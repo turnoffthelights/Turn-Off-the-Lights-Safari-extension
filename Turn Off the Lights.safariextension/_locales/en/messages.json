@@ -8,12 +8,12 @@
     "description":"Background Image"
   },
   "shortcutalllights":{
-    "message":"to toggle the lights on\/off for all open tabs.",
-    "description":"to toggle the lights on\/off for all open tabs."
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
-    "message":"Latest version checked on",
-    "description":"Latest version checked on"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Visual Effects",
@@ -32,12 +32,12 @@
     "description":"Like Bar"
   },
   "desmousespotlightt":{
-    "message":"Allows you to click through the darkened screen when the lights are off.",
-    "description":"Allows you to click through the darkened screen when the lights are off."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
-    "message":"4 choosen colors around the video:",
-    "description":"4 choosen colors around the video:"
+    "message":"Four chosen colors around the video:",
+    "description":"Four chosen colors around the video:"
   },
   "lockentername":{
     "message":"Please enter your password",
@@ -56,16 +56,16 @@
     "description":"Eye Protection"
   },
   "titelcinemaontop":{
-    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window.",
-    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window."
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
+    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
-    "message":"If the light is off, you can select an area to focus a item.",
-    "description":"If the light is off, you can select an area to focus a item."
+    "message":"Enable area selection to focus on an item when the lights are off",
+    "description":"Enable area selection to focus on an item when the lights are off"
   },
   "titelrememberpage":{
-    "message":"Remember page",
-    "description":"Remember page"
+    "message":"Reminder page",
+    "description":"Reminder page"
   },
   "desmousespotlighta":{
     "message":"When the lights are off, it shows a spotlight around the mouse cursor.",
@@ -100,8 +100,8 @@
     "description":"Enabling 'Eye protection' will automatically disable the 'Auto play' feature."
   },
   "skipremember":{
-    "message":"Skip this, and open now the options page",
-    "description":"Skip this, and open now the options page"
+    "message":"Skip this, and open the options page now",
+    "description":"Skip this, and open the options page now"
   },
   "optiontimesaved":{
     "message":"Time is saved successfully!",
@@ -144,24 +144,24 @@
     "description":"Space"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, a complement is added to the 'theatre mode'.",
-    "description":"Clicking on the T key, a complement is added to the 'theatre mode'."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"Settings",
     "description":"Settings"
   },
   "desspotlightradius":{
-    "message":"is the diameter of the search lamp.",
-    "description":"is the diameter of the search lamp."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"Sync",
     "description":"Sync"
   },
   "right":{
-    "message":"right",
-    "description":"right"
+    "message":"Right:",
+    "description":"Right:"
   },
   "titeldynamic":{
     "message":"Dynamic Background",
@@ -212,24 +212,24 @@
     "description":"Enter your password in the box below:"
   },
   "titelblurradius":{
-    "message":"The blur radius",
-    "description":"The blur radius"
+    "message":"Blur radius:",
+    "description":"Blur radius:"
   },
   "version":{
     "message":"Version",
     "description":"Version number text"
   },
   "shortcutdark":{
-    "message":"to darken the screen (increase opacity).",
-    "description":"to darken the screen (increase opacity)."
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"Show the share button of YouTube for this video.",
     "description":"Show the share button of YouTube for this video."
   },
   "shortcutbright":{
-    "message":"to brighten the screen (decrease opacity).",
-    "description":"to brighten the screen (decrease opacity)."
+    "message":"to brighten the screen (decrease opacity)",
+    "description":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
     "message":"All open tabs",
@@ -244,8 +244,8 @@
     "description":"Rate"
   },
   "desautoplay":{
-    "message":"Automatically dim the background when you click the play button and versus.",
-    "description":"Automatically dim the background when you click the play button and versus."
+    "message":"Automatically dim the background when you click the play button and vice versa",
+    "description":"Automatically dim the background when you click the play button and vice versa"
   },
   "titelscreen":{
     "message":"Screen",
@@ -268,8 +268,8 @@
     "description":"Show the add button from this YouTube video."
   },
   "shortcuteyeprotection":{
-    "message":"to enable\/disable the eye protection feature.",
-    "description":"to enable\/disable the eye protection feature."
+    "message":"to enable\/disable the eye protection feature",
+    "description":"to enable\/disable the eye protection feature"
   },
   "titelfadein":{
     "message":"Fade In",
@@ -296,8 +296,8 @@
     "description":"Focus this video"
   },
   "warningtextambilight":{
-    "message":"If it's unable to receive video data because of a site's security rule, then it will show the chosen solid color instead.",
-    "description":"If it's unable to receive video data because of a site's security rule, then it will show the chosen solid color instead."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"Animated Clouds",
@@ -316,12 +316,12 @@
     "description":"Autoplay"
   },
   "top":{
-    "message":"top",
-    "description":"top"
+    "message":"Top:",
+    "description":"Top:"
   },
   "titelspreadradius":{
-    "message":"The spread radius",
-    "description":"The spread radius"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
     "message":"Use then an Adblocker extension",
@@ -408,8 +408,8 @@
     "description":"Extract the color from the video."
   },
   "showremember":{
-    "message":"doesn't show this remember page again when I open the option page.",
-    "description":"doesn't show this remember page again when I open the option page."
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"If you can make a donation of any amount, I'd appreciate it immensely!",
@@ -424,8 +424,8 @@
     "description":"Raindrops"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs when this option is enabled.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs when this option is enabled."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"Seconds is saved successfully!",
@@ -436,20 +436,20 @@
     "description":"Dimness Level Bar"
   },
   "deseyen":{
-    "message":"Normal use (lights go out when you click on the lamp icon).",
-    "description":"Normal use (lights go out when you click on the lamp icon)."
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"Enjoy this extension and share it with others who you think will appreciate it.",
     "description":"Enjoy this extension and share it with others who you think will appreciate it."
   },
   "shortcuttotl":{
-    "message":"to toggle the lights on\/off.",
-    "description":"to toggle the lights on\/off."
+    "message":"to toggle the lights on\/off",
+    "description":"to toggle the lights on\/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a page.",
-    "description":"Automatically dim the background when opening a page."
+    "message":"Automatically dim the background when opening a webpage",
+    "description":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
     "message":"Basics",
@@ -464,16 +464,16 @@
     "description":"Report an Issue"
   },
   "destime":{
-    "message":"Lights off between the following times:",
-    "description":"Lights off between the following times:"
+    "message":"Lights off between the following hours:",
+    "description":"Lights off between the following hours:"
   },
   "guide":{
     "message":"TOtL Welcome Guide",
     "description":"TOtL Welcome Guide"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following page(s):",
-    "description":"Automatically dim the background when opening the following page(s):"
+    "message":"Automatically dim the background on the following site(s):",
+    "description":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
     "message":"Like & Dislike Buttons",
@@ -484,8 +484,8 @@
     "description":"Hide the lamp icon in the omnibox"
   },
   "friendlyremember":{
-    "message":"Friendly Remember...",
-    "description":"Friendly Remember..."
+    "message":"Friendly Reminder...",
+    "description":"Friendly Reminder..."
   },
   "desfadein":{
     "message":"Show the fade in effect.",
@@ -496,8 +496,8 @@
     "description":"Warning!"
   },
   "deseyetimesaver":{
-    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, the page will automatically go dark.",
-    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, the page will automatically go dark."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"Suggestions",
@@ -536,8 +536,8 @@
     "description":"Fish Tank"
   },
   "longdonatetext":{
-    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for the other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
-    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for the other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"Show all Flash objects, skipping the URL filter. This will fix problems with some video players being hidden, but will also display ads.",
@@ -556,12 +556,12 @@
     "description":"Show and invert the color of the video title."
   },
   "desrememberpage":{
-    "message":"If this option is enabled, it will show you not the remember page.",
-    "description":"If this option is enabled, it will show you not the remember page."
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the video as if you were in the cinema.",
-    "description":"The entire page will be fading to dark, so you can watch the video as if you were in the cinema."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"Number of Views",
@@ -576,12 +576,12 @@
     "description":"Automatically set the quality of YouTube videos."
   },
   "shortcutopacity":{
-    "message":"to restore to the set darkness (opacity) setting.",
-    "description":"to restore to the set darkness (opacity) setting."
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
-    "message":"If set to a lower value the shadow will be sharp, the higher the number, the more blurred it will be.",
-    "description":"If set a lower value the shadow will be sharp, the higher the number, the more blurred it will be."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Add Button",
@@ -604,8 +604,8 @@
     "description":"Do you like a real movie theater?"
   },
   "bottom":{
-    "message":"bottom",
-    "description":"bottom"
+    "message":"Bottom:",
+    "description":"Bottom:"
   },
   "dessaver":{
     "message":"Screen Saver:",
@@ -632,8 +632,8 @@
     "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, visit"
   },
   "left":{
-    "message":"left",
-    "description":"left"
+    "message":"Left:",
+    "description":"Left:"
   },
   "titelnighttheme":{
     "message":"Night Mode",
@@ -648,16 +648,16 @@
     "description":"Night Mode"
   },
   "desnightonly":{
-    "message":"Show the Night Mode only the following site(s):",
-    "description":"Show the Night Mode only the following site(s):"
+    "message":"Activate the Night Mode only on the following site(s):",
+    "description":"Activate the Night Mode only on the following site(s):"
   },
   "desnightenabletheme":{
-    "message":"When you open a new page it go automatic to the night mode.",
-    "description":"When you open a new page it go automatic to the night mode."
+    "message":"Automatically go to Night Mode when a new web page is opened",
+    "description":"Automatically go to Night Mode when a new web page is opened"
   },
   "titellampregular":{
-    "message":"Show always the lamp icon in the omnibox",
-    "description":"Show always the lamp icon in the omnibox"
+    "message":"Always show the lamp icon in the omnibox",
+    "description":"Always show the lamp icon in the omnibox"
   },
   "titellampvideo":{
     "message":"Show the lamp icon only if a video player is detected",
@@ -688,8 +688,8 @@
     "description":"Control the web page more accurately"
   },
   "upgradefbshare":{
-    "message":"Facebook Share",
-    "description":"Facebook Share"
+    "message":"Share on Facebook",
+    "description":"Share on Facebook"
   },
   "upgradetwshare":{
     "message":"Tweet",
@@ -716,8 +716,8 @@
     "description":"Reset the Turn Off the Lights settings"
   },
   "desautoplaydelay":{
-    "message":"Brighten again the background when the video ended after",
-    "description":"Brighten again the background when the video ended after"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"seconds",
@@ -728,8 +728,8 @@
     "description":"Camera Motion"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion so that the web page could darkens with a hand sweep down.",
-    "description":"Camera Motion"
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Try it yourself!",
@@ -744,24 +744,24 @@
     "description":"How does it work?"
   },
   "step1description":{
-    "message":"Enable the Camera Motion feature",
-    "description":"Enable the Camera Motion feature"
+    "message":"Enable the Camera Motion feature.",
+    "description":"Enable the Camera Motion feature."
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Move your hand (or fist) from the top to bottom.",
+    "description":"Move your hand (or fist) from the top to bottom."
   },
   "step3description":{
-    "message":"Then the black layer slide automatically down.",
-    "description":"Then the black layer slide automatically down."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Checklist:",
     "description":"Checklist:"
   },
   "des1checkmotion":{
-    "message":"Make sure your room is not dark and that it have enough light.",
-    "description":"Make sure your room is not dark and that it have enough light."
+    "message":"Make sure your room is not dark and that it has enough light.",
+    "description":"Make sure your room is not dark and that it has enough light."
   },
   "des2checkmotion":{
     "message":"Your camera must not receive direct sunlight.",
@@ -776,12 +776,12 @@
     "description":"Linear"
   },
   "titelcolora":{
-    "message":"Color A",
-    "description":"Color A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Color B",
-    "description":"Color B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Speech Recognition",
@@ -792,8 +792,8 @@
     "description":"Speech"
   },
   "desspeech":{
-    "message":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:",
-    "description":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:"
+    "message":"When you enable this option, you can talk to the browser lamp and say the following commands:",
+    "description":"When you enable this option, you can talk to the browser lamp and say the following commands:"
   },
   "desspeech1command":{
     "message":"turn off the lights",
@@ -828,8 +828,8 @@
     "description":"About"
   },
   "desspeechonly":{
-    "message":"Activate the Speech Recognition only the following site(s):",
-    "description":"Activate the Speech Recognition only the following site(s):"
+    "message":"Activate Speech Recognition only on the following site(s):",
+    "description":"Activate Speech Recognition only on the following site(s):"
   },
   "descammotiononly":{
     "message":"Activate the Camera Motion only on the following site(s):",
@@ -852,12 +852,12 @@
     "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
   },
   "desbrowsersupport":{
-    "message":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer.",
-    "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
+    "message":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer.",
+    "description":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer."
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"See online for more examples",
@@ -902,5 +902,157 @@
   "titelwikiatmos":{
     "message":"Wiki about the Atmosphere Lighting feature",
     "description":"Wiki about the Atmosphere Lighting feature"
+  },
+  "sharemenusharetitle":{
+    "message":"Share this",
+    "description":"Share this"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Welcome Guide",
+    "description":"Welcome Guide"
+  },
+  "sharemenutellafriend":{
+    "message":"Tell a Friend",
+    "description":"Tell a Friend"
+  },
+  "sharemenusendatweet":{
+    "message":"Send a Tweet",
+    "description":"Send a Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Post on Facebook",
+    "description":"Post on Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Post on Google+",
+    "description":"Post on Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Rate this extension",
+    "description":"Rate this extension"
+  },
+  "sharemenudonatetitle":{
+    "message":"Support Development",
+    "description":"Support Development"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desautostoponly":{
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautostopblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titeleyeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

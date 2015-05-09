@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Extension Updates</key>
+	<array>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.stefanvd.zoom</string>
+			<key>Developer Identifier</key>
+			<string>PRR97757HF</string>
+			<key>CFBundleVersion</key>
+			<string>1.2</string>
+			<key>CFBundleShortVersionString</key>
+			<string>1.2</string>
+			<key>URL</key>
+			<string>http://www.stefanvd.net/downloads/Zoom.safariextz</string>
+		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.stefanvd.turnoffthelights</string>
+			<key>Developer Identifier</key>
+			<string>PRR97757HF</string>
+			<key>CFBundleVersion</key>
+			<string>3.1.0.25</string>
+			<key>CFBundleShortVersionString</key>
+			<string>3.1.0.25</string>
+			<key>URL</key>
+			<string>http://www.stefanvd.net/downloads/Turn%20Off%20the%20Lights.safariextz</string>
+		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.stefanvd.fullscreen</string>
+			<key>Developer Identifier</key>
+			<string>PRR97757HF</string>
+			<key>CFBundleVersion</key>
+			<string>1.0.1</string>
+			<key>CFBundleShortVersionString</key>
+			<string>1.0.1</string>
+			<key>URL</key>
+			<string>http://www.stefanvd.net/files/Full%20Screen.safariextz</string>
+		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.stefanvd.financetoolbar</string>
+			<key>Developer Identifier</key>
+			<string>PRR97757HF</string>
+			<key>CFBundleVersion</key>
+			<string>0.3.3</string>
+			<key>CFBundleShortVersionString</key>
+			<string>0.3.3</string>
+			<key>URL</key>
+			<string>http://www.stefanvd.net/files/Finance%20Toolbar.safariextz</string>
+		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.stefanvd.ambientaurea</string>
+			<key>Developer Identifier</key>
+			<string>PRR97757HF</string>
+			<key>CFBundleVersion</key>
+			<string>1.0.0.21</string>
+			<key>CFBundleShortVersionString</key>
+			<string>1.0.0.21</string>
+			<key>URL</key>
+			<string>http://www.stefanvd.net/files/Ambient%20Aurea.safariextz</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -2,8 +2,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -190,6 +190,40 @@ function save_options(){
 	else window.localStorage['autoplaychecklistwhite'] = 'false';
 	if($('autoplaychecklistblack').checked)window.localStorage['autoplaychecklistblack'] = 'true';
 	else window.localStorage['autoplaychecklistblack'] = 'false';
+	if($('autostop').checked)window.localStorage['autostop'] = 'true';
+	else window.localStorage['autostop'] = 'false';
+	if($('autostoponly').checked)window.localStorage['autostoponly'] = 'true';
+	else window.localStorage['autostoponly'] = 'false';
+	if($('autostopchecklistwhite').checked)window.localStorage['autostopchecklistwhite'] = 'true';
+	else window.localStorage['autostopchecklistwhite'] = 'false';
+	if($('autostopchecklistblack').checked)window.localStorage['autostopchecklistblack'] = 'true';
+	else window.localStorage['autostopchecklistblack'] = 'false';
+	if($('nighthover').checked)window.localStorage['nighthover'] = 'true';
+	else window.localStorage['nighthover'] = 'false';
+	if($('nightmodechecklistwhite').checked)window.localStorage['nightmodechecklistwhite'] = 'true';
+	else window.localStorage['nightmodechecklistwhite'] = 'false';
+	if($('nightmodechecklistblack').checked)window.localStorage['nightmodechecklistblack'] = 'true';
+	else window.localStorage['nightmodechecklistblack'] = 'false';
+	if($('nmtopleft').checked)window.localStorage['nmtopleft'] = 'true';
+	else window.localStorage['nmtopleft'] = 'false';
+	if($('nmtopright').checked)window.localStorage['nmtopright'] = 'true';
+	else window.localStorage['nmtopright'] = 'false';
+	if($('nmbottomright').checked)window.localStorage['nmbottomright'] = 'true';
+	else window.localStorage['nmbottomright'] = 'false';
+	if($('nmbottomleft').checked)window.localStorage['nmbottomleft'] = 'true';
+	else window.localStorage['nmbottomleft'] = 'false';
+	if($('nmcustom').checked)window.localStorage['nmcustom'] = 'true';
+	else window.localStorage['nmcustom'] = 'false';
+	if($('nightactivetime').checked)window.localStorage['nightactivetime'] = 'true';
+	else window.localStorage['nightactivetime'] = 'false';
+	window.localStorage['nmbegintime'] = $('nmbegintime').value;
+	window.localStorage['nmendtime'] = $('nmendtime').value;
+	if($('lampandnightmode').checked)window.localStorage['lampandnightmode'] = 'true';
+	else window.localStorage['lampandnightmode'] = 'false';	
+	if($('eyechecklistwhite').checked)window.localStorage['eyechecklistwhite'] = 'true';
+	else window.localStorage['eyechecklistwhite'] = 'false';
+	if($('eyechecklistblack').checked)window.localStorage['eyechecklistblack'] = 'true';
+	else window.localStorage['eyechecklistblack'] = 'false';	
 	
 // Excluded domains
 var excludedDomainsBox = $("excludedDomainsBox");
@@ -232,6 +266,13 @@ var speechDomains = {};
 for (var i = 0; i < speechDomainsBox.length; i++)
 	speechDomains[speechDomainsBox.options[i].value] = true;
 	window.localStorage["speechDomains"] = JSON.stringify(speechDomains);
+
+// autostop Excluded domains
+var autostopDomainsBox = $("autostopDomainsBox");
+var autostopDomains = {};
+for (var i = 0; i < autostopDomainsBox.length; i++)
+	autostopDomains[autostopDomainsBox.options[i].value] = true;
+	window.localStorage["autostopDomains"] = JSON.stringify(autostopDomains);
 
 /*------ Safari fix html5 ------*/
 var lightcolor = window.localStorage.getItem("lightcolor");
@@ -330,7 +371,28 @@ var autoplaychecklistwhite = window.localStorage.getItem("autoplaychecklistwhite
 var autoplaychecklistblack = window.localStorage.getItem("autoplaychecklistblack");
 var cammotionDomains = window.localStorage.getItem("cammotionDomains");
 var speechDomains = window.localStorage.getItem("speechDomains");
-safari.self.tab.dispatchMessage("update_setting", {lightcolor:lightcolor, interval:interval, fadein:fadein, fadeout:fadeout, autoplay:autoplay, eastereggs:eastereggs, suggestions:suggestions, playlist:playlist, sharebutton:sharebutton, videoheadline:videoheadline, flash:flash, head:head, infobar:infobar, likebutton:likebutton, shortcutlight:shortcutlight, readera:readera, readern:readern, eyea:eyea, eyen:eyen, readerlargestyle:readerlargestyle, viewcount:viewcount, lightimage:lightimage, lightimagea:lightimagea, lightimagen:lightimagen, eyealist:eyealist, excludedDomains:excludedDomains, mousespotlighto:mousespotlighto, mousespotlighta:mousespotlighta, mousespotlightc:mousespotlightc, nighttime:nighttime, begintime:begintime, endtime:endtime, addvideobutton:addvideobutton, likebar:likebar, ambilight:ambilight, ambilightrangeblurradius:ambilightrangeblurradius, ambilightrangespreadradius:ambilightrangespreadradius, mousespotlightt:mousespotlightt, ambilightfixcolor:ambilightfixcolor, ambilightvarcolor:ambilightvarcolor, ambilightcolorhex:ambilightcolorhex, ambilight4color:ambilight4color, ambilight1colorhex:ambilight1colorhex, ambilight2colorhex:ambilight2colorhex, ambilight3colorhex:ambilight3colorhex, ambilight4colorhex:ambilight4colorhex, password:password, enterpassword:enterpassword, noflash:noflash, hardflash:hardflash, ecosaver:ecosaver, ecosavertime:ecosavertime, dynamic:dynamic, dynamic1:dynamic1, dynamic2:dynamic2, dynamic3:dynamic3, dynamic4:dynamic4, dynamic5:dynamic5, hoveroptiondyn5:hoveroptiondyn5, autoplayonly:autoplayonly, autoplayDomains:autoplayDomains, blur:blur, youtubequality:youtubequality, maxquality:maxquality, autowidthyoutube:autowidthyoutube, customqualityyoutube:customqualityyoutube, cinemaontop:cinemaontop, alllightsoff:alllightsoff, spotlightradius:spotlightradius, atmosphereonly:atmosphereonly, atmosphereDomains:atmosphereDomains, optionskipremember:optionskipremember, countremember:countremember, nighttheme:nighttheme, nightonly:nightonly, nightenabletheme:nightenabletheme, nightDomains:nightDomains, autoplaydelay:autoplaydelay, autoplaydelaytime:autoplaydelaytime, motion:motion, lightimagelin:lightimagelin, linearsq:linearsq, colora:colora, intervallina:intervallina, colorb:colorb, intervallinb:intervallinb, speech:speech, speechlang:speechlang, speechcountry:speechcountry, atmosvivid:atmosvivid, cammotiononly:cammotiononly, speechonly:speechonly, autoplaychecklistwhite:autoplaychecklistwhite, autoplaychecklistblack:autoplaychecklistblack, cammotionDomains:cammotionDomains, speechDomains:speechDomains});
+var reviewedlastonversion = window.localStorage.getItem("reviewedlastonversion");
+var applastonversion = window.localStorage.getItem("applastonversion");
+var autostop = window.localStorage.getItem("autostop");
+var autostoponly = window.localStorage.getItem("autostoponly");
+var autostopchecklistwhite = window.localStorage.getItem("autostopchecklistwhite");
+var autostopchecklistblack = window.localStorage.getItem("autostopchecklistblack");
+var nighthover = window.localStorage.getItem("nighthover");
+var nightmodechecklistwhite = window.localStorage.getItem("nightmodechecklistwhite");
+var nightmodechecklistblack = window.localStorage.getItem("nightmodechecklistblack");
+var nmtopleft = window.localStorage.getItem("nmtopleft");
+var nmtopright = window.localStorage.getItem("nmtopright");
+var nmbottomright = window.localStorage.getItem("nmbottomright");
+var nmbottomleft = window.localStorage.getItem("nmbottomleft");
+var nmcustom = window.localStorage.getItem("nmcustom");
+var nightactivetime = window.localStorage.getItem("nightactivetime");
+var nmbegintime = window.localStorage.getItem("nmbegintime");
+var nmendtime = window.localStorage.getItem("nmendtime");
+var lampandnightmode = window.localStorage.getItem("lampandnightmode");
+var eyechecklistwhite = window.localStorage.getItem("eyechecklistwhite");
+var eyechecklistblack = window.localStorage.getItem("eyechecklistblack");
+var autostopDomains = window.localStorage.getItem("autostopDomains");
+safari.self.tab.dispatchMessage("update_setting", {lightcolor:lightcolor, interval:interval, fadein:fadein, fadeout:fadeout, autoplay:autoplay, eastereggs:eastereggs, suggestions:suggestions, playlist:playlist, sharebutton:sharebutton, videoheadline:videoheadline, flash:flash, head:head, infobar:infobar, likebutton:likebutton, shortcutlight:shortcutlight, readera:readera, readern:readern, eyea:eyea, eyen:eyen, readerlargestyle:readerlargestyle, viewcount:viewcount, lightimage:lightimage, lightimagea:lightimagea, lightimagen:lightimagen, eyealist:eyealist, excludedDomains:excludedDomains, mousespotlighto:mousespotlighto, mousespotlighta:mousespotlighta, mousespotlightc:mousespotlightc, nighttime:nighttime, begintime:begintime, endtime:endtime, addvideobutton:addvideobutton, likebar:likebar, ambilight:ambilight, ambilightrangeblurradius:ambilightrangeblurradius, ambilightrangespreadradius:ambilightrangespreadradius, mousespotlightt:mousespotlightt, ambilightfixcolor:ambilightfixcolor, ambilightvarcolor:ambilightvarcolor, ambilightcolorhex:ambilightcolorhex, ambilight4color:ambilight4color, ambilight1colorhex:ambilight1colorhex, ambilight2colorhex:ambilight2colorhex, ambilight3colorhex:ambilight3colorhex, ambilight4colorhex:ambilight4colorhex, password:password, enterpassword:enterpassword, noflash:noflash, hardflash:hardflash, ecosaver:ecosaver, ecosavertime:ecosavertime, dynamic:dynamic, dynamic1:dynamic1, dynamic2:dynamic2, dynamic3:dynamic3, dynamic4:dynamic4, dynamic5:dynamic5, hoveroptiondyn5:hoveroptiondyn5, autoplayonly:autoplayonly, autoplayDomains:autoplayDomains, blur:blur, youtubequality:youtubequality, maxquality:maxquality, autowidthyoutube:autowidthyoutube, customqualityyoutube:customqualityyoutube, cinemaontop:cinemaontop, alllightsoff:alllightsoff, spotlightradius:spotlightradius, atmosphereonly:atmosphereonly, atmosphereDomains:atmosphereDomains, optionskipremember:optionskipremember, countremember:countremember, nighttheme:nighttheme, nightonly:nightonly, nightenabletheme:nightenabletheme, nightDomains:nightDomains, autoplaydelay:autoplaydelay, autoplaydelaytime:autoplaydelaytime, motion:motion, lightimagelin:lightimagelin, linearsq:linearsq, colora:colora, intervallina:intervallina, colorb:colorb, intervallinb:intervallinb, speech:speech, speechlang:speechlang, speechcountry:speechcountry, atmosvivid:atmosvivid, cammotiononly:cammotiononly, speechonly:speechonly, autoplaychecklistwhite:autoplaychecklistwhite, autoplaychecklistblack:autoplaychecklistblack, cammotionDomains:cammotionDomains, speechDomains:speechDomains, reviewedlastonversion:reviewedlastonversion, applastonversion:applastonversion, autostop:autostop, autostoponly:autostoponly, autostopchecklistwhite:autostopchecklistwhite, autostopchecklistblack:autostopchecklistblack, nighthover:nighthover, nightmodechecklistwhite:nightmodechecklistwhite, nightmodechecklistblack:nightmodechecklistblack, nmtopleft:nmtopleft, nmtopright:nmtopright, nmbottomright:nmbottomright, nmbottomleft:nmbottomleft, nmcustom:nmcustom, nightactivetime:nightactivetime, nmbegintime:nmbegintime, nmendtime:nmendtime, lampandnightmode:lampandnightmode, eyechecklistwhite:eyechecklistwhite, eyechecklistblack:eyechecklistblack, autostopDomains:autostopDomains});
 /*------ Safari fix html5 ------*/
 }
 
@@ -412,6 +474,29 @@ if(!safari.extension.settings['maxquality']) // find no localstore reader
 if(!safari.extension.settings['autoplaychecklistwhite']&&!safari.extension.settings['autoplaychecklistblack']) // find no localstore autoplay whitelist
 {	safari.extension.settings['autoplaychecklistwhite'] = 'true'; // then default true
 	safari.extension.settings['autoplaychecklistblack'] = 'false'; // then default false
+}
+
+if(!safari.extension.settings['autostopchecklistwhite']&&!safari.extension.settings['autostopchecklistblack']) // find no localstore autostop whitelist
+{	safari.extension.settings['autostopchecklistwhite'] = 'true'; // then default true
+	safari.extension.settings['autostopchecklistblack'] = 'false'; // then default false
+}
+
+if(!safari.extension.settings['nightmodechecklistwhite']&&!safari.extension.settings['nightmodechecklistblack']) // find no localstore nightmode whitelist
+{	safari.extension.settings['nightmodechecklistwhite'] = 'true'; // then default true
+	safari.extension.settings['nightmodechecklistblack'] = 'false'; // then default false
+}
+
+if(!safari.extension.settings['nmtopleft']&&!safari.extension.settings['nmtopright']&&!safari.extension.settings['nmbottomright']&&!safari.extension.settings['nmbottomleft']&&!safari.extension.settings['nmcustom'])  // find no localstore eye
+{	safari.extension.settings['nmtopleft'] = 'false'; // then default false
+	safari.extension.settings['nmtopright'] = 'false'; // then default false
+	safari.extension.settings['nmbottomright'] = 'false'; // then default false
+	safari.extension.settings['nmbottomleft'] = 'true'; // then default true
+	safari.extension.settings['nmcustom'] = 'false'; // then default false
+}
+
+if(!safari.extension.settings['eyechecklistwhite']&&!safari.extension.settings['eyechecklistblack']) // find no localstore eye whitelist
+{	safari.extension.settings['eyechecklistwhite'] = 'true'; // then default true
+	safari.extension.settings['eyechecklistblack'] = 'false'; // then default false
 }
 
 // speech
@@ -617,6 +702,35 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 	else{$('speechonly').checked = false;}
 	if(safari.extension.settings['autoplaychecklistwhite'] == 'true')$('autoplaychecklistwhite').checked = true;
 	if(safari.extension.settings['autoplaychecklistblack'] == 'true')$('autoplaychecklistblack').checked = true;
+	// workaround version can't found
+	if(!safari.extension.settings['reviewedlastonversion']){safari.extension.settings['reviewedlastonversion'] = '3.0';}
+	if(!safari.extension.settings['applastonversion']){safari.extension.settings['applastonversion'] = '3.0';}
+	var valuex = safari.extension.settings['reviewedlastonversion'];
+	var valuey = safari.extension.settings['applastonversion'];
+	safariexversion(valuex,valuey);
+	//---
+	if(safari.extension.settings['autostop'] == 'true')$('autostop').checked = true;
+	if(safari.extension.settings['autostoponly'] == 'true'){$('autostoponly').checked = true;}
+	else{$('autostoponly').checked = false;}
+	if(safari.extension.settings['autostopchecklistwhite'] == 'true'){$('autostopchecklistwhite').checked = true;}
+	if(safari.extension.settings['autostopchecklistblack'] == 'true'){$('autostopchecklistblack').checked = true;}
+	if(safari.extension.settings['nighthover'] == 'true'){$('nighthover').checked = true;}
+	if(safari.extension.settings['nightmodechecklistwhite'] == 'true'){$('nightmodechecklistwhite').checked = true;}
+	if(safari.extension.settings['nightmodechecklistblack'] == 'true'){$('nightmodechecklistblack').checked = true;}
+	if(safari.extension.settings['nmtopleft'] == 'true'){$('nmtopleft').checked = true;}
+	if(safari.extension.settings['nmtopright'] == 'true'){$('nmtopright').checked = true;}
+	if(safari.extension.settings['nmbottomright'] == 'true'){$('nmbottomright').checked = true;}
+	if(safari.extension.settings['nmbottomleft'] == 'true'){$('nmbottomleft').checked = true;}
+	if(safari.extension.settings['nmcustom'] == 'true'){$('nmcustom').checked = true;}
+	if(safari.extension.settings['nightactivetime'] == 'true'){$('nightactivetime').checked = true;}
+	if(safari.extension.settings['nmbegintime']){$('nmbegintime').value = safari.extension.settings['nmbegintime'];}
+	else {$('nmbegintime').value = "21:00";}
+	if(safari.extension.settings['nmendtime']){$('nmendtime').value = safari.extension.settings['nmendtime'];}
+	else {$('nmendtime').value = "23:45";}
+	if(safari.extension.settings['lampandnightmode'] == 'true'){$('lampandnightmode').checked = true;}
+	else{$('lampandnightmode').checked = false;}
+	if(safari.extension.settings['eyechecklistwhite'] == 'true'){$('eyechecklistwhite').checked = true;}
+	if(safari.extension.settings['eyechecklistblack'] == 'true'){$('eyechecklistblack').checked = true;}	
 	
 // Excluded domains - sort these alphabetically
 // Safari Fix
@@ -638,18 +752,23 @@ if(!safari.extension.settings['cammotionDomains']) // find no localstore
 if(!safari.extension.settings['speechDomains']) // find no localstore
 	safari.extension.settings['speechDomains'] = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true,  'http://www.vimeo.com': true}); // then default true
 
+if(!safari.extension.settings['autostopDomains']) // find no localstore
+	safari.extension.settings['autostopDomains'] = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true,  'http://www.vimeo.com': true}); // then default true
+
 $('excludedDomainsBox').innerHTML = ""; // clean it Safari fix
 $('autoplayDomainsBox').innerHTML = ""; // clean it Safari fix
 $('atmosphereDomainsBox').innerHTML = ""; // clean it Safari fix
 $('nightDomainsBox').innerHTML = ""; // clean it Safari fix
 $('cammotionDomainsBox').innerHTML = ""; // clean it Safari fix
 $('speechDomainsBox').innerHTML = ""; // clean it Safari fix
+$('autostopDomainsBox').innerHTML = ""; // clean it Safari fix
 var excludedDomains = safari.extension.settings["excludedDomains"];
 var autoplayDomains = safari.extension.settings["autoplayDomains"];
 var atmosphereDomains = safari.extension.settings["atmosphereDomains"];
 var nightDomains = safari.extension.settings["nightDomains"];
 var cammotionDomains = safari.extension.settings["cammotionDomains"];
 var speechDomains = safari.extension.settings["speechDomains"];
+var autostopDomains = safari.extension.settings["autostopDomains"];
 //-----------------------------------------------------------------------
 if(typeof excludedDomains == "string") {
 	excludedDomains = JSON.parse(excludedDomains);
@@ -711,6 +830,16 @@ if(typeof speechDomains == "string") {
 		appendToListBox("speechDomainsBox", srbuf[i]);
     }
 	
+if(typeof autostopDomains == "string") {
+	autostopDomains = JSON.parse(autostopDomains);
+	var asbuf = [];
+	for(var domain in autostopDomains)
+		asbuf.push(domain);
+        asbuf.sort();
+	for(var i = 0; i < asbuf.length; i++)
+		appendToListBox("autostopDomainsBox", asbuf[i]);
+    }
+		
 // temp fix for range bars
 var slidertemp = default_opacity;$('slider').value = slidertemp;$('example1').style.opacity = (slidertemp/100);$('example2').style.opacity = (slidertemp/100);
 var arangeblurtemp = default_arangeblur;$('arangeblur').value = arangeblurtemp;
@@ -762,6 +891,45 @@ window.localStorage['countremember'] = countremember;
     }
 
     // display version number
+	var tempsafariexversion = safari.extension.displayVersion; // Safari 6 or higher
+function safariexversion(x,y) {
+	var mygetrequest = new XMLHttpRequest();
+	mygetrequest.onreadystatechange = function(){
+		if (mygetrequest.readyState == 4){
+			if (mygetrequest.status == 200 || window.location.href.indexOf("http") == -1){
+			var output = mygetrequest.responseText;
+			var myRe = /<string\b[^>]*>([\s\S]*?)<\/string>/gm, myArray, kwa = "";
+			while((myArray = myRe.exec(output)) !== null)
+			{
+				for(var i=1;i<myArray.length;i++)
+				{
+					kwa += '"' + myArray[i] + '"';		
+					kwa += ",";
+				}
+			}
+			var sad = kwa.substring(0, kwa.length - 1);
+			var pieces = sad.split(/,(?!(?:[^",]|[^"],[^"])+")/);
+			var a;
+			for(var i = 0; i < pieces.length; i++){
+			a = pieces[i+5];
+			a = a.substring(0, a.length - 1); // remove the end "
+			a = a.substring(1); // remove the begin "
+			$("version_number").innerText = a;
+			if(x == a){$("sectionreviewbox").style.display = "none";}
+			if(y == a){$("sectionauroraplayerappbox").style.display = "none";}
+			break;
+	  }
+	 }else{ a = "unknow"; }
+	}
+	}
+	try {
+	mygetrequest.open("GET", ''+safari.extension.baseURI+"Info.plist"+'', true);
+	mygetrequest.send(null);
+	}
+	catch(err){}	
+    return a;
+}
+
 var mygetrequest = new XMLHttpRequest();
 mygetrequest.onreadystatechange = function(){
 	if (mygetrequest.readyState == 4){
@@ -1145,7 +1313,7 @@ function cammotionremoveSelectedExcludedDomain() {
     save_options();
 }
 
-// whitelist cam motion domain
+// whitelist speech domain
 function speechaddWhitelistDomain() {
     var domain = $("speechwebsiteurl").value;
     appendToListBox("speechDomainsBox", domain);
@@ -1157,6 +1325,22 @@ function speechremoveSelectedExcludedDomain() {
     for (var i = speechDomainsBox.length-1; i >= 0; i--) {
         if (speechDomainsBox.options[i].selected)
             speechDomainsBox.remove(i);
+    }
+    save_options();
+}
+
+// whitelist autostop domain
+function autostopaddWhitelistDomain() {
+    var domain = $("autostopwebsiteurl").value;
+    appendToListBox("autostopDomainsBox", domain);
+    save_options();
+}
+
+function autostopremoveSelectedExcludedDomain() {
+    var autostopDomainsBox = $("autostopDomainsBox");
+    for (var i = autostopDomainsBox.length-1; i >= 0; i--) {
+        if (autostopDomainsBox.options[i].selected)
+            autostopDomainsBox.remove(i);
     }
     save_options();
 }
@@ -1194,6 +1378,7 @@ function test() {
 if(ambilight.checked == true){
 drawImage();
 }
+
 // show alert warning
 if(ambilightvarcolor.checked == true)
 {$('showwarningambilight').style.display = '';}
@@ -1236,7 +1421,7 @@ else{$('sampleaddbutton').style.zIndex = 1;$('sampleaddbutton').style.position =
 
 if(likebar.checked == true)
 {$('samplelikebar').style.zIndex = 101;$('samplelikebar').style.position = 'relative';}
-else{$('samplelikebar').style.zIndex = 2;$('samplelikebar').style.position = 'relative';}
+else{$('samplelikebar').style.zIndex = 'auto';$('samplelikebar').style.position = 'relative';}
 
 /* --- end YouTube preview --- */
 if(ambilight.checked == true)
@@ -1255,9 +1440,9 @@ $('example2').style.background = 'linear-gradient(to ' + linearsq.options[linear
 $('mousespotlighta').disabled = true;$('mousespotlightc').disabled = true;$('mousespotlighto').checked = true;
 }
 
-if(eyen.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "none";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').disabled = false;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "none";}
-else if(eyea.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";}
-else if(eyealist.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = false;$('websiteurl').disabled = false;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = false;$('removebutton').disabled = false;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";}
+if(eyen.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "none";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').disabled = false;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "none";$('eyechecklistwhite').disabled = true;$('eyechecklistblack').disabled = true;}
+else if(eyea.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";$('eyechecklistwhite').disabled = true;$('eyechecklistblack').disabled = true;}
+else if(eyealist.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = false;$('websiteurl').disabled = false;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = false;$('removebutton').disabled = false;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";$('eyechecklistwhite').disabled = false;$('eyechecklistblack').disabled = false;}
 
 if(mousespotlighto.checked == true)
 {$('eastereggs').disabled = false;} // eastereggs OFF
@@ -1292,8 +1477,8 @@ if(atmosphereonly.checked == true)
 else{$('atmosphereonly').checked = false;$('atmosphereDomainsBox').disabled = true;$('atmospherewebsiteurl').disabled = true;$('atmosphereaddbutton').disabled = true;$('atmosphereremovebutton').disabled = true;}
 
 if(nightonly.checked == true)
-{$('nightonly').checked = true;$('nightDomainsBox').disabled = false;$('nightwebsiteurl').disabled = false;$('nightaddbutton').disabled = false;$('nightremovebutton').disabled = false;}
-else{$('nightonly').checked = false;$('nightDomainsBox').disabled = true;$('nightwebsiteurl').disabled = true;$('nightaddbutton').disabled = true;$('nightremovebutton').disabled = true;}
+{$('nightonly').checked = true;$('nightDomainsBox').disabled = false;$('nightwebsiteurl').disabled = false;$('nightaddbutton').disabled = false;$('nightremovebutton').disabled = false;$('nightmodechecklistwhite').disabled = false;$('nightmodechecklistblack').disabled = false;}
+else{$('nightonly').checked = false;$('nightDomainsBox').disabled = true;$('nightwebsiteurl').disabled = true;$('nightaddbutton').disabled = true;$('nightremovebutton').disabled = true;$('nightmodechecklistwhite').disabled = true;$('nightmodechecklistblack').disabled = true;}
 
 if(autoplay.checked == true)
 {$('eyen').checked = true;$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;}
@@ -1315,6 +1500,14 @@ if(speechonly.checked == true)
 {$('speechonly').checked = true;$('speechDomainsBox').disabled = false;$('speechwebsiteurl').disabled = false;$('speechaddbutton').disabled = false;$('speechremovebutton').disabled = false;}
 else{$('speechonly').checked = false;$('speechDomainsBox').disabled = true;$('speechwebsiteurl').disabled = true;$('speechaddbutton').disabled = true;$('speechremovebutton').disabled = true;}
 
+if(nightactivetime.checked == true){$('nmbegintime').disabled = false;$('nmendtime').disabled = false;$('nmconfirmtime').disabled = false;}
+else{$('nmbegintime').disabled = true;$('nmendtime').disabled = true;$('nmconfirmtime').disabled = true;}
+
+if(nighttheme.checked == true){$('lampandnightmode').disabled = false;}
+else{$('lampandnightmode').disabled = true;}
+
+if(autostoponly.checked == true){$('autostopDomainsBox').disabled = false;$('autostopremovebutton').disabled = false;$('autostopaddbutton').disabled = false;$('autostopwebsiteurl').disabled = false;$('autostopchecklistwhite').disabled = false;$('autostopchecklistblack').disabled = false;}
+else{$('autostopDomainsBox').disabled = true;$('autostopremovebutton').disabled = true;$('autostopaddbutton').disabled = true;$('autostopwebsiteurl').disabled = true;$('autostopchecklistwhite').disabled = true;$('autostopchecklistblack').disabled = true;}
 }
 
 function dynamictest(){
@@ -1460,7 +1653,7 @@ if(hoveroptiondyn5.checked == true){
 		}
 	}
 }
-
+	
 }
 }
 }
@@ -1902,19 +2095,97 @@ $('loading').style.display = "none";
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+// browser check
+var nAgt = navigator.userAgent;
+var browserName;
+var urlbrowservendor = window.navigator.vendor;
+if ((nAgt.indexOf("OPR/"))!=-1) {browserName = "Opera";}
+else if (urlbrowservendor.search("Apple Computer, Inc.") >= 0) {browserName = "Safari";}
+else if (urlbrowservendor.search("Yandex") >= 0) {browserName = "Yandex";}
+else if (urlbrowservendor.search("Google") >= 0) {browserName = "Google Chrome";}
+else if (navigator.appCodeName == "Mozilla") {browserName = "Firefox";}
+else if ((nAgt.indexOf("Maxthon/"))!=-1) {browserName = "Maxthon";}
+
+if (browserName == "Opera") {
+// Opera
+var stefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/";
+var reviewstefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/?#feedback-container";
+var linkfndownload = "https://addons.opera.com/extensions/details/finance-toolbar/";
+var linkppdownload = "https://addons.opera.com/extensions/details/proper-menubar/";
+var linkzodownload = "https://addons.opera.com/extensions/details/zoom/";
+var linkaadownload = "https://addons.opera.com/extensions/details/ambient-aurea/";
+var linkthemedownload = "https://addons.opera.com/themes/details/turn-off-the-lights-theme/";
+} else if (browserName == "Google Chrome") {
+// Google Chrome
+var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
+var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
+var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
+var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
+var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
+var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+} else if (browserName == "Safari") {
+// Safari
+var stefanvdurl = "https://extensions.apple.com/details/?id=com.stefanvd.turnoffthelights-PRR97757HF";
+var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
+var linkfndownload = "https://extensions.apple.com/details/?id=com.stefanvd.financetoolbar-PRR97757HF";
+var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+var linkzodownload = "https://extensions.apple.com/details/?id=com.stefanvd.zoom-PRR97757HF";
+var linkaadownload = "https://extensions.apple.com/details/?id=com.stefanvd.ambientaurea-PRR97757HF";
+var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+} else if (browserName == "Firefox") {
+// Firefox browser
+var stefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/";
+var reviewstefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/reviews/";
+var linkfndownload = "https://addons.mozilla.org/firefox/addon/finance-toolbar/";
+var linkppdownload = "https://addons.mozilla.org/firefox/addon/proper-menubar/";
+var linkzodownload = "https://addons.mozilla.org/firefox/addon/zoom/";
+var linkaadownload = "https://addons.mozilla.org/firefox/addon/ambient-aurea/";
+var linkthemedownload = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights-theme/";
+} else if (browserName == "Maxthon") {
+// Maxthon browser
+var stefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
+var reviewstefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
+var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
+var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
+var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
+var linkthemedownload = "http://skin.maxthon.com/detail/index.php?view_id=2015";
+} else if (browserName == "Yandex") {
+// Yandex browser
+var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
+var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
+var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
+var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
+var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
+var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+} else {
+// default for Microsoft Edge
+var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
+var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
+var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
+var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
+var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
+var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+}
+
 // Remove remember
 $("skipremember").addEventListener('click', function() {$('remembershare').style.display = "none";});
 $("firstcheckboxskipremember").addEventListener('click', function() {if(firstcheckboxskipremember.checked == true){$('optionskipremember').checked = true;}save_options();});
 var sharetext = "I highly recommended Turn Off the Lights. Download and try it yourself! www.turnoffthelights.com ";
-var stefanvdurl = "http://www.turnoffthelights.com/browser.html";var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
+var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
+$("rememberboxrate").addEventListener("click", function() {window.open(reviewstefanvdurl);});
 $("rememberboxgoogle").addEventListener("click", function() {window.open('https://plus.google.com/share?ur\l=' + stefanvdaacodeurl + '', 'Share to Google+','width=600,height=460,menubar=no,location=no,status=no');});
-$("rememberboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "[URL]&t=" + sharetext + "", "_blank");});
+$("rememberboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "[URL]&t=" + sharetext + "");});
 $("rememberboxtwitter").addEventListener("click", function() {window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + " @turnoffthelight", 'Share to Twitter','width=600,height=460,menubar=no,location=no,status=no');});
 
+$("shareboxrate").addEventListener("click", function() {window.open(reviewstefanvdurl);});
 $("shareboxgoogle").addEventListener("click", function() {window.open('https://plus.google.com/share?ur\l=' + stefanvdaacodeurl + '', 'Share to Google+','width=600,height=460,menubar=no,location=no,status=no');});
-$("shareboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "[URL]&t=" + sharetext + "", "_blank");});
+$("shareboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "[URL]&t=" + sharetext + "");});
 $("shareboxtwitter").addEventListener("click", function() {window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "@turnoffthelight", 'Share to Twitter','width=600,height=460,menubar=no,location=no,status=no');});
-	
+
 // Detect click / change to save the page and test it.
 var inputs = document.querySelectorAll('input');
 for (var i = 0; i < inputs.length; i++) {inputs[i].addEventListener('change', test);inputs[i].addEventListener('change', save_options);}
@@ -1933,7 +2204,7 @@ function getImage(url) {
 	save_options();
 	};
     bkimage.onerror = function() {
-	var optionwrongimg = chrome.i18n.getMessage('optionwrongimg');alert(optionwrongimg);
+	var optionwrongimg = chrome.i18n.getMessage('optionwrongimg');window.alert(optionwrongimg);
 	$('lightimagea').checked = true;
 	$('lightimage').value = 'http://www.turnoffthelights.com/extension/images/theater.jpg';
 	$('example1').style.background = 'url(http://www.turnoffthelights.com/extension/images/theater.jpg)';
@@ -1972,10 +2243,13 @@ $("addbutton").addEventListener('click', function() {addWhitelistDomain();});
 $("removebutton").addEventListener('click', function() {removeSelectedExcludedDomain();});
 
 // Save time
-$("confirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');alert(optiontimetemp);});
+$("confirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');window.alert(optiontimetemp);});
 
 // Save password
-$("confirmpassword").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionpasswordsaved');alert(optionpastemp);});
+$("confirmpassword").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionpasswordsaved');window.alert(optionpastemp);});
+
+// Save time
+$("nmconfirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');window.alert(optiontimetemp);});
 
 // Save KB download
 $("tabbasic").addEventListener('click', function() {OFFworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
@@ -1993,15 +2267,18 @@ $("buttonreportlist").addEventListener('click', function() {window.open("http://
 $("buttontranslateme").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/translate.html");});
 
 function ONworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "";}
-function OFFworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "http://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";}
+function OFFworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "https://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";}
 
 // Download Upgrade
-$("aadownload").addEventListener('click', function() {window.open("http://www.stefanvd.net/project/ambientaurea.htm");});
+$("fndownload").addEventListener('click', function() {window.open(linkfndownload);});
+$("ppdownload").addEventListener('click', function() {window.open(linkppdownload);});
+$("zodownload").addEventListener('click', function() {window.open(linkzodownload);});
+$("aadownload").addEventListener('click', function() {window.open(linkaadownload);});
 
-$("themedownload").addEventListener('click', function() {window.open("http://www.turnoffthelights.com");});
+$("themedownload").addEventListener('click', function() {window.open(linkthemedownload);});
 
 // Save password
-$("confirmtimesaver").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionecosaversaved');alert(optionpastemp);});
+$("confirmtimesaver").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionecosaversaved');window.alert(optionpastemp);});
 
 // Check screenshot
 $("wallpaperhide").addEventListener('click', function() {$("imagegallery").style.display = "";$("wallpapershow").style.display = "";$("wallpaperhide").style.display = "none";});
@@ -2049,7 +2326,7 @@ $("nightremovebutton").addEventListener('click', function() {nightremoveSelected
 // cam motion Add website
 $("cammotionaddbutton").addEventListener('click', function() {cammotionaddWhitelistDomain();});
 
-// speech Remove website
+// cam motion Remove website
 $("cammotionremovebutton").addEventListener('click', function() {cammotionremoveSelectedExcludedDomain();});
 
 // speech Add website
@@ -2058,22 +2335,36 @@ $("speechaddbutton").addEventListener('click', function() {speechaddWhitelistDom
 // speech Remove website
 $("speechremovebutton").addEventListener('click', function() {speechremoveSelectedExcludedDomain();});
 
+// autostop Add website
+$("autostopaddbutton").addEventListener('click', function() {autostopaddWhitelistDomain();});
+
+// autostop Remove website
+$("autostopremovebutton").addEventListener('click', function() {autostopremoveSelectedExcludedDomain();});
+
 // Reset settings
-$("resettotl").addEventListener('click', function() {chrome.storage.local.clear();location.reload();});
+$("resettotl").addEventListener('click', function() {safari.extension.clear;location.reload();});
 
 // linearsq
 $("linearsq").addEventListener('click', function() {test();save_options();});
+
+// Review box
+$("war").addEventListener('click', function() {window.open(reviewstefanvdurl);$("sectionreviewbox").style.display = "none";window.localStorage['reviewedlastonversion'] = $("version_number").innerText;});
+$("nt").addEventListener('click', function() {$("sectionreviewbox").style.display = "none";window.localStorage['reviewedlastonversion'] = $("version_number").innerText;});
+
+// Aurora Player app box
+$("apgetapp").addEventListener('click', function() {window.open("http://www.stefanvd.net/project/auroraplayer.htm");$("sectionauroraplayerappbox").style.display = "none";window.localStorage['applastonversion'] = $("version_number").innerText;});
+$("apnt").addEventListener('click', function() {$("sectionauroraplayerappbox").style.display = "none";window.localStorage['applastonversion'] = $("version_number").innerText;});
 
 // retina check
 if(window.devicePixelRatio >= 2) {
 $("loadinglamp").src = "icons/icon16@2x.png";$("loadinglamp").style.width = "16px"; $("loadinglamp").style.height = "16px";
 $("welcomelamp").src = "icons/icon16@2x.png";$("welcomelamp").style.width = "16px"; $("welcomelamp").style.height = "16px";
 $("rememberlamp").src = "icons/icon16@2x.png";$("rememberlamp").style.width = "16px"; $("rememberlamp").style.height = "16px";
+$("auroraplayericon").src = "images/aurora-player_32x32@2x.png";
 }
 
 // browser check
-var browservendor = window.navigator.vendor
-if (browservendor.search("Apple") >= 0) {
+if (browserName == "Safari") {
 	// feature check speech and camera
 	$("helpcameramotion").style.display = "";
 	$("helpspeech").style.display = "";
@@ -2083,7 +2374,7 @@ if (browservendor.search("Apple") >= 0) {
 	$("speechonly").disabled = true;
 	$("motion").disabled = true;
 	$("cammotiononly").disabled = true;
-} else if (browservendor.search("Google") >= 0) {
+} else if (browserName == "Google Chrome") {
 	// feature check speech and camera
 	$("helpcameramotion").style.display = "none";
 	$("helpspeech").style.display = "none";

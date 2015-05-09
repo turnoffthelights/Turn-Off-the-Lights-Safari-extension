@@ -2,8 +2,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -91,27 +91,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						if(o.players.active < 1){o.playerStateChange(0);}
 						
 						setPlayerEvents(htmlplayer);
-					};				
+					};							
 
 					// New Mutation Summary API Reference
-					if (typeof WebKitMutationObserver == "function") {
+					// var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+					// if (typeof MutationObserver == "function") {
 						// setup MutationSummary observer
-						var videolist = document.querySelector('body');
-						var observer = new WebKitMutationObserver(function(mutations, observer) {
-						triggerDOMChanges();
-						});
+						// var videolist = document.querySelector('body');
+						// var observer = new MutationObserver(function(mutations, observer) {
+						// triggerDOMChanges();
+						// });
 					
-						observer.observe(videolist, {
-							subtree: true,       // observe the subtree rooted at ...videolist...
-							childList: true,     // include childNode insertion/removals
-							characterData: false, // include textContent changes
-							attributes: false     // include changes to attributes within the subtree
-						});
-					} else {
+						// observer.observe(videolist, {
+							// subtree: true,       // observe the subtree rooted at ...videolist...
+							// childList: true,     // include childNode insertion/removals
+							// characterData: false, // include textContent changes
+							// attributes: false     // include changes to attributes within the subtree
+						// });
+					// } else {
 						// setup DOM event listeners
-						document.addEventListener("DOMNodeRemoved", triggerDOMChanges, false);
-						document.addEventListener("DOMNodeInserted", triggerDOMChanges, false);
-					}
+						// document.addEventListener("DOMNodeRemoved", triggerDOMChanges, false);
+						// document.addEventListener("DOMNodeInserted", triggerDOMChanges, false);
+					// }
 					
 				}(this.ytCinema));				
 			}

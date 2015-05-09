@@ -8,12 +8,12 @@
     "description":"Фонове зображення"
   },
   "shortcutalllights":{
-    "message":"щоб увімкнути або вимкнути світло для всіх відкритих вкладок.",
-    "description":"Щоб увімкнути або вимкнути фари включення\/вимикання для всіх відкритих вкладок."
+    "message":"щоб увімкнути або вимкнути світло для всіх відкритих вкладок",
+    "description":"щоб увімкнути або вимкнути світло для всіх відкритих вкладок"
   },
   "lastchecked":{
-    "message":"Остання перевірка оновлення відбулась:",
-    "description":"Оновлювали узято на редагування"
+    "message":"Остання перевірка оновлення відбулась",
+    "description":"Остання перевірка оновлення відбулась"
   },
   "visualeffects":{
     "message":"Візуальні ефекти",
@@ -32,8 +32,8 @@
     "description":"Як бар"
   },
   "desmousespotlightt":{
-    "message":"Дозволяє клікнтути елементи веб-сторінки через затемнений прошарок, коли світло вимкнено.",
-    "description":"Дозволяє перейти на темному екрані, коли фари вимкнені."
+    "message":"Ввімкнути можливість клікати на посилання, коли екран затемнений",
+    "description":"Ввімкнути можливість клікати на посилання, коли екран затемнений"
   },
   "desambilight4color":{
     "message":"4 довільних кольори навколо відео:",
@@ -56,16 +56,16 @@
     "description":"Захисту очей"
   },
   "titelcinemaontop":{
-    "message":"Режим кінотеатр: показує кнопку \"вимкнути світло\" тільки у верхній частині екрану.",
-    "description":"Кіно театр режим: це показувати шар 'висвітлює ' тільки верхній частині вікна."
+    "message":"Режим кінотеатр: показує кнопку \"вимкнути світло\" тільки у верхній частині екрану",
+    "description":"Режим кінотеатр: показує кнопку \"вимкнути світло\" тільки у верхній частині екрану"
   },
   "desmousespotlightc":{
     "message":"Якщо затемнення активне, ви можете вибрати область для виділення потрібного елементу.",
     "description":"Якщо не горить, ви можете вибрати область, щоб зосередитися на елемент."
   },
   "titelrememberpage":{
-    "message":"Запам'ятати сторінку",
-    "description":"Пам'ятайте сторінки"
+    "message":"Сторінка нагадування",
+    "description":"Сторінка нагадування"
   },
   "desmousespotlighta":{
     "message":"Якщо затемнення активне, показувати світіння навколо курсору.",
@@ -100,8 +100,8 @@
     "description":"Увімкнення 'Захисту очей' автоматично вимкнути функцію 'Auto play'."
   },
   "skipremember":{
-    "message":"Пропустити це та відкрити сторінку налаштувань",
-    "description":"Пропустіть цей і відкрити зараз сторінці варіант"
+    "message":"Пропустити це та відкрити сторінку з параметрами",
+    "description":"Пропустити це та відкрити сторінку з параметрами"
   },
   "optiontimesaved":{
     "message":"Зміна часу успішно збережена!",
@@ -144,16 +144,16 @@
     "description":"Простір Всесвіту"
   },
   "deseastereggs":{
-    "message":"Бонус в цьому розширенні.",
-    "description":"Бонус в розширенні цього."
+    "message":"Натиснувши клавішу T додає завіса театру до темного шару",
+    "description":"Натиснувши клавішу T додає завіса театру до темного шару"
   },
   "settings":{
     "message":"Налаштування",
     "description":"Параметри"
   },
   "desspotlightradius":{
-    "message":"- діаметр лампи пошуку.",
-    "description":"є діаметр пошук лампа."
+    "message":"Діаметр прожектора:",
+    "description":"Діаметр прожектора:"
   },
   "titelsync":{
     "message":"Синхронізація",
@@ -212,24 +212,24 @@
     "description":"Введіть пароль у поле нижче:"
   },
   "titelblurradius":{
-    "message":"Радіус розмиття",
-    "description":"Радіусу розмиття"
+    "message":"Радіус розмиття:",
+    "description":"Радіус розмиття:"
   },
   "version":{
     "message":"Версія",
     "description":"Номер версії тексту"
   },
   "shortcutdark":{
-    "message":"щоб затемнити екран (збільшення прозорості).",
-    "description":"щоб затемнити екран (збільшення прозорості)."
+    "message":"щоб затемнити екран (збільшення прозорості)",
+    "description":"щоб затемнити екран (збільшення прозорості)"
   },
   "dessharebutton":{
     "message":"Показувати кнопки Share (поділитися) для цього відео на сайті YouTube.",
     "description":"Показати частка кнопки YouTube для цього відео."
   },
   "shortcutbright":{
-    "message":"щоб висвітлити екран (зменшення прозорості).",
-    "description":"щоб скрасити екрану (зменшення непрозорості)."
+    "message":"щоб висвітлити екран (зменшення прозорості)",
+    "description":"щоб висвітлити екран (зменшення прозорості)"
   },
   "titelalllightsoff":{
     "message":"Всі відкриті вкладки",
@@ -268,8 +268,8 @@
     "description":"Показати кнопки Додати з цього відео YouTube."
   },
   "shortcuteyeprotection":{
-    "message":"щоб увімкнути або вимкнути функцію захисту очей.",
-    "description":"Щоб увімкнути або вимкнути функцію захисту очей."
+    "message":"щоб увімкнути або вимкнути функцію захисту очей",
+    "description":"щоб увімкнути або вимкнути функцію захисту очей"
   },
   "titelfadein":{
     "message":"Затемнення",
@@ -296,12 +296,12 @@
     "description":"Зосередити увагу на це відео"
   },
   "warningtextambilight":{
-    "message":"Якщо неможливо отримати відео-дані через політику безпеки сайту, то натомість буде показана суцільна заливка.",
-    "description":"Якщо він не може отримати відео даних через правила безпеки сайту, то він буде показувати обраний чистий колір замість цього."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
-    "message":"Animated Clouds",
-    "description":"Animated Clouds"
+    "message":"Анімовані хмарки",
+    "description":"Анімовані хмарки"
   },
   "desconfirmtimesaver":{
     "message":"Задати час",
@@ -320,8 +320,8 @@
     "description":"Топ"
   },
   "titelspreadradius":{
-    "message":"Радіус розсіювання",
-    "description":"Радіус розвороту"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
     "message":"Використовувати разом із розширенням Adblocker.",
@@ -408,8 +408,8 @@
     "description":"Зайняти кольору з відео."
   },
   "showremember":{
-    "message":"не показувати цю сторінку знову при відкритті налаштувань.",
-    "description":"не показувати цю сторінку запам'ятати при відкритті варіант сторінки."
+    "message":"Більше не показувати цю сторінку нагадування при відкритті налаштувань",
+    "description":"Більше не показувати цю сторінку нагадування при відкритті налаштувань"
   },
   "donatepromotext":{
     "message":"Якщо Ви можете зробити пожертвування будь-якої суми, я буду дуже вдячний!",
@@ -424,8 +424,8 @@
     "description":"Краплі дощу"
   },
   "desalllightsoff":{
-    "message":"Клік на кнопці з лампою увімкне або вимкне світло на всіх відкритих вкладках, якщо дана опція активована.",
-    "description":"Натиснувши кнопку лампа буде перемикати світло включення\/вимикання на всі відкриті вкладки, коли ця опція включена."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"Зміни успішно збережено!",
@@ -436,20 +436,20 @@
     "description":"Помутніння рівні бар"
   },
   "deseyen":{
-    "message":"Налаштування по-замовчуванню (затемнення з'являється тоді, коли ви клікаєте іконку з лампою).",
-    "description":"Нормальної (згасли вогні після натискання на іконку лампа)."
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"Насолоджуйтесь цим розширенням та поділіться інформацією про нього з усіма, хто, на вашу думку, його оцінить.",
     "description":"Насолоджуйтесь це розширення і поділитися ним з іншими, які ви думаєте, буде цінувати його."
   },
   "shortcuttotl":{
-    "message":"щоб увімкнути або вимкнути світло.",
-    "description":"Щоб увімкнути або вимкнути фари вкл\/викл."
+    "message":"щоб увімкнути або вимкнути світло",
+    "description":"щоб увімкнути або вимкнути світло"
   },
   "deseyea":{
-    "message":"Автоматично затемнювати фон при відкритті сторінки.",
-    "description":"Автоматично зменшення яскравості фону, під час відкриття сторінки."
+    "message":"Автоматично затемнювати фон при відкритті сторінки",
+    "description":"Автоматично затемнювати фон при відкритті сторінки"
   },
   "basicsettings":{
     "message":"Базові",
@@ -472,8 +472,8 @@
     "description":"TOtL Ласкаво просимо керівництво"
   },
   "deseyealist":{
-    "message":"Автоматично зменшувати яскравість фону під час відкриття наступних сторінок:",
-    "description":"Автоматично зменшення яскравості фону, під час відкриття наступних сторінках:"
+    "message":"Автоматично затемнювати фон на наступних веб сайтах:",
+    "description":"Автоматично затемнювати фон на наступних веб сайтах:"
   },
   "titellikebutton":{
     "message":"Кнопки Like & Dislike",
@@ -484,8 +484,8 @@
     "description":"приховати піктограму pageaction"
   },
   "friendlyremember":{
-    "message":"Доброзичливе нагадування...",
-    "description":"Дружні пам'ятати..."
+    "message":"Дружнє нагадування...",
+    "description":"Дружнє нагадування..."
   },
   "desfadein":{
     "message":"Використовувати поступове затемнення.",
@@ -496,8 +496,8 @@
     "description":"Попередження!"
   },
   "deseyetimesaver":{
-    "message":"Коли сторінка неактивна (немає клавіатурного вводу та рухів мишею) протягом всього часу, вказаного нижче, вона автоматично буде затемнена.",
-    "description":"Коли сторінка неактивний (не миші або клавіатури вводу) за весь час зазначені нижче, сторінки автоматично перейде темно."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"Пропозиції",
@@ -536,8 +536,8 @@
     "description":"Садок для риби"
   },
   "longdonatetext":{
-    "message":"Я дійсно буду вам вдячний, якщо ви допоможете мені підтримувати це розширення для браузера. Не має значення, чи це буде $$1, чи $$100, - ваша підтрика дуже високо цінується!",
-    "description":"Я дійсно ціную, якщо ви можете подарувати мені просвіщати для нових користувачів цього розширення для браузера. Будь то $$ 1 або $100 доларів, безмірно оцінку вашої підтримки!"
+    "message":"Я буду вам вдячний, якщо ви допоможете мені підтримувати це розширення для браузера. Не має значення, чи це буде $$1, чи $$100, - ваша підтрика дуже високо цінується!",
+    "description":"Я буду вам вдячний, якщо ви допоможете мені підтримувати це розширення для браузера. Не має значення, чи це буде $$1, чи $$100, - ваша підтрика дуже високо цінується!"
   },
   "deshardflash":{
     "message":"Показати всі об'єкти Flash, пропускаючи фільтр URL-адрес. Це допоможе вирішити проблему, коли деякі відео-плеєри не видно на сторінці, проте може викликати появу небажаної реклами.",
@@ -556,12 +556,12 @@
     "description":"Показати і Інвертувати кольори відео назви."
   },
   "desrememberpage":{
-    "message":"Якщо ця опція активована, запам'ятовувана сторінка не буде показана.",
-    "description":"Якщо ця опція включена, він покаже вам не запам'ятовувати сторінки."
+    "message":"Не показувати сторінку нагадування",
+    "description":"Не показувати сторінку нагадування"
   },
   "description":{
-    "message":"Вся сторінка буде затемнена для комфортного перегляду відео (як у кінотеатрі).",
-    "description":"Всю сторінку буде вицвітання темним, так що ви можете дивитися відео, як якби ви були в кіно."
+    "message":"Вся сторінка буде затемнена для комфортного перегляду відео, як у кінотеатрі.",
+    "description":"Вся сторінка буде затемнена для комфортного перегляду відео, як у кінотеатрі."
   },
   "titelviewcount":{
     "message":"Кількість переглядів",
@@ -576,12 +576,12 @@
     "description":"Автоматично встановити якість відео YouTube."
   },
   "shortcutopacity":{
-    "message":"щоб відновити налаштування рівня затемнення.",
-    "description":"Щоб відновити набір темряви (opacity) установка."
+    "message":"щоб відновити налаштування рівня затемнення",
+    "description":"щоб відновити налаштування рівня затемнення"
   },
   "desambilightrangeblurradius":{
-    "message":"При малих значеннях тінь буде різкою, при великих - розмитою.",
-    "description":"Якщо набір нижче значення тінь буде різким, що вище це число, більше розмите буде."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Додати кнопку",
@@ -716,8 +716,8 @@
     "description":"Скинути налаштування Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Висвітлити фон при завершенні відтворення через",
-    "description":"Висвітлити фон при завершенні відтворення через"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"секунд",
@@ -728,8 +728,8 @@
     "description":"Рух камери"
   },
   "desmotion":{
-    "message":"Активуйте Рух камери, щоб мати можливість приглушити світло жестом руки зверху вниз.",
-    "description":"Рух камери"
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Спробуйте самі!",
@@ -748,12 +748,12 @@
     "description":"Активувати функцію Рух камери"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Зробіть рух рукою (або кистю) зверху вниз",
+    "description":"Зробіть рух рукою зверху донизу."
   },
   "step3description":{
-    "message":"Тоді затемнений шар автоматично зміститься вниз.",
-    "description":"Тоді затемнений шар автоматично зміститься вниз."
+    "message":"Чорний шар буде автоматично ковзати вниз.",
+    "description":"Чорний шар буде автоматично ковзати вниз."
   },
   "desmotionChecklist":{
     "message":"Контрольний перелік:",
@@ -776,12 +776,12 @@
     "description":"Лінійний"
   },
   "titelcolora":{
-    "message":"Колір A",
-    "description":"Колір A"
+    "message":"Колір А:",
+    "description":"Колір А:"
   },
   "titelcolorb":{
-    "message":"Колір Б",
-    "description":"Колір Б"
+    "message":"Колір Б:",
+    "description":"Колір Б:"
   },
   "speechoption":{
     "message":"Розпізнавання мови",
@@ -856,8 +856,8 @@
     "description":"Цей браузер поки що не підтримує дану функцію. Переконайтеся, що ви встановили найновішу версію веб-браузера."
   },
   "titelsupportatmos":{
-    "message":"Підтримується тільки HTML5 <video> та YouTube HTML5. Використовується GPU вашої відеокарти.",
-    "description":"Підтримується тільки HTML5 <video> та YouTube HTML5. Використовується GPU вашої відеокарти."
+    "message":"Підтримує тільки HTML5 <video> та HTML5 програвач YouTube. Він також використовує GPU вашоi графічноi карти.",
+    "description":"Підтримує тільки HTML5 <video> та HTML5 програвач YouTube. Він також використовує GPU вашоi графічноi карти."
   },
   "titelseeonline":{
     "message":"Перегляньте інші приклади онлайн",
@@ -900,7 +900,159 @@
     "description":"Розробник API"
   },
   "titelwikiatmos":{
-    "message":"Wiki about the Atmosphere Lighting feature",
-    "description":"Wiki about the Atmosphere Lighting feature"
+    "message":"Wiki про функції атмосферного освітлення",
+    "description":"Wiki про функції атмосферного освітлення"
+  },
+  "sharemenusharetitle":{
+    "message":"Поділитись з друзями",
+    "description":"Поділитись з друзями"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Стартова інструкція",
+    "description":"Стартова інструкція"
+  },
+  "sharemenutellafriend":{
+    "message":"Розповісти другові",
+    "description":"Розповісти другові"
+  },
+  "sharemenusendatweet":{
+    "message":"Твітнути",
+    "description":"Твітнути"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Запостити в Facebook",
+    "description":"Запостити в Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Запостити в Google+",
+    "description":"Запостити в Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Оцінити це розширення",
+    "description":"Оцінити це розширення"
+  },
+  "sharemenudonatetitle":{
+    "message":"Підтримати розробку",
+    "description":"Підтримати розробку"
+  },
+  "titelautostop":{
+    "message":"Автостоп",
+    "description":"Автостоп"
+  },
+  "desautostop":{
+    "message":"Зупинити автоматичне відтворення відео, коли я відкриваю веб-сторінки.",
+    "description":"Зупинити автоматичне відтворення відео, коли я відкриваю веб-сторінки."
+  },
+  "areyouhappy":{
+    "message":"Ви задоволені додатком Turn Off the Lights?",
+    "description":"Ви задоволені додатком Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Гарантує, що ваша думка має значення",
+    "description":"Гарантує, що ваша думка має значення"
+  },
+  "nothanks":{
+    "message":"Ні, дякую",
+    "description":"Ні, дякую"
+  },
+  "writeareview":{
+    "message":"Напишіть відгук",
+    "description":"Напишіть відгук"
+  },
+  "desauroraplayer":{
+    "message":"Для Вашого комп’ютера також доступний програвач з можливістю розсіяного освітлення.",
+    "description":"Для Вашого комп’ютера також доступний програвач з можливістю розсіяного освітлення."
+  },
+  "downloadtheapp":{
+    "message":"Завантажте додаток зараз",
+    "description":"Завантажте додаток зараз"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Збільшити або зменшити вміст веб-сторінки за допомогою кнопки масштабування для більш комфортного читання.",
+    "description":"Збільшити або зменшити вміст веб-сторінки за допомогою кнопки масштабування для більш комфортного читання."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Повернути чорну панель меню на веб-сайті Google.",
+    "description":"Повернути чорну панель меню на веб-сайті Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Це поле в режимі реального часу покаже вам інформацію про фондовий ринок.",
+    "description":"Це поле в режимі реального часу покаже вам інформацію про фондовий ринок."
+  },
+  "titelnightmodeposition":{
+    "message":"Змінити положення",
+    "description":"Змінити положення"
+  },
+  "nmtopleft":{
+    "message":"Зверху зліва",
+    "description":"Зверху зліва"
+  },
+  "nmtopright":{
+    "message":"Зверху справа",
+    "description":"Зверху справа"
+  },
+  "nmbottomright":{
+    "message":"Внизу справа",
+    "description":"Внизу справа"
+  },
+  "nmbottomleft":{
+    "message":"Внизу зліва",
+    "description":"Внизу зліва"
+  },
+  "nmcustom":{
+    "message":"Натисніть і, утримуючи його, перемістіть в зручне місце на вашому екрані.",
+    "description":"Натисніть і, утримуючи його, перемістіть в зручне місце на вашому екрані."
+  },
+  "desnighthover":{
+    "message":"Показувати прозорий перемикач на сторінці.",
+    "description":"Показувати прозорий перемикач на сторінці."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Білий список",
+    "description":"Білий список"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Чорний список",
+    "description":"Чорний список"
+  },
+  "desautostoponly":{
+    "message":"Активувати автостоп відео тільки для наступних сайтів:",
+    "description":"Активувати автостоп відео тільки для наступних сайтів:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Білий список",
+    "description":"Білий список"
+  },
+  "titelautostopblacklist":{
+    "message":"Чорний список",
+    "description":"Чорний список"
+  },
+  "desnightactivetime":{
+    "message":"Перемикач буде видно в певний час:",
+    "description":"Перемикач буде видно в певний час:"
+  },
+  "deslampandnightmode":{
+    "message":"Активуйте опцію „Нічний режим“ натиснувши на кнопку з сірою лампочкою.",
+    "description":"Активуйте опцію „Нічний режим“ натиснувши на кнопку з сірою лампочкою."
+  },
+  "titeleyewhitelist":{
+    "message":"Білий список",
+    "description":"Білий список"
+  },
+  "titeleyeblacklist":{
+    "message":"Чорний список",
+    "description":"Чорний список"
+  },
+  "desspeech5command":{
+    "message":"лампа браузера",
+    "description":"лампа браузера"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 і YouTube™ відео",
+    "description":"HTML5 і YouTube™ відео"
+  },
+  "flashembedobject":{
+    "message":"Підтримка: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Підтримка: <object>, <embed>, <applet>, <iframe>."
   }
 }

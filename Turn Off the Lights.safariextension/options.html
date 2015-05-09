@@ -3,8 +3,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -32,7 +32,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta charset="utf-8">
 <title data-i18n="optionpagetitle">Turn Off the Lights - Options</title>
 <link rel="stylesheet" type="text/css" href="css/options.css">
 <script type="text/javascript" src="js/options.js"></script>
@@ -52,7 +52,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 <br>
 <br>
 <div class="remembertext"><span data-i18n="enjoyshare"></span></div>
-<a id="rememberboxrate" href="https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn" target="_blank"><span data-i18n="rememberrate"></span> 5 &#9733;</a>
+<a id="rememberboxrate"><span data-i18n="rememberrate"></span> 5 &#9733;</a>
 <a id="rememberboxgoogle">Google+</a>
 <a id="rememberboxfacebook">Facebook</a>
 <a id="rememberboxtwitter">Twitter</a>
@@ -71,7 +71,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 <div id="productwelcomeimageload"><img id="loadinglamp" alt="Lamp" src="icons/icon16.png">Turn Off the Lights™</div>
 <div id="progressbar"><div id="progress"><div id="pbaranim"></div></div></div>
 </div>
-<span id="loadinghelp"><span data-i18n="pagestillloading"></span> <a href="http://www.turnoffthelights.com/support.php" target="blank" data-i18n="pagehelp"></a>!</span>
+<span id="loadinghelp"><span data-i18n="pagestillloading"></span> <a href="http://www.turnoffthelights.com/support" target="blank" data-i18n="pagehelp"></a>!</span>
 </div>
 
 <div id="main-content">
@@ -104,7 +104,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 			<div id="tab1" class="page">
 			<h1 data-i18n="basicsettings"></h1>
 			<header>
-			<a id="shareboxrate" href="https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn" target="_blank"><span data-i18n="rememberrate"></span> 5 &#9733;</a> <a id="shareboxgoogle">Google+</a> <a id="shareboxfacebook">Facebook</a> <a id="shareboxtwitter">Twitter</a>
+			<a id="shareboxrate"><span data-i18n="rememberrate"></span> 5 &#9733;</a> <a id="shareboxgoogle">Google+</a> <a id="shareboxfacebook">Facebook</a> <a id="shareboxtwitter">Twitter</a>
 			</header>
 				<br>
 				<div id="example1"></div>
@@ -112,11 +112,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<table class="youtubepreview">
 					<tr>
 						<td class="viewpanel">
-						<iframe id="dont-turn-off-the-lights" class="youtube-player" width="340" height="195" src="" frameborder="0" allowfullscreen></iframe>
+						<iframe id="dont-turn-off-the-lights" class="youtube-player" type="text/html" width="340" height="195" src="" frameborder="0" allowfullscreen></iframe>
 						<div id="sampletitle" class="youtubetitel">Stefan vd</div>
 						<div id="samplechannel" class="youtube_container_head">	
 						<script src="https://apis.google.com/js/platform.js"></script>
-                        <div class="g-ytsubscribe" data-channel="stefanvdlive" data-layout="full" data-count="default"></div>
+						<div class="g-ytsubscribe" data-channel="stefanvdlive" data-layout="full" data-count="default"></div>
 						</div>
 						<div id="videochannel" class="youtube_video_head">
 						<div class="youtubevideobutton"><span>55 videos</span></div>
@@ -144,13 +144,13 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<table>
 							<tr>
 								<td><div class="youtubevideoframegeen"></div></td>
-								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan vd video: update now in air</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan vd video: update now in the air</span><br><span class="youtubesuggestionby">by Stefan</span></td>
 							</tr>
 						</table>
 						<table>
 							<tr>
 								<td><div class="youtubevideoframeblue"></div></td>
-								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Speech feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Speech Recognition feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
 							</tr>
 						</table>
 						<table>
@@ -162,7 +162,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<table>
 							<tr>
 								<td><div class="youtubevideoframered"></div></td>
-								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Cam Motion feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Camera Motion feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
 							</tr>
 						</table>
 						</div>
@@ -297,10 +297,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<div id="helpautoplay" class="helpwhatproblem" data-i18n="helpautoplay"></div>
 				<label class="checkbox"><input id="autoplay" type="checkbox"><span data-i18n="desautoplay"></span></label>
 				<label class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="autoplaydelay" type="checkbox"><span data-i18n="desautoplaydelay"></span> <input id="autoplaydelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautoplaydelayend"></span>.</label>
-				<div class="grey-text"><span>HTML5 &amp; YouTube&#8482; video</span></div>
+				<div class="grey-text"><span data-i18n="html5andyoutube"></span></div>
 				
 				<label class="checkbox"><input id="autoplayonly" type="checkbox"><span data-i18n="desautoplayonly"></span></label>
-				<label class="radio"><input id="autoplaychecklistwhite" type="radio" name="autoplaychecklist" value="true"><span data-i18n="titelautoplaywhitelist"></span>&nbsp;&nbsp;&nbsp;<input id="autoplaychecklistblack" type="radio" name="autoplaychecklist" value="black"><span data-i18n="titelautoplayblacklist"></span></label>
+				<label class="radioline"><input id="autoplaychecklistwhite" type="radio" name="autoplaychecklist" value="true"><span data-i18n="titelautoplaywhitelist"></span></label>
+				&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="autoplaychecklistblack" type="radio" name="autoplaychecklist" value="black"><span data-i18n="titelautoplayblacklist"></span></label>
 				
 				  <table id="autoplaywhitelist">
  				   <tr>
@@ -314,6 +315,37 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				    </tr>
 				  </table>
 				
+				</div>
+				</section>
+				<section>			
+				<h3 data-i18n="titelautostop"></h3>
+				<div>
+				<label class="checkbox"><input id="autostop" type="checkbox"><span data-i18n="desautostop"></span></label>
+				<div class="grey-text"><span data-i18n="html5andyoutube"></span></div>
+				<label class="checkbox"><input id="autostoponly" type="checkbox"><span data-i18n="desautostoponly"></span></label>
+				<label class="radioline"><input id="autostopchecklistwhite" type="radio" name="autostopchecklist" value="true"><span data-i18n="titelautostopwhitelist"></span></label>
+				&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="autostopchecklistblack" type="radio" name="autostopchecklist" value="black"><span data-i18n="titelautostopblacklist"></span></label>
+				
+				  <table id="autostopwhitelist">
+ 				   <tr>
+ 				     <td><span data-i18n="titelwebsite"></span>:</td>
+  				     <td><input id="autostopwebsiteurl" type="url" required pattern="https?://.+" placeholder="http://www.example.com"></td>
+ 				     <td><button id="autostopaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+ 				   </tr>
+ 				   <tr>
+				      <td colspan="2"><select id="autostopDomainsBox" name="autoplayentryList" size="3" multiple=""></select></td>
+				      <td valign="center"><button id="autostopremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				    </tr>
+				  </table>
+				</div>
+				</section>
+				<section id="sectionreviewbox">			
+				<div id="reviewextensionbox">
+					<div class="stars">★★★★★</div>
+					<div id="ayh"><span data-i18n="areyouhappy"></span></div>
+					<div id="tllo"><span data-i18n="tellothers"></span></div>
+					<div id="nt"><span data-i18n="nothanks"></span></div>
+					<div id="war"><span data-i18n="writeareview"></span></div>
 				</div>
 				</section>
 				<section>
@@ -370,7 +402,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<tr><td><label class="checkbox"><input id="customqualityyoutube" type="checkbox"><span data-i18n="titelqualityyoutube"></span></label>
 				<label class="checkbox"><span data-i18n="titelmaxqualityyoutube"></span>
 				<select id="youtubequality">
-					<option value="highres">highres</option>
+					<option value="highres">2160p (4k)</option>
+					<option value="hd1440">1440p</option>
 					<option value="hd1080">1080p</option>
 					<option value="hd720">720p</option>
 					<option value="large">480p</option>
@@ -391,13 +424,23 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>
 				<div>
 				<br><br>
-				<video id="beeld" controls width="640" height="360" preload="none" poster="http://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360.jpg">
-					<source src="http://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.mp4" type="video/mp4">
-					<source src="http://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.ogv" type="video/ogv">
+				<video id="beeld" controls width="640" height="360" crossOrigin="anonymous" preload="none" poster="https://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360.jpg">
+					<source src="https://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.mp4" type="video/mp4">
+					<source src="https://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.ogv" type="video/ogv">
 				</video>
 				<br><br><br><br>
 				</div>
 				</section>
+				<section id="sectionauroraplayerappbox">			
+				<div id="auroraplayerappbox">
+					<div id="apicon"><img id="auroraplayericon" src="images/aurora-player_32x32.png" width="32px" height="32px"></div>
+					<div id="apname"><span>Aurora Player</span></div>
+					<div id="aptllo"><span data-i18n="desauroraplayer"></span></div>
+					<div id="apnt"><span data-i18n="nothanks"></span></div>
+					<div id="apgetapp"><span data-i18n="downloadtheapp"></span></div>
+				</div>
+				</section>
+				<section>
 				<section>
 				<h3 data-i18n="titelambilight"></h3>
 				<div>
@@ -407,7 +450,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<div class="grey-text"><span data-i18n="titeloff"></span></div>
 				</div>
 				<div class="grey-text"><span data-i18n="titelvideosample"></span>: <span>Big Buck Bunny &copy; Copyright 2008 Blender Foundation.</span></div>
-				<a href="http://www.youtube.com/user/StefanvdLive?feature=totloptionpagechrome" target="blank"><span data-i18n="titelseeonline"></span></a><br><br>
+				<a href="http://www.youtube.com/user/StefanvdLive?feature=totloptionpagesafari" target="blank"><span data-i18n="titelseeonline"></span></a><br><br>
 				<label class="checkbox"><input id="ambilight" type="checkbox"><span data-i18n="desambilight"></span></label>
 				<div class="grey-text"><span data-i18n="titelsupportatmos"></span></div>					
 				<br>
@@ -418,7 +461,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					<br>
 					<div id="showwarningambilight" class="warningambilight">
 					<span class="warning" data-i18n="warning"></span><br><span data-i18n="warningtextambilight"></span>
-					<span><a href="http://www.turnoffthelights.com/browser/atmosphere-lighting.html" target="blank">Wiki Atmosphere Lighting and FAQ's</a>.</span>
+					<span><a href="http://www.turnoffthelights.com/browser/atmosphere-lighting.html" target="blank"><span data-i18n="titelwikiatmos"></span></a>.</span>
 					</div>
 					</label>
 				</div>
@@ -482,7 +525,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<label class="radio"><input id="noflash" type="radio" name="af" value="normal"><span data-i18n="desnoflash"></span></label>
 				<label class="radio"><input id="flash" type="radio" name="af" value="easy"><span data-i18n="desflash"></span> <span data-i18n="recflash" class="item"></span></label>
 				<label class="radio"><input id="hardflash" type="radio" name="af" value="hard"><span data-i18n="deshardflash"></span>&nbsp;<span class="superscript">BETA</span><br><a href="http://www.stefanvd.net/project/totlrecommends.htm" target="blank"><span data-i18n="installadblocker"></span></a></label>
-				<div class="grey-text"><span>Support: &lt;object&gt;, &lt;embed&gt;, &lt;applet&gt;, &lt;iframe&gt;.</span></div></div>
+				<div class="grey-text"><span data-i18n="flashembedobject"></span></div></div>
 				</section>
 				<section>
 				<h3 data-i18n="titelreader"></h3>
@@ -498,6 +541,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					<label class="radio"><input id="eyen" type="radio" name="eye" value="never"><span data-i18n="deseyen"></span></label>
 					<label class="radio"><input id="eyea" type="radio" name="eye" value="always"><span data-i18n="deseyea"></span></label>
 					<label class="radio"><input id="eyealist" type="radio" name="eye" value="alwayslist"><span data-i18n="deseyealist"></span></label>
+					<label class="radioline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="eyechecklistwhite" type="radio" name="eyechecklist" value="true"><span data-i18n="titeleyewhitelist"></span></label>&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="eyechecklistblack" type="radio" name="eyechecklist" value="black"><span data-i18n="titeleyeblacklist"></span></label>
 				  <table id="EyeWhitelist">
  				   <tr>
  				     <td><span data-i18n="titelwebsite"></span>:</td>
@@ -590,16 +634,31 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>			
 				<h3 data-i18n="titelupgrade"></h3>
 				<div>
-					<label class="checkbox"><span class="item">Ambient Aurea browser extension</span><br><span data-i18n="titeldownloadupgrade"></span></label>
+					<label class="checkbox"><span class="item">Finance Toolbar <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgradefinancetoolbar"></span></label>
+					<p>
+					<button id="fndownload" data-i18n="titeldownloadbutton"></button>
+					<span class="grey-text"><a href="http://www.stefanvd.net/project/financetoolbar.htm" target="blank">Finance Toolbar</a> <span data-i18n="desbrowserextension"></span></span>
+					</p>
+					<label class="checkbox"><span class="item">Proper Menubar <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgradepropermenubar"></span></label>
+					<p>
+					<button id="ppdownload" data-i18n="titeldownloadbutton"></button>
+					<span class="grey-text"><a href="http://www.stefanvd.net/project/propermenubar.htm" target="blank">Proper Menubar</a> <span data-i18n="desbrowserextension"></span></span>
+					</p>
+					<label class="checkbox"><span class="item">Zoom <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgradezoom"></span></label>
+					<p>
+					<button id="zodownload" data-i18n="titeldownloadbutton"></button>
+					<span class="grey-text"><a href="http://www.stefanvd.net/project/zoom.htm" target="blank">Zoom</a> <span data-i18n="desbrowserextension"></span></span>
+					</p>
+					<label class="checkbox"><span class="item">Ambient Aurea <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgrade"></span></label>
 					<p>
 					<button id="aadownload" data-i18n="titeldownloadbutton"></button>
-					<span class="grey-text"><span data-i18n="desproject"></span> <a href="http://www.stefanvd.net/project/ambientaurea.htm" target="blank">Ambient Aurea</a> <span data-i18n="desbrowserextension"></span>.</span>
+					<span class="grey-text"><a href="http://www.stefanvd.net/project/ambientaurea.htm" target="blank">Ambient Aurea</a> <span data-i18n="desbrowserextension"></span></span>
 					</p>
 					<br>
-					<label class="checkbox"><span class="item">Turn Off the Lights browser theme</span><br><span data-i18n="titeldownloadthemeupgrade"></span></label>
+					<label class="checkbox"><span class="item">Turn Off the Lights <span data-i18n="desbrowsertheme"></span></span><br><span data-i18n="titeldownloadthemeupgrade"></span></label>
 					<p>
 					<button id="themedownload" data-i18n="titeldownloadbutton"></button>
-					<span class="grey-text"><span data-i18n="desproject"></span> <a href="http://www.turnoffthelights.com" target="blank">Turn Off the Lights</a> <span data-i18n="desbrowsertheme"></span>.</span>
+					<span class="grey-text"><a href="http://www.turnoffthelights.com" target="blank">Turn Off the Lights</a> <span data-i18n="desbrowsertheme"></span></span>
 					</p>
 				</div>
 				</section>
@@ -629,7 +688,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelnighttheme"></h3>
 				<div>
 				<label class="checkbox"><input id="nighttheme" type="checkbox"><span data-i18n="desnighttheme"></span></label>
+				<label class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="lampandnightmode" type="checkbox"><span data-i18n="deslampandnightmode"></span></label>
 				<label class="checkbox"><input id="nightonly" type="checkbox"><span data-i18n="desnightonly"></span></label>
+				<label class="radioline"><input id="nightmodechecklistwhite" type="radio" name="nightmodechecklist" value="true"><span data-i18n="titelnightmodewhitelist"></span></label>&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="nightmodechecklistblack" type="radio" name="nightmodechecklist" value="black"><span data-i18n="titelnightmodeblacklist"></span></label>
 				  <table id="nightwhitelist">
  				   <tr>
  				     <td><span data-i18n="titelwebsite"></span>:</td>
@@ -641,7 +702,22 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				      <td valign="center"><button id="nightremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
 				    </tr>
 				  </table>
+				<label class="checkbox"><input id="nightactivetime" type="checkbox"><span data-i18n="desnightactivetime"></span></label>
+				  <div id="nmtime">
+				      <input id="nmbegintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="nmendtime" type="time" name="time"><button id="nmconfirmtime" data-i18n="desconfirmtime"></button>
+				  </div>
 				<label class="checkbox"><input id="nightenabletheme" type="checkbox"><span data-i18n="desnightenabletheme"></span></label>
+				<label class="checkbox"><input id="nighthover" type="checkbox"><span data-i18n="desnighthover"></span></label>
+				</div>
+				</section>			
+				<section>
+				<h3 data-i18n="titelnightmodeposition"></h3>
+				<div>
+					<label class="radio"><input id="nmtopleft" type="radio" name="nmpos" value="nmtop"><span data-i18n="nmtopleft"></span></label>
+					<label class="radio"><input id="nmtopright" type="radio" name="nmpos" value="nmbottom"><span data-i18n="nmtopright"></span></label>
+					<label class="radio"><input id="nmbottomright" type="radio" name="nmpos" value="nmleft"><span data-i18n="nmbottomright"></span></label>
+					<label class="radio"><input id="nmbottomleft" type="radio" name="nmpos" value="nmright"><span data-i18n="nmbottomleft"></span></label>
+					<label class="radio"><input id="nmcustom" type="radio" name="nmpos" value="nmcus"><span data-i18n="nmcustom"></span></label>
 				</div>
 				</section>
 			</div>

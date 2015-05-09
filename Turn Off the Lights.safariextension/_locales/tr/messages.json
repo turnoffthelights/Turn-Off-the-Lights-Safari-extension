@@ -8,8 +8,8 @@
     "description":"Arkaplan Resmi"
   },
   "shortcutalllights":{
-    "message":"bütün sekmelerde ışıkları açmak\/kapatmak için.",
-    "description":"bütün sekmelerde ışıkları açmak\/kapatmak için."
+    "message":"ışığı bütün sekmeler için aç\/kapa",
+    "description":"ışığı bütün sekmeler için aç\/kapa"
   },
   "lastchecked":{
     "message":"En son sürüm kontrolü",
@@ -32,8 +32,8 @@
     "description":"Gibi Bar"
   },
   "desmousespotlightt":{
-    "message":"Işıklar kapalıyken, karartılmış ekranda tıklamalar yapmana izin verir.",
-    "description":"Kararan ekran üzerinden ışıklar kapalı olduğunda tıklatın sağlar."
+    "message":"Ekran karardığında köprülere tıklamyı aktifleştir",
+    "description":"Ekran karardığında köprülere tıklamyı aktifleştir"
   },
   "desambilight4color":{
     "message":"Video etrafında seçilen 4 renk:",
@@ -56,16 +56,16 @@
     "description":"Göz koruması"
   },
   "titelcinemaontop":{
-    "message":"Sinema salonu modu: 'Işıkları Kapat' katmanını sadece pencerenin üstünde gösterir.",
-    "description":"Film sinema modu: pencerenin üst kısmında sadece 'ışıklar off' katman göstermek."
+    "message":"Sinema salonu modu: 'Işıkları Kapat' katmanını sadece pencerenin üstünde gösterir",
+    "description":"Sinema salonu modu: 'Işıkları Kapat' katmanını sadece pencerenin üstünde gösterir"
   },
   "desmousespotlightc":{
     "message":"Eğer ışıklar kapalıysa, seçtiğiniz alandaki nesneye odaklanabilirsiniz.",
     "description":"Işığı yanmıyorsa, bir öğe odaklanmasını bir alan seçebilirsiniz."
   },
   "titelrememberpage":{
-    "message":"Sayfayı hatırla",
-    "description":"Sayfa hatırla"
+    "message":"Hatırlatıcı sayfa",
+    "description":"Hatırlatıcı sayfa"
   },
   "desmousespotlighta":{
     "message":"Işık kapalıysa fare imlecinin etrafını aydınlat.",
@@ -100,8 +100,8 @@
     "description":"'Göz koruma' etkinleştirme otomatik olarak 'Otomatik Oynat' özelliği devre dışı."
   },
   "skipremember":{
-    "message":"Atla ve ayarlar sayfasını aç",
-    "description":"Bunu atlayabilir ve şimdi Seçenek sayfa açmak"
+    "message":"Bunu geç ve seçenekler sayfasını aç",
+    "description":"Bunu geç ve seçenekler sayfasını aç"
   },
   "optiontimesaved":{
     "message":"Süre başarıyla kaydedild!",
@@ -144,16 +144,16 @@
     "description":"Boşluk evren"
   },
   "deseastereggs":{
-    "message":"Bu eklentinin bonusu.",
-    "description":"Bu uzantı bir bonus."
+    "message":"T tuşuna basmak karanlık kısma bir tiyatro perdesi ekler",
+    "description":"T tuşuna basmak karanlık kısma bir tiyatro perdesi ekler"
   },
   "settings":{
     "message":"Ayarlar",
     "description":"Ayarlar"
   },
   "desspotlightradius":{
-    "message":"arama ampulünün çapıdır.",
-    "description":"Arama lamba çapı olduğunu."
+    "message":"Spot lamba çapı:",
+    "description":"Spot lamba çapı:"
   },
   "titelsync":{
     "message":"Eşitle",
@@ -212,24 +212,24 @@
     "description":"Aşağıdaki kutuda parolanızı girin:"
   },
   "titelblurradius":{
-    "message":"Bulanıklığın etki alanı",
-    "description":"Bulanıklık yarıçapı"
+    "message":"Bulanıklık yarıçapı:",
+    "description":"Bulanıklık yarıçapı:"
   },
   "version":{
     "message":"Sürüm",
     "description":"Sürüm numarası metni"
   },
   "shortcutdark":{
-    "message":"ekranı karartmak (opaklığı arttır) için.",
-    "description":"(artış opaklık) ekran koyulaştırmak için."
+    "message":"ekranı karartmak(şeffaflığı artırır) için",
+    "description":"ekranı karartmak(şeffaflığı artırır) için"
   },
   "dessharebutton":{
     "message":"Bu video için YouTube paylaşım butonlarını göster.",
     "description":"Bu video için YouTube Paylaş düğmelerini göster."
   },
   "shortcutbright":{
-    "message":"ekranı aydınlatmak (opaklığı azalt) için.",
-    "description":"(azalış opaklık) ekran aydınlatmak için."
+    "message":"ekranı aydınlatmak(şeffaflığı artırır) için",
+    "description":"ekranı aydınlatmak(şeffaflığı artırır) için"
   },
   "titelalllightsoff":{
     "message":"Bütün açık sekmeler",
@@ -268,8 +268,8 @@
     "description":"Bu YouTube Video Ekle düğmesini göster."
   },
   "shortcuteyeprotection":{
-    "message":"Göz Koruması özelliğini açmak\/kapatmak için.",
-    "description":"göz koruması özelliğini etkinleştirmek\/devre dışı bırakmak için."
+    "message":"göz koruma özelliğini etkinleştirmek\/devre dışı bırakmak için",
+    "description":"göz koruma özelliğini etkinleştirmek\/devre dışı bırakmak için"
   },
   "titelfadein":{
     "message":"Aydınlat",
@@ -296,8 +296,8 @@
     "description":"Bu video odaklanmak"
   },
   "warningtextambilight":{
-    "message":"Eğer video verileri sitenin güvenlik kuralları nedeniyle alınamıyorsa, onun yerine seçilmiş renk gösterilecektir.",
-    "description":"Bir sitenin güvenlik kuralı nedeniyle video verileri alamıyor, sonra o seçilen düz rengi yerine gösterecektir."
+    "message":"Sitenin güvenliğinden dolayı video verisini almak devre dışı olduğu zaman, seçilen koyu renk kullanılacak.",
+    "description":"Sitenin güvenliğinden dolayı video verisini almak devre dışı olduğu zaman, seçilen koyu renk kullanılacak."
   },
   "desdynamiccloud":{
     "message":"Animasyonlu Bulutlar",
@@ -320,8 +320,8 @@
     "description":"Sayfanın Üstü"
   },
   "titelspreadradius":{
-    "message":"Yayılma yarıçapı",
-    "description":"Spread yarıçapı"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
     "message":"Herhangi bir Reklam Engelleyici eklentisiyle kullan.",
@@ -408,8 +408,8 @@
     "description":"Video renk al."
   },
   "showremember":{
-    "message":"Ayarlar sayfasını açtığımda hatırlatma penceresini gösterme.",
-    "description":"Bu unutmayın sayfa seçeneği sayfayı açtığınızda yeniden göstermiyor."
+    "message":"Seçenekler kısmını açtığım zaman hatırlatma sayfasını tekrar gösterme",
+    "description":"Seçenekler kısmını açtığım zaman hatırlatma sayfasını tekrar gösterme"
   },
   "donatepromotext":{
     "message":"Yapabileceğiniz her türlü miktar bağışı, memnuniyetle karşılarım!",
@@ -424,8 +424,8 @@
     "description":"Yağmur damlaları"
   },
   "desalllightsoff":{
-    "message":"Bu özellik açıkken ampul butonuna tıklamak bütün sekmelerde ışıkları kapatıp açacaktır.",
-    "description":"Bu seçenek etkinleştirildiğinde lamba düğmesi tüm açık tabs ışıkları açma geçiş yapılır."
+    "message":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak\/kapatacak",
+    "description":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak\/kapatacak"
   },
   "optionecosaversaved":{
     "message":"Saniye başarıyla kaydedildi!",
@@ -436,20 +436,20 @@
     "description":"Bulanıklık seviyesi çubuğu"
   },
   "deseyen":{
-    "message":"Normal kullanım (lamba simgesine tıkladığınızda sayfa kararır).",
-    "description":"Normal kullanım (ışıklar sönünce tıklattığınızda lambası simgesine)."
+    "message":"Normal kullanım (lamba simgesine tıkladığınızda ışıklar kapanır)",
+    "description":"Normal kullanım (lamba simgesine tıkladığınızda ışıklar kapanır)"
   },
   "enjoyshare":{
     "message":"Bu eklenti hoşunuza gittiyse, kullanmaktan zevk alacak başkalarıyla da paylaşın.",
     "description":"Bu uzantı zevk ve takdir edecek düşünen başkaları ile paylaşmak."
   },
   "shortcuttotl":{
-    "message":"ışıkları kapatıp açmak için.",
-    "description":"Işıklar açık\/kapalı geçiş yapmak için."
+    "message":"ışıkları açmak\/kapatmak için",
+    "description":"ışıkları açmak\/kapatmak için"
   },
   "deseyea":{
-    "message":"Yeni bir sayfa açıldığında otomatik olarak arkaplanı karart.",
-    "description":"Otomatik olarak arka planda sayfa açarken dim."
+    "message":"Yeni bir sayfa açıldığı zaman, arka planı otomatik olarak karart",
+    "description":"Yeni bir sayfa açıldığı zaman, arka planı otomatik olarak karart"
   },
   "basicsettings":{
     "message":"Temeller",
@@ -472,8 +472,8 @@
     "description":"TOtL hoş geldiniz Kılavuzu"
   },
   "deseyealist":{
-    "message":"Şu sayfaları açarken otomatik olarak arkaplanı karart:",
-    "description":"Otomatik olarak arka planda aşağıdaki sayfalar açarken dim:"
+    "message":"Aşağıdaki site(ler)de arka planı otomatik olarak karart:",
+    "description":"Aşağıdaki site(ler)de arka planı otomatik olarak karart:"
   },
   "titellikebutton":{
     "message":"Beğen & Beğenme Butonları",
@@ -484,8 +484,8 @@
     "description":"PageAction simgesini gizle"
   },
   "friendlyremember":{
-    "message":"Dostça Hatırla...",
-    "description":"Dostu hatırlıyorum..."
+    "message":"Dostane Hatırlatma...",
+    "description":"Dostane Hatırlatma..."
   },
   "desfadein":{
     "message":"Kararma efektini göster.",
@@ -496,8 +496,8 @@
     "description":"Uyarı!"
   },
   "deseyetimesaver":{
-    "message":"Bir sayfada belirli bir süre boyunca hiçbir şey yapılmadan beklendiğinde sayfa otomatik olarak kararacaktır.",
-    "description":"Ne zaman bir sayfa etkin değil (hiçbir fare veya klavye girişi) aşağıda belirtilen süre için sayfa otomatik olarak kararacak."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"Öneriler",
@@ -536,8 +536,8 @@
     "description":"Balık Tank"
   },
   "longdonatetext":{
-    "message":"Bu tarayıcı eklentisini hayatta tutmam için bağış yaparsanız çok memnun olurum. 1$ ya da 100$ olması fark etmez, her türlü makbule geçer!",
-    "description":"Eğer sen-ebilmek bağışlamak benim diğer yeni kullanıcılar için bu tarayıcı uzantısı yaşatmak için ben gerçekten takdir ediyorum. $1 $ Ya da $100 dolar olsun, destek son derece beğeni topluyor!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"URL filtresini atlayarak bütün Flash nesneleri göster. Bu, bazı videoların görüntülenme sorununu düzeltecektir ama aynı zamanda reklamları da gösterecektir.",
@@ -556,12 +556,12 @@
     "description":"Göstermek ve video başlığı rengini tersine çevirin."
   },
   "desrememberpage":{
-    "message":"Bu seçenek etkinse, hatırlatma sayfası açılmaz.",
-    "description":"Bu seçenek etkinleştirilirse, o-ecek göstermek sen değil unutmayın sayfa."
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"Video dışında tüm sayfa kararır ve videoyu sinemadaymış gibi izleyebilirsiniz.",
-    "description":"Sinemada sanki videoyu izleyebilmek için tüm sayfa için karanlık, solma."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"İzlenme Sayısı",
@@ -576,12 +576,12 @@
     "description":"Otomatik YouTube video kalitesini ayarlayın."
   },
   "shortcutopacity":{
-    "message":"karanlık (saydamlık) değerini geri yüklemek için.",
-    "description":"ayarlama ayarlama karanlığa (opacity) geri yüklemek için."
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
-    "message":"Daha düşük bir değer seçilirse gölge keskinleşecektir. Değer arttıkça bulanıklaşacaktır.",
-    "description":"Seti daha düşük bir değer gölge keskin olması durumunda, sayı, daha bulanık olacak."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Ekle Butonu",
@@ -716,8 +716,8 @@
     "description":"Turn Off the Lights ayarlarını sıfırla"
   },
   "desautoplaydelay":{
-    "message":"Arka ışığı video durduktan ",
-    "description":"Arka ışığı video durduktan "
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"saniye sonra aydınlat",
@@ -728,8 +728,8 @@
     "description":"Kamera Hareketi"
   },
   "desmotion":{
-    "message":"Elinizi aşağı çekme hareketiyle sayfayı karartmak için Kamera Hareketi'ni etkinleştirin.",
-    "description":"Kamera Hareketi"
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Kendiniz deneyin!",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"Elinizi yukarıdan aşağı doğru hareket ettirin",
-    "description":"Elinizi yukarıdan aşağı doğru hareket ettirin"
+    "description":"Elinizi (veya bir nesneyi) yukarıdan aşağı doğru hareket ettirin."
   },
   "step3description":{
-    "message":"Ardından siyah katman otomatik olarak aşağı kayacaktır.",
-    "description":"Ardından siyah katman otomatik olarak aşağı kayacaktır."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Denetleme listesi:",
@@ -776,12 +776,12 @@
     "description":"Doğrusal"
   },
   "titelcolora":{
-    "message":"Renk A",
-    "description":"Renk A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Renk B",
-    "description":"Renk B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Konuşma Tanıma",
@@ -856,8 +856,8 @@
     "description":"Bu tarayıcı bu özelliği henüz desteklemiyor. Bilgisayarınızdaki tarayıcının son sürüm olduğundan emin olun."
   },
   "titelsupportatmos":{
-    "message":"Sadece HTML5 <video> ve Youtube HTML5 destekler. Ve ekran kartınızdan GPU kullanır.",
-    "description":"Sadece HTML5 <video> ve Youtube HTML5 destekler. Ve ekran kartınızdan GPU kullanır."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"Daha fazla örneği çevrimiçi görün",
@@ -902,5 +902,157 @@
   "titelwikiatmos":{
     "message":"Atmosfer Aydınlatma özelliği hakkında bilgi",
     "description":"Atmosfer Aydınlatma özelliği hakkında bilgi"
+  },
+  "sharemenusharetitle":{
+    "message":"Bunu paylaş",
+    "description":"Bunu paylaş"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Hoşgeldiniz Kılavuzu",
+    "description":"Hoşgeldiniz Kılavuzu"
+  },
+  "sharemenutellafriend":{
+    "message":"Bir Arkadaşına Bahset",
+    "description":"Bir Arkadaşına Bahset"
+  },
+  "sharemenusendatweet":{
+    "message":"Bir Tweet Gönder",
+    "description":"Bir Tweet Gönder"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Facebook'ta Paylaş",
+    "description":"Facebook'ta Paylaş"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Google+'ta Paylaş",
+    "description":"Google+'ta Paylaş"
+  },
+  "sharemenuratetitle":{
+    "message":"Eklentiyi Derecelendir",
+    "description":"Eklentiyi Derecelendir"
+  },
+  "sharemenudonatetitle":{
+    "message":"Geliştirici Desteği",
+    "description":"Geliştirici Desteği"
+  },
+  "titelautostop":{
+    "message":"Oto-Dur",
+    "description":"Oto-Dur"
+  },
+  "desautostop":{
+    "message":"Web sayfasını açtığımda otomatik olarak videoyu durdur.",
+    "description":"Web sayfasını açtığımda otomatik olarak videoyu durdur."
+  },
+  "areyouhappy":{
+    "message":"Turn Off the Lights sizi mutlu etti mi?",
+    "description":"Turn Off the Lights sizi mutlu etti mi?"
+  },
+  "tellothers":{
+    "message":"Size ayar yapma imkanı tanır",
+    "description":"Size ayar yapma imkanı tanır"
+  },
+  "nothanks":{
+    "message":"Hayır, teşekkürler",
+    "description":"Hayır, teşekkürler"
+  },
+  "writeareview":{
+    "message":"Bir Yorum Yaz",
+    "description":"Bir Yorum Yaz"
+  },
+  "desauroraplayer":{
+    "message":"Oynatıcı çevre aydınlatması da bilgisayarınız için kullanılabilir.",
+    "description":"Oynatıcı çevre aydınlatması da bilgisayarınız için kullanılabilir."
+  },
+  "downloadtheapp":{
+    "message":"Hemen uygulamayı indir",
+    "description":"Hemen uygulamayı indir"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Web içeriğini daha rahat okuyabilmek için zoom butonunu kullanabilirsiniz.",
+    "description":"Web içeriğini daha rahat okuyabilmek için zoom butonunu kullanabilirsiniz."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Google websitenize siyah menu çubuğunu geri ekleyin.",
+    "description":"Google websitenize siyah menu çubuğunu geri ekleyin."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Bu sana gerçek zamanlı borsa bilgileri gösterir.",
+    "description":"Bu sana gerçek zamanlı borsa bilgileri gösterir."
+  },
+  "titelnightmodeposition":{
+    "message":"Anahtar konumu",
+    "description":"Anahtar konumu"
+  },
+  "nmtopleft":{
+    "message":"Sol Üst",
+    "description":"Sol Üst"
+  },
+  "nmtopright":{
+    "message":"Sağ Üst",
+    "description":"Sağ Üst"
+  },
+  "nmbottomright":{
+    "message":"Sağ Alt",
+    "description":"Sağ Alt"
+  },
+  "nmbottomleft":{
+    "message":"Sol Alt",
+    "description":"Sol Alt"
+  },
+  "nmcustom":{
+    "message":"Tıklayıp basılı tutarak ekranınızda istediğiniz yere taşıyın.",
+    "description":"Tıklayıp basılı tutarak ekranınızda istediğiniz yere taşıyın."
+  },
+  "desnighthover":{
+    "message":"Web sayfasında saydam düğmeyi göster.",
+    "description":"Web sayfasında saydam düğmeyi göster."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Beyaz liste",
+    "description":"Beyaz liste"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Kara liste",
+    "description":"Kara liste"
+  },
+  "desautostoponly":{
+    "message":"Şu sitelerde; otomatik video durdurmayı etkinleştir.",
+    "description":"Şu sitelerde; otomatik video durdurmayı etkinleştir."
+  },
+  "titelautostopwhitelist":{
+    "message":"Beyaz liste",
+    "description":"Beyaz liste"
+  },
+  "titelautostopblacklist":{
+    "message":"Kara liste",
+    "description":"Kara liste"
+  },
+  "desnightactivetime":{
+    "message":"Şu zamanlar arasında anahtar görünür olacak:",
+    "description":"Şu zamanlar arasında anahtar görünür olacak:"
+  },
+  "deslampandnightmode":{
+    "message":"\"Gri Lamba\" düğmesini tıklayarak, \"Gece Modu\" seçeneği aktive edin.",
+    "description":"\"Gri Lamba\" düğmesini tıklayarak, \"Gece Modu\" seçeneği aktive edin."
+  },
+  "titeleyewhitelist":{
+    "message":"Beyaz liste",
+    "description":"Beyaz liste"
+  },
+  "titeleyeblacklist":{
+    "message":"Kara liste",
+    "description":"Kara liste"
+  },
+  "desspeech5command":{
+    "message":"Tarayıcı Lambası",
+    "description":"Tarayıcı Lambası"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

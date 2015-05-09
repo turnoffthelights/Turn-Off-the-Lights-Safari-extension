@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -33,7 +33,7 @@ if (window.top === window) {
 
 function $(id) { return document.getElementById(id); }
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, contextmenus = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosavertime = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null;
+var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, contextmenus = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosavertime = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, autostop = null, autostoponly = null, autostopDomains = null, autostopchecklistwhite = null, autostopchecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null;
 var settings;
 
 // Install on www.stefanvd.net
@@ -84,11 +84,32 @@ safari.self.addEventListener("message", function(e) {
 		nightonly = settings["nightonly"];
 		nightDomains = settings["nightDomains"];
 		nightenabletheme = settings["nightenabletheme"];
-		autoplaydelay = settings['autoplaydelay'];
-		autoplaydelaytime = settings['autoplaydelaytime'];
-		atmosvivid = settings['atmosvivid'];
-		autoplaychecklistwhite = settings['autoplaychecklistwhite'];
-		autoplaychecklistblack = settings['autoplaychecklistblack'];
+		autoplaydelay = settings["autoplaydelay"];
+		autoplaydelaytime = settings["autoplaydelaytime"];
+		atmosvivid = settings["atmosvivid"];
+		autoplaychecklistwhite = settings["autoplaychecklistwhite"];
+		autoplaychecklistblack = settings["autoplaychecklistblack"];
+		nighthover = settings["nighthover"];
+		nightactivetime = settings["nightactivetime"];
+		nmbegintime = settings["nmbegintime"];
+		nmendtime = settings["nmendtime"];
+		nightmodechecklistblack = settings["nightmodechecklistblack"];
+		nightmodechecklistwhite = settings["nightmodechecklistwhite"];
+		nmtopleft = settings["nmtopleft"];
+		nmtopright = settings["nmtopright"];
+		nmbottomright = settings["nmbottomright"];
+		nmbottomleft = settings["nmbottomleft"];
+		nmcustom = settings["nmcustom"];
+		nmcustomx = settings["nmcustomx"];if(!nmcustomx)nmcustomx = '25px';
+		nmcustomy = settings["nmcustomy"];if(!nmcustomy)nmcustomy = '25px';
+		lampandnightmode = settings["lampandnightmode"];
+		autostop = settings["autostop"];
+		autostoponly = settings["autostoponly"];
+		autostopDomains = settings["autostopDomains"];
+		autostopchecklistwhite = settings["autostopchecklistwhite"];
+		autostopchecklistblack = settings["autostopchecklistblack"];
+		eyechecklistwhite = settings["eyechecklistwhite"];
+		eyechecklistblack = settings["eyechecklistblack"];
 
 // Shortcutlight
 window.addEventListener('keydown', function(e) {
@@ -279,7 +300,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 							}
 							break;
 						default:
-							console.log("unknown event", data);
+							//console.log("unknown event", data);
 							break;
 					}
 				}
@@ -368,20 +389,81 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 
 var messagediv = $('ytCinemaMessage');
 if(messagediv) {}
-else {
+else {		
 		// injected code messaging
-		var bodytag = document.getElementsByTagName("body")[0], message = document.createElement("div");
+		var message = document.createElement("div");
+		var bt=document.getElementsByTagName("body");if(!bt.length)return;
 		message.setAttribute("id", "ytCinemaMessage");
 		message.style.display = "none";
-		bodytag.appendChild(message);
-		$(message.id).addEventListener(message.id, function () {
-			var eventData = $(message.id).innerText;
+		if(!bt.length)return;
+		bt[0].appendChild(message);
+		$(message.id).addEventListener(message.id, function (e) {
+			var eventData = $(message.id).textContent;
 			trigger(eventData);
-  		});
+  		}, false);
 }
 }
 
 } // option autoplay on end
+
+if(autostop == 'true'){
+
+if(autostoponly == 'true'){
+var currenturl = window.location.protocol + '//' + window.location.host;
+var stoprabbit = false;
+if(typeof autostopDomains == "string") {
+	autostopDomains = JSON.parse(autostopDomains);
+	var atbuf = [];
+	for(var domain in autostopDomains)
+		atbuf.push(domain);
+        atbuf.sort();
+		for(var i = 0; i < atbuf.length; i++){
+			if(autostopchecklistwhite == 'true'){
+				if(currenturl == atbuf[i]){autostopfunction();}
+			}
+			else if(autostopchecklistblack == 'true'){
+				if(currenturl == atbuf[i]){stoprabbit=true;}
+			}
+		}
+    }
+	if(autoplaychecklistblack == 'true'){
+		if(stoprabbit == false){autostopfunction();stoprabbit = false;}
+	}
+} else {autostopfunction();}
+
+// Observe a specific DOM element:
+if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+if(document.getElementById('movie_player')){ // from youtube website
+observeDOM( document.getElementById('content') ,function(){
+	autostopfunction();
+});
+}
+}
+
+function autostopvideo(video) {
+	video.pause();
+	video.oncanplay = null;
+	video.onplay = null;
+}
+	
+function autostopfunction(){
+    var ytps = document.querySelector('.ytp-button-pause');
+    if(ytps) { ytps.click();}
+	else {
+        var videos = document.querySelectorAll('video');
+        for (var i=0; i<videos.length; i++) {
+            video = videos[i];
+            if (video && video.readyState == 4)
+                autostopvideo(video);
+            else {
+                video.oncanplay = function() { autostopvideo(video); };
+                video.onplay = function() { autostopvideo(video); };
+            }
+        }
+    }
+}
+
+} // option autostop on end
 
 // easter eggs
 function gogotheater(){
@@ -434,16 +516,27 @@ if((ecosaver == 'true') && (eyen == 'true')){safari.self.tab.dispatchMessage("au
 
 if(eyea == 'true'){safari.self.tab.dispatchMessage("automatic","there");}
 else if(eyealist == 'true'){
-var currenturl = location.protocol + '//' + location.host;
+var currenturl = window.location.protocol + '//' + window.location.host;
+
+var eyerabbit = false;
 if(typeof excludedDomains == "string") {
 	excludedDomains = JSON.parse(excludedDomains);
-	var buf = [];
+	var eyebuf = [];
 	for(var domain in excludedDomains)
-		buf.push(domain);
-        buf.sort();
-	for(var i = 0; i < buf.length; i++)
-		if(currenturl == buf[i]){safari.self.tab.dispatchMessage("automatic","there");}
+		eyebuf.push(domain);
+        eyebuf.sort();
+		for(var i = 0; i < eyebuf.length; i++){
+			if(eyechecklistwhite == 'true'){
+				if(currenturl == eyebuf[i]){safari.self.tab.dispatchMessage("automatic","there");}
+			}
+			else if(eyechecklistblack == 'true'){
+				if(currenturl == eyebuf[i]){eyerabbit=true;}
+			}
+		}
     }
+	if(eyechecklistblack == 'true'){
+		if(eyerabbit == false){safari.self.tab.dispatchMessage("automatic","there");eyerabbit = false;}
+	}
 }
 }
 ///////
@@ -516,9 +609,6 @@ function ambilightfunction(){
 		/* temp fix watch7-video */
 		var watch7video = $('watch7-video');
 		if(watch7video)$('watch7-video').style.zIndex = 'auto';
-	
-		var playerapi = $('player-api');
-		if(playerapi){$('player-api').style.overflow = 'visible';$('player-api').style.zIndex = 1001;$('player-api').style.visibility = 'visible';$('player-api').style.position = 'relative';}
 
 		div = document.getElementsByTagName('div'); 
 		for(var i = 0; i < div.length; i++ )
@@ -765,7 +855,7 @@ var colorlamp4Y = (sourceHeight * 50) /100;
 	context.drawImage(totlshowtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
 	context.drawImage(totlshowtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
 	context.drawImage(totlshowtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
-console.log("klaar??!");
+
 try{
 	var imageData = context.getImageData(0, 0, 1, 1);
 	var data = imageData.data;
@@ -891,86 +981,101 @@ var oldbackground = document.body.style.background;
 // gogo night mode
 function gogonightmode(){
     if (sun == true) {
-        sun = false; isitdark = true;
-        if ($("stefanvdnighti")) {
-            $("stefanvdnighti").setAttribute("id", "stefanvdnightin"); // change day background button
-        }
-        document.body.style.backgroundColor = "black";
-        document.body.style.background = "black";
+			sun = false; isitdark = true;
+			if ($("stefanvdnighti")) {
+				$("stefanvdnighti").setAttribute("id", "stefanvdnightin"); // change day background button
+			}
+			if ($("stefanvdnightthemecheckbox")){$("stefanvdnightthemecheckbox").checked = true;}
+			
+			document.body.style.backgroundColor = "black";
+			document.body.style.background = "black";
 
-		if (window.location.href.match("^http(|s)://([a-z.]*).google.[a-z.]*/")){
-		var gb = document.querySelectorAll('div.gb_gb');
-		for(var i = 0; i < gb.length; i++ ){gb[i].style.background = "black";} //#f1f1f1
-		var gbhb = document.querySelectorAll('div.gb_hb');
-		for(var i = 0; i < gbhb.length; i++ ){gbhb[i].style.background = "black";} //#f1f1f1
-		var gbib = document.querySelectorAll('div.gb_ib');
-		for(var i = 0; i < gbib.length; i++ ){gbib[i].style.background = "black";} //#f1f1f1
-		var fbar = document.querySelectorAll('div.fbar');
-		for(var i = 0; i < fbar.length; i++ ){fbar[i].style.background = "black";} //#f2f2f2
-		if($("appbar")){$("appbar").style.background = "black";} //#fff
-		if($("hdtb")){$("hdtb").style.background = "black";} //#fff
-		if($("hdtbSum")){$("hdtbSum").style.background = "black";} //#fff
-		if($("hdtbMenus")){$("hdtbMenus").style.background = "black";} //#fff
-		}
-		else if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-		if($("logo")){$("logo").style.cssText = "-webkit-filter: grayscale(100%) brightness(100%) contrast(100%);";}
-		if($("watch7-action-buttons")){$("watch7-action-buttons").style.cssText = "-webkit-filter: grayscale(0%) brightness(100%) contrast(0%);";}
-		if($("watch7-content")){$("watch7-content").style.background = "black";} //#fff
-		if($("yt-masthead-container")){$("yt-masthead-container").style.background = "black";} //#f1f1f1
-		if($("watch7-sidebar")){$("watch7-sidebar").style.background = "black";} //#fff
-		if($("watch7-headline")){$("watch7-headline").style.background = "black";} //#fff
-		if($("watch7-user-header")){$("watch7-user-header").style.background = "black";} //#fff
-		if($("footer-container")){$("footer-container").style.background = "black";} //#f2f2f2
-		if($("c4-shelves-container")){$("c4-shelves-container").style.background = "black";} //#fff
-		if($("watch7-creator-bar")){$("watch7-creator-bar").style.background = "black";} //#fff
-		if($("non-appbar-vm-video-actions-bar")){$("non-appbar-vm-video-actions-bar").style.background = "black";} //#fff
-		if($("masthead-search-terms")){$("masthead-search-terms").style.background = "black";} //#fff
-		if($("watch7-action-panel-footer")){$("watch7-action-panel-footer").style.background = "black";} //#fff
-		var ytbranddiv = document.querySelectorAll('div.branded-page-v2-primary-col');
-		for(var i = 0; i < ytbranddiv.length; i++ ){ytbranddiv[i].style.background = "black";} //#fff
-		var ytheaddiv = document.querySelectorAll('div.secondary-header-contents');
-		for(var i = 0; i < ytheaddiv.length; i++ ){ytheaddiv[i].style.background = "black";} //#fff
-		var ytmastersearchtermdiv = document.querySelectorAll('div.masthead-search-terms-border');
-		for(var i = 0; i < ytmastersearchtermdiv.length; i++ ){ytmastersearchtermdiv[i].style.border = "1px solid #414141";} //#414141
-		var ytuixbuttondiv = document.querySelectorAll('button.yt-uix-button-default');
-		for(var i = 0; i < ytuixbuttondiv.length; i++ ){ytuixbuttondiv[i].style.background = "#333333";ytuixbuttondiv[i].style.color = "#fff";ytuixbuttondiv[i].style.borderColor = "#5E5E5E";}
-		var ytuixbuttondiv = document.querySelectorAll('a.yt-uix-button-default');
-		for(var i = 0; i < ytuixbuttondiv.length; i++ ){ytuixbuttondiv[i].style.background = "#333333";ytuixbuttondiv[i].style.color = "#fff";ytuixbuttondiv[i].style.borderColor = "#5E5E5E";}
-		var ytuploadlidiv = document.querySelectorAll('li.vm-video-item');
-		for(var i = 0; i < ytuploadlidiv.length; i++ ){ytuploadlidiv[i].style.background = "black";}
-		var ytuploadmetrixdiv = document.querySelectorAll('div.vm-video-metrics');
-		for(var i = 0; i < ytuploadmetrixdiv.length; i++ ){ytuploadmetrixdiv[i].style.backgroundImage = "linear-gradient(to right,#000000 0,#000 11px)";}
-		var ytmetadatadiv = document.querySelectorAll('button.metadata-inline');
-		for(var i = 0; i < ytmetadatadiv.length; i++ ){ytmetadatadiv[i].style.background = "black";}
-		if($("watch7-container")){$("watch7-container").style.background = "black";} //#fff
-		if($("masthead-appbar")){$("masthead-appbar").style.background = "black";} //#fff
-		if($("gh-activityfeed")){$("gh-activityfeed").style.background = "black";} //#fff
-		if($("appbar-guide-menu")){$("appbar-guide-menu").style.background = "black";} //#fff
-		if($("gh-overviewtab")){$("gh-overviewtab").style.background = "black";} //#fff
-		if($("c4-primary-header-contents")){$("c4-primary-header-contents").style.background = "black";} //#fff
-		if($("channel-subheader")){$("channel-subheader").style.background = "black";} //#fff
-		if($("eow-title")){$("eow-title").style.color = "#7C7C7C";}
-		var ytcard = document.querySelectorAll('.yt-card');
-		for(var i = 0; i < ytcard.length; i++ ){ytcard[i].style.background = "black";}
-		// update 11 may 2014
-		var ytguideitem = document.querySelectorAll('a.guide-item');
-		for(var i = 0; i < ytguideitem.length; i++ ){ytguideitem[i].style.color = "#999";}
-		var ytuiellipsis = document.querySelectorAll('a.yt-ui-ellipsis');
-		for(var i = 0; i < ytuiellipsis.length; i++ ){ytuiellipsis[i].style.background = "black";}
-		var ytnbc = document.querySelectorAll('div.nbc');
-		for(var i = 0; i < ytnbc.length; i++ ){ytnbc[i].style.backgroundColor = "black";}
-		if ($("watch-description-clip")) { $("watch-description-clip").style.color = "#999"; }
-		if ($("masthead-expanded-container")) { $("masthead-expanded-container").style.background = "black"; }
-		// update 12 june 2014
-		var ytselectedguideitem = document.querySelectorAll('a.guide-item-selected');
-		for(var i = 0; i < ytselectedguideitem.length; i++ ){ytselectedguideitem[i].style.color = "#999";}
-		if ($("masthead-search-term")) { $("masthead-search-term").style.color = "white"; }
-		var ytuiellipsisdv = document.querySelectorAll('div.yt-ui-ellipsis');
-		for(var i = 0; i < ytuiellipsisdv.length; i++ ){ytuiellipsisdv[i].style.background = "black";}
-		var ytgssbmtable = document.querySelectorAll('table.gssb_m');
-		for(var i = 0; i < ytgssbmtable.length; i++ ){ytgssbmtable[i].style.background = "black";ytgssbmtable[i].style.color = "white";}
-
-		safari.self.tab.dispatchMessage("adddarkyoutube","there");
+			if (window.location.href.match("^http(|s)://([a-z.]*).google.[a-z.]*/")){
+			var gb = document.querySelectorAll('div.gb_gb');
+			for(var i = 0; i < gb.length; i++ ){gb[i].style.background = "black";} //#f1f1f1
+			var gbhb = document.querySelectorAll('div.gb_hb');
+			for(var i = 0; i < gbhb.length; i++ ){gbhb[i].style.background = "black";} //#f1f1f1
+			var gbib = document.querySelectorAll('div.gb_ib');
+			for(var i = 0; i < gbib.length; i++ ){gbib[i].style.background = "black";} //#f1f1f1
+			var fbar = document.querySelectorAll('div.fbar');
+			for(var i = 0; i < fbar.length; i++ ){fbar[i].style.background = "black";} //#f2f2f2
+			if($("appbar")){$("appbar").style.background = "black";} //#fff
+			if($("hdtb")){$("hdtb").style.background = "black";} //#fff
+			if($("hdtbSum")){$("hdtbSum").style.background = "black";} //#fff
+			if($("hdtbMenus")){$("hdtbMenus").style.background = "black";} //#fff
+			var gbvb = document.querySelectorAll('div.gb_Vb');
+			for(var i = 0; i < gbvb.length; i++ ){gbvb[i].style.background = "black";} //#f1f1f1
+			if($("fbar")){$("fbar").style.background = "black";} //#f2f2f2
+			}
+			else if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+			if($("logo-container")){$("logo-container").style.cssText = "-webkit-filter: grayscale(100%) brightness(100%) contrast(100%);";}
+			if($("watch7-action-buttons")){$("watch7-action-buttons").style.cssText = "-webkit-filter: grayscale(0%) brightness(100%) contrast(0%);";}
+			if($("watch7-content")){$("watch7-content").style.background = "black";} //#fff
+			if($("yt-masthead-container")){$("yt-masthead-container").style.background = "black";} //#f1f1f1
+			if($("watch7-sidebar")){$("watch7-sidebar").style.background = "black";} //#fff
+			if($("watch7-headline")){$("watch7-headline").style.background = "black";} //#fff
+			if($("watch7-user-header")){$("watch7-user-header").style.background = "black";} //#fff
+			if($("footer-container")){$("footer-container").style.background = "black";} //#f2f2f2
+			if($("c4-shelves-container")){$("c4-shelves-container").style.background = "black";} //#fff
+			if($("watch7-creator-bar")){$("watch7-creator-bar").style.background = "black";} //#fff
+			if($("non-appbar-vm-video-actions-bar")){$("non-appbar-vm-video-actions-bar").style.background = "black";} //#fff
+			if($("masthead-search-terms")){$("masthead-search-terms").style.background = "black";} //#fff
+			if($("watch7-action-panel-footer")){$("watch7-action-panel-footer").style.background = "black";} //#fff
+			var ytbranddiv = document.querySelectorAll('div.branded-page-v2-primary-col');
+			for(var i = 0; i < ytbranddiv.length; i++ ){ytbranddiv[i].style.background = "black";} //#fff
+			var ytheaddiv = document.querySelectorAll('div.secondary-header-contents');
+			for(var i = 0; i < ytheaddiv.length; i++ ){ytheaddiv[i].style.background = "black";} //#fff
+			var ytmastersearchtermdiv = document.querySelectorAll('div.masthead-search-terms-border');
+			for(var i = 0; i < ytmastersearchtermdiv.length; i++ ){ytmastersearchtermdiv[i].style.border = "1px solid #414141";} //#414141
+			var ytuixbuttondiv = document.querySelectorAll('button.yt-uix-button-default');
+			for(var i = 0; i < ytuixbuttondiv.length; i++ ){ytuixbuttondiv[i].style.background = "#333333";ytuixbuttondiv[i].style.color = "#fff";ytuixbuttondiv[i].style.borderColor = "#5E5E5E";}
+			var ytuixadiv = document.querySelectorAll('a.yt-uix-button-default');
+			for(var i = 0; i < ytuixadiv.length; i++ ){ytuixadiv[i].style.background = "#333333";ytuixadiv[i].style.color = "#fff";ytuixadiv[i].style.borderColor = "#5E5E5E";}
+			var ytuploadlidiv = document.querySelectorAll('li.vm-video-item');
+			for(var i = 0; i < ytuploadlidiv.length; i++ ){ytuploadlidiv[i].style.background = "black";}
+			var ytuploadmetrixdiv = document.querySelectorAll('div.vm-video-metrics');
+			for(var i = 0; i < ytuploadmetrixdiv.length; i++ ){ytuploadmetrixdiv[i].style.backgroundImage = "linear-gradient(to right,#000000 0,#000 11px)";}
+			var ytmetadatadiv = document.querySelectorAll('button.metadata-inline');
+			for(var i = 0; i < ytmetadatadiv.length; i++ ){ytmetadatadiv[i].style.background = "black";}
+			if($("watch7-container")){$("watch7-container").style.background = "black";} //#fff
+			if($("masthead-appbar")){$("masthead-appbar").style.background = "black";} //#fff
+			if($("gh-activityfeed")){$("gh-activityfeed").style.background = "black";} //#fff
+			if($("appbar-guide-menu")){$("appbar-guide-menu").style.background = "black";} //#fff
+			if($("gh-overviewtab")){$("gh-overviewtab").style.background = "black";} //#fff
+			if($("c4-primary-header-contents")){$("c4-primary-header-contents").style.background = "black";} //#fff
+			if($("channel-subheader")){$("channel-subheader").style.background = "black";} //#fff
+			if($("eow-title")){$("eow-title").style.color = "#7C7C7C";}
+			var ytcard = document.querySelectorAll('.yt-card');
+			for(var i = 0; i < ytcard.length; i++ ){ytcard[i].style.background = "black"; ytcard[i].style.color = "#7C7C7C"; }
+			// update 11 may 2014
+			var ytguideitem = document.querySelectorAll('a.guide-item');
+			for(var i = 0; i < ytguideitem.length; i++ ){ytguideitem[i].style.color = "#999";}
+			var ytuiellipsis = document.querySelectorAll('a.yt-ui-ellipsis');
+			for(var i = 0; i < ytuiellipsis.length; i++ ){ytuiellipsis[i].style.background = "black";}
+			var ytnbc = document.querySelectorAll('div.nbc');
+			for(var i = 0; i < ytnbc.length; i++ ){ytnbc[i].style.backgroundColor = "black";}
+			if ($("watch-description-clip")) { $("watch-description-clip").style.color = "#999"; }
+			if ($("masthead-expanded-container")) { $("masthead-expanded-container").style.background = "black"; }
+			// update 12 june 2014
+			var ytselectedguideitem = document.querySelectorAll('a.guide-item-selected');
+			for(var i = 0; i < ytselectedguideitem.length; i++ ){ytselectedguideitem[i].style.color = "#999";}
+			if ($("masthead-search-term")) { $("masthead-search-term").style.color = "white"; }
+			var ytuiellipsisdv = document.querySelectorAll('div.yt-ui-ellipsis');
+			for(var i = 0; i < ytuiellipsisdv.length; i++ ){ytuiellipsisdv[i].style.background = "black";}
+			var ytgssbmtable = document.querySelectorAll('table.gssb_m');
+			for(var i = 0; i < ytgssbmtable.length; i++ ){ytgssbmtable[i].style.background = "black";ytgssbmtable[i].style.color = "white";}
+			var ytdivytuixexpander = document.querySelectorAll('div.yt-uix-expander-ellipsis');
+			for(var i = 0; i < ytdivytuixexpander.length; i++ ){ytdivytuixexpander[i].style.background = "black";}
+			// update 3 april 2015
+			var ytdivallcomments = document.querySelectorAll('div.all-comments');
+			for(var i = 0; i < ytdivallcomments.length; i++ ){ytdivallcomments[i].style.background = "black";}
+			var ytbtnuixdiv = document.querySelectorAll('button.yt-uix-button');
+			for(var i = 0; i < ytbtnuixdiv.length; i++ ){ytbtnuixdiv[i].style.background = "#333333";ytbtnuixdiv[i].style.color = "#fff";}
+			// update 16 april 2015
+			var ytdivcomments = document.querySelectorAll('div.comments');
+			for(var i = 0; i < ytdivcomments.length; i++ ){ytdivcomments[i].style.color = "#999";}
+			
+			safari.self.tab.dispatchMessage("adddarkyoutube","there");
 }
 //-----
     } else {
@@ -995,12 +1100,15 @@ function gogonightmode(){
             if ($("hdtb")) { $("hdtb").style.background = "#fff"; } //#fff
             if ($("hdtbSum")) { $("hdtbSum").style.background = "#fff"; } //#fff
             if ($("hdtbMenus")) { $("hdtbMenus").style.background = "#fff"; } //#fff
+			var gbvb = document.querySelectorAll('div.gb_Vb');
+			for(var i = 0; i < gbvb.length; i++ ){gbvb[i].style.background = "#f1f1f1";} //#f1f1f1
+			if($("fbar")){$("fbar").style.background = "#f2f2f2";} //#f2f2f2
         }
- else if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)) {
-            if ($("logo")) { $("logo").style.cssText = ""; }
+        else if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)) {
+            if ($("logo-container")) { $("logo-container").style.cssText = ""; }
             if ($("watch7-action-buttons")) { $("watch7-action-buttons").style.cssText = ""; }
             if ($("watch7-content")) { $("watch7-content").style.background = "#fff"; } //#fff
-            if ($("yt-masthead-container")) { $("yt-masthead-container").style.background = "#f1f1f1"; } //#f1f1f1
+            if ($("yt-masthead-container")) { $("yt-masthead-container").style.background = "white"; } //#f1f1f1
             if ($("watch7-sidebar")) { $("watch7-sidebar").style.background = "#fff"; } //#fff
             if ($("watch7-headline")) { $("watch7-headline").style.background = "#fff"; } //#fff
             if ($("watch7-user-header")) { $("watch7-user-header").style.background = "#fff"; } //#fff
@@ -1018,8 +1126,8 @@ function gogonightmode(){
             for (var i = 0; i < ytmastersearchtermdiv.length; i++) { ytmastersearchtermdiv[i].style.border = "1px solid #b9b9b9"; } //#b9b9b9
             var ytuixbuttondiv = document.querySelectorAll('button.yt-uix-button-default');
             for (var i = 0; i < ytuixbuttondiv.length; i++) { ytuixbuttondiv[i].style.background = "#f8f8f8"; ytuixbuttondiv[i].style.color = "#333"; ytuixbuttondiv[i].style.borderColor = "#d3d3d3"; }
-            var ytuixbuttondiv = document.querySelectorAll('a.yt-uix-button-default');
-            for (var i = 0; i < ytuixbuttondiv.length; i++) { ytuixbuttondiv[i].style.background = "#f8f8f8"; ytuixbuttondiv[i].style.color = "#333"; ytuixbuttondiv[i].style.borderColor = "#d3d3d3"; }
+            var ytuixadiv = document.querySelectorAll('a.yt-uix-button-default');
+            for (var i = 0; i < ytuixadiv.length; i++) { ytuixadiv[i].style.background = "#f8f8f8"; ytuixadiv[i].style.color = "#333"; ytuixadiv[i].style.borderColor = "#d3d3d3"; }
             var ytuploadlidiv = document.querySelectorAll('li.vm-video-item');
             for (var i = 0; i < ytuploadlidiv.length; i++) { ytuploadlidiv[i].style.background = "#fff"; }
             var ytuploadmetrixdiv = document.querySelectorAll('div.vm-video-metrics');
@@ -1035,7 +1143,7 @@ function gogonightmode(){
             if ($("channel-subheader")) { $("channel-subheader").style.background = "#fff"; } //#fff
             if ($("eow-title")) { $("eow-title").style.color = "black"; }
             var ytcard = document.querySelectorAll('.yt-card');
-            for (var i = 0; i < ytcard.length; i++) { ytcard[i].style.background = "#fff"; }
+            for (var i = 0; i < ytcard.length; i++) { ytcard[i].style.background = "#fff"; ytcard[i].style.color = "white"; }
 			// update 11 may 2014
 			var ytguideitem = document.querySelectorAll('a.guide-item');
 			for(var i = 0; i < ytguideitem.length; i++ ){ytguideitem[i].style.color = "#222";}
@@ -1053,6 +1161,16 @@ function gogonightmode(){
 			for(var i = 0; i < ytuiellipsisdv.length; i++ ){ytuiellipsisdv[i].style.background = "white";}
 			var ytgssbmtable = document.querySelectorAll('table.gssb_m');
 			for(var i = 0; i < ytgssbmtable.length; i++ ){ytgssbmtable[i].style.background = "white";ytgssbmtable[i].style.color = "black";}
+			var ytdivytuixexpander = document.querySelectorAll('div.yt-uix-expander-ellipsis');
+			for(var i = 0; i < ytdivytuixexpander.length; i++ ){ytdivytuixexpander[i].style.background = "white";}
+			// update 3 april 2015
+			var ytdivallcomments = document.querySelectorAll('div.all-comments');
+			for(var i = 0; i < ytdivallcomments.length; i++ ){ytdivallcomments[i].style.background = "white";}
+			var ytbtnuixdiv = document.querySelectorAll('button.yt-uix-button');
+			for(var i = 0; i < ytbtnuixdiv.length; i++ ){ytbtnuixdiv[i].style.background = "white";ytbtnuixdiv[i].style.color = "#777";}
+			// update 16 april 2015
+			var ytdivcomments = document.querySelectorAll('div.comments');
+			for(var i = 0; i < ytdivcomments.length; i++ ){ytdivcomments[i].style.color = "black";}
 
 			safari.self.tab.dispatchMessage("addnormalyoutube","there");
 		}
@@ -1064,10 +1182,22 @@ function nightfunction(){
 		var newnight = document.createElement('label');
 		newnight.setAttribute('id','stefanvdnighttheme');
 		document.body.appendChild(newnight);
+		if(nighthover == 'true'){
+			newnight.style.opacity = '.2';
+			var item = document.getElementById("stefanvdnighttheme");
+			item.addEventListener("mouseover", function(){item.style.opacity = "1"}, false);
+			item.addEventListener("mouseout", function(){item.style.opacity = ".2"}, false);
+		}
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+		if(nmcustom == 'true'){newnight.style.left = nmcustomx;newnight.style.bottom = nmcustomy;}
+		else if(nmtopleft == 'true'){newnight.style.left = "25px";newnight.style.top = "25px";}
+		else if(nmtopright == 'true'){newnight.style.right = "25px";newnight.style.top = "25px";}
+		else if(nmbottomright == 'true'){newnight.style.right = "25px";newnight.style.bottom = "25px";}
+		else if(nmbottomleft == 'true'){newnight.style.left = "25px";newnight.style.bottom = "25px";}
 
 		var newnightinput = document.createElement('input');
 		newnightinput.setAttribute('type','checkbox');
-		newnightinput.setAttribute('id','stefanvdnighttheme');
+		newnightinput.setAttribute('id','stefanvdnightthemecheckbox');
 		if (nightenabletheme == 'true'){ newnightinput.setAttribute('checked','true'); }
 		newnight.appendChild(newnightinput);
 
@@ -1093,55 +1223,141 @@ function nightfunction(){
 		var newnightspanblockspan = document.createElement('span');
 		newnightspanblockspan.setAttribute('id','stefanvdnighti');
 		newnightspanblockspan.setAttribute('class','turnoffthelightsdrag');
-		newnightspanblockspan.innerHTML = '&#x2261;';
+		newnightspanblockspan.textContent = '≡';
 		newnightspanblock.appendChild(newnightspanblockspan);
 
 		$("stefanvdnighttheme").addEventListener('change', function(e) { gogonightmode(); }, false);
 	}
 }
 
-// show all options the night swith CSS
+// tricker the switch
+function showswitchtricker(){
+		if(nightactivetime == 'true'){
+			var now = new Date();var hours = now.getHours();var minutes = now.getMinutes();var gettime = hours + ":" + minutes;
+			var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
+
+			var time1 = nmbegintime;var time2 = nmendtime;
+			var seconds1 = time1.split(":")[0] * 3600 + time1.split(":")[1] * 60;
+			var seconds2 = time2.split(":")[0] * 3600 + time2.split(":")[1] * 60;
+
+			// example
+			// if begintime set 10:00 but endtime is 18:00
+			// then do this
+			if(seconds1 <= seconds2){ // default for user
+			if((seconds1 <= gettimesecond) && (gettimesecond <= seconds2)){nightfunction();}
+			}
+			// example
+			else if (seconds1 > seconds2){
+			var getotherdaypart = 86400; // ... to 24:00 end
+			var getothernightpart = 0; // start from 0:00 to seconds2 (example 11:00) 
+
+			if((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)){ // 13 -> 24
+			nightfunction();
+			} else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
+			nightfunction();
+			}
+			}
+		}
+		else{
+			nightfunction();
+		}
+}
+
+// show all options the night switch CSS
 // but not the "only" websites
 if (nighttheme == 'true'){
-	if(nightonly != 'true'){nightfunction();}
+	if(nightonly != 'true'){
+		showswitchtricker()
+	}
+}
+
+function timergonighttricker(){
+	if(nightactivetime == 'true'){
+		var now = new Date();var hours = now.getHours();var minutes = now.getMinutes();var gettime = hours + ":" + minutes;
+		var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
+		
+		var time1 = nmbegintime;var time2 = nmendtime;
+		var seconds1 = time1.split(":")[0] * 3600 + time1.split(":")[1] * 60;
+		var seconds2 = time2.split(":")[0] * 3600 + time2.split(":")[1] * 60;
+
+		// example
+		// if begintime set 10:00 but endtime is 18:00
+		// then do this
+		if(seconds1 <= seconds2){ // default for user
+		if((seconds1 <= gettimesecond) && (gettimesecond <= seconds2)){gogonightmode();}
+		}
+		// example
+		else if (seconds1 > seconds2){
+		var getotherdaypart = 86400; // ... to 24:00 end
+		var getothernightpart = 0; // start from 0:00 to seconds2 (example 11:00) 
+
+		if((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)){ // 13 -> 24
+			gogonightmode();
+		} else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
+			gogonightmode();
+		}
+	}
+	}
+	else{
+	gogonightmode();
+	}
 }
 
 if(nightonly == 'true'){
-	var currenturl = location.protocol + '//' + location.host;
-	console.log("NU: "+currenturl);
+	var currenturl = window.location.protocol + '//' + window.location.host;
+	var nightrabbit = false;
 	if(typeof nightDomains == "string") {
 		nightDomains = JSON.parse(nightDomains);
 		var nbuf = [];
 		for(var domain in nightDomains)
 			nbuf.push(domain);
 			nbuf.sort();
-		for(var i = 0; i < nbuf.length; i++)
-			if(currenturl == nbuf[i]){
-				if (nighttheme == 'true'){ nightfunction(); }
-				if (nightenabletheme == 'true'){ gogonightmode(); }
+		for(var i = 0; i < nbuf.length; i++){
+			if(nightmodechecklistwhite == 'true'){
+				if(currenturl == nbuf[i]){
+					if (nighttheme == 'true'){ showswitchtricker(); }
+					if (nightenabletheme == 'true'){
+						timergonighttricker();
+					}
+				}
 			}
+			else if(nightmodechecklistblack == 'true'){
+				if(currenturl == nbuf[i]){nightrabbit=true;}
+			}
+		}
 	}
-}
-
-if(nightonly != 'true'){
-	if (nightenabletheme == 'true'){ gogonightmode(); } // auto the night mode
+	if(nightmodechecklistblack == 'true'){
+		if(nightrabbit == false){showswitchtricker();timergonighttricker();nightrabbit = false;}
+	}
+}else{
+	if (nightenabletheme == 'true'){
+		timergonighttricker();
+	} // auto the night mode
 }
 
 // draggable object for the Night Mode feature switch
 if($('stefanvdnighttheme')){
+if(nmcustom == 'true'){
 var dragobject = { z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
 initialize:function(){
 document.onmousedown = this.drag;
-document.onmouseup = function(){ this.dragapproved = 0; }
+document.onmouseup = function(){ this.dragapproved = 0;
+// save the x and y value
+if(nmcustom == 'true'){
+var getnmcx = $('stefanvdnighttheme').style.left;
+var getnmcy = $('stefanvdnighttheme').style.bottom;
+safari.self.tab.dispatchMessage('nmcustomx', getnmcx);
+safari.self.tab.dispatchMessage('nmcustomy', getnmcy);
+}
+}
 },
 drag:function(e){
 var evtobj = window.event? window.event : e;
 this.targetobj = window.event? event.srcElement : e.target;
 if (this.targetobj.className == "turnoffthelightsdrag"){
 this.dragapproved = 1;
-if (isNaN(parseInt($('stefanvdnighttheme').style.left))){ $('stefanvdnighttheme').style.left = "25px"; }
-if (isNaN(parseInt($('stefanvdnighttheme').style.bottom))){ $('stefanvdnighttheme').style.bottom = "25px"; }
-$('stefanvdnighttheme').offsetx = parseInt($('stefanvdnighttheme').style.left); $('stefanvdnighttheme').offsety = parseInt($('stefanvdnighttheme').style.bottom);
+$('stefanvdnighttheme').offsetx = parseInt($('stefanvdnighttheme').style.left);
+$('stefanvdnighttheme').offsety = parseInt($('stefanvdnighttheme').style.bottom);
 $('stefanvdnighttheme').x = evtobj.clientX; $('stefanvdnighttheme').y = evtobj.clientY;
 if (evtobj.preventDefault)evtobj.preventDefault();
 document.onmousemove = dragobject.moveit;
@@ -1150,14 +1366,41 @@ document.onmousemove = dragobject.moveit;
 moveit:function(e){
 var evtobj = window.event? window.event : e;
 if (this.dragapproved == 1){
-$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
-$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+	if(nmcustom == 'true' || nmbottomleft == 'true'){
+		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+		$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+	}
+	else if(nmtopleft == 'true'){
+		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+		$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+	}
+	else if(nmtopright == 'true'){
+		$('stefanvdnighttheme').style.right = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+		$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+	}
+	else if(nmbottomright == 'true'){
+		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+		$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+	}
 return false;
 }
 }
 }
 
 dragobject.initialize();
+}
+}
+                                 
+// lamp and night mode active with one click
+if(lampandnightmode == 'true'){
+	// Observe a specific DOM element:
+	if(document.body){
+	observeDOM( document.body ,function(){	
+		if(isitdark == false){
+			if(document.getElementById('stefanvdlightareoff1')){ sun = true; gogonightmode(); } // make it dark
+		}else{if(document.getElementById('stefanvdlightareoff1')){}else{sun = false; gogonightmode();}}
+	});
+	}
 }
 
 // YouTube auto width the video player content
@@ -1196,6 +1439,7 @@ if (customqualityyoutube == 'true') {
 
 var ythdinit = function onYouTubePlayerReady(player) {
   try{
+      donesetquality = false;
       mplayer = player;
       if(typeof mplayer == "string"){
     	  mplayer = document.getElementById(mplayer);
@@ -1205,22 +1449,18 @@ var ythdinit = function onYouTubePlayerReady(player) {
       }
       mplayer.addEventListener("onStateChange", "onytplayerStateChange");
 	  updateQuality();
-      //setTimeout(updateQuality,3000);
-	  donesetquality = false;
   }
   catch(e){
   }
 }
 
 var ythdstatechange = function onytplayerStateChange(newState) {
-	try{
-		if(newState == 1 && !donesetquality){
-			//mplayer.setPlaybackQuality(maxquality);
-			// updateQuality();
-			donesetquality = true;
+		if(newState == 3 && !donesetquality){
+			updateQuality();
 		}
-	}
-	catch(e){}
+		if(newState == -1){
+			donesetquality = false;
+		}
 }
 
 var ythduq = function updateQuality(){
@@ -1234,6 +1474,7 @@ var ythduq = function updateQuality(){
 		//console.log("Set to " + maxquality + " in accordance with user settings");
 		mplayer.setPlaybackQuality(maxquality);
 	}
+	donesetquality = true;
 }
 
 function injectScript(codetext){

@@ -2,8 +2,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -47,10 +47,12 @@ safari.self.addEventListener("message", function(e) {
 		playlist = settings["playlist"];
 		sharebutton = settings["sharebutton"];
 		videoheadline = settings["videoheadline"];
-		flash = settings["flash"];if(!flash)flash = 'false';
 		head = settings["head"];
 		infobar = settings["infobar"];
 		likebutton = settings["likebutton"];
+		flash = settings["flash"];if(!flash)flash = 'false';
+		noflash = settings["noflash"];if(!noflash)noflash = 'true';
+		hardflash = settings["hardflash"];if(!hardflash)hardflash = 'false';
 		readera = settings["readera"];
 		readerlargestyle = settings["readerlargestyle"];
 		viewcount = settings["viewcount"];
@@ -63,8 +65,6 @@ safari.self.addEventListener("message", function(e) {
 		mousespotlightt = settings["mousespotlightt"];if(!mousespotlightc)mousespotlightt = 'false'; // default mousespotlight false
 		enterpassword = settings["enterpassword"];
 		password = settings["password"];if(!password)password = 'false';
-		noflash = settings["noflash"];if(!noflash)noflash = 'true';
-		hardflash = settings["hardflash"];if(!hardflash)hardflash = 'false';
 		dynamic =  settings["dynamic"];if(!dynamic)dynamic = 'false'; // default dynamic false
 		dynamic1 = settings["dynamic1"];
 		dynamic2 = settings["dynamic2"];
@@ -84,6 +84,40 @@ safari.self.addEventListener("message", function(e) {
 		intervallinb = settings['intervallinb'];
     }
 	else if(e.name === "lightsoff") {
+// Show all Flash objects -> Flash detection
+function flashobjects(){
+try{
+var d=window.document,j,i,t,T,N,b,r=1,C;
+for(j=0;t=['object','embed','applet','iframe'][j];++j)
+{
+T=d.getElementsByTagName(t);
+for(i=T.length-1;(i+1)&&(N=T[i]);--i)
+if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView))
+{
+N.style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';
+}
+}
+}catch(E){r = 0}
+return r
+}
+
+if(flash == 'true'){
+intelligentvideodetection();
+
+flashobjects();
+} else if(hardflash == 'true'){
+intelligentvideodetection();
+
+for(j=0;t=['object','embed','applet','iframe'][j];++j)
+{
+var a = document.querySelectorAll(t);
+for(var i = 0; i < a.length; i++ )
+{
+a[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';
+}
+}
+}
+
 // detect if not higher then z-index 1000, then make it push down
 // search for the z-index, if found something give it 'auto'
 // var q = document.getElementsByTagName('*');
@@ -93,8 +127,34 @@ safari.self.addEventListener("message", function(e) {
 // if (y >= 1000){q[i].style.zIndex = 'auto';}
 // }
 
+// detect if no -webkit-transform:translateZ(0) used, if so
+// remove this and place the 'none' value
+var w = document.getElementsByTagName('*');
+for(var i = 0; i < w.length; i++ ) {
+if (w[i].currentStyle){var t = w[i].currentStyle["-webkit-transform"] ||
+         w[i].currentStyle["-moz-transform"] ||
+         w[i].currentStyle["-ms-transform"] ||
+         w[i].currentStyle["-o-transform"] ||
+         w[i].currentStyle["transform"]
+}
+else if (window.getComputedStyle){
+var st = document.defaultView.getComputedStyle(w[i], null);
+var t = st.getPropertyValue("-webkit-transform") ||
+         st.getPropertyValue("-moz-transform") ||
+         st.getPropertyValue("-ms-transform") ||
+         st.getPropertyValue("-o-transform") ||
+         st.getPropertyValue("transform")
+}
+if (t == "matrix(1, 0, 0, 1, 0, 0)"){ w[i].style.webkitTransform = 'none'; w[i].style.MozTransform = 'none'; w[i].style.msTransform = 'none'; w[i].style.OTransform = 'none'; w[i].style.transform = 'none';}
+}
+
 // YouTube options
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+// Show the debug mode of YouTube
+var youtubedebuginfopanel = document.querySelectorAll('div.html5-video-info-panel');
+for(var i = 0; i < youtubedebuginfopanel.length; i++ ){youtubedebuginfopanel[i].style.zIndex = "1001";}
+var youtubedebugpanel = document.querySelectorAll('div.ytp-dialog-holder');
+for(var i = 0; i < youtubedebugpanel.length; i++ ){youtubedebugpanel[i].style.zIndex = "1001";}
 
 // YouTube video OK
 var watch7 = $('watch7');
@@ -128,7 +188,7 @@ do {
 } while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 }
 
-// Show YouTube Suggestions
+// Shows YouTube Suggestions
 if(suggestions == 'true'){
 var watch7sidebar = $('watch7-sidebar');  // new youtube watch7
 if(watch7sidebar){$('watch7-sidebar').style.zIndex = '1000';}
@@ -137,31 +197,13 @@ var watchsidebar = $('watch-sidebar');
 if(watchsidebar){$('watch-sidebar').style.zIndex = '1000';}
 }
 
-// Show YouTube playlist
-var watch7playlisttraymask = $('watch7-playlist-tray-mask');  // new youtube watch7
-if(watch7playlisttraymask){$('watch7-playlist-tray-mask').style.cssText = 'visibility:visible !important; position:absolute !important; z-index:auto !important';}
-
+// Shows YouTube playlist
 if(playlist == 'true'){
-/* watch7 show the playlist */
-div = document.getElementsByTagName('div'); 
-for(var i = 0; i < div.length; i++ )
-{if(div[i].className == ('watch7-playlist-bar')) {div[i].style.zIndex = 1001;}}
-
-var watch7playlisttraycontainer = $('watch7-playlist-tray-container');  // new youtube september 2013
-if(watch7playlisttraycontainer){$('watch7-playlist-tray-container').style.zIndex = 1001;}
-
-var watch7playlistcontainer = $('watch7-playlist-container');  // new youtube watch7
-if(watch7playlistcontainer){$('watch7-playlist-container').style.zIndex = 1001;$('watch7-playlist-container').style.position = 'relative';}
-
-// new YouTube playlist (my feeds) 
-var quicklist = $('quicklist');
-if(quicklist){$('quicklist').style.zIndex = 1001;}
-
-var playlistbar = $('playlist-bar');
-if(playlistbar){$('playlist-bar').style.zIndex = 1001;}
+var watchappbarplaylist = $('watch-appbar-playlist');
+if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = 1001;}
 }
 
-// Show video title
+// Shows video title
 if(videoheadline == 'true'){
 var watchheadlinetitle = $('watch-headline-title');  // new youtube watch7
 if(watchheadlinetitle){$('watch-headline-title').style.zIndex = 1001;$('watch-headline-title').style.position = 'relative';}
@@ -174,38 +216,23 @@ var eowtitle = $('eow-title');
 if(eowtitle){$('eow-title').style.color = 'white';$('eow-title').style.zIndex = 1001;$('eow-title').style.position = 'relative';}
 }
 
-// Show YouTube Channel name
+// Shows YouTube Channel name
 if(head == 'true'){
-a = document.getElementsByTagName('a');
-for(var i = 0; i < a.length; i++ ) 
-{if(a[i].className == ('yt-user-photo ') ) {a[i].style.zIndex = 1000;a[i].style.position = 'relative';}}
+var watch7userheader = $('watch7-user-header');
+if(watch7userheader){$('watch7-user-header').style.zIndex = 1000;$('watch7-user-header').style.position = 'relative';}
 
-a = document.getElementsByTagName('a');
-for(var i = 0; i < a.length; i++ ) 
-{if(a[i].className == ('g-hovercard yt-uix-sessionlink yt-user-name ') ) {a[i].style.zIndex = 1000;a[i].style.position = 'relative';}}
-
-a = document.getElementsByTagName('a');
-for(var i = 0; i < a.length; i++ ) 
-{if(a[i].className == ('yt-uix-sessionlink yt-user-videos') ) {a[i].style.zIndex = 1000;a[i].style.position = 'relative';}}
-
-var subcontainer = $('watch7-subscription-container');
-if(subcontainer){$('watch7-subscription-container').style.zIndex = 1000;$('watch7-subscription-container').style.position = 'relative';}
-}
-
-// Show Infobar
-if(infobar == 'true'){
-var watch7actionpanels = $('watch7-action-panels');
-if(watch7actionpanels){$('watch7-action-panels').style.zIndex = 1000;$('watch7-action-panels').style.background = 'white';}
-
-var watchinfo = $('watch-info');
-if(watchinfo){$('watch-info').style.zIndex = 1000;$('watch-info').style.position = 'relative';$('watch-info').style.background = 'white';}
-
-div = document.getElementsByTagName('div'); 
+div = document.getElementsByTagName('a'); 
 for(var i = 0; i < div.length; i++ )
-{if(div[i].className == ('watch-expander-head yt-uix-expander-head yt-rounded')) {div[i].style.zIndex = 1000;div[i].style.visibility = 'visible';div[i].style.position = 'relative';div[i].style.background = 'white'; }}
+{if(div[i].className == (' yt-uix-sessionlink     spf-link  g-hovercard')) {div[i].style.color = 'white';}}
 }
 
-// Show like and unlike buttons
+// Shows Infobar
+if(infobar == 'true'){
+var watchdescription = $('watch-description');
+if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-description').style.background = 'white';}
+}
+
+// Shows like and unlike buttons
 if(likebutton == 'true'){
 var watchdislike = $('watch-dislike'); // new youtube watch7
 if(watchdislike){$('watch-dislike').style.zIndex = 1000;$('watch-dislike').style.position = 'relative';$('watch-dislike').style.background = 'white';} // new youtube watch7
@@ -217,39 +244,26 @@ var watchunlike = $('watch-unlike');
 if(watchunlike){$('watch-unlike').style.zIndex = 1000;$('watch-unlike').style.position = 'relative';}
 }
 
-// Show share buttons
+// Shows share buttons
 if(sharebutton == 'true'){
-var watch7secondaryactions = $('watch7-secondary-actions'); // new youtube watch7
-if(watch7secondaryactions){$('watch7-secondary-actions').style.zIndex = 1000;$('watch7-secondary-actions').style.position = 'relative';$('watch7-secondary-actions').style.background = 'white';}
-
-var watchshare = $('watch-share');
-if(watchshare){$('watch-share').style.zIndex = 1000;$('watch-share').style.position = 'relative';}
+var elems = document.getElementsByTagName('button'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('action-panel-trigger-share') > -1) {elems[i].style.zIndex = 1001;elems[i].style.position = "relative";elems[i].style.background = "white";}}
 }
 
-// Show view count
+// Shows view count
 if(viewcount == 'true'){
-span = document.getElementsByTagName('span'); 
-for(var i = 0; i < span.length; i++ )
-{if(span[i].className == ('watch-view-count ')) {span[i].style.color = 'white';span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
-
-var watch7viewsinfo = $('watch7-views-info'); // new youtube watch7 september 2013
-if(watch7viewsinfo){$('watch7-views-info').style.zIndex = 1000;$('watch7-views-info').style.color = 'white';}
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ )
+{if(div[i].className == ('watch-view-count')) {div[i].style.color = 'white';div[i].style.zIndex = 1001;}}
 }
 
-// Show add button
+// Shows add button
 if(addvideobutton == 'true'){
-var watch7secondaryactions = $('watch7-secondary-actions'); // new youtube watch7
-if(watch7secondaryactions){$('watch7-secondary-actions').style.zIndex = 1000;$('watch7-secondary-actions').style.position = 'relative';$('watch7-secondary-actions').style.background = 'white';}
-
-var watchaddtobutton = $('watch-addto-button');
-if(watchaddtobutton){$('watch-addto-button').style.zIndex = 1000;$('watch-addto-button').style.position = 'relative';}
-
-button = document.getElementsByTagName('button'); 
-for(var i = 0; i < button.length; i++ )
-{if(button[i].className == ('yt-uix-tooltip-reverse  yt-uix-button yt-uix-button-default yt-uix-tooltip')) {button[i].style.zIndex = 1001;button[i].style.position = 'relative';}}
+var elems = document.getElementsByTagName('button'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('action-panel-trigger-addto') > -1) {elems[i].style.zIndex = 1001;elems[i].style.position = "relative";elems[i].style.background = "white";}}
 }
 
-// Show like/dislike bar
+// Shows like/dislike bar
 if(likebar == 'true'){
 div = document.getElementsByTagName('div');  // new youtube watch7
 for(var i = 0; i < div.length; i++ )
@@ -274,11 +288,6 @@ for(var i = 0; i < span.length; i++ )
 // MAC & PC & LINUX
 // HTML5
 
-// HTML5 trial
-video = document.getElementsByTagName('video'); 
-for(var i = 0; i < video.length; i++ )
-{if(video[i].className == ('video-stream html5-main-video')) {video[i].style.cssText = 'visibility:visible !important; position:absolute !important; top: 0 !important; z-index:1000 !important';}}
-
 // show YouTube HTML5 annotation
 div = document.getElementsByTagName('div'); 
 for(var i = 0; i < div.length; i++ )
@@ -299,13 +308,10 @@ var appbarguideiframemask = $('appbar-guide-iframe-mask');
 if(appbarguideiframemask){$('appbar-guide-iframe-mask').style.zIndex = '-1';}
 
 // short and cleaner engine 2014
-var data = [['movie_player',1000],['movie_player-html5',1000],['watch-player',1000],['player-api',1001],['html5-player',1001],['video-player',1001],['user_fullwidth_gadget',1001]];
+var data = [['movie_player',1000],['movie_player-html5',1000],['watch-player',1000],['html5-player',1001],['video-player',1001],['user_fullwidth_gadget',1001]];
 for (var conf in data) {
         var temp = document.getElementById(data[conf][0]);
         if (temp) {
-                if (conf[0] == 'player-api') {
-                        temp.style.overflow = 'visible';
-                }
                 temp.style.zIndex = data[conf][1];
                 temp.style.visibility = 'visible';
                 temp.style.position = 'relative';
@@ -321,15 +327,48 @@ for (var div in divs) {
         }
 }
 
+// YouTube new player 27/04/2015
+var ytdivs = document.getElementsByTagName('div');
+for (var div in ytdivs) {
+        var d = ytdivs[div].className;
+        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-button ytp-cards-button' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container') {
+                ytdivs[div].style.zIndex = 1001;
+        }
+}
+// YouTube new player 27/04/2015 debug
+var ytdivsdebug = document.getElementsByTagName('div');
+for (var div in ytdivsdebug) {
+        var e = ytdivsdebug[div].className;
+        if (e == 'ytp-panelpopup ytp-contextmenu') {
+                ytdivsdebug[div].style.zIndex = 1002;
+        }
+}
+
+// YouTube show sub title
+var subtitel = document.getElementsByTagName('div');
+for(var i = 0; i < subtitel.length; i++ )
+{if(subtitel[i].className == ('ytp-player-content ytp-subtitles-player-content')) {subtitel[i].style.zIndex = 1001;subtitel[i].style.pointerEvents = 'none';}}
+
+var ytbezel = document.getElementsByTagName('div');
+for(var i = 0; i < ytbezel.length; i++ )
+{if(ytbezel[i].className == ('html5-bezel html5-center-overlay')) {ytbezel[i].style.zIndex = 1001;}}
+
 // YouTube still showing the skip button for the ads
 var admedia = document.getElementsByTagName('div');
 for(var i = 0; i < admedia.length; i++ )
 {if(admedia[i].className == ('ad-container ad-container-single-media-element')) {admedia[i].style.zIndex = 1001;}}
 
+var admediaanno = document.getElementsByTagName('div');
+for(var i = 0; i < admediaanno.length; i++ )
+{if(admediaanno[i].className == ('ad-container ad-container-single-media-element-annotations')) {admediaanno[i].style.zIndex = 1001;}}
+
 // show HTML5 controls
 var ytpprogress = document.getElementsByTagName('div');
 for(var i = 0; i < ytpprogress.length; i++ )
 {if(ytpprogress[i].className == ('ytp-progress-bar-container')) {ytpprogress[i].style.zIndex = 1005;}}
+
+var playerapi = $('player-api');
+if(playerapi){$('player-api').style.zIndex = 1001;}
 
 } // end YouTube
 
@@ -477,6 +516,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 27) == 'http://www.collegehumor.com') || (insideframe.substring(0, 28) == 'https://www.collegehumor.com') || (insideframe.substring(0, 38) == 'http://0.static.collegehumor.cvcdn.com') || (insideframe.substring(0, 39) == 'https://0.static.collegehumor.cvcdn.com')
 || (insideframe.substring(0, 24) == 'http://hub.video.msn.com') || (insideframe.substring(0, 25) == 'https://hub.video.msn.com') || (insideframe.substring(0, 34) == 'http://img.widgets.video.s-msn.com') || (insideframe.substring(0, 35) == 'https://img.widgets.video.s-msn.com') // msn bing.com
 || (insideframe.substring(0, 30) == 'http://flash.pcworld.com/video') || (insideframe.substring(0, 31) == 'https://flash.pcworld.com/video')
+|| (insideframe.substring(0, 39) == 'https://safe.txmblr.com/svc/embed/iframe') || (insideframe.substring(0, 40) == 'https://safe.txmblr.com/svc/embed/iframe')
 || (insideframe.substring(0, 23) == 'http://z.cdn.turner.com') || (insideframe.substring(0, 24) == 'https://z.cdn.turner.com')
 || (insideframe.substring(0, 24) == 'http://player.ku6cdn.com') || (insideframe.substring(0, 25) == 'https://player.ku6cdn.com')
 || (insideframe.substring(0, 21) == 'http://js.tudouui.com') || (insideframe.substring(0, 22) == 'https://js.tudouui.com')
@@ -556,6 +596,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 27) == 'http://www.collegehumor.com') || (insideframe.substring(0, 28) == 'https://www.collegehumor.com') || (insideframe.substring(0, 38) == 'http://0.static.collegehumor.cvcdn.com') || (insideframe.substring(0, 39) == 'https://0.static.collegehumor.cvcdn.com')
 || (insideframe.substring(0, 24) == 'http://hub.video.msn.com') || (insideframe.substring(0, 25) == 'https://hub.video.msn.com') || (insideframe.substring(0, 34) == 'http://img.widgets.video.s-msn.com') || (insideframe.substring(0, 35) == 'https://img.widgets.video.s-msn.com') // msn bing.com
 || (insideframe.substring(0, 30) == 'http://flash.pcworld.com/video') || (insideframe.substring(0, 31) == 'https://flash.pcworld.com/video')
+|| (insideframe.substring(0, 39) == 'https://safe.txmblr.com/svc/embed/iframe') || (insideframe.substring(0, 40) == 'https://safe.txmblr.com/svc/embed/iframe')
 || (insideframe.substring(0, 23) == 'http://z.cdn.turner.com') || (insideframe.substring(0, 24) == 'https://z.cdn.turner.com')
 || (insideframe.substring(0, 24) == 'http://player.ku6cdn.com') || (insideframe.substring(0, 25) == 'https://player.ku6cdn.com')
 || (insideframe.substring(0, 21) == 'http://js.tudouui.com') || (insideframe.substring(0, 22) == 'https://js.tudouui.com')
@@ -632,6 +673,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 27) == 'http://www.collegehumor.com') || (insideframe.substring(0, 28) == 'https://www.collegehumor.com') || (insideframe.substring(0, 38) == 'http://0.static.collegehumor.cvcdn.com') || (insideframe.substring(0, 39) == 'https://0.static.collegehumor.cvcdn.com')
 || (insideframe.substring(0, 24) == 'http://hub.video.msn.com') || (insideframe.substring(0, 25) == 'https://hub.video.msn.com') || (insideframe.substring(0, 34) == 'http://img.widgets.video.s-msn.com') || (insideframe.substring(0, 35) == 'https://img.widgets.video.s-msn.com') // msn bing.com
 || (insideframe.substring(0, 30) == 'http://flash.pcworld.com/video') || (insideframe.substring(0, 31) == 'https://flash.pcworld.com/video')
+|| (insideframe.substring(0, 39) == 'https://safe.txmblr.com/svc/embed/iframe') || (insideframe.substring(0, 40) == 'https://safe.txmblr.com/svc/embed/iframe')
 || (insideframe.substring(0, 23) == 'http://z.cdn.turner.com') || (insideframe.substring(0, 24) == 'https://z.cdn.turner.com')
 || (insideframe.substring(0, 24) == 'http://player.ku6cdn.com') || (insideframe.substring(0, 25) == 'https://player.ku6cdn.com')
 || (insideframe.substring(0, 21) == 'http://js.tudouui.com') || (insideframe.substring(0, 22) == 'https://js.tudouui.com')
@@ -685,6 +727,13 @@ for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('sidedock') > -1) 
 
 var elems = document.getElementsByTagName('div'), i;
 for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('title') > -1) {elems[i].style.zIndex = 1001;}}
+
+//fixed 16/01/2015
+var elems = document.getElementsByTagName('div'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('target') > -1) {elems[i].style.zIndex = 1001;}}
+
+var elems = document.getElementsByTagName('div'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('video') > -1) {elems[i].style.zIndex = 1001;}}
 }
 
 // Dailymotion, fixed show video
@@ -723,6 +772,13 @@ var flashvideoportal1 = $('flashvideoportal_1');
 if(flashvideoportal1){$('flashvideoportal_1').style.zIndex = 1001;$('flashvideoportal_1').style.position = 'relative';}
 }
 
+// steampowered.com, fixed show control
+else if (window.location.href.match(/((http:\/\/.*steampowered\.com\/.*)|(https:\/\/.*steampowered\.com\/.*))/i)){
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ ) 
+{if(div[i].className == ('html5_video_overlay')) {div[i].style.zIndex = 1000;}}
+}
+
 //Flash games
 //Windows Media Player
 //Silverlight
@@ -747,15 +803,15 @@ if(flashvideoportal1){$('flashvideoportal_1').style.zIndex = 1001;$('flashvideop
 		readerontext = $('totlgammaVal');
 		readeronrange = $('totlrange');
 		if (readerontext != null && readeronrange != null) {
-			chrome.storage.local.set({"interval": readerontext.value});
+			safari.self.tab.dispatchMessage('interval', readerontext.value);
 		}
 	
 		readerlargestyle = $('__totl-tidbit-box');
 		readerlargeimgclick = $('__totl-min');
 		readerlargetitleclick = $('__totl-box-info');
 		if (readerlargestyle != null && readerlargeimgclick != null && readerlargetitleclick != null) {
-			if(readerlargestyle.style.width == '24px'){chrome.storage.local.set({"readerlargestyle": "false"});}
-			else{chrome.storage.local.set({"readerlargestyle": "true"});}
+			if(readerlargestyle.style.width == '24px'){safari.self.tab.dispatchMessage('readerlargestyle', "false");}
+			else{safari.self.tab.dispatchMessage('readerlargestyle', "true");}
 		}	
 		}
 	
@@ -814,42 +870,6 @@ if(flashvideoportal1){$('flashvideoportal_1').style.zIndex = 1001;$('flashvideop
 		var stefanvddynamicbackground = $('stefanvddynamicbackground');
 		if(stefanvddynamicbackground) {document.body.removeChild(stefanvddynamicbackground);}
 	}
-
-// Show all Flash objects -> Flash detection
-function R(w){
-try{
-var d=w.document,j,i,t,T,N,b,r=1,C;
-for(j=0;t=['object','embed','applet','iframe'][j];++j)
-{
-T=d.getElementsByTagName(t);
-for(i=T.length-1;(i+1)&&(N=T[i]);--i)
-if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView))
-{
-N.style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';
-}
-}
-}catch(E){r = 0}
-return r
-}
-
-if(flash == 'true'){
-intelligentvideodetection();
-
-R(self);
-var i,x;
-for(i=0;x=frames[i];++i)R(x)
-} else if(hardflash == 'true'){
-intelligentvideodetection();
-
-for(j=0;t=['object','embed','applet','iframe'][j];++j)
-{
-var a = document.querySelectorAll(t);
-for(var i = 0; i < a.length; i++ )
-{
-a[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';
-}
-}
-}
 	
 // Password in document
 // taart make it remove or not
@@ -876,8 +896,8 @@ var pwon2 = $('stefanvdlightareoffpw');
 var pwon = $('stefanvdlightareoffpw');
 if(password == 'true'){
 	if(pwon){
-		var entername = prompt(i18nlockentername,'');
-		if(enterpassword == entername){document.body.removeChild(pwon);lightsgoonoroff();} else {alert(i18nlockwrongpassword);}	
+		var entername = window.prompt(i18nlockentername,'');
+		if(enterpassword == entername){document.body.removeChild(pwon);lightsgoonoroff();} else {window.alert(i18nlockwrongpassword);}	
 	} else {
 		lightsgoonoroff();
 	    var newpw = document.createElement("div");
@@ -1326,6 +1346,9 @@ if(stretchable)  {
 
 		// blur effect
 		if(blur == 'true'){
+			// disable for on YouTube website
+			if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}
+			else{
 			/*chrome.extension.sendMessage({name: 'currenttabforblur'}, function(response) {
 				var img = response.screenshotUrl;
 				var newblur = document.createElement('img');
@@ -1377,6 +1400,7 @@ if(document.height !== undefined) {
 }
 exports.screenshotPage=screenshotPage;exports.doScreenshot=doScreenshot;})(window);
 doScreenshot();
+			}
 		}
 		
 /////////// Turn Off the Lights reader slider
@@ -1719,7 +1743,7 @@ try{
 safari.self.addEventListener("message", function(e) {
 if(e.name === "darkyt") {
 //---	 
-var currenturl = location.protocol + '//' + location.host;
+var currenturl = window.location.protocol + '//' + window.location.host;
 if((currenturl.substring(0, 23) == 'https://apis.google.com')|| (currenturl.substring(0, 27) == 'https://plus.googleapis.com')){
 
 var stefanvdnightmode = $('stefanvdnightmode');
@@ -1734,7 +1758,7 @@ document.body.appendChild(link);
 //---
 } else if(e.name === "normalyt") {
 //---
-var currenturl = location.protocol + '//' + location.host;
+var currenturl = window.location.protocol + '//' + window.location.host;
 if((currenturl.substring(0, 23) == 'https://apis.google.com')|| (currenturl.substring(0, 27) == 'https://plus.googleapis.com')){
 
 var stefanvdnightmode = $('stefanvdnightmode');

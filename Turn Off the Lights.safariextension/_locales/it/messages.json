@@ -12,8 +12,8 @@
     "description":"per attivare o disattivare le luci on\/off per tutte le schede aperte."
   },
   "lastchecked":{
-    "message":"Ultima versione verificata in data",
-    "description":"Ultima versione verificata il"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Effetti visivi",
@@ -32,8 +32,8 @@
     "description":"Barra Mi piace"
   },
   "desmousespotlightt":{
-    "message":"Ti permette di fare clic con lo schermo oscurato quando le luci sono spente.",
-    "description":"Ti permette di scegliere attraverso lo schermo oscurato quando le luci sono spente."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 pasirinktinės spalvos, kurios bus rodomas aplink grotuvą:",
@@ -144,16 +144,16 @@
     "description":"Spazio universo"
   },
   "deseastereggs":{
-    "message":"Un bonus in questa estensione.",
-    "description":"Un bonus in questa estensione."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Impostazioni",
     "description":"Impostazioni"
   },
   "desspotlightradius":{
-    "message":"è il diametro della lampada ricerca.",
-    "description":"è il diametro della lampada di ricerca."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sincronizzazione",
@@ -300,8 +300,8 @@
     "description":"Se non è in grado di ricevere dei dati a causa della regola di sicurezza di un sito, poi mostrerà il colore solido scelto invece."
   },
   "desdynamiccloud":{
-    "message":"Animated Clouds",
-    "description":"Animated Clouds"
+    "message":"Nuvole animate",
+    "description":"Nuvole animate"
   },
   "desconfirmtimesaver":{
     "message":"Conferma il tempo dello Screen Saver",
@@ -424,8 +424,8 @@
     "description":"Gocce di pioggia"
   },
   "desalllightsoff":{
-    "message":"Facendo clic sul pulsante lampadina ciò commuta le luci on \/ off su tutte le schede aperte quando questa opzione è abilitata.",
-    "description":"Facendo clic sul pulsante lampada si imposteranno le luci su on\/off su tutte le schede aperte quando questa opzione è abilitatta."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Sekundės sėkmingai išsaugotos!",
@@ -448,8 +448,8 @@
     "description":"per attivare o disattivare le luci su on\/off."
   },
   "deseyea":{
-    "message":"Automatiškai pritemdyti foną, kai atidaromas puslapis.",
-    "description":"Attenua automaticamente lo sfondo quando si apre una pagina."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Pagrindiniai Nustatymai",
@@ -472,8 +472,8 @@
     "description":"Guida di benvenuto TOtL"
   },
   "deseyealist":{
-    "message":"Oscura automaticamente lo sfondo quando si apre la seguente pagina (e):",
-    "description":"Attenua automaticamente lo sfondo quando si apre la seguente pagina:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Patiko ir Nepatiko mygtukai",
@@ -504,7 +504,7 @@
     "description":"Suggerimenti"
   },
   "advancedoptions":{
-    "message":"Papildomos Parinktys",
+    "message":"Opzioni avanzate",
     "description":"Opzioni avanzate"
   },
   "dessuggestions":{
@@ -580,8 +580,8 @@
     "description":"per ripristinare l'oscurità set (opacità) impostazione."
   },
   "desambilightrangeblurradius":{
-    "message":"Kuo didesnį skaičių nustatysite, tuo labiau šešėlį suliesite.",
-    "description":"Se impostato un valore inferiore all'ombra sarà forte, più alto il numero, più sfumati sarà."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Pridėti mygtukas",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Attiva il Movimento alla Webcam così che la pagina web possa scurirsi con uno scorrimento della mano.",
-    "description":"Movimento alla Webcam"
+    "description":"Attiva il Movimento alla Webcam così che la pagina web possa scurirsi con uno scorrimento della mano."
   },
   "trymotion":{
     "message":"Provalo da te!",
@@ -748,12 +748,12 @@
     "description":"Attiva la fuzione Camera in Movimento"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Muovi la tua mano ( o il tuo pugno ) dall'alto verso il basso",
+    "description":"Muovi la tua mano ( o il tuo pugno ) dall'alto verso il basso"
   },
   "step3description":{
-    "message":"Quindi il livello nero scorre automaticamente verso il basso.",
-    "description":"Quindi il livello nero scorre automaticamente verso il basso."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Lista:",
@@ -900,7 +900,159 @@
     "description":"Sviluppatore API"
   },
   "titelwikiatmos":{
-    "message":"Wiki about the Atmosphere Lighting feature",
-    "description":"Wiki about the Atmosphere Lighting feature"
+    "message":"Wiki sulla funzione di Illuminazione d'Atmosfera",
+    "description":"Wiki sulla funzione di Illuminazione d'Atmosfera"
+  },
+  "sharemenusharetitle":{
+    "message":"Condividi",
+    "description":"Condividi"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Guida di Benvenuto",
+    "description":"Guida di Benvenuto"
+  },
+  "sharemenutellafriend":{
+    "message":"Dillo a un amico",
+    "description":"Dillo a un amico"
+  },
+  "sharemenusendatweet":{
+    "message":"Invia un Tweet",
+    "description":"Invia un Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Posta su Facebook",
+    "description":"Posta su Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Posta su Google+",
+    "description":"Posta su Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Valuta questa estensione",
+    "description":"Valuta questa estensione"
+  },
+  "sharemenudonatetitle":{
+    "message":"Sosteni lo sviluppo",
+    "description":"Sosteni lo sviluppo"
+  },
+  "titelautostop":{
+    "message":"Stop Automatico",
+    "description":"Stop Automatico"
+  },
+  "desautostop":{
+    "message":"Ferma automaticamente il video quando apro una pagina web.",
+    "description":"Ferma automaticamente il video quando apro una pagina web."
+  },
+  "areyouhappy":{
+    "message":"Sei soddisfatto di Turn Off the Lights?",
+    "description":"Sei soddisfatto di Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Assicura che la tua opinione conta",
+    "description":"Assicura che la tua opinione conta"
+  },
+  "nothanks":{
+    "message":"No grazie",
+    "description":"No grazie"
+  },
+  "writeareview":{
+    "message":"Scrivi una recensione",
+    "description":"Scrivi una recensione"
+  },
+  "desauroraplayer":{
+    "message":"L'illuminazione ambientale è disponibile anche per il tuo computer.",
+    "description":"L'illuminazione ambientale è disponibile anche per il tuo computer."
+  },
+  "downloadtheapp":{
+    "message":"Scarica ora l'app",
+    "description":"Scarica ora l'app"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura più confortevole.",
+    "description":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura più confortevole."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Aggiungi di nuovo la barra del menu nera sul sito web di Google.",
+    "description":"Aggiungi di nuovo la barra del menu nera sul sito web di Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Questo mostrerà le informazioni della borsa in tempo reale.",
+    "description":"Questo mostrerà le informazioni della borsa in tempo reale."
+  },
+  "titelnightmodeposition":{
+    "message":"Posizione interruttore",
+    "description":"Posizione interruttore"
+  },
+  "nmtopleft":{
+    "message":"In alto a sinistra",
+    "description":"In alto a sinistra"
+  },
+  "nmtopright":{
+    "message":"In alto a destra",
+    "description":"In alto a destra"
+  },
+  "nmbottomright":{
+    "message":"In basso a destra",
+    "description":"In basso a destra"
+  },
+  "nmbottomleft":{
+    "message":"In basso a sinistra",
+    "description":"In basso a sinistra"
+  },
+  "nmcustom":{
+    "message":"Clicca, trascina e muovi sulla posizione dello schermo che preferisci.",
+    "description":"Clicca, trascina e muovi sulla posizione dello schermo che preferisci."
+  },
+  "desnighthover":{
+    "message":"Visualizza l'interruttore trasparente sulla pagina web.",
+    "description":"Visualizza l'interruttore trasparente sulla pagina web."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Lista con permessi",
+    "description":"Lista con permessi"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Lista bloccati",
+    "description":"Lista bloccati"
+  },
+  "desautostoponly":{
+    "message":"Attiva lo stop della riproduzione automatica del video solo sui seguenti siti:",
+    "description":"Attiva lo stop della riproduzione automatica del video solo sui seguenti siti:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Lista con permessi",
+    "description":"Lista con permessi"
+  },
+  "titelautostopblacklist":{
+    "message":"Lista bloccati",
+    "description":"Lista bloccati"
+  },
+  "desnightactivetime":{
+    "message":"L'interruttore sarà visibile nei seguenti orari:",
+    "description":"L'interruttore sarà visibile nei seguenti orari:"
+  },
+  "deslampandnightmode":{
+    "message":"Attiva l'opzione 'Modalità notte' quando si fa clic sul pulsante con lampada grigia.",
+    "description":"Attiva l'opzione 'Modalità notte' quando si fa clic sul pulsante con lampada grigia."
+  },
+  "titeleyewhitelist":{
+    "message":"Lista con permessi",
+    "description":"Lista con permessi"
+  },
+  "titeleyeblacklist":{
+    "message":"Lista bloccati",
+    "description":"Lista bloccati"
+  },
+  "desspeech5command":{
+    "message":"lampada del browser",
+    "description":"lampada del browser"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }
