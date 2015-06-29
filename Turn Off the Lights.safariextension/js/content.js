@@ -1478,9 +1478,14 @@ var ythduq = function updateQuality(){
 }
 
 function injectScript(codetext){
-  var ythdscript = document.createElement("script");
-  ythdscript.textContent = codetext;
-  document.head.appendChild(ythdscript);
+var messagescript = $('ytScriptMessage');
+if(messagescript) {}
+else {		
+	var ythdscript = document.createElement("script");
+	ythdscript.setAttribute("id", "ytScriptMessage");
+	ythdscript.textContent = codetext;
+	document.head.appendChild(ythdscript);
+	}
 }
 
 var codetext = "var maxquality = '" + maxquality + "';\n";

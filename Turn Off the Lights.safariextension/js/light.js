@@ -234,6 +234,10 @@ if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-descrip
 
 // Shows like and unlike buttons
 if(likebutton == 'true'){
+span = document.getElementsByTagName('span');  // new youtube watch8
+for(var i = 0; i < span.length; i++ )
+{if(span[i].className == ('like-button-renderer ')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
+
 var watchdislike = $('watch-dislike'); // new youtube watch7
 if(watchdislike){$('watch-dislike').style.zIndex = 1000;$('watch-dislike').style.position = 'relative';$('watch-dislike').style.background = 'white';} // new youtube watch7
 
@@ -264,7 +268,7 @@ for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('action-panel-trig
 }
 
 // Shows like/dislike bar
-if(likebar == 'true'){
+if(likebar == 'true'){	
 div = document.getElementsByTagName('div');  // new youtube watch7
 for(var i = 0; i < div.length; i++ )
 {if(div[i].className == ('video-extras-sparkbars')) {div[i].style.zIndex = 1001;div[i].style.position = 'relative';}}
