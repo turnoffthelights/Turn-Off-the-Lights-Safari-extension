@@ -236,7 +236,7 @@ if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-descrip
 if(likebutton == 'true'){
 span = document.getElementsByTagName('span');  // new youtube watch8
 for(var i = 0; i < span.length; i++ )
-{if(span[i].className == ('like-button-renderer ')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
+{if(span[i].className == ('like-button-renderer ')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';span[i].style.padding = "6px 0px";span[i].style.background = "white";}}
 
 var watchdislike = $('watch-dislike'); // new youtube watch7
 if(watchdislike){$('watch-dislike').style.zIndex = 1000;$('watch-dislike').style.position = 'relative';$('watch-dislike').style.background = 'white';} // new youtube watch7
