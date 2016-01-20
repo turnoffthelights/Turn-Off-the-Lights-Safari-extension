@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2015 Stefan vd
+Copyright (C) 2016 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -134,6 +134,16 @@ function save_options(){
 	else window.localStorage['dynamic4'] = 'false';
 	if($('dynamic5').checked)window.localStorage['dynamic5'] = 'true';
 	else window.localStorage['dynamic5'] = 'false';
+    if($('dynamic6').checked)window.localStorage['dynamic6'] = 'true';
+	else window.localStorage['dynamic6'] = 'false';
+	if($('dynamic7').checked)window.localStorage['dynamic7'] = 'true';
+	else window.localStorage['dynamic7'] = 'false';
+	if($('dynamic8').checked)window.localStorage['dynamic8'] = 'true';
+	else window.localStorage['dynamic8'] = 'false';
+	if($('dynamic9').checked)window.localStorage['dynamic9'] = 'true';
+	else window.localStorage['dynamic9'] = 'false';
+	if($('dynamic10').checked)window.localStorage['dynamic10'] = 'true';
+	else window.localStorage['dynamic10'] = 'false';
 	if($('hoveroptiondyn5').checked)window.localStorage['hoveroptiondyn5'] = 'true';
 	else window.localStorage['hoveroptiondyn5'] = 'false';
 	if($('autoplayonly').checked)window.localStorage['autoplayonly'] = 'true';
@@ -223,7 +233,22 @@ function save_options(){
 	if($('eyechecklistwhite').checked)window.localStorage['eyechecklistwhite'] = 'true';
 	else window.localStorage['eyechecklistwhite'] = 'false';
 	if($('eyechecklistblack').checked)window.localStorage['eyechecklistblack'] = 'true';
-	else window.localStorage['eyechecklistblack'] = 'false';	
+	else window.localStorage['eyechecklistblack'] = 'false';
+    window.localStorage['nightmodebck'] = $('nightmodebck').value;
+    window.localStorage['nightmodetxt'] = $('nightmodetxt').value;
+	if($('no360youtube').checked)window.localStorage['no360youtube'] = 'true';
+	else window.localStorage['no360youtube'] = 'false';
+    if($('videotool').checked)window.localStorage['videotool'] = 'true';
+	else window.localStorage['videotool'] = 'false';
+    if($('reflection').checked)window.localStorage['reflection'] = 'true';
+	else window.localStorage['reflection'] = 'false';
+    window.localStorage['reflectionamount'] = $('reflectionamount').value;
+    if($('videotoolonly').checked)window.localStorage['videotoolonly'] = 'true';
+	else window.localStorage['videotoolonly'] = 'false';
+    if($('videotoolchecklistwhite').checked)window.localStorage['videotoolchecklistwhite'] = 'true';
+	else window.localStorage['videotoolchecklistwhite'] = 'false';
+    if($('videotoolchecklistblack').checked)window.localStorage['videotoolchecklistblack'] = 'true';
+	else window.localStorage['videotoolchecklistblack'] = 'false';
 	
 // Excluded domains
 var excludedDomainsBox = $("excludedDomainsBox");
@@ -253,7 +278,7 @@ for (var i = 0; i < nightDomainsBox.length; i++)
 	nightDomains[nightDomainsBox.options[i].value] = true;
     window.localStorage["nightDomains"] = JSON.stringify(nightDomains);
 
-// cam Excluded domains
+// cammotion Excluded domains
 var cammotionDomainsBox = $("cammotionDomainsBox");
 var cammotionDomains = {};
 for (var i = 0; i < cammotionDomainsBox.length; i++)
@@ -274,6 +299,13 @@ for (var i = 0; i < autostopDomainsBox.length; i++)
 	autostopDomains[autostopDomainsBox.options[i].value] = true;
 	window.localStorage["autostopDomains"] = JSON.stringify(autostopDomains);
 
+// autostop Excluded domains
+var videotoolDomainsBox = $("videotoolDomainsBox");
+var videotoolDomains = {};
+for (var i = 0; i < videotoolDomainsBox.length; i++)
+	videotoolDomains[videotoolDomainsBox.options[i].value] = true;
+	window.localStorage["videotoolDomains"] = JSON.stringify(videotoolDomains);
+    
 /*------ Safari fix html5 ------*/
 var lightcolor = window.localStorage.getItem("lightcolor");
 var interval = window.localStorage.getItem("interval");
@@ -333,6 +365,11 @@ var dynamic2 = window.localStorage.getItem("dynamic2");
 var dynamic3 = window.localStorage.getItem("dynamic3");
 var dynamic4 = window.localStorage.getItem("dynamic4");
 var dynamic5 = window.localStorage.getItem("dynamic5");
+var dynamic6 = window.localStorage.getItem("dynamic6");
+var dynamic7 = window.localStorage.getItem("dynamic7");
+var dynamic8 = window.localStorage.getItem("dynamic8");
+var dynamic9 = window.localStorage.getItem("dynamic9");
+var dynamic10 = window.localStorage.getItem("dynamic10");
 var hoveroptiondyn5 = window.localStorage.getItem("hoveroptiondyn5");
 var autoplayonly = window.localStorage.getItem("autoplayonly");
 var autoplayDomains = window.localStorage.getItem("autoplayDomains");
@@ -392,12 +429,22 @@ var lampandnightmode = window.localStorage.getItem("lampandnightmode");
 var eyechecklistwhite = window.localStorage.getItem("eyechecklistwhite");
 var eyechecklistblack = window.localStorage.getItem("eyechecklistblack");
 var autostopDomains = window.localStorage.getItem("autostopDomains");
-safari.self.tab.dispatchMessage("update_setting", {lightcolor:lightcolor, interval:interval, fadein:fadein, fadeout:fadeout, autoplay:autoplay, eastereggs:eastereggs, suggestions:suggestions, playlist:playlist, sharebutton:sharebutton, videoheadline:videoheadline, flash:flash, head:head, infobar:infobar, likebutton:likebutton, shortcutlight:shortcutlight, readera:readera, readern:readern, eyea:eyea, eyen:eyen, readerlargestyle:readerlargestyle, viewcount:viewcount, lightimage:lightimage, lightimagea:lightimagea, lightimagen:lightimagen, eyealist:eyealist, excludedDomains:excludedDomains, mousespotlighto:mousespotlighto, mousespotlighta:mousespotlighta, mousespotlightc:mousespotlightc, nighttime:nighttime, begintime:begintime, endtime:endtime, addvideobutton:addvideobutton, likebar:likebar, ambilight:ambilight, ambilightrangeblurradius:ambilightrangeblurradius, ambilightrangespreadradius:ambilightrangespreadradius, mousespotlightt:mousespotlightt, ambilightfixcolor:ambilightfixcolor, ambilightvarcolor:ambilightvarcolor, ambilightcolorhex:ambilightcolorhex, ambilight4color:ambilight4color, ambilight1colorhex:ambilight1colorhex, ambilight2colorhex:ambilight2colorhex, ambilight3colorhex:ambilight3colorhex, ambilight4colorhex:ambilight4colorhex, password:password, enterpassword:enterpassword, noflash:noflash, hardflash:hardflash, ecosaver:ecosaver, ecosavertime:ecosavertime, dynamic:dynamic, dynamic1:dynamic1, dynamic2:dynamic2, dynamic3:dynamic3, dynamic4:dynamic4, dynamic5:dynamic5, hoveroptiondyn5:hoveroptiondyn5, autoplayonly:autoplayonly, autoplayDomains:autoplayDomains, blur:blur, youtubequality:youtubequality, maxquality:maxquality, autowidthyoutube:autowidthyoutube, customqualityyoutube:customqualityyoutube, cinemaontop:cinemaontop, alllightsoff:alllightsoff, spotlightradius:spotlightradius, atmosphereonly:atmosphereonly, atmosphereDomains:atmosphereDomains, optionskipremember:optionskipremember, countremember:countremember, nighttheme:nighttheme, nightonly:nightonly, nightenabletheme:nightenabletheme, nightDomains:nightDomains, autoplaydelay:autoplaydelay, autoplaydelaytime:autoplaydelaytime, motion:motion, lightimagelin:lightimagelin, linearsq:linearsq, colora:colora, intervallina:intervallina, colorb:colorb, intervallinb:intervallinb, speech:speech, speechlang:speechlang, speechcountry:speechcountry, atmosvivid:atmosvivid, cammotiononly:cammotiononly, speechonly:speechonly, autoplaychecklistwhite:autoplaychecklistwhite, autoplaychecklistblack:autoplaychecklistblack, cammotionDomains:cammotionDomains, speechDomains:speechDomains, reviewedlastonversion:reviewedlastonversion, applastonversion:applastonversion, autostop:autostop, autostoponly:autostoponly, autostopchecklistwhite:autostopchecklistwhite, autostopchecklistblack:autostopchecklistblack, nighthover:nighthover, nightmodechecklistwhite:nightmodechecklistwhite, nightmodechecklistblack:nightmodechecklistblack, nmtopleft:nmtopleft, nmtopright:nmtopright, nmbottomright:nmbottomright, nmbottomleft:nmbottomleft, nmcustom:nmcustom, nightactivetime:nightactivetime, nmbegintime:nmbegintime, nmendtime:nmendtime, lampandnightmode:lampandnightmode, eyechecklistwhite:eyechecklistwhite, eyechecklistblack:eyechecklistblack, autostopDomains:autostopDomains});
+var nightmodebck = window.localStorage.getItem("nightmodebck");
+var nightmodetxt = window.localStorage.getItem("nightmodetxt");
+var no360youtube = window.localStorage.getItem("no360youtube");
+var videotool = window.localStorage.getItem("videotool");
+var reflection = window.localStorage.getItem("reflection");
+var reflectionamount = window.localStorage.getItem("reflectionamount");
+var videotoolonly = window.localStorage.getItem("videotoolonly");
+var videotoolchecklistwhite = window.localStorage.getItem("videotoolchecklistwhite");
+var videotoolchecklistblack = window.localStorage.getItem("videotoolchecklistblack");
+var videotoolDomains = window.localStorage.getItem("videotoolDomains");
+safari.self.tab.dispatchMessage("update_setting", {lightcolor:lightcolor, interval:interval, fadein:fadein, fadeout:fadeout, autoplay:autoplay, eastereggs:eastereggs, suggestions:suggestions, playlist:playlist, sharebutton:sharebutton, videoheadline:videoheadline, flash:flash, head:head, infobar:infobar, likebutton:likebutton, shortcutlight:shortcutlight, readera:readera, readern:readern, eyea:eyea, eyen:eyen, readerlargestyle:readerlargestyle, viewcount:viewcount, lightimage:lightimage, lightimagea:lightimagea, lightimagen:lightimagen, eyealist:eyealist, excludedDomains:excludedDomains, mousespotlighto:mousespotlighto, mousespotlighta:mousespotlighta, mousespotlightc:mousespotlightc, nighttime:nighttime, begintime:begintime, endtime:endtime, addvideobutton:addvideobutton, likebar:likebar, ambilight:ambilight, ambilightrangeblurradius:ambilightrangeblurradius, ambilightrangespreadradius:ambilightrangespreadradius, mousespotlightt:mousespotlightt, ambilightfixcolor:ambilightfixcolor, ambilightvarcolor:ambilightvarcolor, ambilightcolorhex:ambilightcolorhex, ambilight4color:ambilight4color, ambilight1colorhex:ambilight1colorhex, ambilight2colorhex:ambilight2colorhex, ambilight3colorhex:ambilight3colorhex, ambilight4colorhex:ambilight4colorhex, password:password, enterpassword:enterpassword, noflash:noflash, hardflash:hardflash, ecosaver:ecosaver, ecosavertime:ecosavertime, dynamic:dynamic, dynamic1:dynamic1, dynamic2:dynamic2, dynamic3:dynamic3, dynamic4:dynamic4, dynamic5:dynamic5, dynamic6:dynamic6, dynamic7:dynamic7, dynamic8:dynamic8, dynamic9:dynamic9, dynamic10:dynamic10, hoveroptiondyn5:hoveroptiondyn5, autoplayonly:autoplayonly, autoplayDomains:autoplayDomains, blur:blur, youtubequality:youtubequality, maxquality:maxquality, autowidthyoutube:autowidthyoutube, customqualityyoutube:customqualityyoutube, cinemaontop:cinemaontop, alllightsoff:alllightsoff, spotlightradius:spotlightradius, atmosphereonly:atmosphereonly, atmosphereDomains:atmosphereDomains, optionskipremember:optionskipremember, countremember:countremember, nighttheme:nighttheme, nightonly:nightonly, nightenabletheme:nightenabletheme, nightDomains:nightDomains, autoplaydelay:autoplaydelay, autoplaydelaytime:autoplaydelaytime, motion:motion, lightimagelin:lightimagelin, linearsq:linearsq, colora:colora, intervallina:intervallina, colorb:colorb, intervallinb:intervallinb, speech:speech, speechlang:speechlang, speechcountry:speechcountry, atmosvivid:atmosvivid, cammotiononly:cammotiononly, speechonly:speechonly, autoplaychecklistwhite:autoplaychecklistwhite, autoplaychecklistblack:autoplaychecklistblack, cammotionDomains:cammotionDomains, speechDomains:speechDomains, reviewedlastonversion:reviewedlastonversion, applastonversion:applastonversion, autostop:autostop, autostoponly:autostoponly, autostopchecklistwhite:autostopchecklistwhite, autostopchecklistblack:autostopchecklistblack, nighthover:nighthover, nightmodechecklistwhite:nightmodechecklistwhite, nightmodechecklistblack:nightmodechecklistblack, nmtopleft:nmtopleft, nmtopright:nmtopright, nmbottomright:nmbottomright, nmbottomleft:nmbottomleft, nmcustom:nmcustom, nightactivetime:nightactivetime, nmbegintime:nmbegintime, nmendtime:nmendtime, lampandnightmode:lampandnightmode, eyechecklistwhite:eyechecklistwhite, eyechecklistblack:eyechecklistblack, autostopDomains:autostopDomains, nightmodebck:nightmodebck, nightmodetxt:nightmodetxt, no360youtube:no360youtube, videotool:videotool, reflection:reflection, reflectionamount:reflectionamount, videotoolonly:videotoolonly, videotoolchecklistwhite:videotoolchecklistwhite, videotoolchecklistblack:videotoolchecklistblack, videotoolDomains:videotoolDomains});
 /*------ Safari fix html5 ------*/
 }
 
 function read_options(){
-safari.self.tab.dispatchMessage("getSettings"); // get safari.settings
+safari.self.tab.dispatchMessage("getSettings","now"); // get safari.settings
 
 // listen for an incoming setSettings message
 safari.self.addEventListener("message", function(e) {
@@ -455,12 +502,17 @@ if(!safari.extension.settings['flash']&&!safari.extension.settings['noflash']&&!
 	safari.extension.settings['hardflash'] = 'false'; // then default false
 }
 
-if(!safari.extension.settings['dynamic1']&&!safari.extension.settings['dynamic2']&&!safari.extension.settings['dynamic3']&&!safari.extension.settings['dynamic4']&&!safari.extension.settings['dynamic5']) // find no localstore reader
+if(!safari.extension.settings['dynamic1']&&!safari.extension.settings['dynamic2']&&!safari.extension.settings['dynamic3']&&!safari.extension.settings['dynamic4']&&!safari.extension.settings['dynamic5']&&!safari.extension.settings['dynamic6']&&!safari.extension.settings['dynamic7']&&!safari.extension.settings['dynamic8']&&!safari.extension.settings['dynamic9']&&!safari.extension.settings['dynamic10']) // find no localstore reader
 {	safari.extension.settings['dynamic1'] = 'true'; // then default true
 	safari.extension.settings['dynamic2'] = 'false'; // then default false
 	safari.extension.settings['dynamic3'] = 'false'; // then default false
 	safari.extension.settings['dynamic4'] = 'false'; // then default false
 	safari.extension.settings['dynamic5'] = 'false'; // then default false
+    safari.extension.settings['dynamic6'] = 'false'; // then default false
+    safari.extension.settings['dynamic7'] = 'false'; // then default false
+    safari.extension.settings['dynamic8'] = 'false'; // then default false
+    safari.extension.settings['dynamic9'] = 'false'; // then default false  
+    safari.extension.settings['dynamic10'] = 'false'; // then default false  
 }
 
 if(!safari.extension.settings['hoveroptiondyn5']) // find no localstore reader
@@ -479,6 +531,11 @@ if(!safari.extension.settings['autoplaychecklistwhite']&&!safari.extension.setti
 if(!safari.extension.settings['autostopchecklistwhite']&&!safari.extension.settings['autostopchecklistblack']) // find no localstore autostop whitelist
 {	safari.extension.settings['autostopchecklistwhite'] = 'true'; // then default true
 	safari.extension.settings['autostopchecklistblack'] = 'false'; // then default false
+}
+
+if(!safari.extension.settings['videotoolchecklistwhite']&&!safari.extension.settings['videotoolchecklistblack']) // find no localstore videotool whitelist
+{	safari.extension.settings['videotoolchecklistwhite'] = 'true'; // then default true
+	safari.extension.settings['videotoolchecklistblack'] = 'false'; // then default false
 }
 
 if(!safari.extension.settings['nightmodechecklistwhite']&&!safari.extension.settings['nightmodechecklistblack']) // find no localstore nightmode whitelist
@@ -657,8 +714,13 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 	if(safari.extension.settings['dynamic1'] == 'true'){$('dynamic1').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicfishtank');}
 	if(safari.extension.settings['dynamic2'] == 'true'){$('dynamic2').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicblocks');}
 	if(safari.extension.settings['dynamic3'] == 'true'){$('dynamic3').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicraindrops');}
-	if(safari.extension.settings['dynamic4'] == 'true'){$('dynamic4').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamiccloud');}
+    if(safari.extension.settings['dynamic4'] == 'true'){$('dynamic4').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamiccloud');}
 	if(safari.extension.settings['dynamic5'] == 'true'){$('dynamic5').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicspace');}
+    if(safari.extension.settings['dynamic6'] == 'true'){$('dynamic6').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicsmoke');}
+    if(safari.extension.settings['dynamic7'] == 'true'){$('dynamic7').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicdotscolor');}
+	if(safari.extension.settings['dynamic8'] == 'true'){$('dynamic8').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstorm');}
+	if(safari.extension.settings['dynamic9'] == 'true'){$('dynamic9').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamictriangulation');}
+	if(safari.extension.settings['dynamic10'] == 'true'){$('dynamic10').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstars');}
 	if(safari.extension.settings['hoveroptiondyn5'] == 'true'){$('hoveroptiondyn5').checked = true;}
 	if(safari.extension.settings['autoplayonly'] == 'true'){$('autoplayonly').checked = true;$('autoplayDomainsBox').disabled = false;$('autoplaywebsiteurl').disabled = false;$('autoplayaddbutton').disabled = false;$('autoplayremovebutton').disabled = false;}
 	else{$('autoplayonly').checked = false;$('autoplayDomainsBox').disabled = true;$('autoplaywebsiteurl').disabled = true;$('autoplayaddbutton').disabled = true;$('autoplayremovebutton').disabled = true;}
@@ -705,9 +767,11 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 	// workaround version can't found
 	if(!safari.extension.settings['reviewedlastonversion']){safari.extension.settings['reviewedlastonversion'] = '3.0';}
 	if(!safari.extension.settings['applastonversion']){safari.extension.settings['applastonversion'] = '3.0';}
+    if(!safari.extension.settings['mobilelastonversion']){safari.extension.settings['mobilelastonversion'] = '3.0';}
 	var valuex = safari.extension.settings['reviewedlastonversion'];
 	var valuey = safari.extension.settings['applastonversion'];
-	safariexversion(valuex,valuey);
+    var valuez = safari.extension.settings['mobilelastonversion'];
+	safariexversion(valuex,valuey,valuez);
 	//---
 	if(safari.extension.settings['autostop'] == 'true')$('autostop').checked = true;
 	if(safari.extension.settings['autostoponly'] == 'true'){$('autostoponly').checked = true;}
@@ -731,7 +795,20 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 	else{$('lampandnightmode').checked = false;}
 	if(safari.extension.settings['eyechecklistwhite'] == 'true'){$('eyechecklistwhite').checked = true;}
 	if(safari.extension.settings['eyechecklistblack'] == 'true'){$('eyechecklistblack').checked = true;}	
-	
+	if(safari.extension.settings['nightmodebck']){$('nightmodebck').value = safari.extension.settings['nightmodebck'];}
+	else {$('nightmodebck').value = '#000000';}
+	if(safari.extension.settings['nightmodetxt']){$('nightmodetxt').value = safari.extension.settings['nightmodetxt'];}
+	else {$('nightmodetxt').value = '#ffffff';}
+	if(safari.extension.settings['no360youtube'] == 'true'){$('no360youtube').checked = true;}
+	if(safari.extension.settings['videotool'] == 'true'){$('videotool').checked = true;}
+	if(safari.extension.settings['reflection'] == 'true'){$('reflection').checked = true;}
+	if(safari.extension.settings['reflectionamount']){$('reflectionamount').value = safari.extension.settings['reflectionamount'];}
+	else {$('reflectionamount').value = '20';}
+	if(safari.extension.settings['videotoolonly'] == 'true'){$('videotoolonly').checked = true;}
+	if(safari.extension.settings['videotoolchecklistwhite'] == 'true'){$('videotoolchecklistwhite').checked = true;}
+	if(safari.extension.settings['videotoolchecklistblack'] == 'true'){$('videotoolchecklistblack').checked = true;}
+		
+        
 // Excluded domains - sort these alphabetically
 // Safari Fix
 if(!safari.extension.settings['autoplayDomains']) // find no localstore
@@ -755,6 +832,9 @@ if(!safari.extension.settings['speechDomains']) // find no localstore
 if(!safari.extension.settings['autostopDomains']) // find no localstore
 	safari.extension.settings['autostopDomains'] = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true,  'http://www.vimeo.com': true}); // then default true
 
+if(!safari.extension.settings['videotoolDomains']) // find no localstore
+	safari.extension.settings['videotoolDomains'] = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true,  'http://www.vimeo.com': true}); // then default true
+
 $('excludedDomainsBox').innerHTML = ""; // clean it Safari fix
 $('autoplayDomainsBox').innerHTML = ""; // clean it Safari fix
 $('atmosphereDomainsBox').innerHTML = ""; // clean it Safari fix
@@ -762,6 +842,7 @@ $('nightDomainsBox').innerHTML = ""; // clean it Safari fix
 $('cammotionDomainsBox').innerHTML = ""; // clean it Safari fix
 $('speechDomainsBox').innerHTML = ""; // clean it Safari fix
 $('autostopDomainsBox').innerHTML = ""; // clean it Safari fix
+$('videotoolDomainsBox').innerHTML = ""; // clean it Safari fix
 var excludedDomains = safari.extension.settings["excludedDomains"];
 var autoplayDomains = safari.extension.settings["autoplayDomains"];
 var atmosphereDomains = safari.extension.settings["atmosphereDomains"];
@@ -769,7 +850,10 @@ var nightDomains = safari.extension.settings["nightDomains"];
 var cammotionDomains = safari.extension.settings["cammotionDomains"];
 var speechDomains = safari.extension.settings["speechDomains"];
 var autostopDomains = safari.extension.settings["autostopDomains"];
+var videotoolDomains = safari.extension.settings["videotoolDomains"];
 //-----------------------------------------------------------------------
+
+// Excluded domains - sort these alphabetically
 if(typeof excludedDomains == "string") {
 	excludedDomains = JSON.parse(excludedDomains);
 	var buf = [];
@@ -779,7 +863,8 @@ if(typeof excludedDomains == "string") {
 	for(var i = 0; i < buf.length; i++)
 		appendToListBox("excludedDomainsBox", buf[i]);
     }
-		
+
+// autoplay - Excluded domains - sort these alphabetically		
 if(typeof autoplayDomains == "string") {
 	autoplayDomains = JSON.parse(autoplayDomains);
 	var abuf = [];
@@ -789,7 +874,8 @@ if(typeof autoplayDomains == "string") {
 	for(var i = 0; i < abuf.length; i++)
 		appendToListBox("autoplayDomainsBox", abuf[i]);
     }
-	
+
+// atmosphere - Excluded domains - sort these alphabetically	
 if(typeof atmosphereDomains == "string") {
 	atmosphereDomains = JSON.parse(atmosphereDomains);
 	var albuf = [];
@@ -800,6 +886,7 @@ if(typeof atmosphereDomains == "string") {
 		appendToListBox("atmosphereDomainsBox", albuf[i]);
     }	
 
+// night - Excluded domains - sort these alphabetically
 if(typeof nightDomains == "string") {
 	nightDomains = JSON.parse(nightDomains);
 	var nbuf = [];
@@ -809,7 +896,8 @@ if(typeof nightDomains == "string") {
 	for(var i = 0; i < nbuf.length; i++)
 		appendToListBox("nightDomainsBox", nbuf[i]);
     }
-	
+
+// cammotion - Excluded domains - sort these alphabetically	
 if(typeof cammotionDomains == "string") {
 	cammotionDomains = JSON.parse(cammotionDomains);
 	var cmbuf = [];
@@ -820,6 +908,7 @@ if(typeof cammotionDomains == "string") {
 		appendToListBox("cammotionDomainsBox", cmbuf[i]);
     }
 
+// speech - Excluded domains - sort these alphabetically
 if(typeof speechDomains == "string") {
 	speechDomains = JSON.parse(speechDomains);
 	var srbuf = [];
@@ -829,7 +918,8 @@ if(typeof speechDomains == "string") {
 	for(var i = 0; i < srbuf.length; i++)
 		appendToListBox("speechDomainsBox", srbuf[i]);
     }
-	
+
+// autostop - Excluded domains - sort these alphabetically	
 if(typeof autostopDomains == "string") {
 	autostopDomains = JSON.parse(autostopDomains);
 	var asbuf = [];
@@ -839,7 +929,18 @@ if(typeof autostopDomains == "string") {
 	for(var i = 0; i < asbuf.length; i++)
 		appendToListBox("autostopDomainsBox", asbuf[i]);
     }
-		
+
+// video tool bar - Excluded domains - sort these alphabetically
+if(typeof videotoolDomains == "string") {
+	videotoolDomains = JSON.parse(videotoolDomains);
+	var vtbbuf = [];
+	for(var domain in videotoolDomains)
+		vtbbuf.push(domain);
+        vtbbuf.sort();
+	for(var i = 0; i < vtbbuf.length; i++)
+		appendToListBox("videotoolDomainsBox", vtbbuf[i]);
+    }
+    		
 // temp fix for range bars
 var slidertemp = default_opacity;$('slider').value = slidertemp;$('example1').style.opacity = (slidertemp/100);$('example2').style.opacity = (slidertemp/100);
 var arangeblurtemp = default_arangeblur;$('arangeblur').value = arangeblurtemp;
@@ -865,7 +966,7 @@ window.localStorage['countremember'] = countremember;
 	for ( var i = 0; i < tabListItems.length; i++ ) {
 		if ( tabListItems[i].nodeName == 'LI' ) {
 		var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
-		var id = getHash( tabLink.getAttribute('onclick') );
+		var id = getHash( tabLink.getAttribute('data-tab') );
 		tabLinks[id] = tabLink;
 		contentDivs[id] = $( id );
         }
@@ -890,9 +991,43 @@ window.localStorage['countremember'] = countremember;
         i++;
     }
 
+    // open direct the tab to 'welcome' or the 'guide'
+    var urlwebcomputer = unescape((''+self.location.search).substring(1));
+    if(urlwebcomputer == "welcome"){
+        $("tabshare").click();
+        var selectedId = getHash("tab6");
+    
+        // Highlight the selected tab, and dim all others.
+        // Also show the selected content div, and hide all others.
+        for ( var id in contentDivs ) {
+            if ( id == selectedId ) {
+            tabLinks[id].className = 'navbar-item-selected';
+            contentDivs[id].className = 'page';
+            } else {
+            tabLinks[id].className = 'navbar-item';
+            contentDivs[id].className = 'page hidden';
+            }
+        }
+    } else if(urlwebcomputer == "welcomeguide"){
+        $("tabguide").click();
+        var selectedId = getHash("tab4");
+    
+        // Highlight the selected tab, and dim all others.
+        // Also show the selected content div, and hide all others.
+        for ( var id in contentDivs ) {
+            if ( id == selectedId ) {
+            tabLinks[id].className = 'navbar-item-selected';
+            contentDivs[id].className = 'page';
+            } else {
+            tabLinks[id].className = 'navbar-item';
+            contentDivs[id].className = 'page hidden';
+            }
+        }
+    }    
+
     // display version number
 	var tempsafariexversion = safari.extension.displayVersion; // Safari 6 or higher
-function safariexversion(x,y) {
+function safariexversion(x,y,z) {
 	var mygetrequest = new XMLHttpRequest();
 	mygetrequest.onreadystatechange = function(){
 		if (mygetrequest.readyState == 4){
@@ -917,6 +1052,7 @@ function safariexversion(x,y) {
 			$("version_number").innerText = a;
 			if(x == a){$("sectionreviewbox").style.display = "none";}
 			if(y == a){$("sectionauroraplayerappbox").style.display = "none";}
+            if(z == a){$("sectionmobileappbox").style.display = "none";}
 			break;
 	  }
 	 }else{ a = "unknow"; }
@@ -964,7 +1100,7 @@ mygetrequest.send(null);
 catch(err){}
 
 // ambilight play detect
-		var startambilight = setInterval(function () {
+		var startambilight = window.setInterval(function () {
 		try {
 		var htmlplayer = document.getElementsByTagName("video") || null;
 		var playerid = null, item = null;
@@ -1204,7 +1340,7 @@ function appendToListBox(boxId, text) { var elt = document.createElement("option
     var contentDivs = new Array();
  
     function showTab() {
-      var selectedId = getHash( this.getAttribute('onclick') );
+      var selectedId = getHash( this.getAttribute('data-tab') );
  
       // Highlight the selected tab, and dim all others.
       // Also show the selected content div, and hide all others.
@@ -1345,6 +1481,22 @@ function autostopremoveSelectedExcludedDomain() {
     save_options();
 }
 
+// whitelist videotool domain
+function videotooladdWhitelistDomain() {
+    var domain = $("videotoolwebsiteurl").value;
+    appendToListBox("videotoolDomainsBox", domain);
+    save_options();
+}
+
+function videotoolremoveSelectedExcludedDomain() {
+    var videotoolDomainsBox = $("videotoolDomainsBox");
+    for (var i = videotoolDomainsBox.length-1; i >= 0; i--) {
+        if (videotoolDomainsBox.options[i].selected)
+            videotoolDomainsBox.remove(i);
+    }
+    save_options();
+}
+
 // fade effects control -> not when loaded page
 function lightscontrol() {
 var jump = $('interval').value;
@@ -1371,6 +1523,16 @@ var clouds = $('clouds');
 if(clouds) {newdynmaster.removeChild(clouds);}
 var space = $('space');
 if(space) {newdynmaster.removeChild(space);}
+var smoke = $('smoke');
+if(smoke) {newdynmaster.removeChild(smoke);}
+var flyingdots = $('flyingdots');
+if(flyingdots) {newdynmaster.removeChild(flyingdots);}
+var storm = $('storm');
+if(storm) {newdynmaster.removeChild(storm);}
+var triangle = $('triangle');
+if(triangle) {newdynmaster.removeChild(triangle);}
+var stars = $('stars');
+if(stars) {newdynmaster.removeChild(stars);}
 }
 
 // test general
@@ -1437,7 +1599,8 @@ else if(lightimagelin.checked == true)
 {var linearsq = document.getElementById("linearsq");
 $('example1').style.background = 'linear-gradient(to ' + linearsq.options[linearsq.selectedIndex].value + ', ' + $('colora').value + ' ' + $('intervallina').value + '%,' + $('colorb').value + ' ' + $('intervallinb').value + '%)';
 $('example2').style.background = 'linear-gradient(to ' + linearsq.options[linearsq.selectedIndex].value + ', ' + $('colora').value + ' ' + $('intervallina').value + '%,' + $('colorb').value + ' ' + $('intervallinb').value + '%)';
-$('mousespotlighta').disabled = true;$('mousespotlightc').disabled = true;$('mousespotlighto').checked = true;
+$('mousespotlighta').disabled = true;$('mousespotlightc').disabled = true;
+if($('mousespotlighta').checked == true || $('mousespotlightc').checked == true){$('mousespotlighto').checked = true;}
 }
 
 if(eyen.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "none";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').disabled = false;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "none";$('eyechecklistwhite').disabled = true;$('eyechecklistblack').disabled = true;}
@@ -1506,8 +1669,19 @@ else{$('nmbegintime').disabled = true;$('nmendtime').disabled = true;$('nmconfir
 if(nighttheme.checked == true){$('lampandnightmode').disabled = false;}
 else{$('lampandnightmode').disabled = true;}
 
-if(autostoponly.checked == true){$('autostopDomainsBox').disabled = false;$('autostopremovebutton').disabled = false;$('autostopaddbutton').disabled = false;$('autostopwebsiteurl').disabled = false;$('autostopchecklistwhite').disabled = false;$('autostopchecklistblack').disabled = false;}
-else{$('autostopDomainsBox').disabled = true;$('autostopremovebutton').disabled = true;$('autostopaddbutton').disabled = true;$('autostopwebsiteurl').disabled = true;$('autostopchecklistwhite').disabled = true;$('autostopchecklistblack').disabled = true;}
+if(autostoponly.checked == true){$('autostopchecklistwhite').disabled = false;$('autostopchecklistblack').disabled = false;$('autostopDomainsBox').disabled = false;$('autostopwebsiteurl').disabled = false;$('autostopaddbutton').disabled = false;$('autostopremovebutton').disabled = false;}
+else{$('autostopchecklistwhite').disabled = true;$('autostopchecklistblack').disabled = true;$('autostopDomainsBox').disabled = true;$('autostopwebsiteurl').disabled = true;$('autostopaddbutton').disabled = true;$('autostopremovebutton').disabled = true;}
+
+if(videotoolonly.checked == true){$('videotoolchecklistwhite').disabled = false;$('videotoolchecklistblack').disabled = false;$('videotoolDomainsBox').disabled = false;$('videotoolwebsiteurl').disabled = false;$('videotooladdbutton').disabled = false;$('videotoolremovebutton').disabled = false;}
+else{$('videotoolchecklistwhite').disabled = true;$('videotoolchecklistblack').disabled = true;$('videotoolDomainsBox').disabled = true;$('videotoolwebsiteurl').disabled = true;$('videotooladdbutton').disabled = true;$('videotoolremovebutton').disabled = true;}
+
+if(reflection.checked == true){$('beeld').style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop("+(100-$('reflectionamount').value)/100+", transparent))";}
+else{$('beeld').style.webkitBoxReflect = "";}
+
+			
+// done with reading
+// run now the dynamic background if enabled
+dynamictest();
 }
 
 function dynamictest(){
@@ -1624,7 +1798,6 @@ removedynamic();
 
 }
 else if(dynamic5.checked == true){
-
 removedynamic();
 if(hoveroptiondyn5.checked == true){
 	var space = document.createElement("div");space.setAttribute('id','space');newdynmaster.appendChild(space);
@@ -1654,7 +1827,436 @@ if(hoveroptiondyn5.checked == true){
 	}
 }
 	
+}else if(dynamic6.checked == true){
+removedynamic();
+var smoke = document.createElement("div");smoke.setAttribute('id','smoke');smoke.style.width = "100%";smoke.style.height = "100%";newdynmaster.appendChild(smoke);
+var newsmokecanvas = document.createElement("canvas");newsmokecanvas.setAttribute('id','stefanvddynamicsmoke');newsmokecanvas.style.width = "100%";newsmokecanvas.style.height = "100%";smoke.appendChild(newsmokecanvas);	
+
+// Create an array to store our particles
+var particles = [];
+
+// The amount of particles to render
+var particleCount = 30;
+
+// The maximum velocity in each direction
+var maxVelocity = 2;
+
+// The target frames per second (how often do we want to update / redraw the scene)
+var targetFPS = 20;
+
+// Set the dimensions of the canvas as variables so they can be used.
+var canvasWidth = 400;
+var canvasHeight = 400;
+
+// Create an image object (only need one instance)
+var imageObj = new Image();
+
+// Once the image has been downloaded then set the image on all of the particles
+imageObj.onload = function() {
+    particles.forEach(function(particle) {
+            particle.setImage(imageObj);
+    });
+};
+
+// Once the callback is arranged then set the source of the image
+imageObj.src = "images/Smoke10.png";
+
+// A function to create a particle object.
+function Particle(context) {
+
+    // Set the initial x and y positions
+    this.x = 0;
+    this.y = 0;
+
+    // Set the initial velocity
+    this.xVelocity = 0;
+    this.yVelocity = 0;
+
+    // Set the radius
+    this.radius = 5;
+
+    // Store the context which will be used to draw the particle
+    this.context = context;
+
+    // The function to draw the particle on the canvas.
+    this.draw = function() {
+        
+        // If an image is set draw it
+        if(this.image){
+            this.context.drawImage(this.image, this.x-128, this.y-128);         
+            // If the image is being rendered do not draw the circle so break out of the draw function                
+            return;
+        }
+        // Draw the circle as before, with the addition of using the position and the radius from this object.
+        this.context.beginPath();
+        this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+        this.context.fillStyle = "rgba(88, 88, 88, 1)";
+        this.context.fill();
+        this.context.closePath();
+    };
+
+    // Update the particle.
+    this.update = function() {
+        // Update the position of the particle with the addition of the velocity.
+        this.x += this.xVelocity;
+        this.y += this.yVelocity;
+
+        // Check if has crossed the right edge
+        if (this.x >= canvasWidth) {
+            this.xVelocity = -this.xVelocity;
+            this.x = canvasWidth;
+        }
+        // Check if has crossed the left edge
+        else if (this.x <= 0) {
+            this.xVelocity = -this.xVelocity;
+            this.x = 0;
+        }
+
+        // Check if has crossed the bottom edge
+        if (this.y >= canvasHeight) {
+            this.yVelocity = -this.yVelocity;
+            this.y = canvasHeight;
+        }
+        
+        // Check if has crossed the top edge
+        else if (this.y <= 0) {
+            this.yVelocity = -this.yVelocity;
+            this.y = 0;
+        }
+    };
+
+    // A function to set the position of the particle.
+    this.setPosition = function(x, y) {
+        this.x = x;
+        this.y = y;
+    };
+
+    // Function to set the velocity.
+    this.setVelocity = function(x, y) {
+        this.xVelocity = x;
+        this.yVelocity = y;
+    };
+    
+    this.setImage = function(image){
+        this.image = image;
+    }
 }
+
+// A function to generate a random number between 2 values
+function generateRandom(min, max){return Math.random() * (max - min) + min;}
+
+var context;
+// Initialise the scene and set the context if possible
+function runsmoke() {
+    var canvas = document.getElementById('stefanvddynamicsmoke');
+    if (canvas.getContext) {
+        // Set the context variable so it can be re-used
+        context = canvas.getContext('2d');
+        // Create the particles and set their initial positions and velocities
+        for(var i=0; i < particleCount; ++i){
+            var particle = new Particle(context);
+            
+            // Set the position to be inside the canvas bounds
+            particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
+            
+            // Set the initial velocity to be either random and either negative or positive
+            particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
+            particles.push(particle);            
+        }
+    }
+}
+
+// The function to draw the scene
+function draw() {
+    // Clear the drawing surface and fill it with a black background
+    context.fillStyle = "rgba(0, 0, 0, 0.0)";
+    context.fillRect(0, 0, 400, 400);
+
+    // Go through all of the particles and draw them.
+    particles.forEach(function(particle) {
+        particle.draw();
+    });
+}
+
+// Update the scene
+function smokeupdate() {
+    particles.forEach(function(particle) {
+        particle.update();
+    });
+}
+
+// Initialize the scene
+runsmoke();
+
+// If the context is set then we can draw the scene (if not then the browser does not support canvas)
+if (context) {
+    window.setInterval(function() {
+        // Update the scene before drawing
+        smokeupdate();
+
+        // Draw the scene
+        draw();
+    }, 1000 / targetFPS);
+}
+
+}else if(dynamic7.checked == true){
+removedynamic();
+var flyingdots = document.createElement("div");flyingdots.setAttribute('id','flyingdots');newdynmaster.appendChild(flyingdots);
+	var newdyndotsworld = document.createElement("div");newdyndotsworld.setAttribute('id','stefanvddynamicdots');flyingdots.appendChild(newdyndotsworld);			
+	for(var j = 1; j < 100; j++ ){
+		var newminic = document.createElement("div");
+		newminic.className = "c";
+		newdyndotsworld.appendChild(newminic);
+	}
+}else if(dynamic8.checked == true){
+removedynamic();
+var storm = document.createElement("div");storm.setAttribute('id','storm');newdynmaster.appendChild(storm);
+var newstormcanvas = document.createElement("canvas");newstormcanvas.setAttribute('id','stefanvddynamicstorm');newstormcanvas.style.width = "100%";newstormcanvas.style.height = "100%";storm.appendChild(newstormcanvas);	
+
+var stormcanvas = document.getElementById('stefanvddynamicstorm');
+var sky = stormcanvas.getContext('2d');
+
+var window_width = window.innerWidth * 1.5;
+var window_height = window.innerHeight * 1.5;
+
+var fall_speed = 0.7;
+var wind_speed = 5;
+
+var rain_weight = 0.11;
+var rain_color = '255,255,255';
+
+var drop_count;
+var drops = [];
+
+function randomFrom(min, max) {
+  return (Math.random() * (max - min) + min);
+}
+
+function resizer() {
+  window_width = window.innerWidth * 1.5;
+  window_height = window.innerHeight * 1.5;
+  drop_count = window_width * rain_weight;
+  
+  stormcanvas.setAttribute('width', window_width);
+  stormcanvas.setAttribute('height', window_height);
+}
+
+window.addEventListener('resize', resizer, false);
+
+function paintSky() {
+  for (var i = 0; i < drop_count; i++) {
+    drops[i] = new drop();
+    drops[i].reset();
+  }
+  
+  rain();
+}
+
+function rain() {
+  sky.clearRect(0, 0, window_width, window_height);
+
+  var drops_length = drops.length;
+
+  for (var i = 0; i < drops_length; i++) {
+    var drop = drops[i];
+    drop.fall();
+    drop.draw();
+  }
+
+  window.requestAnimFrame(rain);
+}
+
+function drop() {
+  this.reset = function() {
+    this.r = randomFrom(0.8, 1.6);
+    this.l = (this.r * 250);
+    this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
+    this.y = randomFrom((window_height * -0.25), (window_height * -1));
+    this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
+    this.dy = (this.r * (100 * fall_speed));
+    this.offset = (this.l * (this.dx / this.dy));
+    this.opacity = (this.r * randomFrom(0.2, 0.6));
+    this.drip = this.render();
+  };
+  
+  this.render = function() {
+    var canv = document.createElement('canvas');
+    var ctx = canv.getContext('2d');
+    canv.setAttribute('width', Math.abs(this.offset) + this.r);
+    canv.setAttribute('height', this.l);
+    
+    ctx.beginPath();
+    
+    var drip = ctx.createLinearGradient(0, 0, 0, this.l);
+    drip.addColorStop(0, 'rgba(' + rain_color + ', 0)');
+    drip.addColorStop(1, 'rgba(' + rain_color + ', ' + this.opacity + ')');
+    ctx.fillStyle = drip;
+        
+    //sky.rect(this.x, this.y, this.r, this.l);
+    var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
+    ctx.moveTo(startX, 0);
+    ctx.lineTo(startX + this.r, 0);
+    ctx.lineTo(startX + this.r + this.offset, this.l);
+    ctx.lineTo(startX + this.offset, this.l);
+
+    ctx.closePath();
+    ctx.fill();
+    
+    return canv;
+  };
+  
+  this.draw = function() {
+    sky.drawImage(this.drip, this.x, this.y);
+  };
+  
+  this.fall = function() {
+    this.x += this.dx;
+    this.y += this.dy;
+    
+    if (this.y > (window_height * 1.25)) {
+      this.reset();
+    }
+  };
+}
+
+resizer();
+paintSky();
+
+}else if(dynamic9.checked == true){
+removedynamic();
+var triangle = document.createElement("div");triangle.setAttribute('id','triangle');newdynmaster.appendChild(triangle);
+	
+var refreshDuration = 10000;
+var refreshTimeout;
+var numPointsX;
+var numPointsY;
+var unitWidth;
+var unitHeight;
+var points;
+
+function trianglerun(){
+    var triasvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    triasvg.setAttribute('width',window.innerWidth);
+    triasvg.setAttribute('height',window.innerHeight);
+    document.getElementById('triangle').appendChild(triasvg);
+
+    var unitSize = (window.innerWidth+window.innerHeight)/20;
+    numPointsX = Math.ceil(window.innerWidth/unitSize)+1;
+    numPointsY = Math.ceil(window.innerHeight/unitSize)+1;
+    unitWidth = Math.ceil(window.innerWidth/(numPointsX-1));
+    unitHeight = Math.ceil(window.innerHeight/(numPointsY-1));
+
+    points = [];
+
+    for(var y = 0; y < numPointsY; y++) {
+        for(var x = 0; x < numPointsX; x++) {
+            points.push({x:unitWidth*x, y:unitHeight*y, originX:unitWidth*x, originY:unitHeight*y});
+        }
+    }
+
+    randomize();
+
+    for(var i = 0; i < points.length; i++) {
+        if(points[i].originX != unitWidth*(numPointsX-1) && points[i].originY != unitHeight*(numPointsY-1)) {
+            var topLeftX = points[i].x;
+            var topLeftY = points[i].y;
+            var topRightX = points[i+1].x;
+            var topRightY = points[i+1].y;
+            var bottomLeftX = points[i+numPointsX].x;
+            var bottomLeftY = points[i+numPointsX].y;
+            var bottomRightX = points[i+numPointsX+1].x;
+            var bottomRightY = points[i+numPointsX+1].y;
+
+            var rando = Math.floor(Math.random()*2);
+
+            for(var n = 0; n < 2; n++) {
+                var polygon = document.createElementNS(triasvg.namespaceURI, 'polygon');
+
+                if(rando==0) {
+                    if(n==0) {
+                        polygon.point1 = i;
+                        polygon.point2 = i+numPointsX;
+                        polygon.point3 = i+numPointsX+1;
+                        polygon.setAttribute('points',topLeftX+','+topLeftY+' '+bottomLeftX+','+bottomLeftY+' '+bottomRightX+','+bottomRightY);
+                    } else if(n==1) {
+                        polygon.point1 = i;
+                        polygon.point2 = i+1;
+                        polygon.point3 = i+numPointsX+1;
+                        polygon.setAttribute('points',topLeftX+','+topLeftY+' '+topRightX+','+topRightY+' '+bottomRightX+','+bottomRightY);
+                    }
+                } else if(rando==1) {
+                    if(n==0) {
+                        polygon.point1 = i;
+                        polygon.point2 = i+numPointsX;
+                        polygon.point3 = i+1;
+                        polygon.setAttribute('points',topLeftX+','+topLeftY+' '+bottomLeftX+','+bottomLeftY+' '+topRightX+','+topRightY);
+                    } else if(n==1) {
+                        polygon.point1 = i+numPointsX;
+                        polygon.point2 = i+1;
+                        polygon.point3 = i+numPointsX+1;
+                        polygon.setAttribute('points',bottomLeftX+','+bottomLeftY+' '+topRightX+','+topRightY+' '+bottomRightX+','+bottomRightY);
+                    }
+                }
+                polygon.setAttribute('fill','rgba(0,0,0,'+(Math.random()/3)+')');
+                var animate = document.createElementNS('http://www.w3.org/2000/svg','animate');
+                animate.setAttribute('fill','freeze');
+                animate.setAttribute('attributeName','points');
+                animate.setAttribute('dur',refreshDuration+'ms');
+                animate.setAttribute('calcMode','linear');
+                polygon.appendChild(animate);
+                triasvg.appendChild(polygon);
+            }
+        }
+    }
+    refresh();
+}
+
+function randomize() {
+    for(var i = 0; i < points.length; i++) {
+        if(points[i].originX != 0 && points[i].originX != unitWidth*(numPointsX-1)) {
+            points[i].x = points[i].originX + Math.random()*unitWidth-unitWidth/2;
+        }
+        if(points[i].originY != 0 && points[i].originY != unitHeight*(numPointsY-1)) {
+            points[i].y = points[i].originY + Math.random()*unitHeight-unitHeight/2;
+        }
+    }
+}
+
+function refresh() {
+    randomize();
+    for(var i = 0; i < document.querySelector('#triangle svg').childNodes.length; i++) {
+        var polygon = document.querySelector('#triangle svg').childNodes[i];
+        var animate = polygon.childNodes[0];
+        if(animate.getAttribute('to')) {
+            animate.setAttribute('from',animate.getAttribute('to'));
+        }
+        animate.setAttribute('to',points[polygon.point1].x+','+points[polygon.point1].y+' '+points[polygon.point2].x+','+points[polygon.point2].y+' '+points[polygon.point3].x+','+points[polygon.point3].y);
+        animate.beginElement();
+    }
+    refreshTimeout = window.setTimeout(function() {refresh();}, refreshDuration);
+}
+
+trianglerun();
+
+			
+function onResize() {
+document.querySelector('#triangle svg').remove();
+window.clearTimeout(refreshTimeout);
+trianglerun();
+}
+
+window.onresize = onResize;
+
+}else if(dynamic10.checked == true){
+removedynamic();
+var stars = document.createElement("div");stars.setAttribute('id','stars');newdynmaster.appendChild(stars);
+	for(var j = 1; j < 3; j++ ){
+		var newmstar = document.createElement("div");
+		newmstar.id = "mstars"+[j];
+		stars.appendChild(newmstar);
+	}
+}
+
 }
 }
 
@@ -1885,7 +2487,8 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
 function writeinlog(text){
 var currentdate = new Date();
 var datetime = "Last Action: " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
-document.getElementById('stefanmotion').innerHTML = datetime + " " + text +"<br>" + document.getElementById('stefanmotion').innerHTML;
+var para = document.createElement("p");para.textContent = datetime + " " + text;
+var container = document.getElementById('stefanmotion');container.insertBefore(para, container.firstChild);
 }
 
 });
@@ -1918,11 +2521,13 @@ navigator.getUserMedia({audio:false,video:true},function(stream){
         video.src = window.URL.createObjectURL(stream);
         // video.addEventListener('play', function(){ intervalID = window.setInterval(dump,1000/25); console.log("RUN A"); });
        
-},function(){ console.log('Something is wrong here! Check your camera!'); })
+},function(){
+//console.log('Something is wrong here! Check your camera!');
+})
 
 } else {
 	// remove everything
-	document.getElementById('stefanmotion').innerHTML = "";
+	document.getElementById('stefanmotion').textContent = "";
 
 	if(localMediaStream){
 		if($("motionvideo")){
@@ -1935,11 +2540,16 @@ navigator.getUserMedia({audio:false,video:true},function(stream){
 		canvas = document.getElementById('motioncanvas');
 		canvasgetcont = canvas.getContext('2d');
 		canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
+		canvas.width = 0;
+		canvas.height = 0;
 		ccanvas = document.getElementById('motioncomp');
 		ccgetcont = ccanvas.getContext('2d');
 		ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
+		ccanvas.width = 0;
+		ccanvas.height = 0;
 		window.clearInterval(intervalID);
 	}
+	
 }
 }
 
@@ -2005,6 +2615,7 @@ var i18nldesspeech1command = chrome.i18n.getMessage("desspeech1command"); // tur
 var i18nldesspeech2command = chrome.i18n.getMessage("desspeech2command"); // turn on the lights
 var i18nldesspeech3command = chrome.i18n.getMessage("desspeech3command"); // play video
 var i18nldesspeech4command = chrome.i18n.getMessage("desspeech4command"); // pause video
+var i18nldesspeech5command = chrome.i18n.getMessage("desspeech5command"); // browser lamp
 
 	recognition.onresult = function(event) {
     var interim_transcript = '';
@@ -2086,10 +2697,9 @@ var today = new Date(); var y0 = today.getFullYear();$("yearnow").innerText = y0
 // Read current value settings
 window.addEventListener('load', function() {
 read_options();
-dynamictest();
 yearnow();
 // Add the YouTube player
-$("dont-turn-off-the-lights").src = "http://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";
+$("dont-turn-off-the-lights").src = "https://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";
 // remove loading screen
 $('loading').style.display = "none";
 });
@@ -2100,77 +2710,49 @@ var nAgt = navigator.userAgent;
 var browserName;
 var urlbrowservendor = window.navigator.vendor;
 if ((nAgt.indexOf("OPR/"))!=-1) {browserName = "Opera";}
-else if (urlbrowservendor.search("Apple Computer, Inc.") >= 0) {browserName = "Safari";}
+else if (urlbrowservendor.search("Safari") >= 0) {browserName = "Safari";}
 else if (urlbrowservendor.search("Yandex") >= 0) {browserName = "Yandex";}
 else if (urlbrowservendor.search("Google") >= 0) {browserName = "Google Chrome";}
 else if (navigator.appCodeName == "Mozilla") {browserName = "Firefox";}
 else if ((nAgt.indexOf("Maxthon/"))!=-1) {browserName = "Maxthon";}
 
+// browser check
 if (browserName == "Opera") {
-// Opera
-var stefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/";
-var reviewstefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/?#feedback-container";
-var linkfndownload = "https://addons.opera.com/extensions/details/finance-toolbar/";
-var linkppdownload = "https://addons.opera.com/extensions/details/proper-menubar/";
-var linkzodownload = "https://addons.opera.com/extensions/details/zoom/";
-var linkaadownload = "https://addons.opera.com/extensions/details/ambient-aurea/";
-var linkthemedownload = "https://addons.opera.com/themes/details/turn-off-the-lights-theme/";
+	// feature check speech and camera
+	// no support
+	$("helpcameramotion").style.display = "";
+	$("helpspeech").style.display = "";
+	$("speech").disabled = true;
+	$("select_language").disabled = true;
+	$("select_dialect").disabled = true;
+	$("speechonly").disabled = true;
+	$("motion").disabled = true;
+	$("cammotiononly").disabled = true;
 } else if (browserName == "Google Chrome") {
-// Google Chrome
-var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-} else if (browserName == "Safari") {
-// Safari
-var stefanvdurl = "https://extensions.apple.com/details/?id=com.stefanvd.turnoffthelights-PRR97757HF";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://extensions.apple.com/details/?id=com.stefanvd.financetoolbar-PRR97757HF";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://extensions.apple.com/details/?id=com.stefanvd.zoom-PRR97757HF";
-var linkaadownload = "https://extensions.apple.com/details/?id=com.stefanvd.ambientaurea-PRR97757HF";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-} else if (browserName == "Firefox") {
-// Firefox browser
-var stefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/";
-var reviewstefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/reviews/";
-var linkfndownload = "https://addons.mozilla.org/firefox/addon/finance-toolbar/";
-var linkppdownload = "https://addons.mozilla.org/firefox/addon/proper-menubar/";
-var linkzodownload = "https://addons.mozilla.org/firefox/addon/zoom/";
-var linkaadownload = "https://addons.mozilla.org/firefox/addon/ambient-aurea/";
-var linkthemedownload = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights-theme/";
-} else if (browserName == "Maxthon") {
-// Maxthon browser
-var stefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
-var reviewstefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "http://skin.maxthon.com/detail/index.php?view_id=2015";
-} else if (browserName == "Yandex") {
-// Yandex browser
-var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+	// feature check speech and camera
+	// support
+	$("helpcameramotion").style.display = "none";
+	$("helpspeech").style.display = "none";
 } else {
-// default for Microsoft Edge
-var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+	// feature check speech and camera
+	// support
+	$("helpcameramotion").style.display = "none";
+	$("helpspeech").style.display = "none";
 }
 
+// Safari
+var stefanvdurl = "https://safari-extensions.apple.com/details/?id=com.stefanvd.turnoffthelights-PRR97757HF";
+var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
+var linkfndownload = "https://safari-extensions.apple.com/details/?id=com.stefanvd.financetoolbar-PRR97757HF";
+var linkppdownload = "https://safari-extensions.apple.com/details/?id=com.stefanvd.propermenubar-PRR97757HF";
+var linkzodownload = "https://safari-extensions.apple.com/details/?id=com.stefanvd.zoom-PRR97757HF";
+var linkaadownload = "https://safari-extensions.apple.com/details/?id=com.stefanvd.ambientaurea-PRR97757HF";
+var linkthemedownload = "https://www.turnoffthelights.com/browser.html";
+
+var linktotlguide = "https://www.turnoffthelights.com/extension/safariguide.html";
+var linktotlchangelog = "https://www.turnoffthelights.com/extension/safarichangelog.html";  
+var linktotlfan = "https://www.turnoffthelights.com/extension/safariwelcome.html";
+      
 // Remove remember
 $("skipremember").addEventListener('click', function() {$('remembershare').style.display = "none";});
 $("firstcheckboxskipremember").addEventListener('click', function() {if(firstcheckboxskipremember.checked == true){$('optionskipremember').checked = true;}save_options();});
@@ -2258,13 +2840,13 @@ $("tabadvan").addEventListener('click', function() {ONworkaroundbugfromsafari();
 $("tabnight").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
 $("tabmotion").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
 $("tabspeech").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "http://www.turnoffthelights.com/extension/safariguide.html";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
-$("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "http://www.turnoffthelights.com/extension/fan.html";$("managed-prefs-banner").style.display = "none";});
+$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = linktotlguide;$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
+$("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = linktotlfan;$("managed-prefs-banner").style.display = "none";});
 
-$("buttonreportissue").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/support");});
-$("buttonchangelog").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/safarichangelog.html");});
-$("buttonreportlist").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/issueslist.html");});
-$("buttontranslateme").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/translate.html");});
+$("buttonreportissue").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/support");});
+$("buttonchangelog").addEventListener('click', function() {window.open(linktotlchangelog);});
+$("buttonreportlist").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/extension/issueslist.html");});
+$("buttontranslateme").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/extension/translate.html");});
 
 function ONworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "";}
 function OFFworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "https://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";}
@@ -2295,6 +2877,11 @@ $("dynamic").addEventListener('click', function() {if(dynamic.checked == true){d
 // Check dynamic
 $("dynamichide").addEventListener('click', function() {$("dynamicgallery").style.display = "";$("dynamicshow").style.display = "";$("dynamichide").style.display = "none";});
 $("dynamicshow").addEventListener('click', function() {$("dynamicgallery").style.display = "none";$("dynamicshow").style.display = "none";$("dynamichide").style.display = "";});
+$("totldynpaper10").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstars');$('dynamic10').checked = true;dynamictest();save_options();});
+$("totldynpaper9").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamictriangulation');$('dynamic9').checked = true;dynamictest();save_options();});
+$("totldynpaper8").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstorm');$('dynamic8').checked = true;dynamictest();save_options();});
+$("totldynpaper7").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamicdotscolor');$('dynamic7').checked = true;dynamictest();save_options();});
+$("totldynpaper6").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamicsmoke');$('dynamic6').checked = true;dynamictest();save_options();});
 $("totldynpaper5").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamicspace');$('dynamic5').checked = true;dynamictest();save_options();});
 $("totldynpaper4").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamiccloud');$('dynamic4').checked = true;dynamictest();save_options();});
 $("totldynpaper3").addEventListener('click', function() {$("lightdynamic").value = chrome.i18n.getMessage('desdynamicraindrops');$('dynamic3').checked = true;dynamictest();save_options();});
@@ -2341,6 +2928,12 @@ $("autostopaddbutton").addEventListener('click', function() {autostopaddWhitelis
 // autostop Remove website
 $("autostopremovebutton").addEventListener('click', function() {autostopremoveSelectedExcludedDomain();});
 
+// video Add website
+$("videotooladdbutton").addEventListener('click', function() {videotooladdWhitelistDomain();});
+
+// video Remove website
+$("videotoolremovebutton").addEventListener('click', function() {videotoolremoveSelectedExcludedDomain();});
+
 // Reset settings
 $("resettotl").addEventListener('click', function() {safari.extension.clear;location.reload();});
 
@@ -2352,8 +2945,12 @@ $("war").addEventListener('click', function() {window.open(reviewstefanvdurl);$(
 $("nt").addEventListener('click', function() {$("sectionreviewbox").style.display = "none";window.localStorage['reviewedlastonversion'] = $("version_number").innerText;});
 
 // Aurora Player app box
-$("apgetapp").addEventListener('click', function() {window.open("http://www.stefanvd.net/project/auroraplayer.htm");$("sectionauroraplayerappbox").style.display = "none";window.localStorage['applastonversion'] = $("version_number").innerText;});
+$("apgetapp").addEventListener('click', function() {window.open("https://www.stefanvd.net/project/aurora-player/");$("sectionauroraplayerappbox").style.display = "none";window.localStorage['applastonversion'] = $("version_number").innerText;});
 $("apnt").addEventListener('click', function() {$("sectionauroraplayerappbox").style.display = "none";window.localStorage['applastonversion'] = $("version_number").innerText;});
+
+// Mobile app box
+$("magetapp").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/mobile.html");$("sectionmobileappbox").style.display = "none";window.localStorage['mobilelastonversion'] = $("version_number").innerText;;});
+$("mant").addEventListener('click', function() {$("sectionmobileappbox").style.display = "none";window.localStorage['mobilelastonversion'] = $("version_number").innerText;});
 
 // retina check
 if(window.devicePixelRatio >= 2) {
@@ -2361,27 +2958,6 @@ $("loadinglamp").src = "icons/icon16@2x.png";$("loadinglamp").style.width = "16p
 $("welcomelamp").src = "icons/icon16@2x.png";$("welcomelamp").style.width = "16px"; $("welcomelamp").style.height = "16px";
 $("rememberlamp").src = "icons/icon16@2x.png";$("rememberlamp").style.width = "16px"; $("rememberlamp").style.height = "16px";
 $("auroraplayericon").src = "images/aurora-player_32x32@2x.png";
-}
-
-// browser check
-if (browserName == "Safari") {
-	// feature check speech and camera
-	$("helpcameramotion").style.display = "";
-	$("helpspeech").style.display = "";
-	$("speech").disabled = true;
-	$("select_language").disabled = true;
-	$("select_dialect").disabled = true;
-	$("speechonly").disabled = true;
-	$("motion").disabled = true;
-	$("cammotiononly").disabled = true;
-} else if (browserName == "Google Chrome") {
-	// feature check speech and camera
-	$("helpcameramotion").style.display = "none";
-	$("helpspeech").style.display = "none";
-} else {
-	// feature check speech and camera
-	$("helpcameramotion").style.display = "none";
-	$("helpspeech").style.display = "none";
 }
 
 });

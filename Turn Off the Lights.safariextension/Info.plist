@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Stefan vd</string>
 	<key>Builder Version</key>
-	<string>10600.7.12</string>
+	<string>11601.4.4</string>
 	<key>CFBundleDisplayName</key>
 	<string>Turn Off the Lights</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1.0.27</string>
+	<string>3.2.0.4</string>
 	<key>CFBundleVersion</key>
-	<string>3.1.0.27</string>
+	<string>3.2.0.4</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
@@ -30,7 +30,7 @@
 				<key>Identifier</key>
 				<string>Lights</string>
 				<key>Image</key>
-				<string>icon1.png</string>
+				<string>Icon1@2x.png</string>
 				<key>Include By Default</key>
 				<true/>
 				<key>Label</key>
@@ -78,8 +78,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://www.stefanvd.net/downloads/updates.plist</string>
+	<string>https://www.stefanvd.net/downloads/updates.plist</string>
 	<key>Website</key>
-	<string>http://www.turnoffthelights.com</string>
+	<string>https://www.turnoffthelights.com</string>
 </dict>
 </plist>
