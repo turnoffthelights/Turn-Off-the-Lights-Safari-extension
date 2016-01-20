@@ -795,7 +795,7 @@ if(eastereggs == 'true'){
 		// shortcut key T
 		if ($('stefanvdtheater')){}
 		else {
-		alert('Do you like a real movie theater?');
+		window.alert('Do you like a real movie theater?');
 		var newimg = document.createElement('img');
 		newimg.setAttribute('id','stefanvdtheater');
 		newimg.src = safari.extension.baseURI + "images/theater.jpg";

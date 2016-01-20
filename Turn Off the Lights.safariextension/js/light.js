@@ -972,7 +972,7 @@ var pwon2 = $('stefanvdlightareoffpw');
 		document.body.removeChild(pwon2);
 		if(fadeout == 'true'){ReducingFinished = false;fader('hide');reader();} 
 		else {removenewframe();reader();}
-		} else {alert(i18nlockwrongpassword);}	
+		} else {window.alert(i18nlockwrongpassword);}	
 	} else {
 		if(fadeout == 'true'){ReducingFinished = false;fader('hide');reader();}
 		else {removenewframe();reader();}
