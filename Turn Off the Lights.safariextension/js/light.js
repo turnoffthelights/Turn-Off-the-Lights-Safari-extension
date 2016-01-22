@@ -825,17 +825,29 @@ el.style.zIndex = '1001';
 }
 
 // facebook.com - show the video player control
-// fixed 19 january 2016
+// fixed 21 january 2016
 else if (window.location.href.match(/((http:\/\/.*facebook\.com\/.*)|(https:\/\/.*facebook\.com\/.*))/i)){
+// separate video page
 var videoStage = document.getElementsByClassName("videoStage");
 for(var i = 0; i < videoStage.length; i++){
     videoStage[i].style.zIndex = 1001; 
         div = videoStage[i].getElementsByTagName('div'); 
-        for(var i = 0; i < div.length; i++ )
+        for(var i = 0; i < div.length; i++ ) 
         {
             // all div get a higher level
             div[i].style.zIndex = 1001;
             //if(div[i].hasAttribute('data-reactroot')) {div[i].style.zIndex = 1001;}
+        }
+}
+
+// main facebook video control
+var i5q = document.getElementsByClassName(" _i5q");
+for(var i = 0; i < i5q.length; i++){
+    i5q[i].style.zIndex = 1001; 
+        div = i5q[i].getElementsByTagName('div'); 
+        for(var j = 0; j < div.length; j++ ) 
+        {
+            div[j].style.zIndex = 1001;
         }
 }
 }
