@@ -29,8 +29,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 // show welcome page
 if ((safari.extension.settings["firstRun"]!="false") && (safari.extension.settings["firstRun"]!=false)) {
-  safari.application.activeBrowserWindow.openTab().url = "http://www.turnoffthelights.com/extension/safariguide.html";
-  var newTab = safari.application.activeBrowserWindow.openTab(); newTab.url = safari.extension.baseURI + "options.html?welcome";
+  safari.application.activeBrowserWindow.openTab().url = "https://www.turnoffthelights.com/extension/safariguide.html";
+  safari.application.activeBrowserWindow.openTab().url = "https://www.turnoffthelights.com/extension/safariwelcome.html";
   safari.extension.settings["firstRun"] = false;
   safari.extension.settings["version"]  = "2.4.1";
 }
