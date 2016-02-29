@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.2.0.7</string>
+	<string>3.2.0.8</string>
 	<key>CFBundleVersion</key>
-	<string>3.2.0.7</string>
+	<string>3.2.0.8</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
@@ -64,7 +64,7 @@
 	<key>Description</key>
 	<string>The entire page will be fading to dark, so you can watch the video as if you were in the cinema.</string>
 	<key>DeveloperIdentifier</key>
-	<string>PRR97757HF</string>
+	<string>0000000000</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
