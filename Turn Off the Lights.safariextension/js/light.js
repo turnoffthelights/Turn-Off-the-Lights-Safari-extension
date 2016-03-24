@@ -42,7 +42,7 @@ safari.self.addEventListener("message", function(e) {
         mousespotlighto = settings["mousespotlighto"];if(!mousespotlighto)mousespotlighto = 'true'; // default mousespotlight true
 		mousespotlightc = settings["mousespotlightc"];if(!mousespotlightc)mousespotlightc = 'false'; // default mousespotlight false
 		mousespotlighta = settings["mousespotlighta"];if(!mousespotlighta)mousespotlighta = 'false'; // default mousespotlight false
-        lightcolor = settings["lightcolor"];if(lightcolor)lightcolor = lightcolor;else lightcolor = '#000000'; // default lightcolor #000000
+        lightcolor = settings["lightcolor"];if(lightcolor)lightcolor = "#" + lightcolor;else lightcolor = '#000000'; // default lightcolor #000000
 		lightimagea = settings["lightimagea"];
         lightimage = settings["lightimage"];
 		interval = settings["interval"];if(!interval)interval = 80;default_opacity = interval; // default interval 80
@@ -71,9 +71,9 @@ safari.self.addEventListener("message", function(e) {
 		slideeffect = settings['slideeffect'];if(!slideeffect)slideeffect = 'false'; // default slideeffect false
 		lightimagelin = settings['lightimagelin'];if(!lightimagelin)lightimagelin = 'false'; // default lightimagelin false
 		linearsq = settings['linearsq'];
-		colora = settings['colora'];
+		colora = "#" + settings['colora'];
 		intervallina = settings['intervallina'];
-		colorb = settings['colorb'];
+		colorb = "#" + settings['colorb'];
 		intervallinb = settings['intervallinb'];
         //---
         //---

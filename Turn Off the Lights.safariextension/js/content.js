@@ -67,12 +67,12 @@ safari.self.addEventListener("message", function(e) {
 		ambilightrangespreadradius = settings["ambilightrangespreadradius"];
 		ambilightfixcolor = settings["ambilightfixcolor"];
 		ambilightvarcolor = settings["ambilightvarcolor"];
-		ambilightcolorhex = settings["ambilightcolorhex"];if(ambilightcolorhex)ambilightcolorhex = settings["ambilightcolorhex"];else ambilightcolorhex = '#47C2FF';
+		ambilightcolorhex = settings["ambilightcolorhex"];if(ambilightcolorhex)ambilightcolorhex = "#" + settings["ambilightcolorhex"];else ambilightcolorhex = '#47C2FF';
 		ambilight4color = settings["ambilight4color"];
-		ambilight1colorhex = settings["ambilight1colorhex"];if(ambilight1colorhex)ambilight1colorhex = settings["ambilight1colorhex"];else ambilight1colorhex = '#FF0000';
-		ambilight2colorhex = settings["ambilight2colorhex"];if(ambilight2colorhex)ambilight2colorhex = settings["ambilight2colorhex"];else ambilight2colorhex = '#FFEE00';
-		ambilight3colorhex = settings["ambilight3colorhex"];if(ambilight3colorhex)ambilight3colorhex = settings["ambilight3colorhex"];else ambilight3colorhex = '#00FF00';
-		ambilight4colorhex = settings["ambilight4colorhex"];if(ambilight4colorhex)ambilight4colorhex = settings["ambilight4colorhex"];else ambilight4colorhex = '#0000FF';
+		ambilight1colorhex = settings["ambilight1colorhex"];if(ambilight1colorhex)ambilight1colorhex = "#" + settings["ambilight1colorhex"];else ambilight1colorhex = '#FF0000';
+		ambilight2colorhex = settings["ambilight2colorhex"];if(ambilight2colorhex)ambilight2colorhex = "#" + settings["ambilight2colorhex"];else ambilight2colorhex = '#FFEE00';
+		ambilight3colorhex = settings["ambilight3colorhex"];if(ambilight3colorhex)ambilight3colorhex = "#" + settings["ambilight3colorhex"];else ambilight3colorhex = '#00FF00';
+		ambilight4colorhex = settings["ambilight4colorhex"];if(ambilight4colorhex)ambilight4colorhex = "#" + settings["ambilight4colorhex"];else ambilight4colorhex = '#0000FF';
 		ecosaver = settings["ecosaver"];
 		ecosavertime = settings["ecosavertime"];
 		autoplayonly = settings["autoplayonly"];
@@ -113,8 +113,8 @@ safari.self.addEventListener("message", function(e) {
 		autostopchecklistblack = settings["autostopchecklistblack"];
 		eyechecklistwhite = settings["eyechecklistwhite"];
 		eyechecklistblack = settings["eyechecklistblack"];
-        nightmodebck = settings['nightmodebck'];if(!nightmodebck)nightmodebck = '#000000';
-        nightmodetxt = settings['nightmodetxt'];if(!nightmodetxt)nightmodetxt = '#ffffff';
+        nightmodebck = "#" + settings['nightmodebck'];if(!nightmodebck)nightmodebck = '#000000';
+        nightmodetxt = "#" + settings['nightmodetxt'];if(!nightmodetxt)nightmodetxt = '#ffffff';
         no360youtube = settings['no360youtube'];
         videotool = settings['videotool'];
         reflection = settings['reflection'];
@@ -267,7 +267,15 @@ window.addEventListener('keydown', function(e) {
 				document.location.reload(true); // reload current web page
 			},3000);
 			}
-		}		
+		}
+        
+        if (e.which == 78 && e.ctrlKey && e.shiftKey && !e.altKey) {
+		// Run code for CTRL+SHIFT+L
+			// Shortcutlight
+			if(shortcutlight == 'true'){
+				if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}
+			}
+		}	
 		
 }, false);
 window.addEventListener('keypress', function(e) {
@@ -297,7 +305,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 					switch (data[0]) {
 						case "playerStateChange":
 							//console.log("received playerStateChange", data[1]);
-							if (data[1] === "2" || data[1] === "0" || data[1] === "-1") {
+							if (data[1] === "2" || data[1] === "0" || data[1] === "-1" || data[1] === "5") {
 								shadesOff(this.player);
 								if (data[1] === "0") {
 									try {

@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Stefan vd</string>
 	<key>Builder Version</key>
-	<string>11601.4.4</string>
+	<string>11601.5.17.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>Turn Off the Lights</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.2.0.8</string>
+	<string>3.2.0.11</string>
 	<key>CFBundleVersion</key>
-	<string>3.2.0.8</string>
+	<string>3.2.0.11</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
@@ -64,7 +64,7 @@
 	<key>Description</key>
 	<string>The entire page will be fading to dark, so you can watch the video as if you were in the cinema.</string>
 	<key>DeveloperIdentifier</key>
-	<string>0000000000</string>
+	<string>PRR97757HF</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
