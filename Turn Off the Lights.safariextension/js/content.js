@@ -1647,12 +1647,19 @@ if(nightonly == 'true'){
 				}
 			}
 			else if(nightmodechecklistblack == 'true'){
-				if(currenturl == nbuf[i]){nightrabbit=true;}
+				if(currenturl == nbuf[i]){
+                    nightrabbit=true;
+                }
 			}
 		}
 	}
 	if(nightmodechecklistblack == 'true'){
-		if(nightrabbit == false){showswitchtricker();timergonighttricker();nightrabbit = false;}
+		if(nightrabbit == false){
+            if (nighttheme == 'true'){showswitchtricker(); }
+					if (nightenabletheme == 'true'){
+						timergonighttricker();
+					}
+        }
 	}
 }else{
 	if (nightenabletheme == 'true'){
