@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Stefan vd</string>
 	<key>Builder Version</key>
-	<string>11601.5.17.1</string>
+	<string>12602.3.12.0.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>Turn Off the Lights</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.2.0.12</string>
+	<string>3.3.0.14</string>
 	<key>CFBundleVersion</key>
-	<string>3.2.0.12</string>
+	<string>3.3.0.14</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
@@ -44,10 +44,6 @@
 	</dict>
 	<key>Content</key>
 	<dict>
-		<key>Blacklist</key>
-		<array>
-			<string>safari-extension://*/*</string>
-		</array>
 		<key>Scripts</key>
 		<dict>
 			<key>End</key>

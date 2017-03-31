@@ -7,6 +7,8 @@
 		<false/>
 		<key>Key</key>
 		<string>optionpage</string>
+		<key>Secure</key>
+		<false/>
 		<key>Title</key>
 		<string>Check me to open Turn Off the Lights options page.</string>
 		<key>Titles</key>

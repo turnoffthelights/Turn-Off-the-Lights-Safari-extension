@@ -168,7 +168,7 @@
     "description":"动态背景"
   },
   "deslikebutton":{
-    "message":"显示YouTube上视频的 顶\/踩 按钮",
+    "message":"显示YouTube上视频的 顶/踩 按钮",
     "description":"显示类似 & 不喜欢此视频的 youtube 上的按钮。"
   },
   "titelmouse":{
@@ -308,8 +308,8 @@
     "description":"确认屏幕保护程序时间"
   },
   "deslikebar":{
-    "message":"显示YouTube 视频下的“like\/dislike”项目 。",
-    "description":"显示像\/不喜欢酒吧下 YouTube 视频。"
+    "message":"显示YouTube 视频下的“like/dislike”项目 。",
+    "description":"显示像/不喜欢酒吧下 YouTube 视频。"
   },
   "titelautoplay":{
     "message":"自动播放",
@@ -444,8 +444,8 @@
     "description":"享受此扩展并共享与其他人你觉得会很感激。"
   },
   "shortcuttotl":{
-    "message":"以开\/关灯光。",
-    "description":"以开\/关灯光。"
+    "message":"以开/关灯光。",
+    "description":"以开/关灯光。"
   },
   "deseyea":{
     "message":"打开页面时自动将背景变暗。",
@@ -476,7 +476,7 @@
     "description":"在打开以下站点时自动将背景变暗。"
   },
   "titellikebutton":{
-    "message":"顶\/踩 按钮",
+    "message":"顶/踩 按钮",
     "description":"喜欢 & 不喜欢按钮"
   },
   "titelpageaction":{
@@ -1076,8 +1076,8 @@
     "description":"风暴"
   },
   "desdynamictriangulation":{
-    "message":"Triangulation",
-    "description":"Triangulation"
+    "message":"三角测量",
+    "description":"三角测量"
   },
   "desdynamicstars":{
     "message":"星标",
@@ -1088,8 +1088,8 @@
     "description":"Turn Off the Lights也适用于您的移动设备。"
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame",
-    "description":"Shows the full 360 degrees YouTube video in one frame"
+    "message":"在一个框架中显示完整的360度YouTube视频",
+    "description":"在一个框架中显示完整的360度YouTube视频"
   },
   "titelvideotool":{
     "message":"视频工具栏",
@@ -1104,8 +1104,8 @@
     "description":"设置视频播放器到全窗口模式的按钮"
   },
   "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
+    "message":"在当前视频播放器中添加筛选器的按钮",
+    "description":"在当前视频播放器中添加筛选器的按钮"
   },
   "vtoolreplay":{
     "message":"重复当前视频播放器的按钮",
@@ -1144,8 +1144,8 @@
     "description":"正常"
   },
   "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
+    "message":"赞",
+    "description":"赞"
   },
   "titelvideotoolsubscribe":{
     "message":"订阅",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"黑名单",
     "description":"黑名单"
+  },
+  "titelnightmodehyperlink":{
+    "message":"超链接",
+    "description":"超链接"
+  },
+  "titelblock60fps":{
+    "message":"阻止60fps",
+    "description":"阻止60fps"
+  },
+  "titelvolume":{
+    "message":"视频音量控制",
+    "description":"视频音量控制"
+  },
+  "desvideovolume":{
+    "message":"使用鼠标滚轮控制当前视频播放器的音量",
+    "description":"使用鼠标滚轮控制当前视频播放器的音量"
+  },
+  "desvideovolumecolor":{
+    "message":"滑动条颜色",
+    "description":"滑动条颜色"
+  },
+  "desvolumelabel":{
+    "message":"显示音量标签",
+    "description":"显示音量标签"
+  },
+  "desvolumesteps":{
+    "message":"鼠标滚轮的滚动所代表的音量等级",
+    "description":"鼠标滚轮的滚动所代表的音量等级"
+  },
+  "sharetexta":{
+    "message":"获取Turn Off the Lights浏览器扩展程序",
+    "description":"获取Turn Off the Lights浏览器扩展程序"
+  },
+  "sharetextb":{
+    "message":"嘿，我今天就尝试了Turn Off the Lights浏览器扩展程序，真令人惊奇。 ",
+    "description":"嘿，我今天就尝试了Turn Off the Lights浏览器扩展程序，真令人惊奇。 "
+  },
+  "sharetextc":{
+    "message":"最佳且奇妙的 Turn Off the Lights 浏览器扩展",
+    "description":"最佳且奇妙的 Turn Off the Lights 浏览器扩展"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights浏览器扩展程序是用在Youtube上的工具中最好用的。你也来下载使用试试吧。",
+    "description":"Turn Off the Lights浏览器扩展程序是用在Youtube上的工具中最好用的。你也来下载使用试试吧。"
+  },
+  "titellampchoose":{
+    "message":"选择您首选的灯样式",
+    "description":"选择您首选的灯样式"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights 不工作于此网页。请尝试其它网页。",
+    "description":"Turn Off the Lights 不工作于此网页。请尝试其它网页。"
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"使用指南",
+    "description":"使用指南"
+  },
+  "titelpopupsupport":{
+    "message":"支持",
+    "description":"支持"
+  },
+  "titelpopupoptions":{
+    "message":"选项",
+    "description":"选项"
+  },
+  "titelpopupratestars":{
+    "message":"打5分",
+    "description":"打5分"
+  },
+  "titelvisenable":{
+    "message":"开启/禁用音频可视化",
+    "description":"开启/禁用音频可视化"
+  },
+  "titelvischoose":{
+    "message":"选择您的音频可视化",
+    "description":"选择您的音频可视化"
+  },
+  "titelvisblocks":{
+    "message":"区块",
+    "description":"区块"
+  },
+  "titelvisfrequency":{
+    "message":"频率",
+    "description":"频率"
+  },
+  "titelvistunnel":{
+    "message":"音乐隧道",
+    "description":"音乐隧道"
+  },
+  "titelvisualization":{
+    "message":"音频可视化",
+    "description":"音频可视化"
+  },
+  "desvisopacity":{
+    "message":"音频可视化背景不透明值",
+    "description":"音频可视化背景不透明值"
+  },
+  "vtoolvisualization":{
+    "message":"用于显示当前视频播放器音频可视化的按钮",
+    "description":"用于显示当前视频播放器音频可视化的按钮"
   }
 }

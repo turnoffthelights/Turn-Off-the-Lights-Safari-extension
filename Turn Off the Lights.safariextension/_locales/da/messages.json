@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Sortliste",
     "description":"Sortliste"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"Blokér 60fps",
+    "description":"Blokér 60fps"
+  },
+  "titelvolume":{
+    "message":"Videolydstyrkeskyder",
+    "description":"Videolydstyrkeskyder"
+  },
+  "desvideovolume":{
+    "message":"Styre volumen på den aktuelle videoafspiller med et rul på musen",
+    "description":"Styre volumen på den aktuelle videoafspiller med et rul på musen"
+  },
+  "desvideovolumecolor":{
+    "message":"Farven på skyderen",
+    "description":"Farven på skyderen"
+  },
+  "desvolumelabel":{
+    "message":"Vis lydstyrkeetiket",
+    "description":"Vis lydstyrkeetiket"
+  },
+  "desvolumesteps":{
+    "message":"Antal af niveauer pr. 360° på musehjulet",
+    "description":"Antal af niveauer pr. 360° på musehjulet"
+  },
+  "sharetexta":{
+    "message":"Få denne cool Turn Off the Lights browserudvidelse",
+    "description":"Få denne cool Turn Off the Lights browserudvidelse"
+  },
+  "sharetextb":{
+    "message":"Halløjsa. Dét er fantastisk. Jeg har i dag lige prøvet denne Turn Off the Lights Browserudvidelse ",
+    "description":"Halløjsa. Dét er fantastisk. Jeg har i dag lige prøvet denne Turn Off the Lights Browserudvidelse "
+  },
+  "sharetextc":{
+    "message":"Den bedste og mest fantastiske Turn Off the Lights browserudvidelse",
+    "description":"Den bedste og mest fantastiske Turn Off the Lights browserudvidelse"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights udvidelse er det bedste værktøj til brug på YouTube. Download den og prøv den selv!",
+    "description":"Turn Off the Lights udvidelse er det bedste værktøj til brug på YouTube. Download den og prøv den selv!"
+  },
+  "titellampchoose":{
+    "message":"Vælg din foretrukne lampestil",
+    "description":"Vælg din foretrukne lampestil"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights fungere ikke på denne webside. Prøv venligst en anden side.",
+    "description":"Turn Off the Lights fungere ikke på denne webside. Prøv venligst en anden side."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Velkommen-guide",
+    "description":"Velkommen-guide"
+  },
+  "titelpopupsupport":{
+    "message":"Support",
+    "description":"Support"
+  },
+  "titelpopupoptions":{
+    "message":"Indstillinger",
+    "description":"Indstillinger"
+  },
+  "titelpopupratestars":{
+    "message":"Bedøm til 5 stjerner",
+    "description":"Bedøm til 5 stjerner"
+  },
+  "titelvisenable":{
+    "message":"Aktivere\/Deaktivere Audiovisualisering",
+    "description":"Aktivere\/Deaktivere Audiovisualisering"
+  },
+  "titelvischoose":{
+    "message":"Vælg din Audiovisualisering",
+    "description":"Vælg din Audiovisualisering"
+  },
+  "titelvisblocks":{
+    "message":"Blokke",
+    "description":"Blokke"
+  },
+  "titelvisfrequency":{
+    "message":"Frekvens",
+    "description":"Frekvens"
+  },
+  "titelvistunnel":{
+    "message":"Musiktunnel",
+    "description":"Musiktunnel"
+  },
+  "titelvisualization":{
+    "message":"Audiovisualisering",
+    "description":"Audiovisualisering"
+  },
+  "desvisopacity":{
+    "message":"Opacitetsværdien af lydvisualiseringsbaggrunden",
+    "description":"Opacitetsværdien af lydvisualiseringsbaggrunden"
+  },
+  "vtoolvisualization":{
+    "message":"En knap til at visning af lydvisualisering for den aktuelle videoafspiller",
+    "description":"En knap til at visning af lydvisualisering for den aktuelle videoafspiller"
   }
 }
