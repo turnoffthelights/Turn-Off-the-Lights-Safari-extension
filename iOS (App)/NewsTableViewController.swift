@@ -85,7 +85,7 @@ class NewsTableViewController: UITableViewController {
 
             (cell.titleLabel.text, cell.descriptionLabel.text, cell.dateLabel.text) = (item.title, string.withoutHtmlTags, editeddate)
 
-            cell.descriptionLabel.numberOfLines = 4
+            cell.descriptionLabel.numberOfLines = 3
         }
         return cell
     }

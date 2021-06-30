@@ -11,13 +11,18 @@ import AVFoundation
 import AVKit
 
 class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
-
+    
+    @IBOutlet weak var btnok: UIButton!
+    
     @IBOutlet weak var videolayer: UIView!
     @IBOutlet weak var imageinspiration: UIImageView!
     override func viewDidLoad(){
         super.viewDidLoad()
         addvideo()
         settranslationtext()
+        
+        // default zero opacity
+        self.btnok.alpha = 0.0
     }
     
     @IBOutlet weak var lbleasysetup: UILabel!
@@ -31,6 +36,12 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.65, execute: {
+            UIView.animate(withDuration: 1.5) {
+                self.btnok.alpha = 1.0
+            }
+        })
     }
 
     func settranslationtext(){

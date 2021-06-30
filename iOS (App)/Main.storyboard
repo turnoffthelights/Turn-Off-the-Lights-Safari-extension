@@ -249,6 +249,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnok" destination="vIf-0d-5wR" id="MHG-zW-dfg"/>
                         <outlet property="imageinspiration" destination="z9W-ok-jXb" id="Cjg-D8-1uO"/>
                         <outlet property="lblactivate" destination="cGy-bU-AF4" id="sS8-Ck-Zbn"/>
                         <outlet property="lbleasysetup" destination="Coh-px-Fvp" id="PaS-D8-rtr"/>
@@ -318,19 +319,19 @@
                                     <action selector="bigshareaction:" destination="Gf6-w3-eM9" eventType="touchUpInside" id="q3h-Dj-A6n"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ck-1D-rTL">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ck-1D-rTL">
                                 <rect key="frame" x="163" y="145" width="65.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safari extension is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Las-RJ-5F9">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safari extension is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Las-RJ-5F9">
                                 <rect key="frame" x="20" y="145" width="138" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqc-uS-erT">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqc-uS-erT">
                                 <rect key="frame" x="20" y="174" width="113" height="30"/>
                                 <state key="normal" title="Manage Options"/>
                             </button>
@@ -1052,19 +1053,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ar-iz-Fme">
-                                            <rect key="frame" x="20" y="68" width="303" height="52"/>
+                                            <rect key="frame" x="20" y="84" width="303" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="Vpg-VI-frZ"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hQ-UE-ILr">
-                                            <rect key="frame" x="20" y="52" width="303" height="14"/>
+                                            <rect key="frame" x="20" y="60" width="303" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="aZa-hz-Vn8"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1077,10 +1078,10 @@
                                         <constraint firstItem="ZPh-Rl-hsg" firstAttribute="top" secondItem="QmH-L9-ZXr" secondAttribute="top" constant="20" id="R0P-2j-pYs"/>
                                         <constraint firstAttribute="right" secondItem="ZPh-Rl-hsg" secondAttribute="right" constant="20" id="Vgd-qH-Pr7"/>
                                         <constraint firstItem="5hQ-UE-ILr" firstAttribute="left" secondItem="QmH-L9-ZXr" secondAttribute="left" constant="20" id="WND-Bx-Oua"/>
-                                        <constraint firstItem="2ar-iz-Fme" firstAttribute="top" secondItem="5hQ-UE-ILr" secondAttribute="bottom" constant="2" id="eaJ-FZ-w8S"/>
+                                        <constraint firstItem="2ar-iz-Fme" firstAttribute="top" secondItem="5hQ-UE-ILr" secondAttribute="bottom" constant="10" id="eaJ-FZ-w8S"/>
                                         <constraint firstItem="ZPh-Rl-hsg" firstAttribute="left" secondItem="QmH-L9-ZXr" secondAttribute="left" constant="20" id="hjv-lB-OnP"/>
                                         <constraint firstItem="2ar-iz-Fme" firstAttribute="centerX" secondItem="QmH-L9-ZXr" secondAttribute="centerX" id="jSa-Cq-Rum"/>
-                                        <constraint firstItem="5hQ-UE-ILr" firstAttribute="top" secondItem="ZPh-Rl-hsg" secondAttribute="bottom" constant="2" id="lvy-sz-Nx2"/>
+                                        <constraint firstItem="5hQ-UE-ILr" firstAttribute="top" secondItem="ZPh-Rl-hsg" secondAttribute="bottom" constant="10" id="lvy-sz-Nx2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

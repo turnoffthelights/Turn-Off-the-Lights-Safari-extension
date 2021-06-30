@@ -85,7 +85,7 @@ class FeedParser: NSObject, XMLParserDelegate {
     switch currentElement {
     case "title":
       currentTitle += string
-    case "description":
+    case "content:encoded":
       currentDescription += string
     case "pubDate":
       currentPubDate += string
