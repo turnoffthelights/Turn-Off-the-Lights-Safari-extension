@@ -58,6 +58,16 @@
                ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E4CB230268CDC6D00015282"
+               BuildableName = "TOtL-iOS-test.xctest"
+               BlueprintName = "TOtL-iOS-test"
+               ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
