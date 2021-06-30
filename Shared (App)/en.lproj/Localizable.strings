@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Turn Off the Lights for Safari
+
+  Created by Stefan Van Damme on 17/06/2021.
+  
+*/
+
+"lbleasytosetup" = "Easy to set this up";
+"lblturnoffthelights" = "Turn Off the Lights";
+"lblactivate" = "Activate";
+"lblwatchvideo" = "Watch Video";
+"lblstep1" = "Leave this app";
+"lblstep2a" = "Open the";
+"lblstep2b" = "Settings";
+"lblstep2c" = "app on your device";
+"lblstep3a" = "Search and tap on";
+"lblstep3b" = "Safari";
+"lblstep3c" = ", tap then on";
+"lblstep3d" = "Extensions";
+"lblstep4a" = "Enable";
+"lblstep4b" = "Turn Off the Lights";
