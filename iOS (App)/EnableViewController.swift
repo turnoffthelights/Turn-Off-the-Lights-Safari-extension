@@ -37,7 +37,7 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.65, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
             UIView.animate(withDuration: 1.5) {
                 self.btnok.alpha = 1.0
             }
