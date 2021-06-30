@@ -28,6 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E4CB1EF268CC62300015282"
+               BuildableName = "Turn Off the Lights for SafariUITests.xctest"
+               BlueprintName = "Turn Off the Lights for SafariUITests"
+               ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E4CB1FC268CC64700015282"
+               BuildableName = "Turn Off the Lights for SafariTests.xctest"
+               BlueprintName = "Turn Off the Lights for SafariTests"
+               ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E4CB209268CC77900015282"
+               BuildableName = "TOtL-iOS-UITest.xctest"
+               BlueprintName = "TOtL-iOS-UITest"
+               ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
