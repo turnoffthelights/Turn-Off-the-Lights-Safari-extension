@@ -896,6 +896,10 @@ function reader(){
 	}
 	window.onmousemove = null;
 
+	function ytresettxtcolor(a){
+		if(a != null){ a.style.color = ""; }
+	}
+
 	// Set everything back to the default YouTube theme
 	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 		// update YouTube material 6 August 2017
@@ -956,14 +960,14 @@ function reader(){
 		var ytmaterialvideotitle = document.querySelector("ytd-video-primary-info-renderer");
 		if(ytmaterialvideotitle){
 			var ytgeth = ytmaterialvideotitle.querySelector("h1");
-			if(ytgeth != null){ ytgeth.style.color = ""; }
+			ytresettxtcolor(ytgeth);
 		}
 
 		// YouTube view count
 		var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
 		if(ytmaterialviewcount){
 			var ytgetformat = ytmaterialviewcount.querySelector(".view-count");
-			if(ytgetformat != null){ ytgetformat.style.color = ""; }
+			ytresettxtcolor(ytgetformat);
 		}
 
 		// old YouTube -----
@@ -1218,6 +1222,10 @@ function dragBorder(arg, delta){
 	}
 }
 
+function stretchout(){
+	stretchable = false; document.body.style.cursor = "auto";
+}
+
 var view1; var view2; var view3; var view4;
 function getMouse(obj, e){
 	posx = 0; posy = 0;
@@ -1258,13 +1266,11 @@ function getMouse(obj, e){
 
 		rect = $("stefanvdlightcorner"); rect.onmousemove = watchMouse;
 		$("stefanvdlightcorner").addEventListener("mousedown", function(){ stretchable = true; }, false);
-		$("stefanvdlightcorner").addEventListener("mouseup", function(){ stretchable = false; document.body.style.cursor = "auto"; }, false);
-		$("stefanvdlightcorner").addEventListener("mouseout", function(){ stretchable = false; document.body.style.cursor = "auto"; }, false);
+		$("stefanvdlightcorner").addEventListener("mouseup", stretchout, false);
+		$("stefanvdlightcorner").addEventListener("mouseout", stretchout, false);
 
-		$("stefanvdlightcorner").style.top = parseInt(document.getElementById("stefanvdlightareoff1").style.height) - 10 + "px";
-		$("stefanvdlightcorner").style.height = parseInt(document.getElementById("stefanvdlightareoff2").style.height) - 20 + "px";
-		$("stefanvdlightcorner").style.left = parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 10 + "px";
-		$("stefanvdlightcorner").style.width = parseInt(document.getElementById("stefanvdlightareoff3").style.left) - parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 20 + "px";
+		setAttributes($("stefanvdlightcorner"), {"top": parseInt(document.getElementById("stefanvdlightareoff1").style.height) - 10 + "px", "height": parseInt(document.getElementById("stefanvdlightareoff2").style.height) - 20 + "px", "left": parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 10 + "px", "width": parseInt(document.getElementById("stefanvdlightareoff3").style.left) - parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 20 + "px"});
+
 	}else{ return false; }
 	// var viewpartwidth = customview.style.width;
 	var viewpartheight = customview.style.height;

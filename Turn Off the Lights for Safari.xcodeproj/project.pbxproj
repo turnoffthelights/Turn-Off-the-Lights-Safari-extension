@@ -1212,7 +1212,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1242,7 +1242,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1276,7 +1276,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1315,7 +1315,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1355,7 +1355,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1387,7 +1387,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1423,7 +1423,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1462,7 +1462,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari";
 				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
-				INFOPLIST_KEY_CFBundleVersion = 36;
+				INFOPLIST_KEY_CFBundleVersion = 37;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
