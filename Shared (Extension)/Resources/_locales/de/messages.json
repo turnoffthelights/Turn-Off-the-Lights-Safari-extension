@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Die ganze Seite wird abgedunkelt, sodass sie Videos wie im Kino ansehen können."},
     "pagehelp": {"message": "Hilfe"},
     "titelimage": {"message": "Hintergrundbild"},
     "shortcutalllights": {"message": "um die Lichter in allen geöffneten Reitern ein-/auszuschalten"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Weiterempfehlen"},
     "sharemenusendatweet": {"message": "Einen Tweet senden"},
     "sharemenupostonfacebook": {"message": "Auf Facebook veröffentlichen"},
-    "sharemenupostongoogleplus": {"message": "Auf Google+ veröffentlichen"},
     "sharemenuratetitle": {"message": "Diese Erweiterung bewerten"},
     "sharemenudonatetitle": {"message": "Spenden"},
     "titelautostop": {"message": "Autom. Anhalten"},

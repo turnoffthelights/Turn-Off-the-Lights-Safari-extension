@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Koko sivu on himmentyy tummaksi, joten voit katsella videoita kuin olisit elokuvissa."},
     "pagehelp": {"message": "ohjeet"},
     "titelimage": {"message": "Taustakuva"},
     "shortcutalllights": {"message": "kytkeäksesi valot päälle/pois kaikkilla avoimilla välilehdillä"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Kerro kaverille"},
     "sharemenusendatweet": {"message": "Lähetä twiitti"},
     "sharemenupostonfacebook": {"message": "Viesti Facebook"},
-    "sharemenupostongoogleplus": {"message": "Lähetä Google+:aan"},
     "sharemenuratetitle": {"message": "Arvostele tämä laajennus"},
     "sharemenudonatetitle": {"message": "Tue kehitystä"},
     "titelautostop": {"message": "AutoStop"},

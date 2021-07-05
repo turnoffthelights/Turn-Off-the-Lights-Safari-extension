@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Ang buong pahina ay magiging madilim, kaya maaari mong panoorin ang mga video na parang nasa sinehan ka."},
     "pagehelp": {"message": "saklolo"},
     "titelimage": {"message": "Imahe ng Likurang harang"},
     "shortcutalllights": {"message": "upang i-toggle ang ilaw sa pag patay/bukas para sa lahat ng mga bukas na tab"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Sabihin sa Kaibigan"},
     "sharemenusendatweet": {"message": "Magpadala ng Tweet"},
     "sharemenupostonfacebook": {"message": "I-post sa Facebook"},
-    "sharemenupostongoogleplus": {"message": "I-post sa Google+"},
     "sharemenuratetitle": {"message": "I-rate ang extension na ito"},
     "sharemenudonatetitle": {"message": "Support Development"},
     "titelautostop": {"message": "Kusang paghinto"},

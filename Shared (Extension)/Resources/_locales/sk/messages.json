@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Celá stránka sa stmaví tak, že budete môcť sledovať videá, ako keby ste boli v kine."},
     "pagehelp": {"message": "pomoc"},
     "titelimage": {"message": "Obrázok na pozadí"},
     "shortcutalllights": {"message": "prepínať svetlá zapnuté/vypnuté pre všetky otvorené záložky"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Povedať priateľovi"},
     "sharemenusendatweet": {"message": "Poslať tweet"},
     "sharemenupostonfacebook": {"message": "Príspevok na Facebook"},
-    "sharemenupostongoogleplus": {"message": "Príspevok na Google+"},
     "sharemenuratetitle": {"message": "Ohodnotiť toto rozšírenie"},
     "sharemenudonatetitle": {"message": "Podpora vývoja"},
     "titelautostop": {"message": "AutoStop"},

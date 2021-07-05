@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "전체 페이지가 어두워지게 함으로써, 여러분이 극장에 있는 듯한 느낌으로 동영상을 시청할 수 있습니다."},
     "pagehelp": {"message": "도움말"},
     "titelimage": {"message": "배경 이미지"},
     "shortcutalllights": {"message": "열려있는 모든 탭 조명 켜기/끄기"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "친구에게 알려주기"},
     "sharemenusendatweet": {"message": "트윗하기"},
     "sharemenupostonfacebook": {"message": "페이스북에서 공유"},
-    "sharemenupostongoogleplus": {"message": "Google +에서 공유"},
     "sharemenuratetitle": {"message": "평점주기"},
     "sharemenudonatetitle": {"message": "개발자를 지원하기"},
     "titelautostop": {"message": "자동 멈춤"},

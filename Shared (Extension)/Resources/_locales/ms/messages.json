@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Seluruh halaman akan pudar menjadi gelap, jadi anda dapat menonton video seperti di pawagam."},
     "pagehelp": {"message": "bantuan"},
     "titelimage": {"message": "Imej latar belakang"},
     "shortcutalllights": {"message": "untuk menghidupkan/mematikan cahaya untuk kesemua tab"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Beritahu rakan"},
     "sharemenusendatweet": {"message": "Hantar Tweet"},
     "sharemenupostonfacebook": {"message": "Pos di Facebook"},
-    "sharemenupostongoogleplus": {"message": "Pos di Google +"},
     "sharemenuratetitle": {"message": "Nilaikan pemalam ini"},
     "sharemenudonatetitle": {"message": "Sokong Pembangunan"},
     "titelautostop": {"message": "Autohenti"},

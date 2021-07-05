@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "سوف تتلاشى الصفحة بأكملها في الظلام، حتى تتمكن من مشاهدة أشرطة الفيديو كما لو كنت في السينما."},
     "pagehelp": {"message": "المساعدة"},
     "titelimage": {"message": "صورة الخلفية"},
     "shortcutalllights": {"message": "لتشغيل/إيقاف الإضاءة لكل التبويبات المفتوحة"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "أخبر صديق"},
     "sharemenusendatweet": {"message": "إرسال تغريدة"},
     "sharemenupostonfacebook": {"message": "مشاركة على الفيس بوك"},
-    "sharemenupostongoogleplus": {"message": "النشر في جوجل +"},
     "sharemenuratetitle": {"message": "قيم هذا الامتداد"},
     "sharemenudonatetitle": {"message": "دعم التنمية"},
     "titelautostop": {"message": "ايقاف تلقائي"},

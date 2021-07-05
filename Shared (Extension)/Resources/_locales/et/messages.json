@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Kogu lehekülg tumeneb, nii et saate vaadata videot, justkui oleksite kinos."},
     "pagehelp": {"message": "abi"},
     "titelimage": {"message": "Taustapilt"},
     "shortcutalllights": {"message": "lülitab tuled sisse/välja kõikidel lahtiolevatel vahelehtedel"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Soovita sõbrale"},
     "sharemenusendatweet": {"message": "Saada Twitter'isse"},
     "sharemenupostonfacebook": {"message": "Postita Facebook'i"},
-    "sharemenupostongoogleplus": {"message": "Postita Google+'i"},
     "sharemenuratetitle": {"message": "Hinda seda laiendust"},
     "sharemenudonatetitle": {"message": "Toeta arengut"},
     "titelautostop": {"message": "AutoStop"},

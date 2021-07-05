@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Ολόκληρη η σελίδα θα σκοτεινιάσει, ώστε να μπορείτε να παρακολουθήσετε το βίντεο σαν να είσαστε στο σινεμά."},
     "pagehelp": {"message": "Βοήθεια"},
     "titelimage": {"message": "Εικόνα Φόντου"},
     "shortcutalllights": {"message": "για να εναλλάξετε τα φώτα σε αναμμένα/σβηστά σε όλες τις ανοικτές καρτέλες"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Ενημερώστε ένα φίλο"},
     "sharemenusendatweet": {"message": "Στείλτε ένα Tweet"},
     "sharemenupostonfacebook": {"message": "Ανάρτηση στο Facebook"},
-    "sharemenupostongoogleplus": {"message": "Ανάρτηση στο Google +"},
     "sharemenuratetitle": {"message": "Βαθμολογήστε αυτήν την επέκταση"},
     "sharemenudonatetitle": {"message": "Υποστήριξη Ανάπτυξης"},
     "titelautostop": {"message": "Αυτόματη διακοπή"},

@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Toàn bộ trang web sẽ tối dần, vì thế bạn có thể xem các video giống như khi bạn xem trong rạp chiếu phim."},
     "pagehelp": {"message": "trợ giúp"},
     "titelimage": {"message": "Hình ảnh nền"},
     "shortcutalllights": {"message": "để bật/tắt đèn cho tất cả các tab đang mở"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Giới thiệu với bạn bè"},
     "sharemenusendatweet": {"message": "Gửi một Tweet"},
     "sharemenupostonfacebook": {"message": "Đăng trên Facebook"},
-    "sharemenupostongoogleplus": {"message": "Đăng trên Google +"},
     "sharemenuratetitle": {"message": "Đánh giá tiện ích mở rộng này"},
     "sharemenudonatetitle": {"message": "Hỗ trợ người phát triển"},
     "titelautostop": {"message": "Tự động dừng"},

@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Hele siden vil bli gjort mørk, slik at du kan se videoer som om du var på kino."},
     "pagehelp": {"message": "Hjelp"},
     "titelimage": {"message": "Bakgrunsbilde"},
     "shortcutalllights": {"message": "for å slå lysene på/av for alle åpne faner"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Tips en venn"},
     "sharemenusendatweet": {"message": "Send en Tweet"},
     "sharemenupostonfacebook": {"message": "Post på Facebook"},
-    "sharemenupostongoogleplus": {"message": "Post på Google +"},
     "sharemenuratetitle": {"message": "Rangér dette tillegget"},
     "sharemenudonatetitle": {"message": "Støtt viderutvikling"},
     "titelautostop": {"message": "AutoStopp"},

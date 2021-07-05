@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Seluruh halaman akan memudar menjadi gelap, sehingga Anda dapat menonton video seperti di bioskop."},
     "pagehelp": {"message": "Bantuan"},
     "titelimage": {"message": "Gambar latar"},
     "shortcutalllights": {"message": "Untuk menghidupkan/mematikan lampu pada seluruh halaman yang sedang dibuka"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Beritahu Teman"},
     "sharemenusendatweet": {"message": "Kirim Tweet"},
     "sharemenupostonfacebook": {"message": "Kirim ke Facebook"},
-    "sharemenupostongoogleplus": {"message": "Kirim ke Google +"},
     "sharemenuratetitle": {"message": "Nilai ekstensi ini"},
     "sharemenudonatetitle": {"message": "Dukung Pengembangan"},
     "titelautostop": {"message": "AutoStop"},

@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Вся страница будет затемнена, Вы сможете смотреть видео, как в кинотеатре."},
     "pagehelp": {"message": "помощь"},
     "titelimage": {"message": "Фоновое изображение"},
     "shortcutalllights": {"message": "чтобы включить или отключить свет для всех открытых вкладок"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Рассказать друзьям"},
     "sharemenusendatweet": {"message": "Отправить твит"},
     "sharemenupostonfacebook": {"message": "Пост на Facebook"},
-    "sharemenupostongoogleplus": {"message": "Пост на Google +"},
     "sharemenuratetitle": {"message": "Оценить это расширение"},
     "sharemenudonatetitle": {"message": "Поддержать разработчика"},
     "titelautostop": {"message": "Автоматическая остановка"},

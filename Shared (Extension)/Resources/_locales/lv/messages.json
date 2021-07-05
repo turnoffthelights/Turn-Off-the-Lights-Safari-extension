@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Visa lapa tiks izgaist līdz tumši, lai jūs varētu skatīties video kā, ja Jums ir kino."},
     "pagehelp": {"message": "palīgā"},
     "titelimage": {"message": "Fona attēls"},
     "shortcutalllights": {"message": "to toggle the lights on/off for all open tabs"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Pastāsti draugam"},
     "sharemenusendatweet": {"message": "Nosūtīt twītu"},
     "sharemenupostonfacebook": {"message": "Ziņu Facebook"},
-    "sharemenupostongoogleplus": {"message": "Post Google +"},
     "sharemenuratetitle": {"message": "Novērtēt šo paplašinājumu"},
     "sharemenudonatetitle": {"message": "Atbalsts attīstībai"},
     "titelautostop": {"message": "AutoStop"},

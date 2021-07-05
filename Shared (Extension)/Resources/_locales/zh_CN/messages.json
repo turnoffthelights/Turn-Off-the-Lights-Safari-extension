@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "观看视频时自动调暗页面，让您仿佛置身于电影院中"},
     "pagehelp": {"message": "帮助"},
     "titelimage": {"message": "背景图片"},
     "shortcutalllights": {"message": "为所有打开的选项卡切换灯开关"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "告诉朋友"},
     "sharemenusendatweet": {"message": "发推"},
     "sharemenupostonfacebook": {"message": "发到 Facebook"},
-    "sharemenupostongoogleplus": {"message": "发到 Google+"},
     "sharemenuratetitle": {"message": "评价本扩展"},
     "sharemenudonatetitle": {"message": "支持开发"},
     "titelautostop": {"message": "自动停止"},

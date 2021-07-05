@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "ሙሉው ገጽ ወደ ጨለማ ይለወጣል, ስለዚህ በሲዲ ውስጥ እንደነበሩ ቪዲዮዎቹን መመልከት ይችላሉ."},
     "pagehelp": {"message": "እገዛ"},
     "titelimage": {"message": "ዳራ ምስል"},
     "shortcutalllights": {"message": "ለሁሉም ክፍት ትሮች አብራ / አጥፋ መብራቶቹን ለማብራት"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Tell a Friend"},
     "sharemenusendatweet": {"message": "Send a Tweet"},
     "sharemenupostonfacebook": {"message": "Post on Facebook"},
-    "sharemenupostongoogleplus": {"message": "Post on Google+"},
     "sharemenuratetitle": {"message": "Rate this extension"},
     "sharemenudonatetitle": {"message": "Support Development"},
     "titelautostop": {"message": "ራስ-አቁም"},

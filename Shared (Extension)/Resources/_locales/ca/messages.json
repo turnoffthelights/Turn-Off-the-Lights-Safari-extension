@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "La pàgina sencera s'enfosquirà, així podrà veure els vídeos com si fos al cinema."},
     "pagehelp": {"message": "ajuda"},
     "titelimage": {"message": "Imatge de fons"},
     "shortcutalllights": {"message": "per encendre/apagar els llums a totes les pestanyes obertes"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Digues-li-ho a un amic"},
     "sharemenusendatweet": {"message": "Envieu un Tweet"},
     "sharemenupostonfacebook": {"message": "Missatge a Facebook"},
-    "sharemenupostongoogleplus": {"message": "Publiqueu-ho al Google+"},
     "sharemenuratetitle": {"message": "Valora aquesta extensió"},
     "sharemenudonatetitle": {"message": "Suport al desenvolupador"},
     "titelautostop": {"message": "AutoStop"},

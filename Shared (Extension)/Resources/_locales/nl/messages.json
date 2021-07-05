@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "De hele pagina wordt donkerder, zodat u naar video's kunt kijken alsof u in de bioscoop bent."},
     "pagehelp": {"message": "Help"},
     "titelimage": {"message": "Achtergrondafbeelding"},
     "shortcutalllights": {"message": "om het licht voor alle geopende tabbladen aan/uit te zetten"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Een vriend(in) vertellen"},
     "sharemenusendatweet": {"message": "Een tweet verzenden"},
     "sharemenupostonfacebook": {"message": "Plaatsen op Facebook"},
-    "sharemenupostongoogleplus": {"message": "Plaatsen op Google+"},
     "sharemenuratetitle": {"message": "Deze extensie beoordelen"},
     "sharemenudonatetitle": {"message": "Ontwikkeling steunen"},
     "titelautostop": {"message": "AutoStop"},

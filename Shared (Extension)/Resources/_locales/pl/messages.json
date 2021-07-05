@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Cała strona będzie przyciemniona, aby można było oglądać filmy, tak jak w kinie."},
     "pagehelp": {"message": "pomoc"},
     "titelimage": {"message": "Obraz tła"},
     "shortcutalllights": {"message": "aby włączyć/wyłączyć światła dla wszystkich kart"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Poinformuj znajomych"},
     "sharemenusendatweet": {"message": "Wyślij tweeta"},
     "sharemenupostonfacebook": {"message": "Prześlij post na Facebooka"},
-    "sharemenupostongoogleplus": {"message": "Prześlij post na Google +"},
     "sharemenuratetitle": {"message": "Oceń ten dodatek"},
     "sharemenudonatetitle": {"message": "Wesprzyj rozwój"},
     "titelautostop": {"message": "Autozatrzymanie"},

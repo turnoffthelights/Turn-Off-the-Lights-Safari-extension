@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Visas puslapis patamsės, o vaizdo įrašus galėsite žiūrėti lyg būtumėte kine."},
     "pagehelp": {"message": "žinynas"},
     "titelimage": {"message": "Fono paveikslėlis"},
     "shortcutalllights": {"message": "to toggle the lights on/off for all open tabs"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Pasakykite draugui"},
     "sharemenusendatweet": {"message": "Čiulbėti"},
     "sharemenupostonfacebook": {"message": "Pranešti „Facebook'e“"},
-    "sharemenupostongoogleplus": {"message": "Pranešti „Google+“"},
     "sharemenuratetitle": {"message": "Įvertinkite šį plėtinį"},
     "sharemenudonatetitle": {"message": "Paremkite kūrimą"},
     "titelautostop": {"message": "AutoStop"},

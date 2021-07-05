@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Videoları tıpkı sinemadaymış gibi izleyebilmeniz için sayfanın tamamı karartılacaktır."},
     "pagehelp": {"message": "yardım"},
     "titelimage": {"message": "Arkaplan Resmi"},
     "shortcutalllights": {"message": "ışığı bütün sekmeler için aç/kapa"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Bir Arkadaşına Bahset"},
     "sharemenusendatweet": {"message": "Bir Tweet Gönder"},
     "sharemenupostonfacebook": {"message": "Facebook'ta Paylaş"},
-    "sharemenupostongoogleplus": {"message": "Google+'ta Paylaş"},
     "sharemenuratetitle": {"message": "Eklentiyi Derecelendir"},
     "sharemenudonatetitle": {"message": "Geliştirici Desteği"},
     "titelautostop": {"message": "Oto-Dur"},

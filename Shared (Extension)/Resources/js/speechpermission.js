@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2020 Stefan vd
+Copyright (C) 2021 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,78 +27,52 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function speechstartfunction(){
-	// start automatic up
-	if(!recognizing){startButton(event);}
-}
-function startButton(event){
-	// Abort previous instances of recognition already running
-    if(recognition && recognition.abort){
-        recognition.abort();
-    }
-	final_transcript = '';
-	recognition.lang = 'en-US';
-	try{ recognition.start(); } catch(e){}
-	ignore_onend = false;
-	try{ start_timestamp = event.timeStamp; } catch(e){}
-}
-
-var final_transcript = '';
 var recognizing = false;
 var ignore_onend;
-var start_timestamp;
 var recognition;
-function startinit(){
-// Check for live API permissions  
-navigator.permissions.query({name:'microphone'})
-.then(function(permissionStatus){
-  permissionStatus.onchange = function(){
-	if(this.state == "granted"){
-		var lol = window.self;
-		lol.opener = window.self;
-		lol.close();
-	}else{
-		var lol = window.self;
-		lol.opener = window.self;
-		lol.close();
-	}
-  };
-});
 
-	if(!('webkitSpeechRecognition' in window)){
+function speechstartfunction(){
+	// start automatic up
+	if(!recognizing){ startButton(); }
+}
+function startButton(){
+	// Abort previous instances of recognition already running
+	if(recognition && recognition.abort){ recognition.abort(); }
+	recognition.lang = "en-US";
+	try{ recognition.start(); }catch(e){ console.error(e); }
+	ignore_onend = false;
+}
+
+function startinit(){
+// Check for live API permissions
+	navigator.permissions.query({name:"microphone"})
+		.then(function(permissionStatus){
+			permissionStatus.onchange = function(){
+				if(this.state == "granted"){
+					var micaccess = window.self; micaccess.opener = window.self; micaccess.close();
+				}else{
+					var micdenied = window.self; micdenied.opener = window.self; micdenied.close();
+				}
+			};
+		});
+
+	const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+	if(typeof SpeechRecognition === "undefined"){
 	// not supported
 	}else{
-		recognition = new webkitSpeechRecognition();
+		recognition = new SpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
-	
 		recognition.onstart = function(){
 			recognizing = true;
 			// console.log("speak now");
 		};
-	
 		recognition.onerror = function(event){
-		if(event.error == 'no-speech'){
-			// No speech was detected.
-			ignore_onend = true;
-		}
-		if(event.error == 'audio-capture'){
-			// No microphone was found.
-			ignore_onend = true;
-		}
-		if(event.error == 'not-allowed'){
-			if(event.timeStamp - start_timestamp < 100){
-				// Permission to use microphone is blocked. 
-			}else{
-				// Permission to use microphone was denied.
-			}
-			ignore_onend = true;
-		}
+			if(event.error == "no-speech" || event.error == "audio-capture" || event.error == "not-allowed"){ ignore_onend = true; }
+			if(ignore_onend == true){ console.log("ignore onend"); }
 		};
-	
 	}
-
 	speechstartfunction();
 }
 
-document.addEventListener('DOMContentLoaded', function(){ startinit(); },false);
+document.addEventListener("DOMContentLoaded", function(){ startinit(); }, false);

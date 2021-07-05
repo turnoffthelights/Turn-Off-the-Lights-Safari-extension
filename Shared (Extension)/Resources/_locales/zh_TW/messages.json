@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "觀賞影片時讓整個畫面變暗，彷彿置身電影院"},
     "pagehelp": {"message": "説明"},
     "titelimage": {"message": "背景圖片"},
     "shortcutalllights": {"message": "對所有開啟頁籤切換光源開啟或關閉。"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "告訴朋友"},
     "sharemenusendatweet": {"message": "發送 Tweet"},
     "sharemenupostonfacebook": {"message": "於Facebook 上發佈"},
-    "sharemenupostongoogleplus": {"message": "於 Google +上發佈"},
     "sharemenuratetitle": {"message": "擴充功能評分"},
     "sharemenudonatetitle": {"message": "支援開發"},
     "titelautostop": {"message": "自動停止"},

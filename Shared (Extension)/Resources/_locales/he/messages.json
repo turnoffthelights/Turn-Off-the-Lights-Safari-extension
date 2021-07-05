@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "הדף כולו יחשיך, כך שתוכלו לצפות בסרט כאילו שאתם בקולנוע."},
     "pagehelp": {"message": "עזרה"},
     "titelimage": {"message": "תמונת רקע"},
     "shortcutalllights": {"message": "להחליף בין מצב חשוך ומואר בכל הכרטיסיות הפתוחות"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "ספרו לחבר"},
     "sharemenusendatweet": {"message": "שליחת ציוץ"},
     "sharemenupostonfacebook": {"message": "פרסמו בפייסבוק"},
-    "sharemenupostongoogleplus": {"message": "פרסמו בגוגל +"},
     "sharemenuratetitle": {"message": "דירוג הרחבה זו"},
     "sharemenudonatetitle": {"message": "תמיכה בפיתוח"},
     "titelautostop": {"message": "עצירה אוטומטית"},

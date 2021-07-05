@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Цела страница ће се затамнити и омогућити вам гледање видео снимака као да сте у биоскопу."},
     "pagehelp": {"message": "помоћ"},
     "titelimage": {"message": "Позадинска слика"},
     "shortcutalllights": {"message": "за паљење/гашење светла на свим отвореним картицама"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Реци пријатељу"},
     "sharemenusendatweet": {"message": "Пошаљи твит"},
     "sharemenupostonfacebook": {"message": "Објави на Facebook-у"},
-    "sharemenupostongoogleplus": {"message": "Објави на Google+"},
     "sharemenuratetitle": {"message": "Оцени овај додатак"},
     "sharemenudonatetitle": {"message": "Подржи развој"},
     "titelautostop": {"message": "Аутоматско заустављање"},

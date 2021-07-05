@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "L'intera pagina si scurirà, così potrai guardare i video come tu fossi al cinema."},
     "pagehelp": {"message": "Guida"},
     "titelimage": {"message": "Immagine di sfondo"},
     "shortcutalllights": {"message": "per accendere o spengere le luci in tutte le schede aperte"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Dillo a un amico"},
     "sharemenusendatweet": {"message": "Invia un Tweet"},
     "sharemenupostonfacebook": {"message": "Posta su Facebook"},
-    "sharemenupostongoogleplus": {"message": "Posta su Google+"},
     "sharemenuratetitle": {"message": "Valuta questa estensione"},
     "sharemenudonatetitle": {"message": "Sosteni lo sviluppo"},
     "titelautostop": {"message": "Stop Automatico"},

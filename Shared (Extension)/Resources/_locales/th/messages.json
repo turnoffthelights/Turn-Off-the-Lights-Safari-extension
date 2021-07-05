@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "หน้าเพจจะมืดลง เสมือนชมวิดิโอในโรงภาพยนต์."},
     "pagehelp": {"message": "ช่วยเหลือ"},
     "titelimage": {"message": "ภาพพื้นหลัง"},
     "shortcutalllights": {"message": "เมื่อต้องการเปิดปิดไฟสำหรับแท็บที่เปิดอยู่ทั้งหมด"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "บอกเพื่อน"},
     "sharemenusendatweet": {"message": "ส่งไปที่ Tweet"},
     "sharemenupostonfacebook": {"message": "โพสต์บน Facebook"},
-    "sharemenupostongoogleplus": {"message": "โพสต์บน Google +"},
     "sharemenuratetitle": {"message": "ให้คะแนนส่วนขยายนี้"},
     "sharemenudonatetitle": {"message": "สนับสนุนการพัฒนา"},
     "titelautostop": {"message": "หยุดอัตโนมัติ"},

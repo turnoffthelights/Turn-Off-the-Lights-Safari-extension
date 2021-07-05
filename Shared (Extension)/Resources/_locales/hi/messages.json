@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "संपूर्ण पृष्ठ अंधेरे में लुप्त होती है, इसलिए आप अगर आप सिनेमा में हैं के रूप में वीडियो देख सकते हैं."},
     "pagehelp": {"message": "मदद"},
     "titelimage": {"message": "पृष्ठभूमि छवि"},
     "shortcutalllights": {"message": "रोशनी के लिए सभी खुले टैब चालू/बंद टॉगल करने के लिए"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "अपने मित्र को बताएँ"},
     "sharemenusendatweet": {"message": "एक ट्वीट भेजें"},
     "sharemenupostonfacebook": {"message": "फेसबुक पर पोस्ट"},
-    "sharemenupostongoogleplus": {"message": "Google + पर पोस्ट"},
     "sharemenuratetitle": {"message": "एक्सटेंशन को रेट करे"},
     "sharemenudonatetitle": {"message": "विकासकर्ता को आर्थिक समर्थन दीजिए"},
     "titelautostop": {"message": "AutoStop"},

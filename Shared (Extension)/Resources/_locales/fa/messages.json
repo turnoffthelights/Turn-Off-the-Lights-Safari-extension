@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."},
     "pagehelp": {"message": "کمک"},
     "titelimage": {"message": "تصویر پس زمینه"},
     "shortcutalllights": {"message": "روشن/خاموش کردن چراغ برای همه زبانه ها"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "ارسال به دوستان"},
     "sharemenusendatweet": {"message": "توئیت کنید"},
     "sharemenupostonfacebook": {"message": "ارسال به فیس بوک"},
-    "sharemenupostongoogleplus": {"message": "ارسال به گوگل پلاس"},
     "sharemenuratetitle": {"message": "به این افزونه امتیاز دهید"},
     "sharemenudonatetitle": {"message": "حمایت از توسعه"},
     "titelautostop": {"message": "AutoStop"},

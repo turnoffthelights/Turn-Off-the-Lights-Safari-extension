@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."},
     "pagehelp": {"message": "help"},
     "titelimage": {"message": "Background Image"},
     "shortcutalllights": {"message": "to toggle the lights on\\/off for all open tabs"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Tell a Friend"},
     "sharemenusendatweet": {"message": "Send a Tweet"},
     "sharemenupostonfacebook": {"message": "Post on Facebook"},
-    "sharemenupostongoogleplus": {"message": "Post on Google+"},
     "sharemenuratetitle": {"message": "Rate this extension"},
     "sharemenudonatetitle": {"message": "Support Development"},
     "titelautostop": {"message": "AutoStop"},

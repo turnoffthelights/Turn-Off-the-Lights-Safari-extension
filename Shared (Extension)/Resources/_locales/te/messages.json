@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "మొత్తం పేజీ కృష్ణ క్షీనతకి చేయబడుతుంది, కాబట్టి మీరు సినిమా లో ఉన్నట్లయితే మీరు వీడియోలను చూడవచ్చు."},
     "pagehelp": {"message": "సహయం"},
     "titelimage": {"message": "నేపథ్య చిత్రం"},
     "shortcutalllights": {"message": "to toggle the lights on/off for all open tabs"},
@@ -232,7 +231,6 @@
     "sharemenutellafriend": {"message": "Tell a Friend"},
     "sharemenusendatweet": {"message": "Send a Tweet"},
     "sharemenupostonfacebook": {"message": "Post on Facebook"},
-    "sharemenupostongoogleplus": {"message": "Post on Google+"},
     "sharemenuratetitle": {"message": "Rate this extension"},
     "sharemenudonatetitle": {"message": "Support Development"},
     "titelautostop": {"message": "AutoStop"},

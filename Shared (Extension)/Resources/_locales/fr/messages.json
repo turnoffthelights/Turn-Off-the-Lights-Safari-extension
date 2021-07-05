@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Toute la page va s'assombrir pour vous permettre de regarder vos vidéos comme si vous étiez au cinéma."},
     "pagehelp": {"message": "Guide"},
     "titelimage": {"message": "Image pour l'arrière-plan"},
     "shortcutalllights": {"message": "pour assombrir ou ré-éclaircir la page pour tous les onglets ouverts"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Envoyer par e-mail"},
     "sharemenusendatweet": {"message": "sur Twitter"},
     "sharemenupostonfacebook": {"message": "sur Facebook"},
-    "sharemenupostongoogleplus": {"message": "sur Google+"},
     "sharemenuratetitle": {"message": "Noter cette extension"},
     "sharemenudonatetitle": {"message": "Soutenir son développement"},
     "titelautostop": {"message": "Arrêt automatique"},

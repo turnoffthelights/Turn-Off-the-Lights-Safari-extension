@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Celotna stran se bo zatemnila, da si lahko video ogledate, kot da bi bili v kinu."},
     "pagehelp": {"message": "pomoč"},
     "titelimage": {"message": "Slika ozadja"},
     "shortcutalllights": {"message": "za vklop/izklop luči vseh odprtih zavihkov"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Povej prijatelju"},
     "sharemenusendatweet": {"message": "Pošlji tvit"},
     "sharemenupostonfacebook": {"message": "Objavi na Facebooku"},
-    "sharemenupostongoogleplus": {"message": "Objavi na Googlu+"},
     "sharemenuratetitle": {"message": "Ocenite to razširitev"},
     "sharemenudonatetitle": {"message": "Podprite razvoj"},
     "titelautostop": {"message": "Samodejno ustavi"},

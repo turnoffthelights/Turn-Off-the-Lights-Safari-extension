@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Întreaga pagină se va întuneca, astfel încât veți putea urmări videoclipul ca și când ați fi într-un cinema."},
     "pagehelp": {"message": "ajutor"},
     "titelimage": {"message": "Imagine de fundal"},
     "shortcutalllights": {"message": "pentru a comuta luminile aprinse/închise pentru toate tab-urile"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Spune unui prieten"},
     "sharemenusendatweet": {"message": "Trimite un Tweet"},
     "sharemenupostonfacebook": {"message": "Postează pe Facebook"},
-    "sharemenupostongoogleplus": {"message": "Postează pe Google+"},
     "sharemenuratetitle": {"message": "Evaluează această extensie"},
     "sharemenudonatetitle": {"message": "Sprijină dezvoltarea"},
     "titelautostop": {"message": "AutoStop"},

@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Вся сторінка буде затемнена для комфортного перегляду відео, як у кінотеатрі."},
     "pagehelp": {"message": "допомога"},
     "titelimage": {"message": "Фонове зображення"},
     "shortcutalllights": {"message": "щоб увімкнути або вимкнути світло для всіх відкритих вкладок"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Розповісти другові"},
     "sharemenusendatweet": {"message": "Твітнути"},
     "sharemenupostonfacebook": {"message": "Запостити в Facebook"},
-    "sharemenupostongoogleplus": {"message": "Запостити в Google+"},
     "sharemenuratetitle": {"message": "Оцінити це розширення"},
     "sharemenudonatetitle": {"message": "Підтримати розробку"},
     "titelautostop": {"message": "Автостоп"},

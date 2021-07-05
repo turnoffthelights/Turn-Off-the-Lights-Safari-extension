@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Цялата страница ще потъмнее така, че да можете да гледате видеоклиповете сякаш сте на кино."},
     "pagehelp": {"message": "помощ"},
     "titelimage": {"message": "Фоново изображение"},
     "shortcutalllights": {"message": "за да включите или изключите светлините за всички отворени раздели"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Кажете на приятел"},
     "sharemenusendatweet": {"message": "Публикувайте в Twitter"},
     "sharemenupostonfacebook": {"message": "Публикувайте във Facebook"},
-    "sharemenupostongoogleplus": {"message": "Публикувайте в Google+"},
     "sharemenuratetitle": {"message": "Оценете това разширение"},
     "sharemenudonatetitle": {"message": "Подкрепете разработката"},
     "titelautostop": {"message": "Автоматично спиране"},

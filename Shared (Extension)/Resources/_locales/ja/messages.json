@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "ページ全体が次第に暗くなる為、まるで映画館の様な気分でビデオを鑑賞できます。"},
     "pagehelp": {"message": "ヘルプ"},
     "titelimage": {"message": "背景画像"},
     "shortcutalllights": {"message": "開いたタブすべてでライトのオン・オフを切り替え"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "友達に教える"},
     "sharemenusendatweet": {"message": "つぶやく"},
     "sharemenupostonfacebook": {"message": "Facebook に投稿"},
-    "sharemenupostongoogleplus": {"message": "Google + に投稿"},
     "sharemenuratetitle": {"message": "この拡張機能を評価"},
     "sharemenudonatetitle": {"message": "開発をサポートする"},
     "titelautostop": {"message": "自動停止"},

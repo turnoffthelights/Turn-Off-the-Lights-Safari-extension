@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "Az egész oldal elsötétül, így úgy nézheted a videókat, mintha moziban lennél."},
     "pagehelp": {"message": "súgó"},
     "titelimage": {"message": "Háttérkép"},
     "shortcutalllights": {"message": "a fények ki/be kapcsolásához minden megnyitott lapon"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Ajánlja ismerősének"},
     "sharemenusendatweet": {"message": "Küldjön egy tweet-et"},
     "sharemenupostonfacebook": {"message": "Megosztás a Facebook-on"},
-    "sharemenupostongoogleplus": {"message": "Megosztás a Google +-on"},
     "sharemenuratetitle": {"message": "Értékelje ezt a bővítményt"},
     "sharemenudonatetitle": {"message": "A fejlesztés támogatása"},
     "titelautostop": {"message": "Autostop"},

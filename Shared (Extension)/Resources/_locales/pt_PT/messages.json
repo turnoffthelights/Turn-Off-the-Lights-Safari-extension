@@ -1,5 +1,4 @@
 {
-    "descriptionshort": {"message": "A página irá escurecer para que veja os vídeos como se estivesse no cinema."},
     "pagehelp": {"message": "ajuda"},
     "titelimage": {"message": "Imagem de fundo"},
     "shortcutalllights": {"message": "para ligar/desligar as luzes em todos os separadores abertos"},
@@ -229,7 +228,6 @@
     "sharemenutellafriend": {"message": "Recomendar a um amigo"},
     "sharemenusendatweet": {"message": "Enviar um tweet"},
     "sharemenupostonfacebook": {"message": "Publicar no Facebook"},
-    "sharemenupostongoogleplus": {"message": "Publicar no Google+"},
     "sharemenuratetitle": {"message": "Classificar esta extensão"},
     "sharemenudonatetitle": {"message": "Apoiar o desenvolvimento"},
     "titelautostop": {"message": "Parar automaticamente"},
