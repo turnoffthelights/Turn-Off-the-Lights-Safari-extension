@@ -30,6 +30,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 chrome.runtime.onMessage.addListener(function request(request, sender){
 // eye protection & autoplay & shortcut
 	switch(request.name){
+	case"bckreload":
+		installation();
+		break;
 	case"automatic":
 		chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});
 		break;
@@ -226,7 +229,6 @@ chrome.browserAction.onClicked.addListener(function(tabs){
 				chrome.browserAction.setPopup({tabId: tabs.id, popup:""});
 				return;
 			}
-
 
 			// Set Click to  true
 			alreadyClicked = true;
@@ -496,6 +498,11 @@ chrome.storage.onChanged.addListener(function(changes){
 			chromerefreshalltabs("gorefreshpipvisualtype");
 		}
 
+		var changenamegamepad = ["gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo"];
+		if(changenamegamepad.includes(key)){
+			chromerefreshalltabs("gorefreshgamepad");
+		}
+
 		// Group Policy
 		// check the values with group policy, if different values. Then change it back
 		checkreturnpolicyvalues(changes, "autoplay", "AutoPlay");
@@ -701,7 +708,7 @@ if(chrome.storage.managed){
 	});
 }
 
-chrome.runtime.onInstalled.addListener(function(){
+function installation(){
 	if(chrome.storage.managed){
 		chrome.storage.managed.get(function(items){
 			readgrouppolicy(items);
@@ -714,6 +721,10 @@ chrome.runtime.onInstalled.addListener(function(){
 		initwelcome();
 	}
 	checkbadge();
+}
+
+chrome.runtime.onInstalled.addListener(function(){
+	installation();
 });
 // first run - check the badge new value for this day
 chrome.runtime.onStartup.addListener(checkbadge);

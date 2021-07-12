@@ -33,6 +33,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-body-background:#111111;
 --totl-svg-fill-color:#fff;
 --totl-svg-fill-color-hover:#474747;
+--totl-svg-icons-fill-colora:#fff;
+--totl-svg-icons-fill-colorb:#000;
 --totl-primary-sidebar-background:#1c1c1c;
 --totl-nav-background-hover:#474747;
 --totl-nav-color:rgba(255,255,255,.882);
@@ -113,6 +115,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-body-background:#fff;
 --totl-svg-fill-color:#000;
 --totl-svg-fill-color-hover:#ebebeb;
+--totl-svg-icons-fill-colora:#000;
+--totl-svg-icons-fill-colorb:#fff;
 --totl-primary-sidebar-background:#f5f5f5;
 --totl-nav-background-hover:#ebebeb;
 --totl-nav-color:#373737;
@@ -216,8 +220,13 @@ section>div:only-of-type{-webkit-box-flex:1}
 .ecogreen{background-color:#43A047;color:white;border-radius:2px;margin-top:10px;padding:10px 120px 10px 10px}
 #Eyesaver{margin:16px 0 16px 30px}
 #logogreen{position:absolute;right:15px;color:green;vertical-align:top;padding:18px}
-#multiopacitylist input[type=url]{width:215px;float:left}
-#multiopacityDomainsBox{width:235px}
+#multiopacitylist input[type=url]{width:100%;float:left;box-sizing:border-box}
+#multiopacitylist{width:100%}
+#multiopacitylist td:nth-child(1){width:55%}
+#multiopacitylist td:nth-child(2){width:15%}
+#multiopacitylist td:nth-child(3){width:30%}
+#multiopacitylist tr{width:100%}
+#multiopacityDomainsBox{width:100%}
 #multiopacitynumberBox{width:65px}
 /* Hyperlinks */
 #mainview-content section a{color:var(--totl-page-a);text-decoration:underline}
@@ -290,7 +299,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .youtubeinforbar{background:#fff}
 #dont-turn-off-the-lights{z-index:1000;position:relative;visibility:visible;width:340px;height:195px}
 /* Black div */
-#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:380px;opacity:1;position:absolute;background-color:#000;z-index:99;background-size:cover}
+#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:380px;opacity:1;position:absolute;background-color:#000;z-index:99}
 #example2{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:480px;opacity:1;position:absolute;background-color:#000;z-index:99}
 /* Blur */
 #stefanvdblurimage{pointer-events:none;width:100%;height:380px;position:absolute;z-index:98;overflow:hidden;backdrop-filter:blur(6px)}
@@ -742,6 +751,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .sharemenu{position:absolute;right:0;margin-top:-27px;color:#666;font-size:11px}
 .sharemenu div{display:inline-block;vertical-align:middle}
 .tablefirstyt{border-spacing:0;width:100%}
+.tablefirstyt td{vertical-align:baseline}
 /* donation button */
 .donatebutton{background:#FDD835;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:#000;font-size:12px;min-width:7em;padding:2px 10px;text-decoration:none;text-transform:uppercase;box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)}
 .donatebutton:hover{background:rgba(253,216,53,.6)}
@@ -789,8 +799,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 /* video tool bar only */
 /* video volume bar only */
 #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
-#autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:360px;float:left}
-#autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:437px;margin-right:16px}
+#autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:360px;float:left;box-sizing:border-box}
+#autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:16px}
+#autoplayaddbutton,#autoplayremovebutton,#autostopaddbutton,#autostopremovebutton,#atmosphereaddbutton,#atmosphereremovebutton,#videovolumeaddbutton,#videovolumeremovebutton,#videotooladdbutton,#videotoolremovebutton,#addbutton,#removebutton,#nightaddbutton,#nightremovebutton,#cammotionaddbutton,#cammotionremovebutton,#speechaddbutton,#speechremovebutton{width:100%;max-width:123px;text-overflow:ellipsis;white-space:nowrap}
 /* Night Theme */
 #samplestefanvdnighttheme{zoom:0.7;padding:0;margin:20px 0;z-index:500;-webkit-user-select:none;-moz-user-select:none;user-select:none;background:#fff;border:1px solid #EBEBEB;box-shadow:#fff 0 0 10px;border-radius:5px;cursor:pointer;display:block;height:50px;overflow:hidden;width:100px;position:relative}
 #samplestefanvdnighttheme input{display:none}
@@ -945,14 +956,12 @@ input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:chec
 .tabledatalist tr:first-child{background:var(--totl-table-first-background);color:var(--totl-table-first-color)}
 .tabledatalist td{border-bottom:var(--totl-table-td-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden}
 .tabledatalist td:first-child{width:80%}
-.tabledatalist tr:hover{background-color:var(--totl-table-tr-background-hover)}
-.tabledatalist tr:active{background-color:var(--totl-table-tr-background-active)}
 .tablegamepadlist{border-spacing:0;width:100%;table-layout:fixed;overflow:hidden}
 .tablegamepadlist tr:first-child{background:var(--totl-table-first-background);color:var(--totl-table-first-color)}
 .tablegamepadlist td{border-bottom:var(--totl-table-td-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden}
-.tablegamepadlist td:first-child{width:30%}
-.tablegamepadlist tr:hover{background-color:var(--totl-table-tr-background-hover)}
-.tablegamepadlist tr:active{background-color:var(--totl-table-tr-background-active)}
+.tablegamepadlist td:first-child{width:25%}
+.tablegamepadlist td:nth-child(2){width:25%}
+.tablegamepadlist td:nth-child(3){width:50%}
 header{background:var(--totl-primary-background);color:var(--totl-primary-font-color);-webkit-user-select:none;-moz-user-select:none;user-select:none;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.26);display:block;flex-direction:row;align-items:center;z-index:399;position:fixed}
 header .messagehead{align-items:center;display:flex;width:100%;position:relative;margin:0;padding:0}
 header .masterhead{min-height:56px;align-items:center;display:flex;position:relative;margin:0;padding:0 16px}
@@ -981,8 +990,6 @@ input[type=checkbox]:checked ~ #mainview{padding-left:0px}
 #reveal-menu{display:none}
 .minitable{line-height:48px;list-style:none;margin:0;padding:0}
 .minitable li{border-bottom:var(--totl-minitable-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.minitable li:hover{background-color:var(--totl-minitable-background-hover)}
-.minitable li:active{background-color:var(--totl-minitable-background-active)}
 .tabbar{border-bottom:var(--totl-minitable-tab-border);height:48px}
 .tabbarintern{width:100%}
 .tabbutton{cursor:pointer;margin:0;border:none;padding:0 20px;float:left;position:relative;display:flex;align-items:center;justify-content:center;text-decoration:none;height:46px;line-height:46px;font-weight:500;font-size:14px;text-transform:uppercase;color:rgba(0,0,0,.54);overflow:hidden;min-width:calc(75px - 40px)}
@@ -992,6 +999,9 @@ input[type=checkbox]:checked ~ #mainview{padding-left:0px}
 .tabhighlight{border-bottom:2px solid rgb(68,138,255);height:46px;line-height:46px}
 .tabhighlight:hover{border-bottom:2px solid rgb(68,138,255);height:46px;line-height:46px}
 .tabicon{height:24px;display:flex}
+#btnmultiopacity .tabicon svg{fill:var(--totl-svg-icons-fill-colora)}
+#sub2 .tabicon svg #parta{fill:var(--totl-svg-icons-fill-colora)}
+#sub2 .tabicon svg #partb{fill:var(--totl-svg-icons-fill-colorb)}
 /* track */
 input[type="range"]{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;width:100%;height:20px;background:transparent;border:none;border-radius:10px;transition:all 400ms;outline:none;padding:0;margin:0;cursor:pointer}
 input[type=range]:focus{outline:none}
@@ -1017,7 +1027,7 @@ input[type="range"][disabled]::-moz-range-track{background-color:var(--totl-rang
 input[type="range"][disabled]::-webkit-slider-thumb{background-color:var(--totl-range-disabled-background)}
 input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-range-disabled-background)}
 /* sub */
-.md-subin{transform:translateX(22px)}
+.md-subin{transform:translateX(22px);width:calc(100% - 22px)}
 .md-subgroup{display:inline-block;vertical-align:middle}
 /* Bulb */
 .md-bulb{position:relative;margin:16px 0 0 0;box-sizing:border-box;height:18px}
@@ -1028,24 +1038,26 @@ input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-rang
 .md-color input[type=color]{position:absolute;right:-25px;top:-5px;width:102px;height:30px;border:none;margin:0;padding:0}
 .md-color label div{vertical-align:middle;display:inline;box-sizing:border-box}
 .md-color label{display:inline-block}
+/* Description */
+.md-desbox{position:relative;margin:16px 0;box-sizing:border-box}
 /* Checkbox */
-.md-checkbox{position:relative;margin:16px 0;box-sizing:border-box;height:18px}
-.md-checkbox label{cursor:pointer;box-sizing:border-box}
-.md-checkbox label div{vertical-align:middle;display:inline;box-sizing:border-box}
+.md-checkbox{position:relative;margin:16px 0;box-sizing:border-box}
+.md-checkbox label{cursor:pointer;box-sizing:border-box;min-height:20px;display:grid;align-items:center}
+.md-checkbox label div{box-sizing:border-box;margin-left:30px}
 .md-checkbox label::before,.md-checkbox label::after{content:"";position:absolute;left:0;top:0;box-sizing:border-box}
 .md-checkbox label::before{width:20px;height:20px;background:var(--totl-checkbox-label-background);border:var(--totl-checkbox-label-border);border-radius:2px;cursor:pointer;transition:background 0.3s;box-sizing:border-box}
-.md-checkbox input[type=checkbox]{outline:0;margin-right:15px;box-sizing:border-box;width:12px;height:12px;opacity:0;float:left}
+.md-checkbox input[type=checkbox]{outline:0;margin-right:15px;box-sizing:border-box;width:12px;height:12px;opacity:0;display:none;float:left}
 .md-checkbox input[type=checkbox]:checked + label::before{background:var(--totl-checkbox-checked);border:none;box-sizing:border-box}
 .md-checkbox input[type=checkbox]:checked + label::after{transform:rotate(-45deg);top:5px;left:4px;width:12px;height:6px;border:2px solid #fff;border-top-style:none;border-right-style:none;box-sizing:border-box}
 .md-checkbox input[type=checkbox]:checked[disabled] + label::before{background:var(--totl-checkbox-checked-disabled);border:var(--totl-checkbox-checked-disabled-border)}
 .md-checkbox input[type=checkbox][disabled] + label::before{border:var(--totl-checkbox-checked-disabled-border)}
 /* Radio button */
-.md-radio{position:relative;margin:16px 0;box-sizing:border-box;height:18px}
-.md-radio label{cursor:pointer;box-sizing:border-box}
-.md-radio label div{vertical-align:middle;display:inline;box-sizing:border-box}
+.md-radio{position:relative;margin:16px 0;box-sizing:border-box}
+.md-radio label{cursor:pointer;box-sizing:border-box;min-height:20px;display:grid;align-items:center}
+.md-radio label div{box-sizing:border-box;margin-left:30px}
 .md-radio label::before,.md-radio label::after{content:"";position:absolute;left:0;top:0;box-sizing:border-box}
 .md-radio label::before{width:20px;height:20px;background:var(--totl-radio-label-background);border:var(--totl-radio-label-border);border-radius:50%;transition:all .3s ease;transition-property:transform,border-color;box-sizing:border-box}
-.md-radio input[type=radio]{outline:0;margin-right:10px;box-sizing:border-box;width:12px;height:12px;opacity:0} 
+.md-radio input[type=radio]{outline:0;margin-right:10px;box-sizing:border-box;width:12px;height:12px;opacity:0;display:none} 
 .md-radio input[type=radio]:checked + label:before{border-color:var(--totl-radio-checked-border);box-sizing:border-box}
 .md-radio input[type=radio]:checked + label:after{transform:scale(1);top:5px;left:5px;width:10px;height:10px;border-radius:50%;background:var(--totl-radio-checked-border);box-sizing:border-box}
 .md-radio input[type=radio]:checked[disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
@@ -1104,7 +1116,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 .materialModalButton{-webkit-user-select:none;-moz-user-select:none;user-select:none;margin:8px 0;float:right;background:0 0;border:none;border-radius:2px;color:#2296f3;position:relative;height:36px;min-width:64px;padding:0 16px;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;outline:none;cursor:pointer;text-decoration:none;text-align:center;line-height:36px;vertical-align:middle}
 .materialModalButton:active{background-color:rgba(158,158,158,.4)}
 .materialModalButton:hover{background-color:rgba(158,158,158,.2)}
-#multiopacityaddbutton,#multiopacityremovebutton{max-width:135px;text-overflow:ellipsis}
+#multiopacityaddbutton,#multiopacityremovebutton{max-width:135px;text-overflow:ellipsis;width:100%}
 #materialModal.hide,#materialModalRate.hide,#materialModalIntroduce.hide{opacity:0;transition:opacity 0.2s ease-out;pointer-events:none}
 #materialModal.hide #materialModalCentered,#materialModalRate.hide #materialModalRateCentered,#materialModalIntroduce.hide #materialModalIntroduceCentered{transform:scale(0.8);transition:transform 0.2s ease-out}
 #materialModal.show,#materialModalRate.show,#materialModalIntroduce.show{opacity:1;transition:opacity 0.2s ease-in}
@@ -1158,15 +1170,15 @@ only screen and (max-device-width:480px){
   #beeld{position:relative;z-index:101;margin:auto;width:250px;height:140px}
   #loadingcenter{width:230px}
   #progressbar{width:230px}
-  #dont-turn-off-the-lights{width:100%;height:auto}
+  #dont-turn-off-the-lights{width:100%;height:auto;aspect-ratio:16/9}
   .suggpanel{width:100%}
   .videopreview{width:100%;padding-right:0}
-  .videopreview iframe{width:100%;height:auto}
+  .videopreview iframe{width:100%;height:auto;aspect-ratio:16/9}
   .youtubesuggpanel{display:none}
   #samplelikebar,#sampledislikebutton,#samplesharebutton,#sampleaddbutton{display:none}
   #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
-  #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:80px;float:left}
-  #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:155px;margin-right:0px}
+  #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:100%;float:left}
+  #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:0px}
   #matllo{font-size:13px;top:10px;right:15px;left:15px}
   #mant{left:15px}
   #magetapp{right:15px}
@@ -1180,11 +1192,8 @@ only screen and (max-device-width:480px){
   #apicon{top:25px;left:108px}
   #apgetapp{right:15px}
   #aptllo{right:15px;top:5px;font-size:13px}
-  #multiopacityaddbutton,#multiopacityremovebutton{max-width:80px}
   #materialModalCentered,#materialModalRateCentered{padding:0}
   #materialModalContent,#materialModalRateContent{max-width:none;height:100%;width:100%;left:0;top:0;position:absolute;border-radius:0}
-  #multiopacitylist input[type=url]{width:105px}
-  #multiopacityDomainsBox{width:125px}
   .tabbar{overflow:scroll}
   .tabbarintern{width:795px}
   .sharestatsenergy .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
@@ -1194,6 +1203,7 @@ only screen and (max-device-width:480px){
   #tablesiteeng,#tablegamepad{table-layout:fixed}
   #tablesiteeng td,#tablegamepad td{overflow:hidden;text-overflow:ellipsis;word-wrap:break-word}
   .aboutbuttons button{margin:15px 0;display:block}
+  .tabledatalist td:first-child{width:50%}
   /* for mobile only */
   input[type=checkbox]:checked ~ #navbar-container{display:block;animation:slide-in 0.5s ease;animation-fill-mode:forwards}
   input[type=checkbox]:checked ~ #darkpanel{opacity:1;display:block;pointer-events:auto}
