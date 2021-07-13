@@ -58,16 +58,16 @@
             </objects>
             <point key="canvasLocation" x="-5078" y="-2780"/>
         </scene>
-        <!--View Controller-->
+        <!--Network View Controller-->
         <scene sceneID="dHK-ME-hdN">
             <objects>
-                <viewController storyboardIdentifier="statusnetwork" id="Xv1-eN-UoH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="statusnetwork" id="Xv1-eN-UoH" customClass="NetworkViewController" customModule="Turn_Off_the_Lights_for_Safari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E2C-Uf-qhE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection and try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NF-tT-Pe3">
-                                <rect key="frame" x="50" y="317" width="314" height="55"/>
+                                <rect key="frame" x="50" y="304" width="314" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="K6o-cR-rp0"/>
                                 </constraints>
@@ -75,8 +75,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY8-ol-qmg">
-                                <rect key="frame" x="87" y="69" width="240" height="126"/>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY8-ol-qmg">
+                                <rect key="frame" x="87" y="94" width="240" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="4rk-fj-Nvh"/>
                                     <constraint firstAttribute="height" constant="128" id="S5X-Tb-9yu"/>
@@ -84,7 +84,7 @@
                                 <imageReference key="image" image="wifi.slash" catalog="system"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOQ-kt-hRG">
-                                <rect key="frame" x="137.5" y="285" width="139.5" height="24"/>
+                                <rect key="frame" x="137.5" y="272" width="139.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -96,12 +96,15 @@
                             <constraint firstItem="uY8-ol-qmg" firstAttribute="centerX" secondItem="E2C-Uf-qhE" secondAttribute="centerX" id="6wm-j8-7qi"/>
                             <constraint firstItem="Ao0-8V-SZ4" firstAttribute="trailing" secondItem="6NF-tT-Pe3" secondAttribute="trailing" constant="50" id="KQS-p7-jtl"/>
                             <constraint firstItem="6NF-tT-Pe3" firstAttribute="top" secondItem="JOQ-kt-hRG" secondAttribute="bottom" constant="8" symbolic="YES" id="OYs-I0-Hlq"/>
-                            <constraint firstItem="uY8-ol-qmg" firstAttribute="top" secondItem="Ao0-8V-SZ4" secondAttribute="top" constant="25" id="a4a-xb-Rou"/>
+                            <constraint firstItem="uY8-ol-qmg" firstAttribute="top" secondItem="Ao0-8V-SZ4" secondAttribute="top" constant="50" id="a4a-xb-Rou"/>
                             <constraint firstItem="6NF-tT-Pe3" firstAttribute="leading" secondItem="Ao0-8V-SZ4" secondAttribute="leading" constant="50" id="bKG-lp-b4z"/>
-                            <constraint firstItem="JOQ-kt-hRG" firstAttribute="top" secondItem="uY8-ol-qmg" secondAttribute="bottom" constant="88" id="i7Q-VF-cao"/>
+                            <constraint firstItem="JOQ-kt-hRG" firstAttribute="top" secondItem="uY8-ol-qmg" secondAttribute="bottom" constant="50" id="i7Q-VF-cao"/>
                             <constraint firstItem="JOQ-kt-hRG" firstAttribute="centerX" secondItem="E2C-Uf-qhE" secondAttribute="centerX" id="jaf-T3-nSa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgnetworkoffline" destination="uY8-ol-qmg" id="jlP-SO-1qr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXm-zC-axj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

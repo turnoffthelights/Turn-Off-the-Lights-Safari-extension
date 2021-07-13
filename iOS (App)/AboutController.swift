@@ -46,7 +46,6 @@ class AboutController: UITableViewController{
         btnreview.layer.cornerRadius = 10
         btnreview.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMinXMinYCorner]
         //--
-        
     }
     
     func version() -> String {
@@ -60,7 +59,13 @@ class AboutController: UITableViewController{
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 // call to welcome guide
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "goguide"), object: nil)
+                //statuscheck
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "statuscheck")
+                vc.modalTransitionStyle = .coverVertical
+                vc.modalPresentationStyle = .pageSheet
+                vc.isModalInPresentation = true
+                self.present(vc, animated: true)
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
@@ -89,7 +94,7 @@ class AboutController: UITableViewController{
         }
     }
     func opensupport() {
-        if let url = URL(string: "https://www.turnoffthelights.com/support") {
+        if let url = URL(string: "https://www.turnoffthelights.com/support/") {
             UIApplication.shared.open(url)
         }
     }
