@@ -120,8 +120,9 @@ class ViewController: UIViewController{
     @IBAction func showmainapp(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "mainapp")
+        // Animate loadingVC over the existing views on screen
         vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true)
     }
     
