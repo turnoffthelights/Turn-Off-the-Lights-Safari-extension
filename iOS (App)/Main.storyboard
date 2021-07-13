@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.5"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -56,6 +57,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2X-WO-cjt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5078" y="-2780"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dHK-ME-hdN">
+            <objects>
+                <viewController storyboardIdentifier="statusnetwork" id="Xv1-eN-UoH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E2C-Uf-qhE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection and try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NF-tT-Pe3">
+                                <rect key="frame" x="50" y="317" width="314" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="K6o-cR-rp0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY8-ol-qmg">
+                                <rect key="frame" x="87" y="69" width="240" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4rk-fj-Nvh"/>
+                                    <constraint firstAttribute="height" constant="128" id="S5X-Tb-9yu"/>
+                                </constraints>
+                                <imageReference key="image" image="wifi.slash" catalog="system"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOQ-kt-hRG">
+                                <rect key="frame" x="137.5" y="285" width="139.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ao0-8V-SZ4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uY8-ol-qmg" firstAttribute="centerX" secondItem="E2C-Uf-qhE" secondAttribute="centerX" id="6wm-j8-7qi"/>
+                            <constraint firstItem="Ao0-8V-SZ4" firstAttribute="trailing" secondItem="6NF-tT-Pe3" secondAttribute="trailing" constant="50" id="KQS-p7-jtl"/>
+                            <constraint firstItem="6NF-tT-Pe3" firstAttribute="top" secondItem="JOQ-kt-hRG" secondAttribute="bottom" constant="8" symbolic="YES" id="OYs-I0-Hlq"/>
+                            <constraint firstItem="uY8-ol-qmg" firstAttribute="top" secondItem="Ao0-8V-SZ4" secondAttribute="top" constant="25" id="a4a-xb-Rou"/>
+                            <constraint firstItem="6NF-tT-Pe3" firstAttribute="leading" secondItem="Ao0-8V-SZ4" secondAttribute="leading" constant="50" id="bKG-lp-b4z"/>
+                            <constraint firstItem="JOQ-kt-hRG" firstAttribute="top" secondItem="uY8-ol-qmg" secondAttribute="bottom" constant="88" id="i7Q-VF-cao"/>
+                            <constraint firstItem="JOQ-kt-hRG" firstAttribute="centerX" secondItem="E2C-Uf-qhE" secondAttribute="centerX" id="jaf-T3-nSa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXm-zC-axj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5010" y="-1688"/>
         </scene>
         <!--Enable View Controller-->
         <scene sceneID="sdw-wA-wUg">
@@ -190,7 +240,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xvt-cV-lM9">
-                                                <rect key="frame" x="28" y="373" width="70" height="4"/>
+                                                <rect key="frame" x="20" y="373" width="78" height="4"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0W-Tw-2Eo">
                                                 <rect key="frame" x="273.5" y="297" width="120.5" height="34.5"/>
@@ -250,7 +300,7 @@
                                             <constraint firstItem="2Fe-t2-09U" firstAttribute="leading" secondItem="nno-a9-tc6" secondAttribute="trailing" constant="20" id="qrg-O8-42x"/>
                                             <constraint firstItem="Coh-px-Fvp" firstAttribute="leading" secondItem="03X-ln-9im" secondAttribute="leading" constant="20" symbolic="YES" id="uVS-ms-xN2"/>
                                             <constraint firstItem="8sg-sx-zTC" firstAttribute="top" secondItem="rjX-cE-L7Z" secondAttribute="bottom" constant="5" id="v4r-AD-yae"/>
-                                            <constraint firstItem="Xvt-cV-lM9" firstAttribute="left" secondItem="03X-ln-9im" secondAttribute="left" constant="28" id="vfP-pU-NAN"/>
+                                            <constraint firstItem="Xvt-cV-lM9" firstAttribute="left" secondItem="03X-ln-9im" secondAttribute="left" constant="20" symbolic="YES" id="vfP-pU-NAN"/>
                                             <constraint firstItem="Xvt-cV-lM9" firstAttribute="trailing" secondItem="cGy-bU-AF4" secondAttribute="trailing" id="viD-Cm-Ye7"/>
                                             <constraint firstItem="nno-a9-tc6" firstAttribute="top" secondItem="k1Q-Uo-uug" secondAttribute="bottom" constant="20" id="xgy-qG-mnx"/>
                                         </constraints>
@@ -703,9 +753,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="rDc-6W-Hbw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="image" id="eSi-kO-4hi">
+                            <tableViewSection headerTitle="Home image" id="eSi-kO-4hi">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="acN-Ce-9nv" style="IBUITableViewCellStyleDefault" id="zPU-vx-BoG">
                                         <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
@@ -1349,6 +1398,7 @@
         <image name="people" width="600" height="375"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="template" width="512" height="512"/>
+        <image name="wifi.slash" catalog="system" width="128" height="102"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

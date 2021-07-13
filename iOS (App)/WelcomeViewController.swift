@@ -8,7 +8,24 @@
 import Foundation
 import UIKit
 
-class WelcomeViewController: UIViewController{
+class WelcomeViewController: UIViewController, UIActivityItemSource {
+
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return String.localizedStringWithFormat(NSLocalizedString("lblplaceholder", comment: ""), "")
+    }
+
+    let websitelink = "https://www.turnoffthelights.com"
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        if activityType == .postToTwitter {
+            return String.localizedStringWithFormat(NSLocalizedString("lblsharetwitter", comment: ""), "") + " " + websitelink
+        } else {
+            return String.localizedStringWithFormat(NSLocalizedString("lblshareregular", comment: ""), "") + " " + websitelink
+        }
+    }
+    
+    func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
+        return String.localizedStringWithFormat(NSLocalizedString("lblemailsubject", comment: ""), "")
+    }
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -42,19 +59,14 @@ class WelcomeViewController: UIViewController{
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         #else
-        let activityVC = UIActivityViewController(activityItems: [productURL], applicationActivities: nil)
-        
-        //Apps to be excluded sharing to
-        activityVC.excludedActivityTypes = [
-                UIActivity.ActivityType.print,
-                UIActivity.ActivityType.addToReadingList
-            ]
+        let items = [self]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         // Check if user is on iPad and present popover
         if UIDevice.current.userInterfaceIdiom == .pad {
-            activityVC.popoverPresentationController?.sourceView = self.view
+            ac.popoverPresentationController?.sourceView = self.view
         }
         // Present share activityView on regular iPhone
-        self.present(activityVC, animated: true, completion: nil)
+        present(ac, animated: true)
         #endif
     }
 

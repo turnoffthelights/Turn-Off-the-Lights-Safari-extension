@@ -7,6 +7,7 @@
 
 import WebKit
 import UIKit
+import Network
 
 class ViewController: UIViewController,BWWalkthroughViewControllerDelegate {
 
@@ -42,12 +43,21 @@ class ViewController: UIViewController,BWWalkthroughViewControllerDelegate {
     }
     
     @objc func startmainapp(_ notification: Notification) {
+        let connected = UserDefaults.standard.bool(forKey: "connected")
+
+        print("3hallo = ",connected)
+
         DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "mainapp")
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
+                if(connected == false){
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "calloffline"), object: nil)
+                }
+            })
         })
     }
     
@@ -105,8 +115,6 @@ class ViewController: UIViewController,BWWalkthroughViewControllerDelegate {
 //                        self.showmainapp()
 //                    }
 
-
-
                     //statuscheck
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "statuscheck")
@@ -114,9 +122,7 @@ class ViewController: UIViewController,BWWalkthroughViewControllerDelegate {
                     vc.modalPresentationStyle = .pageSheet
                     vc.isModalInPresentation = true
                     self.present(vc, animated: true)
-
                 })
-
 
             }
         })

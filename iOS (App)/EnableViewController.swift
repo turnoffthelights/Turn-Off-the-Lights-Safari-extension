@@ -45,7 +45,6 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     }
 
     func settranslationtext(){
-        
         lbleasysetup.text = String.localizedStringWithFormat(NSLocalizedString("lbleasytosetup", comment: ""), "").uppercased()
         lblturnoffthelights.text = String.localizedStringWithFormat(NSLocalizedString("lblturnoffthelights", comment: ""), "")
         lblactivate.text = String.localizedStringWithFormat(NSLocalizedString("lblactivate", comment: ""), "")
@@ -80,7 +79,6 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         attributedString3.append(boldString3d)
         lblstep3.attributedText = attributedString3
 
-        
         let part4a = String.localizedStringWithFormat(NSLocalizedString("lblstep4a", comment: ""), "") + " "
         let part4b = String.localizedStringWithFormat(NSLocalizedString("lblstep4b", comment: ""), "")
 
@@ -167,8 +165,6 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
        {
            currentviewController?.present(playerViewController,animated: true,completion:nil)
        }
-
-
     }
 
     @IBAction func closebutton(_ sender: Any) {
