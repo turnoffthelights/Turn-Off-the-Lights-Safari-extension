@@ -122,7 +122,7 @@ class ViewController: UIViewController{
         let vc = storyboard.instantiateViewController(withIdentifier: "mainapp")
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false)
+        self.present(vc, animated: true)
     }
     
 }
