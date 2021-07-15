@@ -52,22 +52,19 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         }
     }
     
+    @IBOutlet weak var btnshare: UIButton!
     var productURL = URL(string: "https://itunes.apple.com/app/id1273998507")!
     @IBAction func bigshareaction(_ sender: Any) {
-        #if targetEnvironment(simulator)
-        let alert = UIAlertController(title: "Share", message: "Share is not available in the iOS simulator", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        #else
         let items = [self]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         // Check if user is on iPad and present popover
         if UIDevice.current.userInterfaceIdiom == .pad {
-            ac.popoverPresentationController?.sourceView = self.view
+            ac.popoverPresentationController?.sourceView = btnshare
+            ac.popoverPresentationController?.sourceRect = btnshare.bounds;
+            ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down;
         }
         // Present share activityView on regular iPhone
         present(ac, animated: true)
-        #endif
     }
 
 }

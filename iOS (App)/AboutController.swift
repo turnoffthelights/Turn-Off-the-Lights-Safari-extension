@@ -121,11 +121,12 @@ class AboutController: UITableViewController{
 
     @IBOutlet weak var cellshare: UIView!
     func openshare() {
-        #if targetEnvironment(simulator)
-        let alert = UIAlertController(title: "Share", message: "Share is not available in the iOS simulator", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        #else
+//        #if targetEnvironment(simulator)
+//        let alert = UIAlertController(title: "Share", message: "Share is not available in the iOS simulator", preferredStyle: UIAlertController.Style.alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        #else
+//        #endif
         let activityVC = UIActivityViewController(activityItems: [productURL], applicationActivities: nil)
 
         //Apps to be excluded sharing to
@@ -139,7 +140,6 @@ class AboutController: UITableViewController{
         }
         // Present share activityView on regular iPhone
         self.present(activityVC, animated: true, completion: nil)
-        #endif
     }
 
     @IBAction func opentranslate(_ sender: Any) {
