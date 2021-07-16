@@ -159,7 +159,7 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 	if(items["endtime"] == null){ firstdefaultvalues["endtime"] = "23:45"; }
 
 	if(items["nightmodeswitchhidetime"] == null){ firstdefaultvalues["nightmodeswitchhidetime"] = 3; }
-	if(items["playrateamount"] == null){ firstdefaultvalues["nightmodeswitchhidetime"] = 1; }
+	if(items["playrateamount"] == null){ firstdefaultvalues["playrateamount"] = 1; }
 
 	if(items["drawatmosfps"] == null){ firstdefaultvalues["drawatmosfps"] = 12; }
 
@@ -1220,7 +1220,7 @@ function test(){
 	if("requestVideoFrameCallback" in HTMLVideoElement.prototype){
 		// do nothing
 	}else{
-		// the API is supported!
+		// the API is not supported
 		$("boxfpsauto").className = "hidden";
 	}
 
@@ -1350,7 +1350,6 @@ function test(){
 
 	// wizard user profile
 	$("ska").style.background = $("profileAcolor").value;
-	$("ska").style.opacity = $("profileAopacity").value / 100;
 	$("ska").style.opacity = $("profileAopacity").value / 100;
 	if($("profileAmouse").checked == true){
 		$("ska").style.pointerEvents = "none";
@@ -2835,63 +2834,11 @@ function domcontentloaded(){
 	});
 
 	// GP
-	$("gpleftstick").addEventListener("click", function(){ save_options(); });
-	$("gpleftstick").addEventListener("change", function(){ save_options(); });
-
-	$("gprightstick").addEventListener("click", function(){ save_options(); });
-	$("gprightstick").addEventListener("change", function(){ save_options(); });
-
-	// GP buttons
-	$("gpbtnx").addEventListener("click", function(){ save_options(); });
-	$("gpbtnx").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtno").addEventListener("click", function(){ save_options(); });
-	$("gpbtno").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnsquare").addEventListener("click", function(){ save_options(); });
-	$("gpbtnsquare").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtntriangle").addEventListener("click", function(){ save_options(); });
-	$("gpbtntriangle").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnlb").addEventListener("click", function(){ save_options(); });
-	$("gpbtnlb").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnrb").addEventListener("click", function(){ save_options(); });
-	$("gpbtnrb").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnlt").addEventListener("click", function(){ save_options(); });
-	$("gpbtnlt").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnrt").addEventListener("click", function(){ save_options(); });
-	$("gpbtnrt").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnshare").addEventListener("click", function(){ save_options(); });
-	$("gpbtnshare").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnmenu").addEventListener("click", function(){ save_options(); });
-	$("gpbtnmenu").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnrightstick").addEventListener("click", function(){ save_options(); });
-	$("gpbtnrightstick").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnleftstick").addEventListener("click", function(){ save_options(); });
-	$("gpbtnleftstick").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtndirup").addEventListener("click", function(){ save_options(); });
-	$("gpbtndirup").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtndirdown").addEventListener("click", function(){ save_options(); });
-	$("gpbtndirdown").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtndirleft").addEventListener("click", function(){ save_options(); });
-	$("gpbtndirleft").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtndirright").addEventListener("click", function(){ save_options(); });
-	$("gpbtndirright").addEventListener("change", function(){ save_options(); });
-
-	$("gpbtnlogo").addEventListener("click", function(){ save_options(); });
-	$("gpbtnlogo").addEventListener("change", function(){ save_options(); });
+	var gparray = ["gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo"];
+	for(var inm = 0; inm < gparray.length; inm++){
+		$(gparray[inm]).addEventListener("click", function(){ save_options(); });
+		$(gparray[inm]).addEventListener("change", function(){ save_options(); });
+	}
 
 	function saveindarktheme(){
 		chrome.permissions.contains({

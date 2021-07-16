@@ -101,18 +101,18 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	videovolumecolor = response["videovolumecolor"]; if(videovolumecolor == null)videovolumecolor = "#167ac6";
 	videovolumesteps = response["videovolumesteps"]; if(videovolumesteps == null)videovolumesteps = 5;
 	videovolumelabel = response["videovolumelabel"]; if(videovolumelabel == null)videovolumelabel = true;
-	visopacity = response["visopacity"]; if(visopacity == null)visopacity = "80";
+	visopacity = response["visopacity"]; if(visopacity == null)visopacity = 80;
 	videotoolcolor = response["videotoolcolor"]; if(videotoolcolor == null)videotoolcolor = "#000000";
 	hovervideo = response["hovervideo"];
-	hovervideoamount = response["hovervideoamount"]; if(hovervideoamount == null)hovervideoamount = "3";
+	hovervideoamount = response["hovervideoamount"]; if(hovervideoamount == null)hovervideoamount = 3;
 	mousespotlights = response["mousespotlights"];
-	drawatmosfps = response["drawatmosfps"]; if(drawatmosfps == null)drawatmosfps = "12";
+	drawatmosfps = response["drawatmosfps"]; if(drawatmosfps == null)drawatmosfps = 12;
 	aplay = response["aplay"]; if(aplay == null)aplay = true;
 	apause = response["apause"]; if(apause == null)apause = true;
 	astop = response["astop"]; if(astop == null)astop = true;
 	videozoom = response["videozoom"];
 	playrate = response["playrate"];
-	playrateamount = response["playrateamount"]; if(playrateamount == null)playrateamount = "1";
+	playrateamount = response["playrateamount"]; if(playrateamount == null)playrateamount = 1;
 	speedtoolbar = response["speedtoolbar"];
 	atmosontotlmode = response["atmosontotlmode"];
 	vpause = response["vpause"];
@@ -125,7 +125,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	nightmodebypage = response["nightmodebypage"]; if(nightmodebypage == null)nightmodebypage = false;
 	nightmodegesture = response["nightmodegesture"];
 	nightmodeswitchhide = response["nightmodeswitchhide"];
-	nightmodeswitchhidetime = response["nightmodeswitchhidetime"]; if(nightmodeswitchhidetime == null)nightmodeswitchhidetime = "3";
+	nightmodeswitchhidetime = response["nightmodeswitchhidetime"]; if(nightmodeswitchhidetime == null)nightmodeswitchhidetime = 3;
 	atmosfpsauto = response["atmosfpsauto"]; if(atmosfpsauto == null)atmosfpsauto = false;
 	atmosfpsmanual = response["atmosfpsmanual"]; if(atmosfpsmanual == null)atmosfpsmanual = true;
 	videovolumeonly = response["videovolumeonly"];
@@ -2104,25 +2104,26 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		animate();
 	}
 
+	function atmostotlmode(){
+		if(atmosontotlmode == true){
+			if($("stefanvdlightareoff1")){
+				totlmode = true;
+			}else{
+				totlmode = false;
+			}
+		}else{
+			totlmode = true;
+		}
+	}
+
 	var totlmode = false;
 	function animate(){
-	// stop
+		// stop
 		if(stop){ return; }
 
 		// use only for "vivi mode" and "atmosfpsauto" are both enabled
 		if(atmosfpsauto == true && atmosvivid == true){
-		// draw stuff here
-		// regular HTML5 videos
-			if(atmosontotlmode == true){
-				if($("stefanvdlightareoff1")){
-					totlmode = true;
-				}else{
-					totlmode = false;
-				}
-			}else{
-				totlmode = true;
-			}
-
+			atmostotlmode();
 			if(document.visibilityState === "visible"){
 				var htmlplayer = document.getElementsByTagName("video") || null;
 				var playerid = null, item = null;
@@ -2155,18 +2156,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				// Also, adjust for fpsInterval not being multiple of 16.67
 				then = now - (elapsed % fpsInterval);
 
-				// draw stuff here
-				// regular HTML5 videos
-				if(atmosontotlmode == true){
-					if($("stefanvdlightareoff1")){
-						totlmode = true;
-					}else{
-						totlmode = false;
-					}
-				}else{
-					totlmode = true;
-				}
-
+				atmostotlmode();
 				if(document.visibilityState === "visible"){
 					let htmlplayer = document.getElementsByTagName("video") || null;
 					let playerid = null, item = null;
@@ -3569,17 +3559,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		});
 	}
 
-	// gogo night mode
-	function gogonightmode(){
-	// PDF detection
+	// convert pdf file in dark version
+	function convertpdfnight(){
 		if(isitdark == true){
 			if(document.getElementById("stefanvdnightpdf")){
 				document.getElementById("stefanvdnightpdf").style.display = "none";
 			}
 		}else{
-		// if current web page is a PDF file
+			// if current web page is a PDF file
 			if(window.location.href.indexOf(".pdf") != -1){
-			// it is a PDF file
+				// it is a PDF file
 				if(document.getElementById("stefanvdnightpdf")){
 					document.getElementById("stefanvdnightpdf").style.display = "block";
 				}else{
@@ -3591,6 +3580,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 			}
 		}
+	}
+
+	// gogo night mode
+	function gogonightmode(){
+		// PDF detection
+		convertpdfnight();
 		//---
 
 		if(sun == false){
@@ -3625,7 +3620,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var mousemoveswitchhide = function(){
 		window.clearTimeout(timernightswitch);
 		if($("stefanvdnighttheme")){
-			$("stefanvdnighttheme").classList.toggle("stefanvdswitchhidden");
+			if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){
+				$("stefanvdnighttheme").classList.remove("stefanvdswitchhidden");
+			}
 		}
 		timernightswitch = window.setTimeout(function(){
 			if($("stefanvdnighttheme")){
@@ -3644,7 +3641,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	function goshowswitchonpause(){
 		if(!nightmodeswitchhide){ // auto hide switch is not enabled
 			if($("stefanvdnighttheme")){
-				$("stefanvdnighttheme").classList.toggle("stefanvdswitchhidden");
+				if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){ $("stefanvdnighttheme").classList.remove("stefanvdswitchhidden"); }
 			}
 		}
 	}
@@ -3681,7 +3678,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				item.addEventListener("mouseout", function(){ item.style.opacity = ".2"; }, false);
 			}
 			// var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-			if(nmcustom == true){ newnight.style.left = nmcustomx; newnight.style.bottom = nmcustomy; }else if(nmtopleft == true){ newnight.style.left = "25px"; newnight.style.top = "25px"; }else if(nmtopright == true){ newnight.style.right = "25px"; newnight.style.top = "25px"; }else if(nmbottomright == true){ newnight.style.right = "25px"; newnight.style.bottom = "25px"; }else if(nmbottomleft == true){ newnight.style.left = "25px"; newnight.style.bottom = "25px"; }
+			if(nmcustom == true){ newnight.style.left = "calc(" + nmcustomx + " + env(safe-area-inset-left))"; newnight.style.bottom = "calc(" + nmcustomy + " + env(safe-area-inset-bottom))"; }else if(nmtopleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmtopright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmbottomright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }else if(nmbottomleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }
 
 			var newnightinput = document.createElement("input");
 			newnightinput.setAttribute("type", "checkbox");
@@ -4785,17 +4782,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 
 			if(a == "+"){
-				if(that.volume <= 0.99){
-					that.volume += videovolumesteps;
-				}
+				if(that.volume <= 0.99){ that.volume += videovolumesteps; }
 			}else{
-				if(that.volume > 0.00){
-					that.volume -= videovolumesteps;
-				}
+				if(that.volume > 0.00){ that.volume -= videovolumesteps; }
 			}
 			that.volume = Math.round(that.volume * 100) / 100;
 			setyoutubevolumemeter(that.volume);
-
 
 			document.getElementById("volumecontrol" + cdv).value = Math.round(that.volume * 100);
 			if(videovolumelabel == true){ document.getElementById("lblvolume" + cdv).textContent = Math.round(that.volume * 100) + "%"; }

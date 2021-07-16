@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import SafariServices
+import Turn_Off_the_Lights_for_Safari_Extension
 
 class WelcomeViewController: UIViewController, UIActivityItemSource {
 
@@ -25,6 +27,12 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
     
     func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
         return String.localizedStringWithFormat(NSLocalizedString("lblemailsubject", comment: ""), "")
+    }
+    
+    @IBAction func openoptions(_ sender: Any) {
+        if let url = URL(string: "safari-web-extension://0D7D2870-42AD-484E-B5ED-669FA016CF58/options.html") {
+            UIApplication.shared.open(url)
+        }
     }
     
     override func viewDidLoad(){
