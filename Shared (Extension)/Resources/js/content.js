@@ -237,6 +237,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	});
 
+	let redirectionHosts = ["https://www.turnoffthelights.com/extension/redirection/"];
+	if(redirectionHosts.includes(window.location.href)){
+		chrome.runtime.sendMessage({name: "redirectionoptions"});
+	}
+
 	// Shortcutlight
 	window.addEventListener("keydown", function(e){
 		if(e.key == "F8" && !e.ctrlKey && !e.shiftKey && e.altKey){
@@ -3882,11 +3887,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// night mode gesture
 	var bnode = document.body;
 	var presstimer = null;
-
+	var presstimeraction = null;
 	var cancelgesture = function(){
 		if(presstimer !== null){
-			clearTimeout(presstimer);
+			window.clearTimeout(presstimer);
 			presstimer = null;
+			window.clearTimeout(presstimeraction);
+			presstimeraction = null;
 		}
 
 		var elementList = bnode.getElementsByTagName("*");
@@ -3965,14 +3972,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			}
 		}
-		document.getElementsByTagName("html")[0].classList.add("stefanvdnightblur");
 
-		presstimer = setTimeout(function(){
-			gogonightmode();
-			if(navigator.vibrate){
-				window.navigator.vibrate([100, 30, 200]);
-			}
-		}, 800);
+		// delay after 1.5 seconds start to work this code
+		presstimer = window.setTimeout(function(){
+			document.getElementsByTagName("html")[0].classList.add("stefanvdnightblur");
+			presstimeraction = window.setTimeout(function(){
+				gogonightmode();
+				if(navigator.vibrate){
+					window.navigator.vibrate([100, 30, 200]);
+				}
+			}, 800);
+		}, 1500);
 
 		return false;
 	};
