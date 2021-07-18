@@ -138,7 +138,7 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     }
     
     @IBAction func opentutorialvideo(_ sender: Any) {
-        let path = Bundle.main.path(forResource: "forest", ofType: "mov")
+        let path = Bundle.main.path(forResource: "enable-safari-extension-iphone", ofType: "mp4")
         let url = NSURL(fileURLWithPath: path!)
         let player = AVPlayer(url:url as URL)
         playerController = AVPlayerViewController()

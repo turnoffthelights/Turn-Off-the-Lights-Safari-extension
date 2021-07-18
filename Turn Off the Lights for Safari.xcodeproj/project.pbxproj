@@ -14,6 +14,7 @@
 		1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A61902682677300619A31 /* YouTubeViewController.swift */; };
 		1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F5768267BE9D600C78FFC /* Localizable.strings */; };
 		1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E378628267CA350003A0F73 /* LicensesViewController.swift */; };
+		1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */; };
 		1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */; };
 		1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */; };
 		1E4CB227268CDC2300015282 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */; };
@@ -154,6 +155,7 @@
 		1E2A61902682677300619A31 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		1E2F5767267BE9D600C78FFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E378628267CA350003A0F73 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
+		1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "enable-safari-extension-iphone.mp4"; sourceTree = "<group>"; };
 		1E4CB20A268CC77900015282 /* TOtL-iOS-UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-iOS-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_UITest.swift; sourceTree = "<group>"; };
 		1E4CB217268CC79300015282 /* TOtL-macOS-UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,6 +360,7 @@
 		1E70C9F926726F380064A939 /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */,
 				1E70C9FA26726F380064A939 /* AppDelegate.swift */,
 				1E6762772681F2B800995D6C /* MasterViewController.swift */,
 				1E151BB2267FC78E0004E9E3 /* SidebarController.swift */,
@@ -687,6 +690,7 @@
 				1E70CA0026726F380064A939 /* LaunchScreen.storyboard in Resources */,
 				1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */,
 				1E2A6183268264EB00619A31 /* Main.storyboard in Resources */,
+				1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */,
 				1E70CA3026726F380064A939 /* Assets.xcassets in Resources */,
 				1E6C4913267B83C3001048CF /* forest.mov in Resources */,
 			);
