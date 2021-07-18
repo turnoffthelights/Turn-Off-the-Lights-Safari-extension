@@ -9,8 +9,14 @@ import Foundation
 import UIKit
 import SafariServices
 import Turn_Off_the_Lights_for_Safari_Extension
+import LinkPresentation
 
 class WelcomeViewController: UIViewController, UIActivityItemSource {
+    var metadata: LPLinkMetadata?
+
+    func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
+        return self.metadata
+    }
 
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
         return String.localizedStringWithFormat(NSLocalizedString("lblplaceholder", comment: ""), "")
@@ -62,20 +68,26 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
             self.navigationItem.title = ""
         }
     }
-    
+
     @IBOutlet weak var btnshare: UIButton!
-    var productURL = URL(string: "https://itunes.apple.com/app/id1273998507")!
     @IBAction func bigshareaction(_ sender: Any) {
-        let items = [self]
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        // Check if user is on iPad and present popover
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            ac.popoverPresentationController?.sourceView = btnshare
-            ac.popoverPresentationController?.sourceRect = btnshare.bounds;
-            ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down;
+        let url = URL(string: "https://www.turnoffthelights.com")!
+        LPMetadataProvider().startFetchingMetadata(for: url) { [self] linkMetadata, _ in
+            //linkMetadata?.iconProvider = linkMetadata?.imageProvider
+            self.metadata = linkMetadata
+            let items = [self]
+            let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            // Check if user is on iPad and present popover
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                ac.popoverPresentationController?.sourceView = self.btnshare
+                ac.popoverPresentationController?.sourceRect = self.btnshare.bounds;
+                ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down;
+            }
+            // Present share activityView on regular iPhone
+            DispatchQueue.main.async {
+                self.present(ac, animated: true)
+            }
         }
-        // Present share activityView on regular iPhone
-        present(ac, animated: true)
     }
 
 }
