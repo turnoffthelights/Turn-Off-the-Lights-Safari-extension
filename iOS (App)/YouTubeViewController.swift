@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 //UITableViewDelegate, UITableViewDataSource
 class YouTubeViewController: UITableViewController{
@@ -121,18 +122,28 @@ class YouTubeViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vi = videos[indexPath.row]
-        self.video = vi
-        performSegue(withIdentifier: "toVideo", sender: nil)
+//        self.video = vi
+//        performSegue(withIdentifier: "toVideo", sender: nil)
         
-//        let youtubeId = vi
-//        if let youtubeURL = URL(string: "youtube://\(youtubeId)"),
-//            UIApplication.shared.canOpenURL(youtubeURL) {
-//            // redirect to app
-//            UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-//        } else if let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(youtubeId)") {
-//            // redirect through safari
-//            UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-//        }
+        let youtubeId = vi
+        if let youtubeURL = URL(string: "youtube://\(youtubeId)"),
+            UIApplication.shared.canOpenURL(youtubeURL) {
+            // redirect to app
+            UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+        } else if URL(string: "https://www.youtube.com/watch?v=\(youtubeId)") != nil {
+            // redirect through safari
+            //UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+            
+            let thisurlpost = "https://www.youtube.com/watch?v=\(youtubeId)"
+            let config = SFSafariViewController.Configuration()
+            config.barCollapsingEnabled = true
+            config.entersReaderIfAvailable = false
+
+            if let url = URL(string: thisurlpost) {
+                let vc = SFSafariViewController(url: url, configuration: config)
+                present(vc, animated: true)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
