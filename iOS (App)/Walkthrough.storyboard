@@ -754,7 +754,7 @@ dmFpbGFibGUDLg
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IN9-yT-dQQ">
-                                                <rect key="frame" x="20" y="646" width="984" height="50"/>
+                                                <rect key="frame" x="20" y="636" width="984" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="kuI-1I-UB4"/>
                                                 </constraints>
@@ -800,7 +800,7 @@ dmFpbGFibGUDLg
                                             <constraint firstItem="opu-Bg-yF6" firstAttribute="top" secondItem="KLJ-NO-6JP" secondAttribute="bottom" constant="5" id="j2D-3x-rN2"/>
                                             <constraint firstItem="lOv-lD-98t" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" constant="20" symbolic="YES" id="lwX-BU-79f"/>
                                             <constraint firstItem="KLJ-NO-6JP" firstAttribute="top" secondItem="T3L-8g-nlS" secondAttribute="bottom" constant="22" id="nGC-Pv-Id9"/>
-                                            <constraint firstAttribute="bottom" secondItem="IN9-yT-dQQ" secondAttribute="bottom" constant="64" id="sfx-2f-Fre"/>
+                                            <constraint firstAttribute="bottom" secondItem="IN9-yT-dQQ" secondAttribute="bottom" constant="74" id="sfx-2f-Fre"/>
                                             <constraint firstItem="TlZ-Hv-ZZ1" firstAttribute="top" secondItem="686-7N-zur" secondAttribute="bottom" constant="20" id="tYA-rz-k2a"/>
                                             <constraint firstItem="686-7N-zur" firstAttribute="centerX" secondItem="IN9-yT-dQQ" secondAttribute="centerX" id="tjK-hU-PdL"/>
                                             <constraint firstItem="TlZ-Hv-ZZ1" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" constant="20" symbolic="YES" id="u1N-jk-1Uf"/>

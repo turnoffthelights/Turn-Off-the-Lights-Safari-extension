@@ -63,7 +63,7 @@ class ViewController: UIViewController{
         super.viewDidLayoutSubviews()
         if(showedintro == false){
             imageView.center = view.center
-            // heart beat effect
+            // Heart beat effect
             let popForce = 0.8
             let duration = 3
             let delay = 0.5
@@ -76,7 +76,7 @@ class ViewController: UIViewController{
             animation.repeatCount = Float(3)
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay/2)
             self.imageView.layer.add(animation, forKey: "pop")
-            // remove zoom out effect
+            // Remove zoom out effect
             DispatchQueue.main.asyncAfter(deadline: .now()+3.0) {
                 self.animate()
             }
@@ -99,15 +99,16 @@ class ViewController: UIViewController{
             if done {
                 DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
 
-                    self.showWalkthrough()
+                    // Debug
+                    //self.showWalkthrough()
                     
-//                    let appdefaults = UserDefaults.standard
-//                    if !appdefaults.bool(forKey: "walkthroughPresented") {
-//                      self.showWalkthrough()
-//                    }else{
-//                        // regular open the app
-//                        self.showmainapp()
-//                    }
+                    let appdefaults = UserDefaults.standard
+                    if !appdefaults.bool(forKey: "walkthroughPresented") {
+                        self.showWalkthrough()
+                    }else{
+                        // regular open the app
+                        self.showmainapp()
+                    }
 
                 })
 
@@ -178,7 +179,6 @@ class ViewController: UIViewController{
         self.dismiss(animated: true, completion: {
             self.showmainapp()
         })
-        
     }
     
 }
