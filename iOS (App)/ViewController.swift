@@ -22,6 +22,18 @@ class ViewController: UIViewController{
             selector: #selector(startmainapp(_:)),
             name: NSNotification.Name(rawValue: "startmainapp"),
             object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(openwelcomeguide(_:)),
+            name: NSNotification.Name(rawValue: "goguide"),
+            object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(closewelcomeguide(_:)),
+            name: NSNotification.Name(rawValue: "closeguide"),
+            object: nil)
     }
     
     override func viewDidLoad() {
@@ -87,22 +99,15 @@ class ViewController: UIViewController{
             if done {
                 DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
 
-                    let appdefaults = UserDefaults.standard
-                    if !appdefaults.bool(forKey: "walkthroughPresented") {
-                        //statuscheck
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let vc = storyboard.instantiateViewController(withIdentifier: "statuscheck")
-                        vc.modalTransitionStyle = .coverVertical
-                        vc.modalPresentationStyle = .pageSheet
-                        vc.isModalInPresentation = true
-                        self.present(vc, animated: true)
-                        
-                        appdefaults.set(true, forKey: "walkthroughPresented")
-                        appdefaults.synchronize()
-                    }else{
-                        // regular open the app
-                        self.showmainapp()
-                    }
+                    self.showWalkthrough()
+                    
+//                    let appdefaults = UserDefaults.standard
+//                    if !appdefaults.bool(forKey: "walkthroughPresented") {
+//                      self.showWalkthrough()
+//                    }else{
+//                        // regular open the app
+//                        self.showmainapp()
+//                    }
 
                 })
 
@@ -124,6 +129,56 @@ class ViewController: UIViewController{
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true)
+    }
+    
+    //----- welcome guide
+    @objc func openwelcomeguide(_ notification: Notification) {
+        self.dismiss(animated: true, completion: {
+            self.showWalkthrough()
+        });//This is intended to dismiss the Info sceen.
+    }
+    
+    @IBAction func showWalkthrough(){
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            iphonewelcomeguide()
+            //print("yes I am an iPhone");
+            // It's an iPhone
+        case .pad:
+            iphonewelcomeguide()
+            //print("yes I am an iPad");
+            // It's an iPad
+        case .unspecified:
+            iphonewelcomeguide()
+            //print("yes Apple secret device?");
+            // Uh, oh! What could it be?
+        default:
+            iphonewelcomeguide()
+            //print("yes I am an default iPod Touch");
+        }
+    }
+    
+    func iphonewelcomeguide(){
+        let storyboard = UIStoryboard(name: "Walkthrough", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "startguide")
+        vc.modalTransitionStyle = .coverVertical
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            // rotation limit work only in fullscreen mode
+            vc.modalPresentationStyle = .fullScreen
+        } else {
+            vc.modalPresentationStyle = .pageSheet
+        }
+        vc.isModalInPresentation = true
+        self.present(vc, animated: true)
+    }
+    
+    @objc func closewelcomeguide(_ notification: Notification) {
+        //self.dismiss(animated: true, completion: nil)
+        // close the guide, and go back the homeapp
+        self.dismiss(animated: true, completion: {
+            self.showmainapp()
+        })
+        
     }
     
 }

@@ -10,10 +10,11 @@
 		1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E151BB2267FC78E0004E9E3 /* SidebarController.swift */; };
 		1E2A6183268264EB00619A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C491C267B851B001048CF /* Main.storyboard */; };
 		1E2A618E2682675E00619A31 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */; };
-		1E2A618F2682675E00619A31 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A618D2682675E00619A31 /* VideoViewController.swift */; };
 		1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A61902682677300619A31 /* YouTubeViewController.swift */; };
 		1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F5768267BE9D600C78FFC /* Localizable.strings */; };
+		1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */; };
 		1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E378628267CA350003A0F73 /* LicensesViewController.swift */; };
+		1E4333A526A9C36B00ABFB0D /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4333A426A9C36B00ABFB0D /* Walkthrough.storyboard */; };
 		1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */; };
 		1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */; };
 		1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */; };
@@ -73,6 +74,8 @@
 		1E7D1A182672848500FECE52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7D1A17267283A700FECE52 /* Main.storyboard */; };
 		1E7D1A192672850D00FECE52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1A16267283A700FECE52 /* ViewController.swift */; };
 		1E7D1A1A26728E0500FECE52 /* DaringInfantileDachshund.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E7D1A15267283A600FECE52 /* DaringInfantileDachshund.mp4 */; };
+		1E862AA326AC4FA3004B9642 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E862AA226AC4FA3004B9642 /* PageViewController.swift */; };
+		1E862AA726AC55C8004B9642 /* WelcomeGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */; };
 		1E8F88FD269E194F00030DDB /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8F88FC269E194F00030DDB /* NetworkViewController.swift */; };
 		1EC4AC1A26851FC0005FCF33 /* CommonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */; };
 		1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */; };
@@ -151,10 +154,11 @@
 /* Begin PBXFileReference section */
 		1E151BB2267FC78E0004E9E3 /* SidebarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarController.swift; sourceTree = "<group>"; };
 		1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
-		1E2A618D2682675E00619A31 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		1E2A61902682677300619A31 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		1E2F5767267BE9D600C78FFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "enable-safari-extension-ipad.mov"; sourceTree = "<group>"; };
 		1E378628267CA350003A0F73 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
+		1E4333A426A9C36B00ABFB0D /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "enable-safari-extension-iphone.mp4"; sourceTree = "<group>"; };
 		1E4CB20A268CC77900015282 /* TOtL-iOS-UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-iOS-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_UITest.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		1E7D1A15267283A600FECE52 /* DaringInfantileDachshund.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DaringInfantileDachshund.mp4; sourceTree = "<group>"; };
 		1E7D1A16267283A700FECE52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E7D1A17267283A700FECE52 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1E862AA226AC4FA3004B9642 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuideViewController.swift; sourceTree = "<group>"; };
 		1E8F88FC269E194F00030DDB /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonClasses.swift; sourceTree = "<group>"; };
 		1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
@@ -361,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */,
+				1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */,
 				1E70C9FA26726F380064A939 /* AppDelegate.swift */,
 				1E6762772681F2B800995D6C /* MasterViewController.swift */,
 				1E151BB2267FC78E0004E9E3 /* SidebarController.swift */,
@@ -375,16 +382,18 @@
 				1E6C490E267B83C2001048CF /* ViewController.swift */,
 				1E6C490F267B83C3001048CF /* WelcomeViewController.swift */,
 				1E70C9FC26726F380064A939 /* SceneDelegate.swift */,
+				1E862AA226AC4FA3004B9642 /* PageViewController.swift */,
+				1E4333A426A9C36B00ABFB0D /* Walkthrough.storyboard */,
 				1E6C491C267B851B001048CF /* Main.storyboard */,
 				1E70C9FE26726F380064A939 /* LaunchScreen.storyboard */,
 				1E70CA0426726F380064A939 /* Info.plist */,
 				1E378628267CA350003A0F73 /* LicensesViewController.swift */,
 				1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */,
-				1E2A618D2682675E00619A31 /* VideoViewController.swift */,
 				1E2A61902682677300619A31 /* YouTubeViewController.swift */,
 				1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */,
 				1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */,
 				1E8F88FC269E194F00030DDB /* NetworkViewController.swift */,
+				1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */,
 			);
 			path = "iOS (App)";
 			sourceTree = "<group>";
@@ -689,8 +698,10 @@
 			files = (
 				1E70CA0026726F380064A939 /* LaunchScreen.storyboard in Resources */,
 				1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */,
+				1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */,
 				1E2A6183268264EB00619A31 /* Main.storyboard in Resources */,
 				1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */,
+				1E4333A526A9C36B00ABFB0D /* Walkthrough.storyboard in Resources */,
 				1E70CA3026726F380064A939 /* Assets.xcassets in Resources */,
 				1E6C4913267B83C3001048CF /* forest.mov in Resources */,
 			);
@@ -798,12 +809,13 @@
 				1E6C491A267B83C3001048CF /* ViewController.swift in Sources */,
 				1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */,
 				1E6C4919267B83C3001048CF /* FeedParser.swift in Sources */,
-				1E2A618F2682675E00619A31 /* VideoViewController.swift in Sources */,
 				1EC4AC1A26851FC0005FCF33 /* CommonClasses.swift in Sources */,
 				1E70C9FD26726F380064A939 /* SceneDelegate.swift in Sources */,
 				1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */,
 				1E6C4916267B83C3001048CF /* NewsTableViewController.swift in Sources */,
 				1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */,
+				1E862AA326AC4FA3004B9642 /* PageViewController.swift in Sources */,
+				1E862AA726AC55C8004B9642 /* WelcomeGuideViewController.swift in Sources */,
 				1E6C491B267B83C3001048CF /* WelcomeViewController.swift in Sources */,
 				1E2A618E2682675E00619A31 /* VideoTableViewCell.swift in Sources */,
 				1E67627A2681F42E00995D6C /* SplitViewController.swift in Sources */,

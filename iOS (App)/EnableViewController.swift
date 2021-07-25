@@ -37,7 +37,7 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.8, execute: {
             UIView.animate(withDuration: 1.5) {
                 self.btnok.alpha = 1.0
             }
@@ -138,7 +138,12 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     }
     
     @IBAction func opentutorialvideo(_ sender: Any) {
-        let path = Bundle.main.path(forResource: "enable-safari-extension-iphone", ofType: "mp4")
+        var path = Bundle.main.path(forResource: "enable-safari-extension-iphone", ofType: "mp4")
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            path = Bundle.main.path(forResource: "enable-safari-extension-ipad", ofType: "mov")
+        }else{
+            path = Bundle.main.path(forResource: "enable-safari-extension-iphone", ofType: "mp4")
+        }
         let url = NSURL(fileURLWithPath: path!)
         let player = AVPlayer(url:url as URL)
         playerController = AVPlayerViewController()
@@ -168,9 +173,11 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     }
 
     @IBAction func closebutton(_ sender: Any) {
-        self.dismiss(animated: true, completion: {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "startmainapp"), object: nil)
-        })
+        let appdefaults = UserDefaults.standard
+        appdefaults.set(true, forKey: "walkthroughPresented")
+        appdefaults.synchronize()
+        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "closeguide"), object: nil)
     }
 
 }

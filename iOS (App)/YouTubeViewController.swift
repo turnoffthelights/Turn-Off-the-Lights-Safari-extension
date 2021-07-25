@@ -146,13 +146,6 @@ class YouTubeViewController: UITableViewController{
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toVideo" {
-            let vc = segue.destination as! VideoViewController
-            vc.video = self.video
-        }
-    }
-    
     // animation effect add moving item on scroll
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.removeLoadingScreen()
