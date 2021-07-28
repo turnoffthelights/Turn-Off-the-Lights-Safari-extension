@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19142.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19129"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,10 +26,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totl-ios-guide-image3" translatesAutoresizingMaskIntoConstraints="NO" id="Czq-6l-As8">
-                                        <rect key="frame" x="412" y="37" width="200" height="200"/>
+                                        <rect key="frame" x="432" y="57" width="160" height="160"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="WfY-eF-Fgz"/>
-                                            <constraint firstAttribute="height" constant="200" id="pYJ-3a-VbC"/>
+                                            <constraint firstAttribute="width" constant="160" id="WfY-eF-Fgz"/>
+                                            <constraint firstAttribute="height" constant="160" id="pYJ-3a-VbC"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="imagewcornerRadius">
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5Q-cU-SYm">
-                                <rect key="frame" x="883.5" y="297" width="120.5" height="34.5"/>
+                                <rect key="frame" x="898" y="297" width="106" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Watch Video"/>
                                 <connections>
@@ -74,7 +74,7 @@
                                 <rect key="frame" x="20" y="373" width="203" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLb-B0-RK2">
-                                <rect key="frame" x="20" y="407" width="704" height="64.5"/>
+                                <rect key="frame" x="20" y="407" width="704" height="36"/>
                                 <string key="text">The last profile is the "Eye Protection" which dims the web page and adds this dark layer to all newly opened websites and will not remove the layer unless you tap the lamp button again.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6O-Jw-gSV">
-                                <rect key="frame" x="20" y="407" width="704" height="42.5"/>
+                                <rect key="frame" x="20" y="407" width="704" height="36"/>
                                 <string key="text">The 2nd action you can choose is the Night Owl profile. That makes it possible to convert any website to your personal dark mode theme.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
@@ -139,10 +139,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totl-ios-guide-image2" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-7n-JBJ">
-                                        <rect key="frame" x="412" y="37" width="200" height="200"/>
+                                        <rect key="frame" x="432" y="57" width="160" height="160"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="236-eh-A7P"/>
-                                            <constraint firstAttribute="width" constant="200" id="xFe-Xm-2W1"/>
+                                            <constraint firstAttribute="height" constant="160" id="236-eh-A7P"/>
+                                            <constraint firstAttribute="width" constant="160" id="xFe-Xm-2W1"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="imagewcornerRadius">
@@ -174,7 +174,7 @@
                                 <rect key="frame" x="20" y="373" width="159" height="4"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imp-Os-wOD">
-                                <rect key="frame" x="883.5" y="297" width="120.5" height="34.5"/>
+                                <rect key="frame" x="898" y="297" width="106" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Watch Video"/>
                                 <connections>
@@ -231,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us walk you through the awesome Turn Off the Lights Safari extension features." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khk-p9-ex7">
-                                <rect key="frame" x="302" y="502.5" width="420" height="42.5"/>
+                                <rect key="frame" x="302" y="502.5" width="420" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -432,10 +432,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totl-ios-guide-image4" translatesAutoresizingMaskIntoConstraints="NO" id="otO-mw-agC">
-                                        <rect key="frame" x="412" y="37" width="200" height="200"/>
+                                        <rect key="frame" x="432" y="57" width="160" height="160"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="MU8-n8-e9Q"/>
-                                            <constraint firstAttribute="height" constant="200" id="dJk-jd-8Kn"/>
+                                            <constraint firstAttribute="width" constant="160" id="MU8-n8-e9Q"/>
+                                            <constraint firstAttribute="height" constant="160" id="dJk-jd-8Kn"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="imagewcornerRadius">
@@ -472,7 +472,7 @@
                                 <rect key="frame" x="20" y="373" width="130" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OB-Fg-auw">
-                                <rect key="frame" x="20" y="407" width="704" height="42.5"/>
+                                <rect key="frame" x="20" y="407" width="704" height="36"/>
                                 <string key="text" base64-UTF8="YES">
 VGhlcmUgaXMgc28gbXVjaCBtb3JlIHlvdSBjYW4gZG8uIEFuZCBldmVyeXRoaW5nIGNhbiBiZSBjdXN0
 b21pemVkIG9uIHRoZSBUdXJuIE9mZiB0aGUgTGlnaHRzIE9wdGlvbnMgcGFnZSwgdGhhdCB0byADeW91
@@ -527,10 +527,10 @@ ciBwZXJzb25hbCBzdHlsZSBhbmQgcHJlZmVyZW5jZXMuA
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totl-ios-guide-image1" translatesAutoresizingMaskIntoConstraints="NO" id="YRJ-lt-7OA">
-                                        <rect key="frame" x="412" y="37" width="200" height="200"/>
+                                        <rect key="frame" x="432" y="57" width="160" height="160"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="4Ci-Lt-ewm"/>
-                                            <constraint firstAttribute="height" constant="200" id="nbs-sE-s2S"/>
+                                            <constraint firstAttribute="width" constant="160" id="4Ci-Lt-ewm"/>
+                                            <constraint firstAttribute="height" constant="160" id="nbs-sE-s2S"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="viewcornerRadius">
@@ -547,7 +547,7 @@ ciBwZXJzb25hbCBzdHlsZSBhbmQgcHJlZmVyZW5jZXMuA
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLD-al-AhY">
-                                <rect key="frame" x="20" y="407" width="704" height="42.5"/>
+                                <rect key="frame" x="20" y="407" width="704" height="36"/>
                                 <string key="text" base64-UTF8="YES">
 VGhlcmUgaXMgMyBraW5kIG9mIGJ1dHRvbiBhY3Rpb25zIHlvdQMgY2FuIHNldCBmb3IgdGhlIGxhbXAg
 YnV0dG9uLiBUaGUgZGVmYXVsdAMgYWN0aW9uIGlzIHRoZSBWaWRlbyBMb3ZlciBwcm9maWxlLiADVGhh
@@ -746,7 +746,7 @@ dmFpbGFibGUDLg
                                                 <rect key="frame" x="20" y="373" width="78" height="4"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-xO-PNb">
-                                                <rect key="frame" x="883.5" y="297" width="120.5" height="34.5"/>
+                                                <rect key="frame" x="898" y="297" width="106" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Watch Video"/>
                                                 <connections>

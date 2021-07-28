@@ -36,9 +36,6 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
     }
     
     @IBAction func openoptions(_ sender: Any) {
-        //https://www.turnoffthelights.com/extension/redirection/
-        //safari-web-extension://ADE41D7A-3F87-47EE-BA44-0ED67B3301FD/options.html
-        //"safari-web-extension://0D7D2870-42AD-484E-B5ED-669FA016CF58/options.html"
         if let url = URL(string: "https://www.turnoffthelights.com/extension/redirection/") {
             UIApplication.shared.open(url)
         }
