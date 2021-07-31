@@ -27,17 +27,16 @@
     "page": "background.html",
 	  "persistent": false
   },
-  "content_security_policy": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src https://www.turnoffthelights.com 'self' * data:; object-src 'none'",
+  "content_security_policy": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' * data:; object-src 'none'",
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
       "js": ["js/constants.js", "js/content.js", "js/eco.js"],
       "run_at": "document_end"
     },
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.mycinema.pro/*", "*://*.turnoffthelights.com/extension/options.html"],
+      "exclude_matches": ["*://*.mycinema.pro/*"],
       "css" : ["css/light.css"],
       "run_at": "document_end",
       "all_frames": true,
@@ -46,7 +45,6 @@
     {
       "matches": ["http://*/*", "https://*/*"],
       "js": ["js/screenshader.js"],
-      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
       "run_at": "document_start"
     },
     {
@@ -57,7 +55,6 @@
     },
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
       "js": ["js/autostop.js"],
       "run_at": "document_start",
       "all_frames": true,
@@ -66,11 +63,6 @@
     {
       "matches": ["*://*.youtube.com/*"], 
       "css" : ["css/youtube.css"]
-    },
-    {
-      "matches": ["*://*.turnoffthelights.com/extension/options.html"],
-      "js": ["js/constants.js","js/options.js","js/Chart.js","js/eco-preview.js"],
-      "run_at": "document_end"
     }
   ],
   "commands": {
@@ -97,5 +89,5 @@
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage"]
+  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage" ]
 }
