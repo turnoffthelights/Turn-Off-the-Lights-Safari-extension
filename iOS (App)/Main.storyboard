@@ -220,11 +220,11 @@
             </objects>
             <point key="canvasLocation" x="1244.9275362318842" y="-1688.1696428571429"/>
         </scene>
-        <!--Video-->
+        <!--Videos-->
         <scene sceneID="uP0-IK-g2Y">
             <objects>
                 <navigationController storyboardIdentifier="tabb" automaticallyAdjustsScrollViewInsets="NO" id="5Zz-Sl-K2S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Video" id="vXJ-o3-xot">
+                    <tabBarItem key="tabBarItem" title="Videos" id="vXJ-o3-xot">
                         <imageReference key="image" image="film" catalog="system" symbolScale="default"/>
                         <imageReference key="landscapeImage" image="film" catalog="system" symbolScale="default"/>
                         <imageReference key="largeContentSizeImage" image="film" catalog="system" symbolScale="default"/>
@@ -981,7 +981,7 @@
             </objects>
             <point key="canvasLocation" x="-2291" y="-1688"/>
         </scene>
-        <!--Video-->
+        <!--Videos-->
         <scene sceneID="0ch-Mg-Vlx">
             <objects>
                 <tableViewController id="SYs-CO-Hiy" customClass="YouTubeViewController" customModule="Turn_Off_the_Lights_for_Safari" customModuleProvider="target" sceneMemberID="viewController">
@@ -1033,7 +1033,7 @@
                             <outlet property="delegate" destination="SYs-CO-Hiy" id="myc-SQ-T4c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Video" id="pJZ-9Y-hHw"/>
+                    <navigationItem key="navigationItem" title="Videos" id="pJZ-9Y-hHw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3q-tA-uLN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
