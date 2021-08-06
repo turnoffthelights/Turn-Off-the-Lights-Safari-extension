@@ -164,6 +164,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	function $(id){ return document.getElementById(id); }
 
+	var windark = window.matchMedia("(prefers-color-scheme: dark)");
+
 	function rgbToHex(r, g, b){
 		if(r > 255 || g > 255 || b > 255)
 			throw"Invalid color component";
@@ -508,6 +510,27 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 
+	function checkregdomaininside(thaturl, websiteurl){
+		// regex test
+		var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+		var prepUrl = ""; var m;
+		if((m = thaturl.match(rxUrlSplit)) !== null){
+			prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+			if(m[3]){
+				prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+			}
+		}
+		if(prepUrl){
+			// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+			if(websiteurl.match(RegExp("^" + prepUrl + "$", "i"))){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		return false;
+	}
+
 	function runautoplaycheck(){
 		if(autoplay == true && mousespotlights != true){
 			if(autoplayonly == true){
@@ -524,9 +547,25 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					var l = abuf.length;
 					for(i = 0; i < l; i++){
 						if(autoplaychecklistwhite == true){
-							if(currenturl == abuf[i]){ autoplayfunction(); }
+							if(abuf[i].includes("*")){
+								// regex test
+								if(checkregdomaininside(abuf[i], currenturl) == true){
+									autoplayfunction();
+								}
+							}else{
+								// regular text
+								if(currenturl == abuf[i]){ autoplayfunction(); }
+							}
 						}else if(autoplaychecklistblack == true){
-							if(currenturl == abuf[i]){ blackrabbit = true; }
+							if(abuf[i].includes("*")){
+								// regex test
+								if(checkregdomaininside(abuf[i], currenturl) == true){
+									blackrabbit = true;
+								}
+							}else{
+								// regular text
+								if(currenturl == abuf[i]){ blackrabbit = true; }
+							}
 						}
 					}
 				}
@@ -567,10 +606,29 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					vtbbuf.sort();
 					var i, l = vtbbuf.length;
 					for(i = 0; i < l; i++){
-						if((videotoolchecklistwhite == true) && (currenturl == vtbbuf[i])){
-							videotoolfunction();
-						}else if((videotoolchecklistblack == true) && (currenturl == vtbbuf[i])){
-							videotoolrabbit = true;
+						if(videotoolchecklistwhite == true){
+							if(vtbbuf[i].includes("*")){
+								// regex test
+								if(checkregdomaininside(vtbbuf[i], currenturl) == true){
+									videotoolfunction();
+								}
+							}else{
+								// regular text
+								if(currenturl == vtbbuf[i]){
+									videotoolfunction();
+								}
+							}
+						}else if(videotoolchecklistblack == true){
+							if(vtbbuf[i].includes("*")){
+								// regex test
+								if(checkregdomaininside(vtbbuf[i], currenturl) == true){
+									videotoolrabbit = true;
+								}
+							}else{
+								if(currenturl == vtbbuf[i]){
+									videotoolrabbit = true;
+								}
+							}
 						}
 					}
 				}
@@ -1884,9 +1942,25 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var l = eyebuf.length;
 				for(i = 0; i < l; i++){
 					if(eyechecklistwhite == true){
-						if(currenturl == eyebuf[i]){ chrome.runtime.sendMessage({name: "automatic"}); }
+						if(eyebuf[i].includes("*")){
+							// regex test
+							if(checkregdomaininside(eyebuf[i], currenturl) == true){
+								chrome.runtime.sendMessage({name: "automatic"});
+							}
+						}else{
+							// regular text
+							if(currenturl == eyebuf[i]){ chrome.runtime.sendMessage({name: "automatic"}); }
+						}
 					}else if(eyechecklistblack == true){
-						if(currenturl == eyebuf[i]){ eyerabbit = true; }
+						if(eyebuf[i].includes("*")){
+							// regex test
+							if(checkregdomaininside(eyebuf[i], currenturl) == true){
+								eyerabbit = true;
+							}
+						}else{
+							// regular text
+							if(currenturl == eyebuf[i]){ eyerabbit = true; }
+						}
 					}
 				}
 			}
@@ -2041,8 +2115,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					albuf.sort();
 					var i;
 					var l = albuf.length;
-					for(i = 0; i < l; i++)
-						if(currenturl == albuf[i]){ ambilightfunction(); }
+					for(i = 0; i < l; i++){
+						if(albuf[i].includes("*")){
+							// regex test
+							if(checkregdomaininside(albuf[i], currenturl) == true){
+								ambilightfunction();
+							}
+						}else{
+							// regular text
+							if(currenturl == albuf[i]){ ambilightfunction(); }
+						}
+					}
 				}
 			}else{ ambilightfunction(); }
 		}
@@ -2728,6 +2811,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				case"AREA":
 				case"NOSCRIPT":
 				case"BASE":
+				case"BR":
 					// do nothing
 					break;
 				default:
@@ -3635,10 +3719,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		//---
 
 		if(sun == false){
-		// go back and disable this
+			// go back and disable this
 			nightcssobserver.disconnect();
 		}else{
-		// enable observe
+			// enable observe
 			nightcssobserver.observe(element, {
 				attributes: true,
 				childList: true,
@@ -3729,7 +3813,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var newnightinput = document.createElement("input");
 			newnightinput.setAttribute("type", "checkbox");
 			newnightinput.setAttribute("id", "stefanvdnightthemecheckbox");
-			if(nightenabletheme == true){ newnightinput.setAttribute("checked", true); }
+			if(nightenabletheme == true){
+				if(nightmodeos == true){
+					if(window.matchMedia && windark.matches){
+						// dark mode
+						newnightinput.setAttribute("checked", false);
+					}
+				}else{
+					newnightinput.setAttribute("checked", true);
+				}
+			}
 			newnight.appendChild(newnightinput);
 
 			var newnightspan = document.createElement("span");
@@ -3811,7 +3904,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// show all options the night switch CSS
 	// but not the "only" websites
 	var currenturl;
-	var currenturlb;
 	function runnightmodecheck(){
 		if(nighttheme == true && nightonly != true){
 			showswitchtricker();
@@ -3819,14 +3911,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 		if(nightonly == true){
 			if(nightmodebydomain == true){
+				// Only the domain
 				currenturl = window.location.protocol + "//" + window.location.host;
-				currenturlb = currenturl; // copy
 			}else{
-			// WITH end slash
+				// The full URL
+				// WITH no end slash
 				currenturl = window.location.href;
 				if(currenturl.substr(-1) === "/"){
 					// NO end slash
-					currenturlb = currenturl.substr(0, currenturl.length - 1);
+					currenturl = currenturl.substr(0, currenturl.length - 1);
 				}
 			}
 
@@ -3840,13 +3933,30 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var i, l = nbuf.length;
 				for(i = 0; i < l; i++){
 					if(nightmodechecklistwhite == true){
-						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
-							if(nighttheme == true){ showswitchtricker(); }
-							if(nightenabletheme == true){ timergonighttricker(); }
+						if(nbuf[i].includes("*")){
+							// regex test
+							if(checkregdomaininside(nbuf[i], currenturl) == true){
+								if(nighttheme == true){ showswitchtricker(); }
+								if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+							}
+						}else{
+							// regular text
+							if(currenturl == nbuf[i]){
+								if(nighttheme == true){ showswitchtricker(); }
+								if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+							}
 						}
 					}else if(nightmodechecklistblack == true){
-						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
-							nightrabbit = true;
+						if(nbuf[i].includes("*")){
+							// regex test
+							if(checkregdomaininside(nbuf[i], currenturl) == true){
+								nightrabbit = true;
+							}
+						}else{
+							// regular text
+							if(currenturl == nbuf[i]){
+								nightrabbit = true;
+							}
 						}
 					}
 				}
@@ -3854,20 +3964,37 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(nightmodechecklistblack == true){
 				if(nightrabbit == false){
 					if(nighttheme == true){ showswitchtricker(); }
-					if(nightenabletheme == true){ timergonighttricker(); }
+					if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
 				}
 			}
 		}else{
-			if(nightenabletheme == true){
+			if(nightenabletheme == true || nightmodeos == true){
 				timergonighttricker();
 			} // auto the night mode
 		}
 	}
 	runnightmodecheck();
 
+	function osdarkmodecheck(e){
+		const newColorScheme = e.matches ? "dark" : "light";
+		if(newColorScheme == "dark"){
+			sun = true; gogonightmode(); // make it dark
+		}else if(newColorScheme == "light"){
+			sun = false; gogonightmode(); // sun go up
+		}
+	}
+
 	function timergonighttricker(){
 		if(checknightactivetime() == true){
-			gogonightmode();
+			if(nightmodeos == true){
+				if(window.matchMedia && windark.matches){
+					// dark mode
+					gogonightmode();
+				}
+				windark.addEventListener("change", osdarkmodecheck);
+			}else{
+				gogonightmode();
+			}
 		}
 	}
 
@@ -4080,24 +4207,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 	runnightmodegesturecheck();
-
-	function runnightmodeos(){
-		if(nightmodeos == true){
-			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
-				// dark mode
-				gogonightmode();
-			}
-			window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-				const newColorScheme = e.matches ? "dark" : "light";
-				if(newColorScheme == "dark"){
-					sun = true; gogonightmode(); // make it dark
-				}else if(newColorScheme == "light"){
-					sun = false; gogonightmode(); // sun go up
-				}
-			});
-		}
-	}
-	runnightmodeos();
 
 	// reflection
 	function drawReflection(reflectionid){
@@ -4531,9 +4640,24 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					var l = vvbbuf.length;
 					for(i = 0; i < l; i++){
 						if(videovolumechecklistwhite == true){
-							if(currenturl == vvbbuf[i]){ videovolumefunction(); }
+							if(vvbbuf[i].includes("*")){
+								// regex test
+								if(checkregdomaininside(vvbbuf[i], currenturl) == true){
+									videovolumefunction();
+								}
+							}else{
+								if(currenturl == vvbbuf[i]){ videovolumefunction(); }
+							}
 						}else if(videovolumechecklistblack == true){
-							if(currenturl == vvbbuf[i]){ videovolumerabbit = true; }
+							if(vvbbuf[i].includes("*")){
+								// regex test
+								if(checkregdomaininside(vvbbuf[i], currenturl) == true){
+									videovolumerabbit = true;
+								}
+							}else{
+								// regular text
+								if(currenturl == vvbbuf[i]){ videovolumerabbit = true; }
+							}
 						}
 					}
 				}
@@ -5387,6 +5511,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				window.clearTimeout(timernightswitch);
 				document.removeEventListener("pointermove", mousemoveswitchhide);
 				document.removeEventListener("fullscreenchange", fullscreenswitch);
+				windark.removeEventListener("change", osdarkmodecheck);
 
 				nightcurrentvideoplaying = false;
 				var x = document.getElementsByTagName("video")[0];

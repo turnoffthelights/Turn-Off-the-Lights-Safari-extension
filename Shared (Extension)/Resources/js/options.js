@@ -1271,7 +1271,7 @@ function test(){
 
 	if($("atmosphereonly").checked == true){ $("atmosphereonly").checked = true; $("atmosphereDomainsBox").disabled = false; $("atmospherewebsiteurl").disabled = false; $("atmosphereaddbutton").disabled = false; $("atmosphereremovebutton").disabled = false; }else{ $("atmosphereonly").checked = false; $("atmosphereDomainsBox").disabled = true; $("atmospherewebsiteurl").disabled = true; $("atmosphereaddbutton").disabled = true; $("atmosphereremovebutton").disabled = true; }
 
-	if($("nightonly").checked == true){ $("nightonly").checked = true; $("nightDomainsBox").disabled = false; $("nightwebsiteurl").disabled = false; $("nightaddbutton").disabled = false; $("nightremovebutton").disabled = false; $("nightmodechecklistwhite").disabled = false; $("nightmodechecklistblack").disabled = false; }else{ $("nightonly").checked = false; $("nightDomainsBox").disabled = true; $("nightwebsiteurl").disabled = true; $("nightaddbutton").disabled = true; $("nightremovebutton").disabled = true; $("nightmodechecklistwhite").disabled = true; $("nightmodechecklistblack").disabled = true; }
+	if($("nightonly").checked == true){ $("nightonly").checked = true; $("nightDomainsBox").disabled = false; $("nightwebsiteurl").disabled = false; $("nightaddbutton").disabled = false; $("nightremovebutton").disabled = false; $("nightmodechecklistwhite").disabled = false; $("nightmodechecklistblack").disabled = false; $("nightmodebydomain").disabled = false; $("nightmodebypage").disabled = false; }else{ $("nightonly").checked = false; $("nightDomainsBox").disabled = true; $("nightwebsiteurl").disabled = true; $("nightaddbutton").disabled = true; $("nightremovebutton").disabled = true; $("nightmodechecklistwhite").disabled = true; $("nightmodechecklistblack").disabled = true; $("nightmodebydomain").disabled = true; $("nightmodebypage").disabled = true; }
 
 	if($("autoplay").checked == true){
 		$("aplay").disabled = false; $("apause").disabled = false; $("astop").disabled = false; $("eyen").checked = true; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplaydelay").disabled = false;
@@ -1301,9 +1301,9 @@ function test(){
 		$("speechonly").disabled = true; $("speechDomainsBox").disabled = true; $("speechwebsiteurl").disabled = true; $("speechaddbutton").disabled = true; $("speechremovebutton").disabled = true;
 	}
 
-	if($("nightactivetime").checked == true){ $("nmbegintime").disabled = false; $("nmendtime").disabled = false; }else{ $("nmbegintime").disabled = true; $("nmendtime").disabled = true; }
+	if($("nightactivetime").checked == true && $("nighttheme").checked == true){ $("nmbegintime").disabled = false; $("nmendtime").disabled = false; }else{ $("nmbegintime").disabled = true; $("nmendtime").disabled = true; }
 
-	if($("nighttheme").checked == true){ $("lampandnightmode").disabled = false; $("nightmodeswitchhide").disabled = false; $("nightmodeswitchhidetime").disabled = false; }else{ $("lampandnightmode").disabled = true; $("nightmodeswitchhide").disabled = true; $("nightmodeswitchhidetime").disabled = true; }
+	if($("nighttheme").checked == true){ $("nighthover").disabled = false; $("nightmodeswitchhide").disabled = false; $("nightmodeswitchhidetime").disabled = false; $("nightactivetime").disabled = false; }else{ $("nighthover").disabled = true; $("nightmodeswitchhide").disabled = true; $("nightmodeswitchhidetime").disabled = true; $("nightactivetime").disabled = true; }
 
 	if($("autostop").checked == true){ $("autostopred").disabled = false; $("autostoptrans").disabled = false; }else{ $("autostopred").disabled = true; $("autostoptrans").disabled = true; }
 
@@ -2108,10 +2108,9 @@ function cameradomcontentloaded(){
 		delt = canvasgetcont.createImageData(width, height);
 		if(last !== false){
 			var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
-			var testcondition = pix -= 4;
 			// Any number that is not 0 evaluates to true
 			// if 0 evaluates to false
-			while(testcondition){
+			while((pix -= 4)){
 				var d = Math.abs(draw.data[pix] - last.data[pix]
 				) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
 				) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
@@ -2189,10 +2188,10 @@ function cameradomcontentloaded(){
 				}
 			}else if(dy < -movethresh && !dirx){
 				if(davg > overthresh){
-					// console.log('over down')
+					// console.log("over down")
 					// writeinlog("over down");
 				}else{
-					// console.log('down')
+					// console.log("down")
 					// writeinlog("down");
 				}
 			}
