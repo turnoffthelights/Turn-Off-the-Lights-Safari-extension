@@ -68,21 +68,23 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
 
     @IBOutlet weak var btnshare: UIButton!
     @IBAction func bigshareaction(_ sender: Any) {
-        let url = URL(string: "https://www.turnoffthelights.com")!
-        LPMetadataProvider().startFetchingMetadata(for: url) { [self] linkMetadata, _ in
-            //linkMetadata?.iconProvider = linkMetadata?.imageProvider
-            self.metadata = linkMetadata
-            let items = [self]
-            let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-            // Check if user is on iPad and present popover
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                ac.popoverPresentationController?.sourceView = self.btnshare
-                ac.popoverPresentationController?.sourceRect = self.btnshare.bounds;
-                ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down;
-            }
-            // Present share activityView on regular iPhone
-            DispatchQueue.main.async {
-                self.present(ac, animated: true)
+        DispatchQueue.main.async {
+            let url = URL(string: "https://www.turnoffthelights.com")!
+            LPMetadataProvider().startFetchingMetadata(for: url) { [self] linkMetadata, _ in
+                //linkMetadata?.iconProvider = linkMetadata?.imageProvider
+                self.metadata = linkMetadata
+                let items = [self]
+                let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                // Check if user is on iPad and present popover
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    ac.popoverPresentationController?.sourceView = self.btnshare
+                    ac.popoverPresentationController?.sourceRect = self.btnshare.bounds;
+                    ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down;
+                }
+                // Present share activityView on regular iPhone
+                DispatchQueue.main.async {
+                    self.present(ac, animated: true)
+                }
             }
         }
     }

@@ -85,6 +85,10 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
 
             let safariVC = SFSafariViewController(url: url)
             safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
+            // Check if user is on iPad and present popover
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                safariVC.popoverPresentationController?.sourceView = self.view
+            }
             safariVC.delegate = self
             present(safariVC, animated: true, completion: nil)
         }else if indexPath.row == 1 {
@@ -95,6 +99,10 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
 
             let safariVC = SFSafariViewController(url: url)
             safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
+            // Check if user is on iPad and present popover
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                safariVC.popoverPresentationController?.sourceView = self.view
+            }
             safariVC.delegate = self
             present(safariVC, animated: true, completion: nil)
         }else if indexPath.row == 2 {
@@ -105,16 +113,24 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
 
             let safariVC = SFSafariViewController(url: url)
             safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
+            // Check if user is on iPad and present popover
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                safariVC.popoverPresentationController?.sourceView = self.view
+            }
             safariVC.delegate = self
             present(safariVC, animated: true, completion: nil)
         }else if indexPath.row == 3 {
             // check if website exists
-            guard let url = URL(string: "https://apps.apple.com/app/id1044081431") else {
+            guard let url = URL(string: "https://apps.apple.com/app/id1523093827") else {
             return
             }
 
             let safariVC = SFSafariViewController(url: url)
             safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
+            // Check if user is on iPad and present popover
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                safariVC.popoverPresentationController?.sourceView = self.view
+            }
             safariVC.delegate = self
             present(safariVC, animated: true, completion: nil)
         }
