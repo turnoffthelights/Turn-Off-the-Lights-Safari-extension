@@ -34,7 +34,7 @@ class LicensesViewController: UITableViewController, SFSafariViewControllerDeleg
                 // Check if user is on iPad and present popover
                 if UIDevice.current.userInterfaceIdiom == .pad {
                     safariVC.popoverPresentationController?.sourceView = self.view
-                }v
+                }
                 safariVC.delegate = self
                 present(safariVC, animated: true, completion: nil)
             }
