@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "Turn Off the Lights",
-  "version": "4.2.6.0",
+  "version": "4.3.0.0",
   "description": "__MSG_descriptionshort__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
@@ -48,11 +48,6 @@
       "run_at": "document_start"
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["js/nightmode.js"],
-      "run_at": "document_end"
-    },
-    {
       "matches": ["*://*.youtube.com/*"],
       "js": [ "js/fps.js" ],
       "run_at": "document_start",
@@ -94,5 +89,5 @@
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage" ]
+  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage", "webNavigation" ]
 }

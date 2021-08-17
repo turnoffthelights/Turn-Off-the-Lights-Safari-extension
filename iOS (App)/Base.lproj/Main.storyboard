@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XgQ-Ap-W4Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XgQ-Ap-W4Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -145,14 +145,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help spread the world!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq1-qS-Z1a">
-                                <rect key="frame" x="129.5" y="700" width="155.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help spread the word!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq1-qS-Z1a">
+                                <rect key="frame" x="131.5" y="749" width="151.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-ag-wTG">
-                                <rect key="frame" x="20" y="733" width="374" height="50"/>
+                                <rect key="frame" x="20" y="782" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6pa-gi-hZn"/>
                                 </constraints>
@@ -162,18 +162,6 @@
                                     <action selector="bigshareaction:" destination="Gf6-w3-eM9" eventType="touchUpInside" id="q3h-Dj-A6n"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ck-1D-rTL">
-                                <rect key="frame" x="163" y="145" width="65.5" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safari extension is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Las-RJ-5F9">
-                                <rect key="frame" x="20" y="145" width="138" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqc-uS-erT">
                                 <rect key="frame" x="20" y="174" width="113" height="30"/>
                                 <state key="normal" title="Manage Options"/>
@@ -182,32 +170,41 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ee5-vl-CXn">
-                                <rect key="frame" x="20" y="457" width="374" height="235"/>
+                                <rect key="frame" x="20" y="506" width="374" height="235"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="235" id="YfO-AL-75v"/>
+                                    <constraint firstAttribute="height" constant="235" id="YfO-AL-75v">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="135"/>
+                                    </constraint>
                                 </constraints>
                                 <imageReference key="image" image="people"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safari extension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCD-St-9Ia">
+                                <rect key="frame" x="20" y="145" width="122" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EbU-DL-dlX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="86Q-KA-z9o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="86Q-KA-z9o" firstAttribute="bottom" secondItem="yR6-ag-wTG" secondAttribute="bottom" constant="30" id="03v-BL-kvX"/>
                             <constraint firstItem="Ee5-vl-CXn" firstAttribute="leading" secondItem="86Q-KA-z9o" secondAttribute="leading" constant="20" id="5La-ZZ-cOw"/>
-                            <constraint firstItem="Las-RJ-5F9" firstAttribute="top" secondItem="lIQ-WX-qaf" secondAttribute="top" constant="145" id="8uz-Rz-F6Z"/>
+                            <constraint firstItem="cCD-St-9Ia" firstAttribute="top" secondItem="86Q-KA-z9o" secondAttribute="top" constant="5" id="9BP-LW-Hhe"/>
                             <constraint firstItem="86Q-KA-z9o" firstAttribute="trailing" secondItem="Ee5-vl-CXn" secondAttribute="trailing" constant="20" id="9Ih-3c-AZk"/>
                             <constraint firstItem="Cqc-uS-erT" firstAttribute="leading" secondItem="86Q-KA-z9o" secondAttribute="leading" constant="20" id="GfZ-Iv-4Ok"/>
                             <constraint firstItem="86Q-KA-z9o" firstAttribute="right" secondItem="yR6-ag-wTG" secondAttribute="right" constant="20" id="IPZ-tI-MFI"/>
-                            <constraint firstItem="5ck-1D-rTL" firstAttribute="leading" secondItem="Las-RJ-5F9" secondAttribute="trailing" constant="5" id="KHi-Ni-ead"/>
+                            <constraint firstItem="cCD-St-9Ia" firstAttribute="leading" secondItem="86Q-KA-z9o" secondAttribute="leading" constant="20" id="LL7-Kv-vuD"/>
                             <constraint firstItem="yR6-ag-wTG" firstAttribute="top" secondItem="sq1-qS-Z1a" secondAttribute="bottom" constant="15" id="TtP-Vb-UZs"/>
                             <constraint firstItem="yR6-ag-wTG" firstAttribute="left" secondItem="86Q-KA-z9o" secondAttribute="left" constant="20" id="YXQ-Lt-gHM"/>
-                            <constraint firstItem="Las-RJ-5F9" firstAttribute="leading" secondItem="86Q-KA-z9o" secondAttribute="leading" constant="20" id="eAt-wo-Z44"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cCD-St-9Ia" secondAttribute="trailing" constant="-142" id="ayM-mv-hfB"/>
+                            <constraint firstItem="Cqc-uS-erT" firstAttribute="top" secondItem="cCD-St-9Ia" secondAttribute="bottom" constant="8" symbolic="YES" id="cv7-eo-Nax"/>
                             <constraint firstItem="sq1-qS-Z1a" firstAttribute="centerX" secondItem="lIQ-WX-qaf" secondAttribute="centerX" id="kFL-De-Fha"/>
-                            <constraint firstItem="5ck-1D-rTL" firstAttribute="top" secondItem="lIQ-WX-qaf" secondAttribute="top" constant="145" id="mAs-z1-68Z"/>
                             <constraint firstItem="sq1-qS-Z1a" firstAttribute="top" secondItem="Ee5-vl-CXn" secondAttribute="bottom" constant="8" symbolic="YES" id="n0a-VV-Xaf"/>
                             <constraint firstItem="yR6-ag-wTG" firstAttribute="centerX" secondItem="lIQ-WX-qaf" secondAttribute="centerX" id="rN5-CD-h8z"/>
-                            <constraint firstItem="86Q-KA-z9o" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5ck-1D-rTL" secondAttribute="trailing" symbolic="YES" id="ssp-Td-SJl"/>
-                            <constraint firstItem="Cqc-uS-erT" firstAttribute="top" secondItem="Las-RJ-5F9" secondAttribute="bottom" constant="8" symbolic="YES" id="v2g-2A-V0f"/>
                             <constraint firstItem="86Q-KA-z9o" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cqc-uS-erT" secondAttribute="trailing" symbolic="YES" id="yZR-js-R7p"/>
                         </constraints>
                     </view>
@@ -1063,10 +1060,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="f7M-mh-Al1"/>
-        <segue reference="pER-5N-84k"/>
-        <segue reference="wnf-H6-Lu3"/>
-        <segue reference="KJq-iP-A4x"/>
+        <segue reference="0La-Bs-Tne"/>
+        <segue reference="7WK-4g-dcQ"/>
+        <segue reference="Pxd-nc-Y4P"/>
+        <segue reference="x4l-Lf-j1p"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AppDateToday" width="250" height="250"/>
