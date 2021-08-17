@@ -10,9 +10,9 @@
 		1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E151BB2267FC78E0004E9E3 /* SidebarController.swift */; };
 		1E2A618E2682675E00619A31 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */; };
 		1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A61902682677300619A31 /* YouTubeViewController.swift */; };
-		1E2F2BE526CC4E010033C5E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BE226CC4E000033C5E7 /* LaunchScreen.storyboard */; };
 		1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BEF26CC4E920033C5E7 /* Walkthrough.storyboard */; };
 		1E2F2BF526CC4F160033C5E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BF726CC4F160033C5E7 /* Main.storyboard */; };
+		1E2F2BFA26CC52EF0033C5E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BFC26CC52EF0033C5E7 /* LaunchScreen.storyboard */; };
 		1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F5768267BE9D600C78FFC /* Localizable.strings */; };
 		1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */; };
 		1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E378628267CA350003A0F73 /* LicensesViewController.swift */; };
@@ -153,11 +153,11 @@
 		1E151BB2267FC78E0004E9E3 /* SidebarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarController.swift; sourceTree = "<group>"; };
 		1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		1E2A61902682677300619A31 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
-		1E2F2BE226CC4E000033C5E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E2F2BF326CC4EFA0033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Walkthrough.storyboard; sourceTree = "<group>"; };
 		1E2F2BF426CC4F060033C5E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Walkthrough.strings; sourceTree = "<group>"; };
 		1E2F2BF626CC4F160033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E2F2BF926CC4F4A0033C5E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1E2F2BFB26CC52EF0033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E2F5767267BE9D600C78FFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "enable-safari-extension-ipad.mov"; sourceTree = "<group>"; };
 		1E378628267CA350003A0F73 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
@@ -383,7 +383,7 @@
 				1E70C9FC26726F380064A939 /* SceneDelegate.swift */,
 				1E862AA226AC4FA3004B9642 /* PageViewController.swift */,
 				1E70CA0426726F380064A939 /* Info.plist */,
-				1E2F2BE226CC4E000033C5E7 /* LaunchScreen.storyboard */,
+				1E2F2BFC26CC52EF0033C5E7 /* LaunchScreen.storyboard */,
 				1E2F2BF726CC4F160033C5E7 /* Main.storyboard */,
 				1E2F2BEF26CC4E920033C5E7 /* Walkthrough.storyboard */,
 				1E378628267CA350003A0F73 /* LicensesViewController.swift */,
@@ -698,7 +698,7 @@
 				1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */,
 				1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */,
 				1E2F2BF526CC4F160033C5E7 /* Main.storyboard in Resources */,
-				1E2F2BE526CC4E010033C5E7 /* LaunchScreen.storyboard in Resources */,
+				1E2F2BFA26CC52EF0033C5E7 /* LaunchScreen.storyboard in Resources */,
 				1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */,
 				1E70CA3026726F380064A939 /* Assets.xcassets in Resources */,
 				1E6C4913267B83C3001048CF /* forest.mov in Resources */,
@@ -897,6 +897,14 @@
 				1E2F2BF926CC4F4A0033C5E7 /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E2F2BFC26CC52EF0033C5E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E2F2BFB26CC52EF0033C5E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		1E2F5768267BE9D600C78FFC /* Localizable.strings */ = {
