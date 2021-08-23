@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import AVKit
+import AudioToolbox
 
 class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     
@@ -177,6 +178,9 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         appdefaults.set(true, forKey: "walkthroughPresented")
         appdefaults.synchronize()
         
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+
         NotificationCenter.default.post(name: Notification.Name(rawValue: "closeguide"), object: nil)
     }
 

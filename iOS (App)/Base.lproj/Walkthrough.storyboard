@@ -475,12 +475,8 @@
                                 <rect key="frame" x="20" y="373" width="130" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OB-Fg-auw">
-                                <rect key="frame" x="20" y="407" width="349.66666666666669" height="55"/>
-                                <string key="text" base64-UTF8="YES">
-VGhlcmUgaXMgc28gbXVjaCBtb3JlIHlvdSBjYW4gZG8uIEFuZCBldmVyeXRoaW5nIGNhbiBiZSBjdXN0
-b21pemVkIG9uIHRoZSBUdXJuIE9mZiB0aGUgTGlnaHRzIE9wdGlvbnMgcGFnZSwgdGhhdCB0byADeW91
-ciBwZXJzb25hbCBzdHlsZSBhbmQgcHJlZmVyZW5jZXMuA
-</string>
+                                <rect key="frame" x="20" y="407" width="349.66666666666669" height="74"/>
+                                <string key="text">There is so much more you can do. And everything can be customized on the Turn Off the Lights Options page, so it matches your personal style and preferences.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -676,7 +672,6 @@ dmFpbGFibGUDLg
                                                 <rect key="frame" x="20" y="407" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="GFf-op-V74"/>
-                                                    <constraint firstAttribute="width" constant="35" id="tNm-Ss-Adg"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="1"/>
@@ -685,7 +680,6 @@ dmFpbGFibGUDLg
                                                 <rect key="frame" x="20" y="462" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="4p5-cR-3uZ"/>
-                                                    <constraint firstAttribute="width" constant="35" id="6A6-uS-FXg"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="2"/>
@@ -693,7 +687,6 @@ dmFpbGFibGUDLg
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2Y-OR-G7m">
                                                 <rect key="frame" x="20" y="517" width="35" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="35" id="1rK-WF-VMV"/>
                                                     <constraint firstAttribute="height" constant="35" id="V7V-0q-M56"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
@@ -703,7 +696,6 @@ dmFpbGFibGUDLg
                                                 <rect key="frame" x="20" y="572" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="OT7-mw-MdK"/>
-                                                    <constraint firstAttribute="width" constant="35" id="OVE-n8-HJT"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="4"/>
@@ -772,11 +764,12 @@ dmFpbGFibGUDLg
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="KLJ-NO-6JP" firstAttribute="leading" secondItem="lOv-lD-98t" secondAttribute="trailing" constant="20" id="0qj-ri-PPM"/>
                                             <constraint firstItem="opu-Bg-yF6" firstAttribute="left" secondItem="QUA-an-ILC" secondAttribute="right" constant="20" id="1Zp-Rb-UKy"/>
+                                            <constraint firstItem="j8t-bB-hiC" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" constant="75" id="4fz-CK-tmc"/>
                                             <constraint firstItem="Li8-95-iL8" firstAttribute="top" secondItem="e2Y-OR-G7m" secondAttribute="bottom" constant="20" id="6jK-kI-b57"/>
                                             <constraint firstItem="j8t-bB-hiC" firstAttribute="left" secondItem="Li8-95-iL8" secondAttribute="right" constant="20" id="7h8-3A-XwE"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TlZ-Hv-ZZ1" secondAttribute="trailing" constant="20" symbolic="YES" id="9j7-JM-i4n"/>
-                                            <constraint firstItem="KLJ-NO-6JP" firstAttribute="left" secondItem="lOv-lD-98t" secondAttribute="right" constant="20" id="9zR-4d-bt2"/>
                                             <constraint firstItem="e2Y-OR-G7m" firstAttribute="left" secondItem="eVy-ai-CT5" secondAttribute="left" constant="20" symbolic="YES" id="Aby-wP-lsY"/>
                                             <constraint firstAttribute="trailing" secondItem="Ddt-xO-PNb" secondAttribute="trailing" constant="20" symbolic="YES" id="B8k-ag-oqY"/>
                                             <constraint firstItem="i0A-Dg-a92" firstAttribute="top" secondItem="opu-Bg-yF6" secondAttribute="bottom" constant="5" id="FMT-Hx-hcO"/>
@@ -791,6 +784,7 @@ dmFpbGFibGUDLg
                                             <constraint firstAttribute="right" secondItem="opu-Bg-yF6" secondAttribute="right" constant="20" symbolic="YES" id="OuE-Hm-Piu"/>
                                             <constraint firstItem="PJs-v5-LSN" firstAttribute="top" secondItem="TlZ-Hv-ZZ1" secondAttribute="bottom" constant="10" id="QYI-Ot-R83"/>
                                             <constraint firstAttribute="trailing" secondItem="IN9-yT-dQQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Sp6-yK-5Xb"/>
+                                            <constraint firstItem="KLJ-NO-6JP" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" constant="75" id="Twm-pc-Aqe"/>
                                             <constraint firstAttribute="height" constant="760" id="Vmy-0D-ccJ">
                                                 <variation key="heightClass=compact" constant="826"/>
                                             </constraint>
@@ -802,10 +796,12 @@ dmFpbGFibGUDLg
                                             <constraint firstItem="3Cj-kM-e8I" firstAttribute="top" secondItem="PJs-v5-LSN" secondAttribute="bottom" constant="8" symbolic="YES" id="cpV-8L-8w7"/>
                                             <constraint firstItem="686-7N-zur" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" id="e2u-Sa-KxT"/>
                                             <constraint firstItem="3Cj-kM-e8I" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" constant="20" symbolic="YES" id="eFU-ef-lTK"/>
-                                            <constraint firstAttribute="right" relation="lessThanOrEqual" secondItem="KLJ-NO-6JP" secondAttribute="right" constant="20" symbolic="YES" id="ege-TP-hM2"/>
+                                            <constraint firstAttribute="right" secondItem="KLJ-NO-6JP" secondAttribute="right" constant="20" symbolic="YES" id="ege-TP-hM2"/>
+                                            <constraint firstItem="i0A-Dg-a92" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" constant="75" id="eye-xC-DF6"/>
+                                            <constraint firstItem="opu-Bg-yF6" firstAttribute="leading" secondItem="eVy-ai-CT5" secondAttribute="leading" constant="75" id="fdN-2a-Ms9"/>
                                             <constraint firstItem="j8t-bB-hiC" firstAttribute="top" secondItem="i0A-Dg-a92" secondAttribute="bottom" constant="5" id="g94-Y8-2YO"/>
                                             <constraint firstItem="opu-Bg-yF6" firstAttribute="top" secondItem="KLJ-NO-6JP" secondAttribute="bottom" constant="5" id="j2D-3x-rN2"/>
-                                            <constraint firstItem="lOv-lD-98t" firstAttribute="left" relation="lessThanOrEqual" secondItem="eVy-ai-CT5" secondAttribute="left" constant="20" symbolic="YES" id="lwX-BU-79f"/>
+                                            <constraint firstItem="lOv-lD-98t" firstAttribute="left" secondItem="eVy-ai-CT5" secondAttribute="left" constant="20" symbolic="YES" id="lwX-BU-79f"/>
                                             <constraint firstItem="Ddt-xO-PNb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PJs-v5-LSN" secondAttribute="trailing" constant="8" symbolic="YES" id="mGz-Le-HSx"/>
                                             <constraint firstItem="KLJ-NO-6JP" firstAttribute="top" secondItem="T3L-8g-nlS" secondAttribute="bottom" constant="22" id="nGC-Pv-Id9"/>
                                             <constraint firstAttribute="bottom" secondItem="IN9-yT-dQQ" secondAttribute="bottom" constant="74" id="sfx-2f-Fre"/>
@@ -851,7 +847,7 @@ dmFpbGFibGUDLg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOu-kB-49K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4264" y="-856"/>
+            <point key="canvasLocation" x="4263.0769230769229" y="-856.6350710900474"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="UAe-gT-LTe">

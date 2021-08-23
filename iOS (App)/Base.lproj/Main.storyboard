@@ -146,13 +146,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help spread the word!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq1-qS-Z1a">
-                                <rect key="frame" x="131.5" y="749" width="151.5" height="18"/>
+                                <rect key="frame" x="131.5" y="700" width="151.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-ag-wTG">
-                                <rect key="frame" x="20" y="782" width="374" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-ag-wTG" customClass="AnimatedButton" customModule="Turn_Off_the_Lights_for_Safari" customModuleProvider="target">
+                                <rect key="frame" x="20" y="733" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6pa-gi-hZn"/>
                                 </constraints>
@@ -170,7 +170,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ee5-vl-CXn">
-                                <rect key="frame" x="20" y="506" width="374" height="235"/>
+                                <rect key="frame" x="20" y="457" width="374" height="235"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="235" id="YfO-AL-75v">
                                         <variation key="heightClass=compact-widthClass=regular" constant="135"/>
@@ -253,7 +253,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-Yg-yKq">
+                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-Yg-yKq" customClass="AboutAnimatedbox" customModule="Turn_Off_the_Lights_for_Safari" customModuleProvider="target">
                                     <rect key="frame" x="20" y="0.0" width="174.5" height="150"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <constraints>
@@ -272,7 +272,7 @@
                                         <action selector="opentranslate:" destination="Wfs-r5-ayb" eventType="touchUpInside" id="Dhl-nI-YWj"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-cT-4RD">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-cT-4RD" customClass="AboutAnimatedbox" customModule="Turn_Off_the_Lights_for_Safari" customModuleProvider="target">
                                     <rect key="frame" x="219.5" y="0.0" width="174.5" height="150"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <constraints>
@@ -1059,11 +1059,22 @@
             <point key="canvasLocation" x="-2291" y="-3222"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="LNZ-Yg-yKq">
+            <size key="intrinsicContentSize" width="416" height="25"/>
+        </designable>
+        <designable name="Q4p-cT-4RD">
+            <size key="intrinsicContentSize" width="312.5" height="23.5"/>
+        </designable>
+        <designable name="yR6-ag-wTG">
+            <size key="intrinsicContentSize" width="68" height="34.5"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="0La-Bs-Tne"/>
-        <segue reference="7WK-4g-dcQ"/>
-        <segue reference="Pxd-nc-Y4P"/>
-        <segue reference="x4l-Lf-j1p"/>
+        <segue reference="f7M-mh-Al1"/>
+        <segue reference="pER-5N-84k"/>
+        <segue reference="wnf-H6-Lu3"/>
+        <segue reference="KJq-iP-A4x"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AppDateToday" width="250" height="250"/>

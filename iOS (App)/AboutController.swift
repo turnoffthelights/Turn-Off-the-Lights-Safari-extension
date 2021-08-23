@@ -9,6 +9,32 @@ import Foundation
 import UIKit
 import StoreKit
 
+class AboutAnimatedbox: UIButton {
+
+    override var isHighlighted: Bool {
+        didSet {
+            let transform: CGAffineTransform = isHighlighted ? .init(scaleX: 0.95, y: 0.95) : .identity
+            animate(transform)
+        }
+    }
+
+}
+
+private extension AboutAnimatedbox {
+    private func animate(_ transform: CGAffineTransform) {
+        UIView.animate(
+            withDuration: 0.4,
+            delay: 0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 3,
+            options: [.curveEaseInOut],
+            animations: {
+                self.transform = transform
+            }
+        )
+    }
+}
+
 class AboutController: UITableViewController{
     
     override func viewDidLoad() {
@@ -132,16 +158,6 @@ class AboutController: UITableViewController{
     }
 
     @IBAction func opentranslate(_ sender: Any) {
-        UIView.animate(withDuration: 0.15,
-            animations: {
-                self.btntranslate.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
-            },
-            completion: { _ in
-                UIView.animate(withDuration: 0.15) {
-                    self.btntranslate.transform = CGAffineTransform.identity
-                }
-            })
-        
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         
@@ -151,20 +167,9 @@ class AboutController: UITableViewController{
     }
     
     @IBAction func openreview(_ sender: Any) {
-        UIView.animate(withDuration: 0.15,
-            animations: {
-                self.btnreview.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
-            },
-            completion: { _ in
-                UIView.animate(withDuration: 0.15) {
-                    self.btnreview.transform = CGAffineTransform.identity
-                }
-            })
-        
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         
         openreview()
-        
     }
 }

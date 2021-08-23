@@ -11,6 +11,32 @@ import SafariServices
 import Turn_Off_the_Lights_for_Safari_Extension
 import LinkPresentation
 
+class AnimatedButton: UIButton {
+
+    override var isHighlighted: Bool {
+        didSet {
+            let transform: CGAffineTransform = isHighlighted ? .init(scaleX: 0.95, y: 0.95) : .identity
+            animate(transform)
+        }
+    }
+
+}
+
+private extension AnimatedButton {
+    private func animate(_ transform: CGAffineTransform) {
+        UIView.animate(
+            withDuration: 0.4,
+            delay: 0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 3,
+            options: [.curveEaseInOut],
+            animations: {
+                self.transform = transform
+            }
+        )
+    }
+}
+
 class WelcomeViewController: UIViewController, UIActivityItemSource {
     var metadata: LPLinkMetadata?
 
@@ -65,7 +91,7 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
             self.navigationItem.title = ""
         }
     }
-
+        
     @IBOutlet weak var btnshare: UIButton!
     @IBAction func bigshareaction(_ sender: Any) {
         DispatchQueue.main.async {
@@ -81,6 +107,10 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
                     ac.popoverPresentationController?.sourceRect = self.btnshare.bounds;
                     ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down;
                 }
+                
+                let generator = UIImpactFeedbackGenerator(style: .medium)
+                generator.impactOccurred()
+                
                 // Present share activityView on regular iPhone
                 DispatchQueue.main.async {
                     self.present(ac, animated: true)
