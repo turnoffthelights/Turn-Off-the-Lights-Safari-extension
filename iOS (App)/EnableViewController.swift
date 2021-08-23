@@ -130,9 +130,9 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         videolayer.layer.insertSublayer(playerLayer, at: 1)
         player.play()
         
-        playerLayer.cornerRadius = 15
-        playerLayer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMinXMinYCorner]
-        playerLayer.masksToBounds = true
+//        playerLayer.cornerRadius = 15
+//        playerLayer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMinXMinYCorner]
+//        playerLayer.masksToBounds = true
      
         // poster avplayer
         imageinspiration.image = imagePreview(from: pathURL, in: 0.0)
