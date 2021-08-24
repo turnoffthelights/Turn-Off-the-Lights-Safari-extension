@@ -40,6 +40,7 @@ private extension AnimatedButton {
 class WelcomeViewController: UIViewController, UIActivityItemSource {
     var metadata: LPLinkMetadata?
 
+    @IBOutlet weak var imagepeople: UIImageView!
     func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
         return self.metadata
     }
@@ -80,6 +81,7 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
             // large iPad size
             self.navigationItem.title = ""
         }
+        hidepeoplesmallscreen()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -119,4 +121,29 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         }
     }
 
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        switch UIDevice.current.orientation{
+        case .landscapeLeft, .landscapeRight:
+            let screenSize: CGFloat = UIScreen.main.bounds.height
+            if(screenSize <= 320.0){
+                imagepeople.isHidden = true
+            }
+            break;
+        default:
+            imagepeople.isHidden = false
+        }
+    }
+    
+    func hidepeoplesmallscreen(){
+        if UIDevice.current.orientation.isLandscape {
+            //print("Landscape")
+            imagepeople.isHidden = false
+        } else {
+            //print("Portrait")
+            let screenSize: CGFloat = UIScreen.main.bounds.height
+            if(screenSize <= 320.0){
+               imagepeople.isHidden = true
+            }
+        }
+    }
 }

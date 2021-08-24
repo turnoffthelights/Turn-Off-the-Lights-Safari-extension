@@ -1,0 +1,30 @@
+/*
+  Localizable.strings
+  Turn Off the Lights for Safari
+
+  Created by Stefan Van Damme on 17/06/2021.
+  
+*/
+
+"lbleasytosetup" = "Helppo ottaa käyttöön";
+"lblturnoffthelights" = "Turn Off the Lights";
+"lblactivate" = "Aktivoi";
+"lblwatchvideo" = "Katso video";
+"lblstep1" = "Poistu tästä sovelluksesta";
+"lblstep2a" = "Avaa";
+"lblstep2b" = "Asetukset";
+"lblstep2c" = "sovellus laitteellasi";
+"lblstep3a" = "Etsi ja napauta";
+"lblstep3b" = "Safari";
+"lblstep3c" = ", napauta sitten";
+"lblstep3d" = "Laajennukset";
+"lblstep4a" = "Ota käyttöön";
+"lblstep4b" = "Turn Off the Lights";
+"lblplaceholder" = "Turn Off the Lights -Safari-laajennus";
+"lblemailsubject" = "ILMAINEN Turn Off the Lights -Safari-laajennus";
+"lblsharetwitter" = "Lataa ilmainen Turn Off the Lights -Safari-laajennus saadaksesi tumman tilan kaikilla sivustoilla. Kokeile itse! #iOS15 @TurnOfftheLight";
+"lblshareregular" = "Asensin juuri tämän ilmaisen Turn Off the Lights -Safari-laajennuksen. Se on suosiikilaajennukseni Safarille ja sen avullasaan tumman tilan kaikilla verkkosivuilla. Kokeile sitä itse!";
+"lblsafariextensionstatus" = "Safari-laajennus on";
+"lblsafariextensionenable" = "Käytössä";
+"lblsafariextensiondisable" = "Ei käytössä";
+"lblquickoptions" = "Avaa asetussivu";

@@ -211,6 +211,7 @@
                     <navigationItem key="navigationItem" title="Turn Off the Lights" largeTitleDisplayMode="always" id="3YG-8K-hfa"/>
                     <connections>
                         <outlet property="btnshare" destination="yR6-ag-wTG" id="bxe-tv-Mcl"/>
+                        <outlet property="imagepeople" destination="Ee5-vl-CXn" id="BoY-1X-Y2m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g74-Mi-j9A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -225,6 +225,9 @@
 		1EBA02C426D56B0500EDF450 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Walkthrough.strings; sourceTree = "<group>"; };
 		1EBA02C526D56B0600EDF450 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EBA02C726D56B2100EDF450 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1EBA02C926D56BFC00EDF450 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Main.strings; sourceTree = "<group>"; };
+		1EBA02CA26D56BFC00EDF450 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1EBA02CB26D56BFD00EDF450 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonClasses.swift; sourceTree = "<group>"; };
 		1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -655,6 +658,7 @@
 				nl,
 				es,
 				nb,
+				fi,
 			);
 			mainGroup = 1E70C9E326726F350064A939;
 			productRefGroup = 1E70C9F826726F380064A939 /* Products */;
@@ -901,6 +905,7 @@
 				1EBA02BC26D549D100EDF450 /* nl */,
 				1EBA02C026D56A5800EDF450 /* es */,
 				1EBA02C426D56B0500EDF450 /* nb */,
+				1EBA02CA26D56BFC00EDF450 /* fi */,
 			);
 			name = Walkthrough.storyboard;
 			sourceTree = "<group>";
@@ -913,6 +918,7 @@
 				1EBA02BB26D549D000EDF450 /* nl */,
 				1EBA02BF26D56A5800EDF450 /* es */,
 				1EBA02C326D56B0500EDF450 /* nb */,
+				1EBA02C926D56BFC00EDF450 /* fi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -924,6 +930,7 @@
 				1EBA02BD26D549D100EDF450 /* nl */,
 				1EBA02C126D56A5800EDF450 /* es */,
 				1EBA02C526D56B0600EDF450 /* nb */,
+				1EBA02CB26D56BFD00EDF450 /* fi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
