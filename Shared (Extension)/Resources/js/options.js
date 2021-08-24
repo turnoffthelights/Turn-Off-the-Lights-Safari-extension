@@ -902,9 +902,6 @@ function drawAtmos(){
 					newvivid.style.bottom = 0;
 					newvivid.style.right = 0;
 					newvivid.style.left = 0;
-					newvivid.style.margin = "auto";
-					newvivid.style.width = "640px";
-					newvivid.style.height = "360px";
 					newvivid.style.opacity = .88;
 					newvivid.style.display = "block";
 					newvivid.width = Math.floor(tempwidthvideo * 0.08);
@@ -2530,12 +2527,10 @@ function domcontentloaded(){
 		function getImage(url){
 			var bkimage = new Image();
 			bkimage.onload = function(){
-				$("lightimagea").checked = true;
 				save_options();
 			};
 			bkimage.onerror = function(){
 				var optionwrongimg = chrome.i18n.getMessage("optionwrongimg"); window.alert(optionwrongimg);
-				$("lightimagea").checked = true;
 				$("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg";
 				$("example1").style.background = $("example2").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
 				save_options();

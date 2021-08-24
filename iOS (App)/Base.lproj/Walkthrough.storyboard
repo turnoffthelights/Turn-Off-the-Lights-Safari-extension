@@ -639,9 +639,9 @@
                                                 <rect key="frame" x="20" y="407" width="278" height="93"/>
                                                 <string key="text" base64-UTF8="YES">
 VGhlcmUgaXMgMyBraW5kIG9mIGJ1dHRvbiBhY3Rpb25zIHlvdQMgY2FuIHNldCBmb3IgdGhlIGxhbXAg
-YnV0dG9uLiBUaGUgZGVmYXVsdCBhY3Rpb24gaXMgdGhlIFZpZGVvIExvdmVyIHByb2ZpbGUuIANUaGF0
-IHdpbGwgZGltIHRoZSB3ZWIgcGFnZSBhbmQgA2hpZ2hsaWdodCB0aGUgdmlkZW8gcGxheWVyIGlmIGF2
-YWlsYWJsZQMuA
+YnV0dG9uLiBUaGUgZGVmYXVsdCBhY3Rpb24gaXMgdGhlIFZpZGVvIExvdmVyIHByb2ZpbGUuIFRoYXQg
+d2lsbCBkaW0gdGhlIHdlYiBwYWdlIGFuZCBoaWdobGlnaHQgdGhlIHZpZGVvIHBsYXllciBpZiBhdmFp
+bGFibGUDLg
 </string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="highlightedColor"/>
@@ -963,6 +963,11 @@ YWlsYWJsZQMuA
             <point key="canvasLocation" x="-241" y="-855"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="IN9-yT-dQQ">
+            <size key="intrinsicContentSize" width="44" height="31"/>
+        </designable>
+    </designables>
     <resources>
         <image name="template" width="512" height="512"/>
         <image name="totl-ios-guide-image1" width="954" height="954"/>
