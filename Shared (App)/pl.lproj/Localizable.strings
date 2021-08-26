@@ -1,0 +1,30 @@
+/*
+  Localizable.strings
+  Turn Off the Lights for Safari
+
+  Created by Stefan Van Damme on 17/06/2021.
+  
+*/
+
+"lbleasytosetup" = "Łatwo to skonfigurować";
+"lblturnoffthelights" = "Turn Off the Lights";
+"lblactivate" = "Aktywuj";
+"lblwatchvideo" = "Obejrzyj film";
+"lblstep1" = "Zostaw tę aplikację";
+"lblstep2a" = "Otwórz";
+"lblstep2b" = "Ustawienia";
+"lblstep2c" = "aplikację na Twoim urządzeniu";
+"lblstep3a" = "Szukaj i dotknij";
+"lblstep3b" = "Safari";
+"lblstep3c" = ", naciśnij następnie";
+"lblstep3d" = "Rozszerzenia";
+"lblstep4a" = "Włącz";
+"lblstep4b" = "Turn Off the Lights";
+"lblplaceholder" = "Rozszerzenie Wyłącz Światło dla Safari";
+"lblemailsubject" = "DARMOWE rozszerzenie Wyłącz Światło dla Safari";
+"lblsharetwitter" = "Pobierz darmowe rozszerzenie Wyłącz Światło dla Safari, aby uzyskać tryb ciemny na wszystkich stronach. Spróbuj sam. #iOS15 za pomocą @TurnOfftheLight";
+"lblshareregular" = "Właśnie zainstalowałem to darmowe rozszerzenie Wyłącz Światło dla Safari, to moje ulubione rozszerzenie dla Safari na wszystkich stronach. Wypróbuj sam.";
+"lblsafariextensionstatus" = "Rozszerzenie Safari jest";
+"lblsafariextensionenable" = "Włączone";
+"lblsafariextensiondisable" = "Wyłączone";
+"lblquickoptions" = "Otwórz stronę opcji";

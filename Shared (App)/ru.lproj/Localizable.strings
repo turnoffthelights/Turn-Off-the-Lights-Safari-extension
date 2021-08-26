@@ -1,0 +1,30 @@
+/*
+  Localizable.strings
+  Turn Off the Lights for Safari
+
+  Created by Stefan Van Damme on 17/06/2021.
+  
+*/
+
+"lbleasytosetup" = "Простая настройка";
+"lblturnoffthelights" = "Turn Off the Lights";
+"lblactivate" = "Активировать";
+"lblwatchvideo" = "Смотреть видео";
+"lblstep1" = "Выход из приложения";
+"lblstep2a" = "Открыть";
+"lblstep2b" = "Параметры";
+"lblstep2c" = "приложение на Вашем устройстве";
+"lblstep3a" = "Поиск и нажатие на";
+"lblstep3b" = "Safari";
+"lblstep3c" = ", затем нажмите";
+"lblstep3d" = "Расширения";
+"lblstep4a" = "Включите";
+"lblstep4b" = "Turn Off the Lights";
+"lblplaceholder" = "Расширение Turn Off the Lights для Safari";
+"lblemailsubject" = "БЕСПЛАТНОЕ расширение Turn Off the Lights для Safari";
+"lblsharetwitter" = "Скачайте бесплатное расширение Turn Off the Lights для Safari для получения темного режима на всех сайтах. Попробуйте сами! #iOS15 через @TurnOfftheLight";
+"lblshareregular" = "Я только что установил это бесплатное расширение Turn Off the Lights для Safari, это мое любимое расширение для Safari для получения темного режима на всех сайтах. Попробуйте сами!";
+"lblsafariextensionstatus" = "Расширение для Safari - это";
+"lblsafariextensionenable" = "Включено";
+"lblsafariextensiondisable" = "Отключено";
+"lblquickoptions" = "Открыть страницу настроек";

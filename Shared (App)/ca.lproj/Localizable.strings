@@ -1,0 +1,30 @@
+/*
+  Localizable.strings
+  Turn Off the Lights for Safari
+
+  Created by Stefan Van Damme on 17/06/2021.
+  
+*/
+
+"lbleasytosetup" = "Fàcil de configurar";
+"lblturnoffthelights" = "Apaga els llums";
+"lblactivate" = "Activa";
+"lblwatchvideo" = "Mira el vídeo";
+"lblstep1" = "Surt d'aquesta aplicació";
+"lblstep2a" = "Obre l'";
+"lblstep2b" = "Configuració";
+"lblstep2c" = "l'aplicació al vostre dispositiu";
+"lblstep3a" = "Cerqueu i toqueu a";
+"lblstep3b" = "Safari";
+"lblstep3c" = ", després toqueu a";
+"lblstep3d" = "Extensions";
+"lblstep4a" = "Activa";
+"lblstep4b" = "Apaga els llums";
+"lblplaceholder" = "Extensió del Safari de Turn Off the Lights";
+"lblemailsubject" = "Extensió GRATUÏTA del Safari de Turn Off the Lights";
+"lblsharetwitter" = "Baixeu l'extensió gratuïta Turn Off the Lights del Safari per obtenir el mode fosc a tots els llocs web. Proveu-ho vosaltres mateixos! #iOS15 mitjançant @TurnOfftheLight";
+"lblshareregular" = "Acabo d'instal·lar l'extensió gratuïta Turn Off the Lights del Safari, és la meva extensió del Safari preferida per obtenir el mode fosc a tots els llocs web. Proveu-ho vosaltres mateixos!";
+"lblsafariextensionstatus" = "L'extensió del Safari és";
+"lblsafariextensionenable" = "Activat";
+"lblsafariextensiondisable" = "Desactivat";
+"lblquickoptions" = "Obre la pàgina d'opcions";

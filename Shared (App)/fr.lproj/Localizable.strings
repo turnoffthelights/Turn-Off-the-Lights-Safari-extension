@@ -1,0 +1,30 @@
+/*
+  Localizable.strings
+  Turn Off the Lights for Safari
+
+  Created by Stefan Van Damme on 17/06/2021.
+  
+*/
+
+"lbleasytosetup" = "Facile à configurer";
+"lblturnoffthelights" = "Turn Off the Lights";
+"lblactivate" = "Activer";
+"lblwatchvideo" = "Regarder la vidéo";
+"lblstep1" = "Quitter cette page";
+"lblstep2a" = "Ouvrir le";
+"lblstep2b" = "Paramètres";
+"lblstep2c" = "l'application sur votre appareil";
+"lblstep3a" = "Rechercher et appuyer sur";
+"lblstep3b" = "Safari";
+"lblstep3c" = ", appuyez ensuite sur";
+"lblstep3d" = "Extensions";
+"lblstep4a" = "Activer";
+"lblstep4b" = "Turn Off the Lights";
+"lblplaceholder" = "Extension Turn Off the Lights pour Safari";
+"lblemailsubject" = "Extension Turn Off the Lights Safari GRATUITE";
+"lblsharetwitter" = "Téléchargez l'extension gratuite pour Safari Turn Off the Lights pour obtenir le mode sombre sur tous les sites Web. Essayez-la vous-même ! #iOS15 via @TurnOfftheLight";
+"lblshareregular" = "Je viens d'installer cette extension gratuite de Safari Turn Off the Lights, c'est mon extension Safari préférée pour obtenir Dark Mode sur tous les sites Web. Essayez-le vous-même!";
+"lblsafariextensionstatus" = "L'extension Safari est";
+"lblsafariextensionenable" = "Activé";
+"lblsafariextensiondisable" = "Désactivé";
+"lblquickoptions" = "Ouvrir la page des options";

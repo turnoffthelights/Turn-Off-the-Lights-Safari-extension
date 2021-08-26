@@ -94,7 +94,7 @@
 /* Class = "UILabel"; text = "Welcome"; ObjectID = "kSN-m6-Tb4"; */
 "kSN-m6-Tb4.text" = "Tervetuloa";
 
-/* Class = "UILabel"; text = "There is 3 kind of button actions you can set for the lamp button. The default action is the Video Lover profile. That will dim the web page and highlight the video player if available."; ObjectID = "lLD-al-AhY"; */
+/* Class = "UILabel"; text = "You can set 3 types of button actions for the lamp button. The default action is the Video Lover profile, which will dim the web page and highlight the video player if available."; ObjectID = "lLD-al-AhY"; */
 "lLD-al-AhY.text" = "On 3 toimintoa, jotka voit määrittää lamppupainikkeelle. Oletus on Video Lover -profiili, joka himmentää web-sivun ja korostaa videosoittimen jos mahdollista.";
 
 /* Class = "UIButton"; configuration.title = "1"; ObjectID = "lOv-lD-98t"; */
