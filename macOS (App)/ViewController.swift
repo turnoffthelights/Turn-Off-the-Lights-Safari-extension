@@ -12,7 +12,7 @@ import AVKit
 import AVFoundation
 
 let appName = "Turn Off the Lights for Safari"
-let extensionBundleIdentifier = "com.stefanvd.Turn-Off-the-Lights-for-Safari.extension"
+let extensionBundleIdentifier = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension"
 
 extension String {
     func localized(withComment comment: String? = nil) -> String {
@@ -167,7 +167,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func opensupport(_ sender: Any){
-        if let url = URL(string: "https://www.turnoffthelights.com/support"), NSWorkspace.shared.open(url) {
+        if let url = URL(string: "https://www.turnoffthelights.com/support/"), NSWorkspace.shared.open(url) {
             //print("default browser was successfully opened")
         }
     }
