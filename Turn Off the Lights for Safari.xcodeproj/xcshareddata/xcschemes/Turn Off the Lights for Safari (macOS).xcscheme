@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E70CA0826726F380064A939"
-               BuildableName = "Turn Off the Lights for Safari2.app"
+               BuildableName = "Turn Off the Lights for Safari.app"
                BlueprintName = "Turn Off the Lights for Safari (macOS)"
                ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E70CA0826726F380064A939"
-            BuildableName = "Turn Off the Lights for Safari2.app"
+            BuildableName = "Turn Off the Lights for Safari.app"
             BlueprintName = "Turn Off the Lights for Safari (macOS)"
             ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E70CA0826726F380064A939"
-            BuildableName = "Turn Off the Lights for Safari2.app"
+            BuildableName = "Turn Off the Lights for Safari.app"
             BlueprintName = "Turn Off the Lights for Safari (macOS)"
             ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
          </BuildableReference>
