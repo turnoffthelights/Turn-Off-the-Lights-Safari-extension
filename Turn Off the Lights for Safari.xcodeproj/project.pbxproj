@@ -34,8 +34,6 @@
 		1E70C9FB26726F380064A939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9FA26726F380064A939 /* AppDelegate.swift */; };
 		1E70C9FD26726F380064A939 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9FC26726F380064A939 /* SceneDelegate.swift */; };
 		1E70CA0C26726F380064A939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70CA0B26726F380064A939 /* AppDelegate.swift */; };
-		1E70CA1726726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1E70CA2126726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1E70CA3026726F380064A939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E70C9F026726F380064A939 /* Assets.xcassets */; };
 		1E70CA3126726F380064A939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E70C9F026726F380064A939 /* Assets.xcassets */; };
 		1E70CA3226726F380064A939 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9F226726F380064A939 /* SafariWebExtensionHandler.swift */; };
@@ -77,6 +75,8 @@
 		1EBA02C826D56B2100EDF450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBA02C726D56B2100EDF450 /* LaunchScreen.storyboard */; };
 		1EC4AC1A26851FC0005FCF33 /* CommonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */; };
 		1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */; };
+		1EE7F90F26DE57000011E42E /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1EE7F91026DE570B0011E42E /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,7 +131,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1E70CA1726726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
+				1EE7F90F26DE57000011E42E /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +142,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1E70CA2126726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
+				1EE7F91026DE570B0011E42E /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1635,7 +1635,7 @@
 		1E70CA3E26726F380064A939 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 51;
 				DEVELOPMENT_TEAM = PRR97757HF;
@@ -1668,7 +1668,7 @@
 		1E70CA3F26726F380064A939 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 51;
 				DEVELOPMENT_TEAM = PRR97757HF;
