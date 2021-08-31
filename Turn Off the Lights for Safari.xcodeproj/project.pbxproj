@@ -1641,7 +1641,7 @@
 		1E70CA3E26726F380064A939 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 51;
 				DEVELOPMENT_TEAM = PRR97757HF;
@@ -1674,7 +1674,7 @@
 		1E70CA3F26726F380064A939 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 51;
 				DEVELOPMENT_TEAM = PRR97757HF;
