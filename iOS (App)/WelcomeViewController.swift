@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import SafariServices
-import Turn_Off_the_Lights_for_Safari_Extension
 import LinkPresentation
 
 class AnimatedButton: UIButton {
