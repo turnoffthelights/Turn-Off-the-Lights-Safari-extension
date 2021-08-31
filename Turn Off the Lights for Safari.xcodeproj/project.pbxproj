@@ -1,0 +1,1868 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E151BB2267FC78E0004E9E3 /* SidebarController.swift */; };
+		1E2A618E2682675E00619A31 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */; };
+		1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A61902682677300619A31 /* YouTubeViewController.swift */; };
+		1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BEF26CC4E920033C5E7 /* Walkthrough.storyboard */; };
+		1E2F2BF526CC4F160033C5E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BF726CC4F160033C5E7 /* Main.storyboard */; };
+		1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F5768267BE9D600C78FFC /* Localizable.strings */; };
+		1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */; };
+		1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E378628267CA350003A0F73 /* LicensesViewController.swift */; };
+		1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */; };
+		1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */; };
+		1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */; };
+		1E4CB227268CDC2300015282 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */; };
+		1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */; };
+		1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762772681F2B800995D6C /* MasterViewController.swift */; };
+		1E67627A2681F42E00995D6C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762792681F42E00995D6C /* SplitViewController.swift */; };
+		1E6C4913267B83C3001048CF /* forest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C4907267B83C2001048CF /* forest.mov */; };
+		1E6C4914267B83C3001048CF /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C4908267B83C2001048CF /* GalleryController.swift */; };
+		1E6C4915267B83C3001048CF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C4909267B83C2001048CF /* NewsTableViewCell.swift */; };
+		1E6C4916267B83C3001048CF /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C490A267B83C2001048CF /* NewsTableViewController.swift */; };
+		1E6C4917267B83C3001048CF /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C490B267B83C2001048CF /* AboutController.swift */; };
+		1E6C4918267B83C3001048CF /* EnableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C490C267B83C2001048CF /* EnableViewController.swift */; };
+		1E6C4919267B83C3001048CF /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C490D267B83C2001048CF /* FeedParser.swift */; };
+		1E6C491A267B83C3001048CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C490E267B83C2001048CF /* ViewController.swift */; };
+		1E6C491B267B83C3001048CF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C490F267B83C3001048CF /* WelcomeViewController.swift */; };
+		1E70C9FB26726F380064A939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9FA26726F380064A939 /* AppDelegate.swift */; };
+		1E70C9FD26726F380064A939 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9FC26726F380064A939 /* SceneDelegate.swift */; };
+		1E70CA0C26726F380064A939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70CA0B26726F380064A939 /* AppDelegate.swift */; };
+		1E70CA1726726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1E70CA2126726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1E70CA3026726F380064A939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E70C9F026726F380064A939 /* Assets.xcassets */; };
+		1E70CA3126726F380064A939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E70C9F026726F380064A939 /* Assets.xcassets */; };
+		1E70CA3226726F380064A939 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9F226726F380064A939 /* SafariWebExtensionHandler.swift */; };
+		1E70CA3326726F380064A939 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9F226726F380064A939 /* SafariWebExtensionHandler.swift */; };
+		1E70CA5426726F380064A939 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4526726F380064A939 /* LICENSE */; };
+		1E70CA5526726F380064A939 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4626726F380064A939 /* css */; };
+		1E70CA5626726F380064A939 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4726726F380064A939 /* images */; };
+		1E70CA5726726F380064A939 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4826726F380064A939 /* js */; };
+		1E70CA5826726F380064A939 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4926726F380064A939 /* popup.html */; };
+		1E70CA5926726F380064A939 /* palette.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4A26726F380064A939 /* palette.html */; };
+		1E70CA5A26726F380064A939 /* speech.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4B26726F380064A939 /* speech.html */; };
+		1E70CA5C26726F380064A939 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4D26726F380064A939 /* icons */; };
+		1E70CA5D26726F380064A939 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4E26726F380064A939 /* manifest.json */; };
+		1E70CA5E26726F380064A939 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4F26726F380064A939 /* schema.json */; };
+		1E70CA5F26726F380064A939 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5026726F380064A939 /* options.html */; };
+		1E70CA6026726F380064A939 /* background.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5126726F380064A939 /* background.html */; };
+		1E70CA6126726F380064A939 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5226726F380064A939 /* _locales */; };
+		1E70CA6226726F380064A939 /* motion.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5326726F380064A939 /* motion.html */; };
+		1E70CA6326726F380064A939 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4526726F380064A939 /* LICENSE */; };
+		1E70CA6426726F380064A939 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4626726F380064A939 /* css */; };
+		1E70CA6526726F380064A939 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4726726F380064A939 /* images */; };
+		1E70CA6626726F380064A939 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4826726F380064A939 /* js */; };
+		1E70CA6726726F380064A939 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4926726F380064A939 /* popup.html */; };
+		1E70CA6826726F380064A939 /* palette.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4A26726F380064A939 /* palette.html */; };
+		1E70CA6926726F380064A939 /* speech.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4B26726F380064A939 /* speech.html */; };
+		1E70CA6B26726F380064A939 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4D26726F380064A939 /* icons */; };
+		1E70CA6C26726F380064A939 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4E26726F380064A939 /* manifest.json */; };
+		1E70CA6D26726F380064A939 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4F26726F380064A939 /* schema.json */; };
+		1E70CA6E26726F380064A939 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5026726F380064A939 /* options.html */; };
+		1E70CA6F26726F380064A939 /* background.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5126726F380064A939 /* background.html */; };
+		1E70CA7026726F380064A939 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5226726F380064A939 /* _locales */; };
+		1E70CA7126726F380064A939 /* motion.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5326726F380064A939 /* motion.html */; };
+		1E744B4526DE2C1A00BE9D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E744B4726DE2C1A00BE9D86 /* Main.storyboard */; };
+		1E7D1A192672850D00FECE52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1A16267283A700FECE52 /* ViewController.swift */; };
+		1E7D1A1A26728E0500FECE52 /* DaringInfantileDachshund.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E7D1A15267283A600FECE52 /* DaringInfantileDachshund.mp4 */; };
+		1E862AA326AC4FA3004B9642 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E862AA226AC4FA3004B9642 /* PageViewController.swift */; };
+		1E862AA726AC55C8004B9642 /* WelcomeGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */; };
+		1E8F88FD269E194F00030DDB /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8F88FC269E194F00030DDB /* NetworkViewController.swift */; };
+		1EBA02C826D56B2100EDF450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBA02C726D56B2100EDF450 /* LaunchScreen.storyboard */; };
+		1EC4AC1A26851FC0005FCF33 /* CommonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */; };
+		1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E4CB20E268CC77900015282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70C9F626726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari (iOS)";
+		};
+		1E4CB21B268CC79300015282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70CA0826726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari (macOS)";
+		};
+		1E4CB228268CDC2300015282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70CA0826726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari (macOS)";
+		};
+		1E4CB235268CDC6D00015282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70C9F626726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari (iOS)";
+		};
+		1E70CA1826726F380064A939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70CA1526726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari Extension (iOS)";
+		};
+		1E70CA2226726F380064A939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70CA1F26726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E70CA3926726F380064A939 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E70CA1726726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA4026726F380064A939 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E70CA2126726F380064A939 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E151BB2267FC78E0004E9E3 /* SidebarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarController.swift; sourceTree = "<group>"; };
+		1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		1E2A61902682677300619A31 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
+		1E2F2BF326CC4EFA0033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Walkthrough.storyboard; sourceTree = "<group>"; };
+		1E2F2BF426CC4F060033C5E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E2F2BF626CC4F160033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E2F2BF926CC4F4A0033C5E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1E2F5767267BE9D600C78FFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "enable-safari-extension-ipad.mov"; sourceTree = "<group>"; };
+		1E378628267CA350003A0F73 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
+		1E41D60026DC120C00455536 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E41D60126DC120D00455536 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Walkthrough.strings"; sourceTree = "<group>"; };
+		1E41D60226DC120D00455536 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1E41D60326DC126B00455536 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		1E41D60426DC126C00455536 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E41D60526DC126C00455536 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E425A6726DE374D00ECF14A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "enable-safari-extension-iphone.mp4"; sourceTree = "<group>"; };
+		1E4CB20A268CC77900015282 /* TOtL-iOS-UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-iOS-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_UITest.swift; sourceTree = "<group>"; };
+		1E4CB217268CC79300015282 /* TOtL-macOS-UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_UITest.swift; sourceTree = "<group>"; };
+		1E4CB224268CDC2300015282 /* TOtL-macOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_test.swift; sourceTree = "<group>"; };
+		1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-iOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_test.swift; sourceTree = "<group>"; };
+		1E6762772681F2B800995D6C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		1E6762792681F42E00995D6C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		1E6C4907267B83C2001048CF /* forest.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = forest.mov; sourceTree = "<group>"; };
+		1E6C4908267B83C2001048CF /* GalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryController.swift; sourceTree = "<group>"; };
+		1E6C4909267B83C2001048CF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		1E6C490A267B83C2001048CF /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		1E6C490B267B83C2001048CF /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
+		1E6C490C267B83C2001048CF /* EnableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableViewController.swift; sourceTree = "<group>"; };
+		1E6C490D267B83C2001048CF /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
+		1E6C490E267B83C2001048CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E6C490F267B83C3001048CF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1E70C9F026726F380064A939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E70C9F226726F380064A939 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		1E70C9F726726F380064A939 /* Turn Off the Lights for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turn Off the Lights for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E70C9FA26726F380064A939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E70C9FC26726F380064A939 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1E70CA0426726F380064A939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E70CA0926726F380064A939 /* Turn Off the Lights for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turn Off the Lights for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E70CA0B26726F380064A939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E70CA1026726F380064A939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E70CA1126726F380064A939 /* Turn Off the Lights for Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Turn Off the Lights for Safari.entitlements"; sourceTree = "<group>"; };
+		1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Turn Off the Lights for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E70CA1B26726F380064A939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Turn Off the Lights for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E70CA2526726F380064A939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E70CA4526726F380064A939 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = Resources/LICENSE; sourceTree = "<group>"; };
+		1E70CA4626726F380064A939 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; name = css; path = Resources/css; sourceTree = "<group>"; };
+		1E70CA4726726F380064A939 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
+		1E70CA4826726F380064A939 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = Resources/js; sourceTree = "<group>"; };
+		1E70CA4926726F380064A939 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
+		1E70CA4A26726F380064A939 /* palette.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = palette.html; path = Resources/palette.html; sourceTree = "<group>"; };
+		1E70CA4B26726F380064A939 /* speech.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = speech.html; path = Resources/speech.html; sourceTree = "<group>"; };
+		1E70CA4D26726F380064A939 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		1E70CA4E26726F380064A939 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		1E70CA4F26726F380064A939 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = Resources/schema.json; sourceTree = "<group>"; };
+		1E70CA5026726F380064A939 /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = Resources/options.html; sourceTree = "<group>"; };
+		1E70CA5126726F380064A939 /* background.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = background.html; path = Resources/background.html; sourceTree = "<group>"; };
+		1E70CA5226726F380064A939 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = Resources/_locales; sourceTree = "<group>"; };
+		1E70CA5326726F380064A939 /* motion.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = motion.html; path = Resources/motion.html; sourceTree = "<group>"; };
+		1E744B4626DE2C1A00BE9D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E744B4826DE2F5400BE9D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B4926DE2F5600BE9D86 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B4A26DE2F5A00BE9D86 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E744B4B26DE2F5D00BE9D86 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B4C26DE2F5F00BE9D86 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B4D26DE2F6100BE9D86 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B4E26DE2F6400BE9D86 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B4F26DE2F6600BE9D86 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5026DE2F6800BE9D86 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5126DE2F6A00BE9D86 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5226DE2F6C00BE9D86 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5326DE2F6F00BE9D86 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5426DE2F7100BE9D86 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5526DE2F7300BE9D86 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5626DE2F7500BE9D86 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5826DE2F7800BE9D86 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E744B5926DE2FC200BE9D86 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5A26DE2FCD00BE9D86 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5B26DE2FCD00BE9D86 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B5C26DE2FCD00BE9D86 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B5D26DE2FE400BE9D86 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5E26DE2FE500BE9D86 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B5F26DE2FE500BE9D86 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B6026DE2FE600BE9D86 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B6526DE300600BE9D86 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B6626DE300600BE9D86 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B6726DE300700BE9D86 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B6826DE300700BE9D86 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B6926DE301300BE9D86 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B6A26DE301500BE9D86 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B6B26DE301500BE9D86 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B6C26DE301500BE9D86 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B6D26DE301D00BE9D86 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B6E26DE301F00BE9D86 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B6F26DE301F00BE9D86 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B7026DE302000BE9D86 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B7126DE302800BE9D86 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B7226DE302A00BE9D86 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B7326DE302A00BE9D86 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B7426DE302A00BE9D86 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B7526DE303500BE9D86 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E744B7626DE303700BE9D86 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E744B7726DE303700BE9D86 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Walkthrough.strings"; sourceTree = "<group>"; };
+		1E744B7826DE303700BE9D86 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1E744B7926DE303E00BE9D86 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E744B7A26DE304000BE9D86 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E744B7B26DE304000BE9D86 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Walkthrough.strings"; sourceTree = "<group>"; };
+		1E744B7C26DE304000BE9D86 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1E744B7D26DE304700BE9D86 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B7E26DE304900BE9D86 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B7F26DE304900BE9D86 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B8026DE304900BE9D86 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B8126DE307A00BE9D86 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8226DE307D00BE9D86 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8326DE307D00BE9D86 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B8426DE307D00BE9D86 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B8526DE308600BE9D86 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8626DE308800BE9D86 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8726DE308800BE9D86 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B8826DE308800BE9D86 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B8926DE309000BE9D86 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8A26DE309100BE9D86 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8B26DE309200BE9D86 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B8C26DE309200BE9D86 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B8D26DE30A200BE9D86 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8E26DE30A200BE9D86 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		1E744B8F26DE30A300BE9D86 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E744B9026DE30A300BE9D86 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E744B9126DE36D400BE9D86 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E744B9226DE36D600BE9D86 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Walkthrough.strings"; sourceTree = "<group>"; };
+		1E744B9326DE36D600BE9D86 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		1E7D1A14267283A600FECE52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E7D1A15267283A600FECE52 /* DaringInfantileDachshund.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DaringInfantileDachshund.mp4; sourceTree = "<group>"; };
+		1E7D1A16267283A700FECE52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E84709D26D64C0C00D9694F /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Main.strings; sourceTree = "<group>"; };
+		1E84709E26D64C0C00D9694F /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E84709F26D64C0D00D9694F /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E8470A026D64CB500D9694F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		1E8470A126D64CB500D9694F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E8470A226D64CB500D9694F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E8470A326D64D4E00D9694F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		1E8470A426D64D4E00D9694F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E8470A526D64D4F00D9694F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E8470A626D64DA700D9694F /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Main.strings; sourceTree = "<group>"; };
+		1E8470A726D64DA700D9694F /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1E8470A826D64DA700D9694F /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E862AA226AC4FA3004B9642 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuideViewController.swift; sourceTree = "<group>"; };
+		1E8F88FC269E194F00030DDB /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		1EBA02BB26D549D000EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		1EBA02BC26D549D100EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1EBA02BD26D549D100EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EBA02BF26D56A5800EDF450 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		1EBA02C026D56A5800EDF450 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1EBA02C126D56A5800EDF450 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EBA02C326D56B0500EDF450 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Main.strings; sourceTree = "<group>"; };
+		1EBA02C426D56B0500EDF450 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1EBA02C526D56B0600EDF450 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EBA02C726D56B2100EDF450 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1EBA02C926D56BFC00EDF450 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Main.strings; sourceTree = "<group>"; };
+		1EBA02CA26D56BFC00EDF450 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1EBA02CB26D56BFD00EDF450 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonClasses.swift; sourceTree = "<group>"; };
+		1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		1ECCC70126D79663002A2A32 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Main.strings; sourceTree = "<group>"; };
+		1ECCC70226D79663002A2A32 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1ECCC70326D79663002A2A32 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1ECCC70426D797A6002A2A32 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		1ECCC70526D797A6002A2A32 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1ECCC70626D797A6002A2A32 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1ECCC70726D79878002A2A32 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		1ECCC70826D79878002A2A32 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1ECCC70926D79879002A2A32 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1ECCC70A26D799B9002A2A32 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		1ECCC70B26D799E8002A2A32 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Walkthrough.strings"; sourceTree = "<group>"; };
+		1ECCC70C26D799E8002A2A32 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1ECCC70D26D79EFC002A2A32 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		1ECCC70E26D79EFC002A2A32 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Walkthrough.strings; sourceTree = "<group>"; };
+		1ECCC70F26D79EFC002A2A32 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E4CB207268CC77900015282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB214268CC79300015282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB221268CDC2300015282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB22E268CDC6D00015282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70C9F426726F380064A939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA0626726F380064A939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA1326726F380064A939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA1D26726F380064A939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E4CB20B268CC77900015282 /* TOtL-iOS-UITest */ = {
+			isa = PBXGroup;
+			children = (
+				1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */,
+			);
+			path = "TOtL-iOS-UITest";
+			sourceTree = "<group>";
+		};
+		1E4CB218268CC79300015282 /* TOtL-macOS-UITest */ = {
+			isa = PBXGroup;
+			children = (
+				1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */,
+			);
+			path = "TOtL-macOS-UITest";
+			sourceTree = "<group>";
+		};
+		1E4CB225268CDC2300015282 /* TOtL-macOS-test */ = {
+			isa = PBXGroup;
+			children = (
+				1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */,
+			);
+			path = "TOtL-macOS-test";
+			sourceTree = "<group>";
+		};
+		1E4CB232268CDC6D00015282 /* TOtL-iOS-test */ = {
+			isa = PBXGroup;
+			children = (
+				1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */,
+			);
+			path = "TOtL-iOS-test";
+			sourceTree = "<group>";
+		};
+		1E70C9E326726F350064A939 = {
+			isa = PBXGroup;
+			children = (
+				1E70C9E826726F350064A939 /* Shared (App) */,
+				1E70C9F126726F380064A939 /* Shared (Extension) */,
+				1E70C9F926726F380064A939 /* iOS (App) */,
+				1E70CA0A26726F380064A939 /* macOS (App) */,
+				1E70CA1A26726F380064A939 /* iOS (Extension) */,
+				1E70CA2426726F380064A939 /* macOS (Extension) */,
+				1E4CB20B268CC77900015282 /* TOtL-iOS-UITest */,
+				1E4CB218268CC79300015282 /* TOtL-macOS-UITest */,
+				1E4CB225268CDC2300015282 /* TOtL-macOS-test */,
+				1E4CB232268CDC6D00015282 /* TOtL-iOS-test */,
+				1E70C9F826726F380064A939 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E70C9E826726F350064A939 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				1E70C9F026726F380064A939 /* Assets.xcassets */,
+				1E2F5768267BE9D600C78FFC /* Localizable.strings */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		1E70C9F126726F380064A939 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				1E70CA4426726F380064A939 /* Resources */,
+				1E70C9F226726F380064A939 /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		1E70C9F826726F380064A939 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E70C9F726726F380064A939 /* Turn Off the Lights for Safari.app */,
+				1E70CA0926726F380064A939 /* Turn Off the Lights for Safari.app */,
+				1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */,
+				1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */,
+				1E4CB20A268CC77900015282 /* TOtL-iOS-UITest.xctest */,
+				1E4CB217268CC79300015282 /* TOtL-macOS-UITest.xctest */,
+				1E4CB224268CDC2300015282 /* TOtL-macOS-test.xctest */,
+				1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E70C9F926726F380064A939 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */,
+				1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */,
+				1E70C9FA26726F380064A939 /* AppDelegate.swift */,
+				1E6762772681F2B800995D6C /* MasterViewController.swift */,
+				1E151BB2267FC78E0004E9E3 /* SidebarController.swift */,
+				1E6762792681F42E00995D6C /* SplitViewController.swift */,
+				1E6C490B267B83C2001048CF /* AboutController.swift */,
+				1E6C490C267B83C2001048CF /* EnableViewController.swift */,
+				1E6C490D267B83C2001048CF /* FeedParser.swift */,
+				1E6C4907267B83C2001048CF /* forest.mov */,
+				1E6C4908267B83C2001048CF /* GalleryController.swift */,
+				1E6C4909267B83C2001048CF /* NewsTableViewCell.swift */,
+				1E6C490A267B83C2001048CF /* NewsTableViewController.swift */,
+				1E6C490E267B83C2001048CF /* ViewController.swift */,
+				1E6C490F267B83C3001048CF /* WelcomeViewController.swift */,
+				1E70C9FC26726F380064A939 /* SceneDelegate.swift */,
+				1E862AA226AC4FA3004B9642 /* PageViewController.swift */,
+				1E70CA0426726F380064A939 /* Info.plist */,
+				1EBA02C726D56B2100EDF450 /* LaunchScreen.storyboard */,
+				1E2F2BF726CC4F160033C5E7 /* Main.storyboard */,
+				1E2F2BEF26CC4E920033C5E7 /* Walkthrough.storyboard */,
+				1E378628267CA350003A0F73 /* LicensesViewController.swift */,
+				1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */,
+				1E2A61902682677300619A31 /* YouTubeViewController.swift */,
+				1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */,
+				1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */,
+				1E8F88FC269E194F00030DDB /* NetworkViewController.swift */,
+				1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		1E70CA0A26726F380064A939 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				1E7D1A14267283A600FECE52 /* Assets.xcassets */,
+				1E7D1A15267283A600FECE52 /* DaringInfantileDachshund.mp4 */,
+				1E744B4726DE2C1A00BE9D86 /* Main.storyboard */,
+				1E7D1A16267283A700FECE52 /* ViewController.swift */,
+				1E70CA0B26726F380064A939 /* AppDelegate.swift */,
+				1E70CA1026726F380064A939 /* Info.plist */,
+				1E70CA1126726F380064A939 /* Turn Off the Lights for Safari.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		1E70CA1A26726F380064A939 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				1E70CA1B26726F380064A939 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		1E70CA2426726F380064A939 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				1E70CA2526726F380064A939 /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		1E70CA4426726F380064A939 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E70CA4526726F380064A939 /* LICENSE */,
+				1E70CA4626726F380064A939 /* css */,
+				1E70CA4726726F380064A939 /* images */,
+				1E70CA4826726F380064A939 /* js */,
+				1E70CA4926726F380064A939 /* popup.html */,
+				1E70CA4A26726F380064A939 /* palette.html */,
+				1E70CA4B26726F380064A939 /* speech.html */,
+				1E70CA4D26726F380064A939 /* icons */,
+				1E70CA4E26726F380064A939 /* manifest.json */,
+				1E70CA4F26726F380064A939 /* schema.json */,
+				1E70CA5026726F380064A939 /* options.html */,
+				1E70CA5126726F380064A939 /* background.html */,
+				1E70CA5226726F380064A939 /* _locales */,
+				1E70CA5326726F380064A939 /* motion.html */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E4CB209268CC77900015282 /* TOtL-iOS-UITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4CB210268CC77900015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-UITest" */;
+			buildPhases = (
+				1E4CB206268CC77900015282 /* Sources */,
+				1E4CB207268CC77900015282 /* Frameworks */,
+				1E4CB208268CC77900015282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E4CB20F268CC77900015282 /* PBXTargetDependency */,
+			);
+			name = "TOtL-iOS-UITest";
+			productName = "TOtL-iOS-UITest";
+			productReference = 1E4CB20A268CC77900015282 /* TOtL-iOS-UITest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1E4CB216268CC79300015282 /* TOtL-macOS-UITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4CB21D268CC79300015282 /* Build configuration list for PBXNativeTarget "TOtL-macOS-UITest" */;
+			buildPhases = (
+				1E4CB213268CC79300015282 /* Sources */,
+				1E4CB214268CC79300015282 /* Frameworks */,
+				1E4CB215268CC79300015282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E4CB21C268CC79300015282 /* PBXTargetDependency */,
+			);
+			name = "TOtL-macOS-UITest";
+			productName = "TOtL-macOS-UITest";
+			productReference = 1E4CB217268CC79300015282 /* TOtL-macOS-UITest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1E4CB223268CDC2300015282 /* TOtL-macOS-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4CB22A268CDC2300015282 /* Build configuration list for PBXNativeTarget "TOtL-macOS-test" */;
+			buildPhases = (
+				1E4CB220268CDC2300015282 /* Sources */,
+				1E4CB221268CDC2300015282 /* Frameworks */,
+				1E4CB222268CDC2300015282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E4CB229268CDC2300015282 /* PBXTargetDependency */,
+			);
+			name = "TOtL-macOS-test";
+			productName = "TOtL-macOS-test";
+			productReference = 1E4CB224268CDC2300015282 /* TOtL-macOS-test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E4CB230268CDC6D00015282 /* TOtL-iOS-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4CB237268CDC6D00015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-test" */;
+			buildPhases = (
+				1E4CB22D268CDC6D00015282 /* Sources */,
+				1E4CB22E268CDC6D00015282 /* Frameworks */,
+				1E4CB22F268CDC6D00015282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E4CB236268CDC6D00015282 /* PBXTargetDependency */,
+			);
+			name = "TOtL-iOS-test";
+			productName = "TOtL-iOS-test";
+			productReference = 1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E70C9F626726F380064A939 /* Turn Off the Lights for Safari (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E70CA3A26726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari (iOS)" */;
+			buildPhases = (
+				1E70C9F326726F380064A939 /* Sources */,
+				1E70C9F426726F380064A939 /* Frameworks */,
+				1E70C9F526726F380064A939 /* Resources */,
+				1E70CA3926726F380064A939 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E70CA1926726F380064A939 /* PBXTargetDependency */,
+			);
+			name = "Turn Off the Lights for Safari (iOS)";
+			productName = "Turn Off the Lights for Safari (iOS)";
+			productReference = 1E70C9F726726F380064A939 /* Turn Off the Lights for Safari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E70CA0826726F380064A939 /* Turn Off the Lights for Safari (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E70CA4126726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari (macOS)" */;
+			buildPhases = (
+				1E70CA0526726F380064A939 /* Sources */,
+				1E70CA0626726F380064A939 /* Frameworks */,
+				1E70CA0726726F380064A939 /* Resources */,
+				1E70CA4026726F380064A939 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E70CA2326726F380064A939 /* PBXTargetDependency */,
+			);
+			name = "Turn Off the Lights for Safari (macOS)";
+			productName = "Turn Off the Lights for Safari (macOS)";
+			productReference = 1E70CA0926726F380064A939 /* Turn Off the Lights for Safari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E70CA1526726F380064A939 /* Turn Off the Lights for Safari Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E70CA3626726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari Extension (iOS)" */;
+			buildPhases = (
+				1E70CA1226726F380064A939 /* Sources */,
+				1E70CA1326726F380064A939 /* Frameworks */,
+				1E70CA1426726F380064A939 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Turn Off the Lights for Safari Extension (iOS)";
+			productName = "Turn Off the Lights for Safari Extension (iOS)";
+			productReference = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1E70CA1F26726F380064A939 /* Turn Off the Lights for Safari Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E70CA3D26726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari Extension (macOS)" */;
+			buildPhases = (
+				1E70CA1C26726F380064A939 /* Sources */,
+				1E70CA1D26726F380064A939 /* Frameworks */,
+				1E70CA1E26726F380064A939 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Turn Off the Lights for Safari Extension (macOS)";
+			productName = "Turn Off the Lights for Safari Extension (macOS)";
+			productReference = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E70C9E426726F350064A939 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					1E4CB209268CC77900015282 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 1E70C9F626726F380064A939;
+					};
+					1E4CB216268CC79300015282 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 1E70CA0826726F380064A939;
+					};
+					1E4CB223268CDC2300015282 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 1E70CA0826726F380064A939;
+					};
+					1E4CB230268CDC6D00015282 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 1E70C9F626726F380064A939;
+					};
+					1E70C9F626726F380064A939 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					1E70CA0826726F380064A939 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					1E70CA1526726F380064A939 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					1E70CA1F26726F380064A939 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 1E70C9E726726F350064A939 /* Build configuration list for PBXProject "Turn Off the Lights for Safari" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				nl,
+				es,
+				nb,
+				fi,
+				da,
+				de,
+				ru,
+				ro,
+				ca,
+				pl,
+				it,
+				"es-419",
+				fr,
+				"zh-Hans",
+				ja,
+				ar,
+				cs,
+				he,
+				hu,
+				id,
+				el,
+				"pt-BR",
+				"pt-PT",
+				sv,
+				vi,
+				uk,
+				tr,
+				ko,
+				"zh-Hant",
+			);
+			mainGroup = 1E70C9E326726F350064A939;
+			productRefGroup = 1E70C9F826726F380064A939 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E70C9F626726F380064A939 /* Turn Off the Lights for Safari (iOS) */,
+				1E70CA0826726F380064A939 /* Turn Off the Lights for Safari (macOS) */,
+				1E70CA1526726F380064A939 /* Turn Off the Lights for Safari Extension (iOS) */,
+				1E70CA1F26726F380064A939 /* Turn Off the Lights for Safari Extension (macOS) */,
+				1E4CB209268CC77900015282 /* TOtL-iOS-UITest */,
+				1E4CB216268CC79300015282 /* TOtL-macOS-UITest */,
+				1E4CB223268CDC2300015282 /* TOtL-macOS-test */,
+				1E4CB230268CDC6D00015282 /* TOtL-iOS-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E4CB208268CC77900015282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB215268CC79300015282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB222268CDC2300015282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB22F268CDC6D00015282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70C9F526726F380064A939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */,
+				1EBA02C826D56B2100EDF450 /* LaunchScreen.storyboard in Resources */,
+				1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */,
+				1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */,
+				1E2F2BF526CC4F160033C5E7 /* Main.storyboard in Resources */,
+				1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */,
+				1E70CA3026726F380064A939 /* Assets.xcassets in Resources */,
+				1E6C4913267B83C3001048CF /* forest.mov in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA0726726F380064A939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7D1A1A26728E0500FECE52 /* DaringInfantileDachshund.mp4 in Resources */,
+				1E744B4526DE2C1A00BE9D86 /* Main.storyboard in Resources */,
+				1E70CA3126726F380064A939 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA1426726F380064A939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70CA6826726F380064A939 /* palette.html in Resources */,
+				1E70CA6526726F380064A939 /* images in Resources */,
+				1E70CA6C26726F380064A939 /* manifest.json in Resources */,
+				1E70CA6726726F380064A939 /* popup.html in Resources */,
+				1E70CA6B26726F380064A939 /* icons in Resources */,
+				1E70CA7126726F380064A939 /* motion.html in Resources */,
+				1E70CA6426726F380064A939 /* css in Resources */,
+				1E70CA6D26726F380064A939 /* schema.json in Resources */,
+				1E70CA6326726F380064A939 /* LICENSE in Resources */,
+				1E70CA6926726F380064A939 /* speech.html in Resources */,
+				1E70CA6626726F380064A939 /* js in Resources */,
+				1E70CA6E26726F380064A939 /* options.html in Resources */,
+				1E70CA7026726F380064A939 /* _locales in Resources */,
+				1E70CA6F26726F380064A939 /* background.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA1E26726F380064A939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70CA5926726F380064A939 /* palette.html in Resources */,
+				1E70CA5626726F380064A939 /* images in Resources */,
+				1E70CA5D26726F380064A939 /* manifest.json in Resources */,
+				1E70CA5826726F380064A939 /* popup.html in Resources */,
+				1E70CA5C26726F380064A939 /* icons in Resources */,
+				1E70CA6226726F380064A939 /* motion.html in Resources */,
+				1E70CA5526726F380064A939 /* css in Resources */,
+				1E70CA5E26726F380064A939 /* schema.json in Resources */,
+				1E70CA5426726F380064A939 /* LICENSE in Resources */,
+				1E70CA5A26726F380064A939 /* speech.html in Resources */,
+				1E70CA5726726F380064A939 /* js in Resources */,
+				1E70CA5F26726F380064A939 /* options.html in Resources */,
+				1E70CA6126726F380064A939 /* _locales in Resources */,
+				1E70CA6026726F380064A939 /* background.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E4CB206268CC77900015282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB213268CC79300015282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB220268CDC2300015282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4CB227268CDC2300015282 /* TOtL_macOS_test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CB22D268CDC6D00015282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70C9F326726F380064A939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */,
+				1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */,
+				1E6C4914267B83C3001048CF /* GalleryController.swift in Sources */,
+				1E70C9FB26726F380064A939 /* AppDelegate.swift in Sources */,
+				1E6C4918267B83C3001048CF /* EnableViewController.swift in Sources */,
+				1E6C4915267B83C3001048CF /* NewsTableViewCell.swift in Sources */,
+				1E6C491A267B83C3001048CF /* ViewController.swift in Sources */,
+				1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */,
+				1E6C4919267B83C3001048CF /* FeedParser.swift in Sources */,
+				1EC4AC1A26851FC0005FCF33 /* CommonClasses.swift in Sources */,
+				1E70C9FD26726F380064A939 /* SceneDelegate.swift in Sources */,
+				1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */,
+				1E6C4916267B83C3001048CF /* NewsTableViewController.swift in Sources */,
+				1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */,
+				1E862AA326AC4FA3004B9642 /* PageViewController.swift in Sources */,
+				1E862AA726AC55C8004B9642 /* WelcomeGuideViewController.swift in Sources */,
+				1E6C491B267B83C3001048CF /* WelcomeViewController.swift in Sources */,
+				1E2A618E2682675E00619A31 /* VideoTableViewCell.swift in Sources */,
+				1E67627A2681F42E00995D6C /* SplitViewController.swift in Sources */,
+				1E8F88FD269E194F00030DDB /* NetworkViewController.swift in Sources */,
+				1E6C4917267B83C3001048CF /* AboutController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA0526726F380064A939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7D1A192672850D00FECE52 /* ViewController.swift in Sources */,
+				1E70CA0C26726F380064A939 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA1226726F380064A939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70CA3226726F380064A939 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70CA1C26726F380064A939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70CA3326726F380064A939 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E4CB20F268CC77900015282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70C9F626726F380064A939 /* Turn Off the Lights for Safari (iOS) */;
+			targetProxy = 1E4CB20E268CC77900015282 /* PBXContainerItemProxy */;
+		};
+		1E4CB21C268CC79300015282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70CA0826726F380064A939 /* Turn Off the Lights for Safari (macOS) */;
+			targetProxy = 1E4CB21B268CC79300015282 /* PBXContainerItemProxy */;
+		};
+		1E4CB229268CDC2300015282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70CA0826726F380064A939 /* Turn Off the Lights for Safari (macOS) */;
+			targetProxy = 1E4CB228268CDC2300015282 /* PBXContainerItemProxy */;
+		};
+		1E4CB236268CDC6D00015282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70C9F626726F380064A939 /* Turn Off the Lights for Safari (iOS) */;
+			targetProxy = 1E4CB235268CDC6D00015282 /* PBXContainerItemProxy */;
+		};
+		1E70CA1926726F380064A939 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70CA1526726F380064A939 /* Turn Off the Lights for Safari Extension (iOS) */;
+			targetProxy = 1E70CA1826726F380064A939 /* PBXContainerItemProxy */;
+		};
+		1E70CA2326726F380064A939 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70CA1F26726F380064A939 /* Turn Off the Lights for Safari Extension (macOS) */;
+			targetProxy = 1E70CA2226726F380064A939 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E2F2BEF26CC4E920033C5E7 /* Walkthrough.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E2F2BF326CC4EFA0033C5E7 /* Base */,
+				1E2F2BF426CC4F060033C5E7 /* en */,
+				1EBA02BC26D549D100EDF450 /* nl */,
+				1EBA02C026D56A5800EDF450 /* es */,
+				1EBA02C426D56B0500EDF450 /* nb */,
+				1EBA02CA26D56BFC00EDF450 /* fi */,
+				1E84709E26D64C0C00D9694F /* da */,
+				1E8470A126D64CB500D9694F /* de */,
+				1E8470A426D64D4E00D9694F /* ru */,
+				1E8470A726D64DA700D9694F /* ro */,
+				1ECCC70226D79663002A2A32 /* ca */,
+				1ECCC70526D797A6002A2A32 /* pl */,
+				1ECCC70826D79878002A2A32 /* it */,
+				1ECCC70B26D799E8002A2A32 /* es-419 */,
+				1ECCC70E26D79EFC002A2A32 /* fr */,
+				1E41D60126DC120D00455536 /* zh-Hans */,
+				1E41D60426DC126C00455536 /* ja */,
+				1E744B5B26DE2FCD00BE9D86 /* ar */,
+				1E744B5F26DE2FE500BE9D86 /* cs */,
+				1E744B6726DE300700BE9D86 /* he */,
+				1E744B6B26DE301500BE9D86 /* hu */,
+				1E744B6F26DE301F00BE9D86 /* id */,
+				1E744B7326DE302A00BE9D86 /* el */,
+				1E744B7726DE303700BE9D86 /* pt-BR */,
+				1E744B7B26DE304000BE9D86 /* pt-PT */,
+				1E744B7F26DE304900BE9D86 /* sv */,
+				1E744B8326DE307D00BE9D86 /* vi */,
+				1E744B8726DE308800BE9D86 /* uk */,
+				1E744B8B26DE309200BE9D86 /* tr */,
+				1E744B8F26DE30A300BE9D86 /* ko */,
+				1E744B9226DE36D600BE9D86 /* zh-Hant */,
+			);
+			name = Walkthrough.storyboard;
+			sourceTree = "<group>";
+		};
+		1E2F2BF726CC4F160033C5E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E2F2BF626CC4F160033C5E7 /* Base */,
+				1E2F2BF926CC4F4A0033C5E7 /* en */,
+				1EBA02BB26D549D000EDF450 /* nl */,
+				1EBA02BF26D56A5800EDF450 /* es */,
+				1EBA02C326D56B0500EDF450 /* nb */,
+				1EBA02C926D56BFC00EDF450 /* fi */,
+				1E84709D26D64C0C00D9694F /* da */,
+				1E8470A026D64CB500D9694F /* de */,
+				1E8470A326D64D4E00D9694F /* ru */,
+				1E8470A626D64DA700D9694F /* ro */,
+				1ECCC70126D79663002A2A32 /* ca */,
+				1ECCC70426D797A6002A2A32 /* pl */,
+				1ECCC70726D79878002A2A32 /* it */,
+				1ECCC70A26D799B9002A2A32 /* es-419 */,
+				1ECCC70D26D79EFC002A2A32 /* fr */,
+				1E41D60026DC120C00455536 /* zh-Hans */,
+				1E41D60326DC126B00455536 /* ja */,
+				1E744B5A26DE2FCD00BE9D86 /* ar */,
+				1E744B5E26DE2FE500BE9D86 /* cs */,
+				1E744B6626DE300600BE9D86 /* he */,
+				1E744B6A26DE301500BE9D86 /* hu */,
+				1E744B6E26DE301F00BE9D86 /* id */,
+				1E744B7226DE302A00BE9D86 /* el */,
+				1E744B7626DE303700BE9D86 /* pt-BR */,
+				1E744B7A26DE304000BE9D86 /* pt-PT */,
+				1E744B7E26DE304900BE9D86 /* sv */,
+				1E744B8226DE307D00BE9D86 /* vi */,
+				1E744B8626DE308800BE9D86 /* uk */,
+				1E744B8A26DE309100BE9D86 /* tr */,
+				1E744B8E26DE30A200BE9D86 /* ko */,
+				1E744B9126DE36D400BE9D86 /* zh-Hant */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E2F5768267BE9D600C78FFC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E2F5767267BE9D600C78FFC /* en */,
+				1EBA02BD26D549D100EDF450 /* nl */,
+				1EBA02C126D56A5800EDF450 /* es */,
+				1EBA02C526D56B0600EDF450 /* nb */,
+				1EBA02CB26D56BFD00EDF450 /* fi */,
+				1E84709F26D64C0D00D9694F /* da */,
+				1E8470A226D64CB500D9694F /* de */,
+				1E8470A526D64D4F00D9694F /* ru */,
+				1E8470A826D64DA700D9694F /* ro */,
+				1ECCC70326D79663002A2A32 /* ca */,
+				1ECCC70626D797A6002A2A32 /* pl */,
+				1ECCC70926D79879002A2A32 /* it */,
+				1ECCC70C26D799E8002A2A32 /* es-419 */,
+				1ECCC70F26D79EFC002A2A32 /* fr */,
+				1E41D60226DC120D00455536 /* zh-Hans */,
+				1E41D60526DC126C00455536 /* ja */,
+				1E744B5C26DE2FCD00BE9D86 /* ar */,
+				1E744B6026DE2FE600BE9D86 /* cs */,
+				1E744B6826DE300700BE9D86 /* he */,
+				1E744B6C26DE301500BE9D86 /* hu */,
+				1E744B7026DE302000BE9D86 /* id */,
+				1E744B7426DE302A00BE9D86 /* el */,
+				1E744B7826DE303700BE9D86 /* pt-BR */,
+				1E744B7C26DE304000BE9D86 /* pt-PT */,
+				1E744B8026DE304900BE9D86 /* sv */,
+				1E744B8426DE307D00BE9D86 /* vi */,
+				1E744B8826DE308800BE9D86 /* uk */,
+				1E744B8C26DE309200BE9D86 /* tr */,
+				1E744B9026DE30A300BE9D86 /* ko */,
+				1E425A6726DE374D00ECF14A /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1E744B4726DE2C1A00BE9D86 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E744B4626DE2C1A00BE9D86 /* Base */,
+				1E744B4826DE2F5400BE9D86 /* en */,
+				1E744B4926DE2F5600BE9D86 /* ca */,
+				1E744B4A26DE2F5A00BE9D86 /* zh-Hans */,
+				1E744B4B26DE2F5D00BE9D86 /* da */,
+				1E744B4C26DE2F5F00BE9D86 /* nl */,
+				1E744B4D26DE2F6100BE9D86 /* fi */,
+				1E744B4E26DE2F6400BE9D86 /* fr */,
+				1E744B4F26DE2F6600BE9D86 /* de */,
+				1E744B5026DE2F6800BE9D86 /* it */,
+				1E744B5126DE2F6A00BE9D86 /* ja */,
+				1E744B5226DE2F6C00BE9D86 /* nb */,
+				1E744B5326DE2F6F00BE9D86 /* pl */,
+				1E744B5426DE2F7100BE9D86 /* ro */,
+				1E744B5526DE2F7300BE9D86 /* ru */,
+				1E744B5626DE2F7500BE9D86 /* es */,
+				1E744B5826DE2F7800BE9D86 /* es-419 */,
+				1E744B5926DE2FC200BE9D86 /* ar */,
+				1E744B5D26DE2FE400BE9D86 /* cs */,
+				1E744B6526DE300600BE9D86 /* he */,
+				1E744B6926DE301300BE9D86 /* hu */,
+				1E744B6D26DE301D00BE9D86 /* id */,
+				1E744B7126DE302800BE9D86 /* el */,
+				1E744B7526DE303500BE9D86 /* pt-BR */,
+				1E744B7926DE303E00BE9D86 /* pt-PT */,
+				1E744B7D26DE304700BE9D86 /* sv */,
+				1E744B8126DE307A00BE9D86 /* vi */,
+				1E744B8526DE308600BE9D86 /* uk */,
+				1E744B8926DE309000BE9D86 /* tr */,
+				1E744B8D26DE30A200BE9D86 /* ko */,
+				1E744B9326DE36D600BE9D86 /* zh-Hant */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E4CB211268CC77900015282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-iOS-UITest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Turn Off the Lights for Safari (iOS)";
+			};
+			name = Debug;
+		};
+		1E4CB212268CC77900015282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-iOS-UITest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Turn Off the Lights for Safari (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E4CB21E268CC79300015282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-UITest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Turn Off the Lights for Safari (macOS)";
+			};
+			name = Debug;
+		};
+		1E4CB21F268CC79300015282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-UITest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Turn Off the Lights for Safari (macOS)";
+			};
+			name = Release;
+		};
+		1E4CB22B268CDC2300015282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Contents/MacOS/Turn Off the Lights for Safari";
+			};
+			name = Debug;
+		};
+		1E4CB22C268CDC2300015282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Contents/MacOS/Turn Off the Lights for Safari";
+			};
+			name = Release;
+		};
+		1E4CB238268CDC6D00015282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-iOS-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Turn Off the Lights for Safari";
+			};
+			name = Debug;
+		};
+		1E4CB239268CDC6D00015282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-iOS-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Turn Off the Lights for Safari";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E70CA3426726F380064A939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E70CA3526726F380064A939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		1E70CA3726726F380064A939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 4.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
+				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E70CA3826726F380064A939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 4.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
+				PRODUCT_NAME = "Turn Off the Lights for Safari2 Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E70CA3B26726F380064A939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.3.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari";
+				PRODUCT_NAME = "Turn Off the Lights for Safari";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E70CA3C26726F380064A939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.3.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari";
+				PRODUCT_NAME = "Turn Off the Lights for Safari";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E70CA3E26726F380064A939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 4.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
+				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1E70CA3F26726F380064A939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 4.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
+				PRODUCT_NAME = "Turn Off the Lights for Safari2 Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1E70CA4226726F380064A939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 4.3.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari";
+				PRODUCT_NAME = "Turn Off the Lights for Safari";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1E70CA4326726F380064A939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 51;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleExecutable = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_CFBundleVersion = 38;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 4.3.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari";
+				PRODUCT_NAME = "Turn Off the Lights for Safari";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E4CB210268CC77900015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-UITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4CB211268CC77900015282 /* Debug */,
+				1E4CB212268CC77900015282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E4CB21D268CC79300015282 /* Build configuration list for PBXNativeTarget "TOtL-macOS-UITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4CB21E268CC79300015282 /* Debug */,
+				1E4CB21F268CC79300015282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E4CB22A268CDC2300015282 /* Build configuration list for PBXNativeTarget "TOtL-macOS-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4CB22B268CDC2300015282 /* Debug */,
+				1E4CB22C268CDC2300015282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E4CB237268CDC6D00015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4CB238268CDC6D00015282 /* Debug */,
+				1E4CB239268CDC6D00015282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70C9E726726F350064A939 /* Build configuration list for PBXProject "Turn Off the Lights for Safari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70CA3426726F380064A939 /* Debug */,
+				1E70CA3526726F380064A939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70CA3626726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70CA3726726F380064A939 /* Debug */,
+				1E70CA3826726F380064A939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70CA3A26726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70CA3B26726F380064A939 /* Debug */,
+				1E70CA3C26726F380064A939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70CA3D26726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70CA3E26726F380064A939 /* Debug */,
+				1E70CA3F26726F380064A939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70CA4126726F380064A939 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70CA4226726F380064A939 /* Debug */,
+				1E70CA4326726F380064A939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E70C9E426726F350064A939 /* Project object */;
+}
