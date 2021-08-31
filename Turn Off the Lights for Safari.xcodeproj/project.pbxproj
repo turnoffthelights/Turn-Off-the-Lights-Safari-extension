@@ -77,6 +77,8 @@
 		1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */; };
 		1EE7F90F26DE57000011E42E /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1EE7F91026DE570B0011E42E /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1EE7F91126DE586D0011E42E /* Turn Off the Lights for Safari Extension.appex in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; };
+		1EE7F91226DE58760011E42E /* Turn Off the Lights for Safari Extension.appex in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -840,6 +842,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE7F91126DE586D0011E42E /* Turn Off the Lights for Safari Extension.appex in Resources */,
 				1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */,
 				1EBA02C826D56B2100EDF450 /* LaunchScreen.storyboard in Resources */,
 				1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */,
@@ -855,6 +858,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE7F91226DE58760011E42E /* Turn Off the Lights for Safari Extension.appex in Resources */,
 				1E7D1A1A26728E0500FECE52 /* DaringInfantileDachshund.mp4 in Resources */,
 				1E744B4526DE2C1A00BE9D86 /* Main.storyboard in Resources */,
 				1E70CA3126726F380064A939 /* Assets.xcassets in Resources */,
