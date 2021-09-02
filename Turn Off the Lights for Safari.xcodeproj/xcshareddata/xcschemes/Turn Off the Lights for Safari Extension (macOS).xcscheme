@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E70CA1F26726F380064A939"
-               BuildableName = "Turn Off the Lights for Safari2 Extension.appex"
+               BuildableName = "Turn Off the Lights for Safari Extension.appex"
                BlueprintName = "Turn Off the Lights for Safari Extension (macOS)"
                ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">
             </BuildableReference>
