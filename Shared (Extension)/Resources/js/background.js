@@ -83,6 +83,21 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"nmcustomvalues":
 		if(request.valuex && request.valuey){ chrome.storage.sync.set({"nmcustomx": request.valuex, "nmcustomy": request.valuey}); }
 		break;
+	case"mastertabnight":
+		// Night Owl profile
+		var nightowlprofile, nightenabletheme;
+		chrome.storage.sync.get(["nightowlprofile", "nightenabletheme"], function(response){
+			nightowlprofile = response["nightowlprofile"];
+			nightenabletheme = response["nightenabletheme"];
+			if(nightowlprofile == true && nightenabletheme == true){
+				chrome.storage.sync.set({"nightowlprofile": false});
+				chrome.storage.sync.set({"nightenabletheme": false});
+			}else{
+				chrome.storage.sync.set({"nightowlprofile": true});
+				chrome.storage.sync.set({"nightenabletheme": true});
+			}
+		});
+		break;
 	case"mastertabdark":
 		if(request.value == true){
 			chromerefreshalltabs("goremovelightoff");
@@ -140,9 +155,6 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			});
 		}
 		break;
-	case"sendnightmodeindark":
-		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
-		break;
 	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){
@@ -163,6 +175,25 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		break;
 	}
 });
+
+// Screen Shader inject before displaying the website
+chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
+	// Filter out non main window events.
+	if(frameId !== 0)return;
+	injectScriptsTo(tabId);
+});
+
+const injectScriptsTo = (tabId) => {
+	chrome.tabs.executeScript(tabId, {
+		file: "js/screenshader.js",
+		runAt: "document_start"
+	}, () => void chrome.runtime.lastError);
+	chrome.tabs.executeScript(tabId, {
+		file: "js/nightmode.js",
+		runAt: "document_start"
+	}, () => void chrome.runtime.lastError);
+};
+//---
 
 function restcontent(path, name, sendertab){
 	var cssoReq = new XMLHttpRequest();
@@ -241,6 +272,8 @@ chrome.browserAction.onClicked.addListener(function(tabs){
 								chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
 							}
 						}else{ // all tabs
+							// Night Mode profile
+							// Eye Protection profile
 							chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
 						}
 					});
@@ -466,7 +499,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			chromerefreshalltabs("gonightmodecolors");
 		}
 
-		var changenamenight = ["nighttheme", "lampandnightmode", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos"];
+		var changenamenight = ["nighttheme", "lampandnightmode", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos", "nmautoclock", "nmautobegintime", "nmautoendtime"];
 		if(changenamenight.includes(key)){
 			chromerefreshalltabs("goenablenightmode");
 		}
