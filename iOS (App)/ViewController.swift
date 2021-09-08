@@ -42,8 +42,6 @@ class ViewController: UIViewController{
     }
     
     @objc func startmainapp(_ notification: Notification) {
-        let connected = UserDefaults.standard.bool(forKey: "connected")
-
         DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "mainapp")
@@ -51,6 +49,7 @@ class ViewController: UIViewController{
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
             DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
+                let connected = UserDefaults.standard.bool(forKey: "connected")
                 if(connected == false){
                     NotificationCenter.default.post(name: Notification.Name(rawValue: "calloffline"), object: nil)
                 }
