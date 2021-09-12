@@ -156,8 +156,8 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		}
 		break;
 	case"sendnightmodeindark":
- 		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
- 		break;
+		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
+		break;
 	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){
@@ -186,15 +186,16 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
 	injectScriptsTo(tabId);
 });
 
-// Safari 15 bug => "js/screenshader.js" can not read multiple files. No actions for the 2nd script in array
-const scriptList = ["js/nightmode.js"];
+// Safari 15 bug => can not read multiple files. No actions for the 2nd script in array
+// profile.js =  Night Mode and Screen Shader
+const scriptList = ["js/profile.js"];
 
 const injectScriptsTo = (tabId) => {
 	scriptList.forEach((script) => {
-	  chrome.tabs.executeScript(tabId, {
-		file: `${script}`,
-		runAt: "document_start",
-	  }, () => void chrome.runtime.lastError);
+		chrome.tabs.executeScript(tabId, {
+			file: `${script}`,
+			runAt: "document_start",
+		}, () => void chrome.runtime.lastError);
 	});
 };
 //---
@@ -296,13 +297,17 @@ chrome.browserAction.onClicked.addListener(function(tabs){
 	}
 });
 
+var lampandnightmode;
 chrome.commands.onCommand.addListener(function(command){
 	if(command == "toggle-feature-nightmode"){
-		if(lampandnightmode == true){
-			chrome.runtime.sendMessage({name: "mastertabnight"});
-		}else{
-			chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
-		}
+		chrome.storage.sync.get(["lampandnightmode"], function(response){
+			lampandnightmode = response["lampandnightmode"];
+			if(lampandnightmode == true){
+				chrome.runtime.sendMessage({name: "mastertabnight"});
+			}else{
+				chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+			}
+		});
 	}
 });
 
@@ -365,24 +370,29 @@ function browsercontext(a, b, c, d){
 	}
 }
 
+var actionmenuadded = false;
 if(chrome.contextMenus){
-	var contexts = ["browser_action"];
-	browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
-	browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
-	browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
+	if(actionmenuadded == false){
+		actionmenuadded = true;
 
-	// Create a parent item and two children.
-	var parent = null;
-	parent = browsercontext(sharemenusharetitle, "totlsharemenu", {"16": "images/IconShare.png", "32": "images/IconShare@2x.png"});
-	browsercontext(sharemenutellafriend, "totlshareemail", {"16": "images/IconEmail.png", "32": "images/IconEmail@2x.png"}, parent);
-	chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
-	browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
-	browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
+		var contexts = ["browser_action"];
+		browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
+		browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
+		browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
 
-	chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartor", "contexts": contexts});
-	browsercontext(sharemenusubscribetitle, "totlsubscribe", {"16": "images/IconYouTube.png", "32": "images/IconYouTube@2x.png"});
+		// Create a parent item and two children.
+		var parent = null;
+		parent = browsercontext(sharemenusharetitle, "totlsharemenu", {"16": "images/IconShare.png", "32": "images/IconShare@2x.png"});
+		browsercontext(sharemenutellafriend, "totlshareemail", {"16": "images/IconEmail.png", "32": "images/IconEmail@2x.png"}, parent);
+		chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
+		browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
+		browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
 
-	chrome.contextMenus.onClicked.addListener(onClickHandler);
+		chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartor", "contexts": contexts});
+		browsercontext(sharemenusubscribetitle, "totlsubscribe", {"16": "images/IconYouTube.png", "32": "images/IconYouTube@2x.png"});
+
+		chrome.contextMenus.onClicked.addListener(onClickHandler);
+	}
 }
 
 // context menu for page and video
