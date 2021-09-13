@@ -66,7 +66,7 @@ class YouTubeViewController: UITableViewController{
         
         let video = Video()
         video.Key = "yONZVLA72ZM"
-        video.Title = "🔔 Introduction - Turn Off the Lights Browser Extension version 4"
+        video.Title = "🔔Introduction - Turn Off the Lights Browser Extension version 4"
         videos.append(video)
         
         let video2 = Video()
@@ -96,7 +96,7 @@ class YouTubeViewController: UITableViewController{
         
         let video7 = Video()
         video7.Key = "V5uDBWCzrEQ"
-        video7.Title = "🔵 How to enable the Audio Visualizer on YouTube? (and other HTML5 video websites)"
+        video7.Title = "🔵How to enable the Audio Visualizer on YouTube? (and other HTML5 video websites)"
         videos.append(video7)
         
         let video8 = Video()
@@ -121,7 +121,7 @@ class YouTubeViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vi = videos[indexPath.row]
+        let vi = videos[indexPath.row].Key
 //        self.video = vi
 //        performSegue(withIdentifier: "toVideo", sender: nil)
         
@@ -133,7 +133,7 @@ class YouTubeViewController: UITableViewController{
         } else if URL(string: "https://www.youtube.com/watch?v=\(youtubeId)") != nil {
             // redirect through safari
             //UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-            
+
             let thisurlpost = "https://www.youtube.com/watch?v=\(youtubeId)"
             let config = SFSafariViewController.Configuration()
             config.barCollapsingEnabled = true
