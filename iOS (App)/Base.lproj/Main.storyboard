@@ -995,14 +995,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1OH-YX-5Ht" customClass="BorderImage" customModule="Turn_Off_the_Lights_for_Safari" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="25.5" width="160" height="90"/>
+                                            <rect key="frame" x="20" y="25.5" width="120" height="90"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="160" id="baz-xD-5eB"/>
+                                                <constraint firstAttribute="width" constant="120" id="baz-xD-5eB"/>
                                                 <constraint firstAttribute="height" constant="90" id="xCm-fM-gkf"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vK-K6-lwU">
-                                            <rect key="frame" x="195" y="60" width="133" height="21"/>
+                                            <rect key="frame" x="155" y="60" width="173" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="WZP-Wy-8qG"/>
                                             </constraints>
