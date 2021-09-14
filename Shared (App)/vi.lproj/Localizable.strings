@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   Turn Off the Lights for Safari
 
@@ -6,25 +6,25 @@
   
 */
 
-"lbleasytosetup" = "Easy to set this up";
-"lblturnoffthelights" = "Turn Off the Lights";
-"lblactivate" = "Activate";
-"lblwatchvideo" = "Watch Video";
-"lblstep1" = "Leave this app";
-"lblstep2a" = "Open the";
-"lblstep2b" = "Settings";
-"lblstep2c" = "app on your device";
-"lblstep3a" = "Search and tap on";
+"lbleasytosetup" = "Dễ dàng thiết lập cái này";
+"lblturnoffthelights" = "Tắt đèn";
+"lblactivate" = "Kích hoạt";
+"lblwatchvideo" = "Xem Video";
+"lblstep1" = "Rời khỏi ứng dụng này";
+"lblstep2a" = "Mở";
+"lblstep2b" = "Thiết đặt";
+"lblstep2c" = "ứng dụng trên thiết bị";
+"lblstep3a" = "Tìm kiểm và chạm vào";
 "lblstep3b" = "Safari";
-"lblstep3c" = ", tap then on";
-"lblstep3d" = "Extensions";
-"lblstep4a" = "Enable";
-"lblstep4b" = "Turn Off the Lights";
-"lblplaceholder" = "Turn Off the Lights Safari extension";
-"lblemailsubject" = "FREE Turn Off the Lights Safari extension";
-"lblsharetwitter" = "Download the free Turn Off the Lights Safari extension to get Dark Mode on all websites. Try it yourself! #iOS15 via @TurnOfftheLight";
-"lblshareregular" = "I just installed this free Turn Off the Lights Safari extension, it is my favorite Safari extension to get Dark Mode on all websites. Try it yourself!";
-"lblsafariextensionstatus" = "Safari Extension is";
-"lblsafariextensionenable" = "Enabled";
-"lblsafariextensiondisable" = "Disabled";
-"lblquickoptions" = "Open Options page";
+"lblstep3c" = ", chạm rồi bật";
+"lblstep3d" = "Tiện ích mở rộng";
+"lblstep4a" = "Cho phép";
+"lblstep4b" = "Tắt đèn";
+"lblplaceholder" = "Tiện ích mở rộng Safari Tắt Đèn";
+"lblemailsubject" = "Tiện ích mở rộng Safari Tắt Đèn MIỄN PHÍ";
+"lblsharetwitter" = "Tải tiện ích mở rộng Safari Tắt Đèn miễn phí để có Chế độ Tối trên mọi trang web. Hãy tự mình thử nó! #iOS15 qua @TurnOfftheLight";
+"lblshareregular" = "Tôi vừa tải tiện ích trình duyệt Safari Tắt Đèn miễn phí này, nó là tiện ích trình duyệt Safari để có Chế độ Tối trên mọi trang web mà tôi thích nhất. Hãy tự mình thử nó!";
+"lblsafariextensionstatus" = "Tiện ích mở rộng Safari là";
+"lblsafariextensionenable" = "Đã kích hoạt";
+"lblsafariextensiondisable" = "Vô hiệu hóa";
+"lblquickoptions" = "Mở trang Tùy chọn";

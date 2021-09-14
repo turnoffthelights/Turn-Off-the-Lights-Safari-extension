@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   Turn Off the Lights for Safari
 
@@ -6,25 +6,25 @@
   
 */
 
-"lbleasytosetup" = "Easy to set this up";
+"lbleasytosetup" = "Так легко встановити";
 "lblturnoffthelights" = "Turn Off the Lights";
-"lblactivate" = "Activate";
-"lblwatchvideo" = "Watch Video";
-"lblstep1" = "Leave this app";
-"lblstep2a" = "Open the";
-"lblstep2b" = "Settings";
-"lblstep2c" = "app on your device";
-"lblstep3a" = "Search and tap on";
+"lblactivate" = "Активувати";
+"lblwatchvideo" = "Дивитися Відео";
+"lblstep1" = "Згорніть цей додаток";
+"lblstep2a" = "Відкрийте";
+"lblstep2b" = "Налаштування";
+"lblstep2c" = "застосунок на вашому прийстрої";
+"lblstep3a" = "Знайдіть і натисніть на";
 "lblstep3b" = "Safari";
-"lblstep3c" = ", tap then on";
-"lblstep3d" = "Extensions";
-"lblstep4a" = "Enable";
+"lblstep3c" = ", потім натисніть на";
+"lblstep3d" = "Розширення";
+"lblstep4a" = "Увімкнено";
 "lblstep4b" = "Turn Off the Lights";
-"lblplaceholder" = "Turn Off the Lights Safari extension";
-"lblemailsubject" = "FREE Turn Off the Lights Safari extension";
-"lblsharetwitter" = "Download the free Turn Off the Lights Safari extension to get Dark Mode on all websites. Try it yourself! #iOS15 via @TurnOfftheLight";
-"lblshareregular" = "I just installed this free Turn Off the Lights Safari extension, it is my favorite Safari extension to get Dark Mode on all websites. Try it yourself!";
-"lblsafariextensionstatus" = "Safari Extension is";
-"lblsafariextensionenable" = "Enabled";
-"lblsafariextensiondisable" = "Disabled";
-"lblquickoptions" = "Open Options page";
+"lblplaceholder" = "Розширення Turn Off the Lights для Safari";
+"lblemailsubject" = "БЕЗКОШТОВНЕ розширення Turn Off the Lights для Safari";
+"lblsharetwitter" = "Завантажте безкоштовне розширення Turn Off the Lights для Safari, щоб отримати Темний режим на всіх веб-сайтах. Спробуйте самі! #iOS15 через @TurnOfftheLight";
+"lblshareregular" = "Я щойно встановив безкоштовне розширення Turn Off the Lights для Safari, це моє улюблене розширення Safari, щоб отримати Темний режим на всі веб-сайтах. Спробуйте самі!";
+"lblsafariextensionstatus" = "Додаток для Safari";
+"lblsafariextensionenable" = "Ввімкнено";
+"lblsafariextensiondisable" = "Вимкнено";
+"lblquickoptions" = "Відкрити сторінку налаштувань";

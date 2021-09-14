@@ -1,5 +1,5 @@
 /* Class = "UILabel"; text = "Share this app"; ObjectID = "0xC-8g-1Gv"; */
-"0xC-8g-1Gv.text" = "Partager cette application";
+"0xC-8g-1Gv.text" = "Partagez cette application";
 
 /* Class = "UITableViewSection"; headerTitle = "Help"; ObjectID = "0xj-1s-361"; */
 "0xj-1s-361.headerTitle" = "Aide";
@@ -11,7 +11,7 @@
 "3YG-8K-hfa.title" = "Turn Off the Lights";
 
 /* Class = "UILabel"; text = "Other apps"; ObjectID = "49d-ST-IOy"; */
-"49d-ST-IOy.text" = "Autres applications";
+"49d-ST-IOy.text" = "Autres apps";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "4vK-K6-lwU"; */
 "4vK-K6-lwU.text" = "Label";
@@ -35,22 +35,22 @@
 "B30-5t-0qX.headerTitle" = "Extension de navigateur";
 
 /* Class = "UITableViewSection"; headerTitle = "Guide"; ObjectID = "Bou-rk-djw"; */
-"Bou-rk-djw.headerTitle" = "Guider";
+"Bou-rk-djw.headerTitle" = "Tutoriel";
 
 /* Class = "UILabel"; text = "Hard Disk"; ObjectID = "CNU-C9-Jvh"; */
 "CNU-C9-Jvh.text" = "Hard Disk";
 
 /* Class = "UIButton"; normalTitle = "Manage Options"; ObjectID = "Cqc-uS-erT"; */
-"Cqc-uS-erT.normalTitle" = "Gérer les options";
+"Cqc-uS-erT.normalTitle" = "Options";
 
 /* Class = "UILabel"; text = "Version"; ObjectID = "EpI-DN-Nyv"; */
 "EpI-DN-Nyv.text" = "Version";
 
 /* Class = "UILabel"; text = "No Connection"; ObjectID = "JOQ-kt-hRG"; */
-"JOQ-kt-hRG.text" = "Pas de Connexion";
+"JOQ-kt-hRG.text" = "Aucune connexion";
 
 /* Class = "UIButton"; normalTitle = "Translate the Safari extension in your local language"; ObjectID = "LNZ-Yg-yKq"; */
-"LNZ-Yg-yKq.normalTitle" = "Traduire l'extension Safari dans votre langue locale";
+"LNZ-Yg-yKq.normalTitle" = "Traduire l'extension Safari dans votre langue";
 
 /* Class = "UITabBarItem"; title = "More"; ObjectID = "Lu9-5p-UCh"; */
 "Lu9-5p-UCh.title" = "Plus";
@@ -122,7 +122,7 @@
 "tME-ct-sBk.text" = "Licences";
 
 /* Class = "UINavigationItem"; title = "Other apps"; ObjectID = "udT-Mh-cjM"; */
-"udT-Mh-cjM.title" = "Autres applications";
+"udT-Mh-cjM.title" = "Autres apps";
 
 /* Class = "UILabel"; text = "GPL 2.0"; ObjectID = "v3E-8P-XQW"; */
 "v3E-8P-XQW.text" = "GPL 2.0";
@@ -137,7 +137,7 @@
 "yBg-ic-sw9.title" = "Actualité";
 
 /* Class = "UIButton"; configuration.title = "Share"; ObjectID = "yR6-ag-wTG"; */
-"yR6-ag-wTG.configuration.title" = "Partager";
+"yR6-ag-wTG.configuration.title" = "Partagez";
 
 /* Class = "UIButton"; normalTitle = "Share"; ObjectID = "yR6-ag-wTG"; */
-"yR6-ag-wTG.normalTitle" = "Partager";
+"yR6-ag-wTG.normalTitle" = "Partagez";
