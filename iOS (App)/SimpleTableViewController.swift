@@ -13,7 +13,7 @@ class SimpleTableViewController: UIViewController {
     var datasource: UICollectionViewDiffableDataSource<Section, Item>!
     
     lazy var mainSectionItems = [Item(type: .row, title: "Home", image: UIImage(systemName: "house")!),
-                                 Item(type: .row, title: "Video", image: UIImage(systemName: "film")!),
+                                 Item(type: .row, title: "Videos", image: UIImage(systemName: "film")!),
                                  Item(type: .row, title: "News", image: UIImage(systemName: "newspaper")!),
                                  Item(type: .row, title: "More", image: UIImage(systemName: "ellipsis")!)
     ]
