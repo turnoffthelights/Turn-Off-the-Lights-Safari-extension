@@ -2746,7 +2746,6 @@ function domcontentloaded(){
 		$("interval").value = 0; $("slider").value = 0; showValue(0);
 		$("mousespotlightt").checked = true;
 		$("lampandnightmode").checked = true;
-		//todo
 		chrome.runtime.sendMessage({name: "sendclearscreenshader"});
 		var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
 		save_options(); test(); ariacheck();
