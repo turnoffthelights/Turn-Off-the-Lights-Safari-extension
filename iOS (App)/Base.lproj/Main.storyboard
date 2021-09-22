@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XgQ-Ap-W4Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XgQ-Ap-W4Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -832,6 +832,66 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Pxr-r7-CzG">
+                                        <rect key="frame" x="20" y="455.5" width="374" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pxr-r7-CzG" id="Q2a-24-igK">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppHomeTab" translatesAutoresizingMaskIntoConstraints="NO" id="wpc-QO-CDl">
+                                                    <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="331-yY-1So"/>
+                                                        <constraint firstAttribute="height" constant="60" id="aZz-UG-rjx"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GT1-ma-5ID">
+                                                    <rect key="frame" x="95" y="21" width="264" height="58.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Tab for Safari" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-fN-BAX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpC-XX-ajP">
+                                                            <rect key="frame" x="0.0" y="28.5" width="264" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="Ihf-DJ-Eog"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="jv3-hK-Hw1"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Download"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="AccentColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wpc-QO-CDl" secondAttribute="bottom" constant="9" id="1f6-84-UTR"/>
+                                                <constraint firstItem="wpc-QO-CDl" firstAttribute="top" secondItem="Q2a-24-igK" secondAttribute="topMargin" constant="9" id="6qF-pL-B7U"/>
+                                                <constraint firstItem="GT1-ma-5ID" firstAttribute="centerY" secondItem="Q2a-24-igK" secondAttribute="centerY" id="KBT-aX-ZIc"/>
+                                                <constraint firstItem="GT1-ma-5ID" firstAttribute="right" secondItem="Q2a-24-igK" secondAttribute="right" constant="-15" id="X2z-fE-2Pa"/>
+                                                <constraint firstItem="GT1-ma-5ID" firstAttribute="leading" secondItem="wpc-QO-CDl" secondAttribute="trailing" constant="15" id="mKL-uT-nQ1"/>
+                                                <constraint firstItem="wpc-QO-CDl" firstAttribute="leading" secondItem="Q2a-24-igK" secondAttribute="leadingMargin" id="vWQ-bF-TIe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1080,6 +1140,7 @@
     <resources>
         <image name="AppDateToday" width="250" height="250"/>
         <image name="AppHardDisk" width="60" height="60"/>
+        <image name="AppHomeTab" width="250" height="250"/>
         <image name="AppMyChristmasTree" width="60" height="60"/>
         <image name="AppSunrise" width="60" height="60"/>
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>

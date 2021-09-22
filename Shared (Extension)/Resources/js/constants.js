@@ -35,4 +35,4 @@ const linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
 const linktotlmobileapp = "https://www.turnoffthelights.com/mobile.html";
 const linkgamepad = "https://www.turnoffthelights.com/game-controller/";
 const devmode = true;
-const devdonate = true;
+const devdonate = false;

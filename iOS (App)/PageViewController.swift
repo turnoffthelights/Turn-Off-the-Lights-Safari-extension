@@ -57,7 +57,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         super.viewWillAppear(animated);
         
         closeButton.alpha = 0
-        UIView.animate(withDuration: 1.0, delay: 3.0, animations: {
+        UIView.animate(withDuration: 1.0, delay: 5.0, animations: {
             self.closeButton.alpha = 1.0
         })
 

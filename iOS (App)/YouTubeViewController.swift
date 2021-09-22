@@ -64,6 +64,38 @@ class YouTubeViewController: UITableViewController{
         // Do any additional setup after loading the view, typically from a nib.
         setLoadingScreen()
         
+        let videoa = Video()
+        videoa.Key = "GSEqAjzy_hg"
+        videoa.Title = "⚡️Introduction Turn Off the Lights for Safari on iOS 15"
+        videos.append(videoa)
+        
+        let videob = Video()
+        videob.Key = "la3l4IQrtbo"
+        videob.Title = "🔵How to enable Safari Extension iOS 15?"
+        videos.append(videob)
+        
+        let videoc = Video()
+        videoc.Key = "vubVpLm8ldk"
+        videoc.Title = "🔵How to enable the Night Owl profile on iOS 15?"
+        videos.append(videoc)
+        
+        let videod = Video()
+        videod.Key = "3TNYUG9O-u8"
+        videod.Title = "🔵How to enable the Eye Protection profile on iOS 15?"
+        videos.append(videod)
+
+        let videoe = Video()
+        videoe.Key = "Rm8nKaPlnSI"
+        videoe.Title = "🔵How to enable the Video Lover profile on iOS 15?"
+        videos.append(videoe)
+        
+        let videof = Video()
+        videof.Key = "91DmhjsCb_Y"
+        videof.Title = "🔵How to open the Turn Off the Lights Options page on iOS 15?"
+        videos.append(videof)
+
+        // -- general videos
+        
         let video = Video()
         video.Key = "yONZVLA72ZM"
         video.Title = "🔔Introduction - Turn Off the Lights Browser Extension version 4"

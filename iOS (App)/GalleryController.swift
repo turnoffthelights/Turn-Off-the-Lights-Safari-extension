@@ -133,6 +133,20 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
             }
             safariVC.delegate = self
             present(safariVC, animated: true, completion: nil)
+        }else if indexPath.row == 4 {
+            // check if website exists
+            guard let url = URL(string: "https://apps.apple.com/app/id1585512140") else {
+            return
+            }
+
+            let safariVC = SFSafariViewController(url: url)
+            safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
+            // Check if user is on iPad and present popover
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                safariVC.popoverPresentationController?.sourceView = self.view
+            }
+            safariVC.delegate = self
+            present(safariVC, animated: true, completion: nil)
         }
         
         tableView.deselectRow(at: indexPath, animated: true)

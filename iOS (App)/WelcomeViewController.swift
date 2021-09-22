@@ -95,7 +95,6 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         
     @IBOutlet weak var btnshare: UIButton!
     @IBAction func bigshareaction(_ sender: Any) {
-        DispatchQueue.main.async {
             let url = URL(string: "https://www.turnoffthelights.com")!
             LPMetadataProvider().startFetchingMetadata(for: url) { [self] linkMetadata, _ in
                 //linkMetadata?.iconProvider = linkMetadata?.imageProvider
@@ -104,9 +103,13 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
                 let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
                 // Check if user is on iPad and present popover
                 if UIDevice.current.userInterfaceIdiom == .pad {
-                    ac.popoverPresentationController?.sourceView = self.btnshare
-                    ac.popoverPresentationController?.sourceRect = self.btnshare.bounds;
-                    ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down;
+                    DispatchQueue.main.async {
+                        if let popoverPresentationController = ac.popoverPresentationController {
+                            popoverPresentationController.sourceView = self.btnshare
+                            popoverPresentationController.sourceRect = self.btnshare.bounds;
+                            popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.down;
+                        }
+                    }
                 }
                 
                 let generator = UIImpactFeedbackGenerator(style: .medium)
@@ -117,7 +120,6 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
                     self.present(ac, animated: true)
                 }
             }
-        }
     }
 
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
