@@ -41,7 +41,12 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
 
     @IBOutlet weak var imagepeople: UIImageView!
     func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
-        return self.metadata
+        let metadata = LPLinkMetadata()
+        metadata.originalURL = URL(string: "https://www.turnoffthelights.com")
+        metadata.url = metadata.originalURL
+        metadata.title = String.localizedStringWithFormat(NSLocalizedString("lblplaceholder", comment: ""), "")
+        metadata.imageProvider = NSItemProvider.init(contentsOf:Bundle.main.url(forResource: "share-lamp", withExtension: "png"))
+        return metadata
     }
 
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
@@ -95,31 +100,26 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         
     @IBOutlet weak var btnshare: UIButton!
     @IBAction func bigshareaction(_ sender: Any) {
-            let url = URL(string: "https://www.turnoffthelights.com")!
-            LPMetadataProvider().startFetchingMetadata(for: url) { [self] linkMetadata, _ in
-                //linkMetadata?.iconProvider = linkMetadata?.imageProvider
-                self.metadata = linkMetadata
-                let items = [self]
-                let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-                // Check if user is on iPad and present popover
-                if UIDevice.current.userInterfaceIdiom == .pad {
-                    DispatchQueue.main.async {
-                        if let popoverPresentationController = ac.popoverPresentationController {
-                            popoverPresentationController.sourceView = self.btnshare
-                            popoverPresentationController.sourceRect = self.btnshare.bounds;
-                            popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.down;
-                        }
-                    }
-                }
-                
-                let generator = UIImpactFeedbackGenerator(style: .medium)
-                generator.impactOccurred()
-                
-                // Present share activityView on regular iPhone
-                DispatchQueue.main.async {
-                    self.present(ac, animated: true)
+        let items = [self]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        // Check if user is on iPad and present popover
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            DispatchQueue.main.async {
+                if let popoverPresentationController = ac.popoverPresentationController {
+                    popoverPresentationController.sourceView = self.btnshare
+                    popoverPresentationController.sourceRect = self.btnshare.bounds;
+                    popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.down;
                 }
             }
+        }
+
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+
+        // Present share activityView on regular iPhone
+        DispatchQueue.main.async {
+            self.present(ac, animated: true)
+        }
     }
 
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {

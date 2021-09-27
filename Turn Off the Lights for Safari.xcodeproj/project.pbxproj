@@ -20,6 +20,7 @@
 		1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */; };
 		1E4CB227268CDC2300015282 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */; };
 		1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */; };
+		1E665AF826FE6B48002ED59A /* share-lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E665AF726FE6B48002ED59A /* share-lamp.png */; };
 		1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762772681F2B800995D6C /* MasterViewController.swift */; };
 		1E67627A2681F42E00995D6C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762792681F42E00995D6C /* SplitViewController.swift */; };
 		1E6C4913267B83C3001048CF /* forest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C4907267B83C2001048CF /* forest.mov */; };
@@ -174,6 +175,7 @@
 		1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_test.swift; sourceTree = "<group>"; };
 		1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-iOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_test.swift; sourceTree = "<group>"; };
+		1E665AF726FE6B48002ED59A /* share-lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-lamp.png"; sourceTree = "<group>"; };
 		1E6762772681F2B800995D6C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		1E6762792681F42E00995D6C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		1E6C4907267B83C2001048CF /* forest.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = forest.mov; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 			children = (
 				1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */,
 				1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */,
+				1E665AF726FE6B48002ED59A /* share-lamp.png */,
 				1E70C9FA26726F380064A939 /* AppDelegate.swift */,
 				1E6762772681F2B800995D6C /* MasterViewController.swift */,
 				1E151BB2267FC78E0004E9E3 /* SidebarController.swift */,
@@ -851,6 +854,7 @@
 				1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */,
 				1EBA02C826D56B2100EDF450 /* LaunchScreen.storyboard in Resources */,
 				1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */,
+				1E665AF826FE6B48002ED59A /* share-lamp.png in Resources */,
 				1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */,
 				1E2F2BF526CC4F160033C5E7 /* Main.storyboard in Resources */,
 				1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */,
@@ -1504,7 +1508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -1519,7 +1523,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = iphoneos;
@@ -1534,7 +1538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -1549,7 +1553,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = iphoneos;
@@ -1567,7 +1571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -1585,7 +1589,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,
@@ -1605,7 +1609,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -1623,7 +1627,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,
@@ -1643,7 +1647,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1661,7 +1665,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = macosx;
@@ -1676,7 +1680,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1694,7 +1698,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = macosx;
@@ -1711,7 +1715,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1730,7 +1734,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,
@@ -1750,7 +1754,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1769,7 +1773,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.1;
+				MARKETING_VERSION = 4.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,
