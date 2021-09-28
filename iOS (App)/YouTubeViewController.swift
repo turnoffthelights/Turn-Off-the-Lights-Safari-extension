@@ -7,10 +7,15 @@
 
 import UIKit
 import SafariServices
+import AVFoundation
+import AVKit
+import AudioToolbox
 
 //UITableViewDelegate, UITableViewDataSource
 class YouTubeViewController: UITableViewController{
-
+    @IBOutlet weak var videolayer: UIView!
+    @IBOutlet weak var imageinspiration: UIImageView!
+    
     // View which contains the loading text and the spinner
     let loadingView = UIView()
 
@@ -61,6 +66,7 @@ class YouTubeViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         setLoadingScreen()
         
@@ -135,6 +141,62 @@ class YouTubeViewController: UITableViewController{
         video8.Key = "P9_tK6p-YOU"
         video8.Title = "🔵How to enable the block 60fps on YouTube?"
         videos.append(video8)
+        
+        addvideo()
+    }
+    
+    func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {
+        let timestamp = CMTime(seconds: seconds, preferredTimescale: 60)
+        let asset = AVURLAsset(url: moviePath)
+        let generator = AVAssetImageGenerator(asset: asset)
+        generator.appliesPreferredTrackTransform = true
+
+        guard let imageRef = try? generator.copyCGImage(at: timestamp, actualTime: nil) else {
+            return nil
+        }
+        return UIImage(cgImage: imageRef)
+    }
+    
+    @IBAction func openyoutube(_ sender: Any) {
+        if let url = URL(string: "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    private var player: AVQueuePlayer!
+    private var playerLayer: AVPlayerLayer!
+    private var playerItem: AVPlayerItem!
+    private var playerLooper: AVPlayerLooper!
+
+    // Fixed to update size on iPad to full size
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        playerLayer.frame = videolayer.layer.bounds
+    }
+    
+    func addvideo(){
+        let path = Bundle.main.path(forResource: "forest", ofType: "mov")
+        let pathURL = URL(fileURLWithPath: path!)
+        let duration = Int64( ( (Float64(CMTimeGetSeconds(AVAsset(url: pathURL).duration)) *  10.0) - 1) / 10.0 )
+
+        player = AVQueuePlayer()
+        player.volume = 0
+        playerLayer = AVPlayerLayer(player: player)
+        playerItem = AVPlayerItem(url: pathURL)
+        playerLooper = AVPlayerLooper(player: player, templateItem: playerItem,
+                                      timeRange: CMTimeRange(start: CMTime.zero, end: CMTimeMake(value: duration, timescale: 1)) )
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        playerLayer.frame = videolayer.layer.bounds
+
+        videolayer.layer.insertSublayer(playerLayer, at: 1)
+        player.play()
+        
+//        playerLayer.cornerRadius = 15
+//        playerLayer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMinXMinYCorner]
+//        playerLayer.masksToBounds = true
+     
+        // poster avplayer
+        imageinspiration.image = imagePreview(from: pathURL, in: 0.0)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

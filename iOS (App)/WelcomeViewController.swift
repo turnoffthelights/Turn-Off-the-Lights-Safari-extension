@@ -75,7 +75,7 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
     override func viewDidLoad(){
         super.viewDidLoad()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if traitCollection.horizontalSizeClass == .compact {

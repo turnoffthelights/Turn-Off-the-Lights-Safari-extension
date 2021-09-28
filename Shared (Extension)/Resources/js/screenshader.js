@@ -36,42 +36,6 @@ function setAttributes(el, attrs){
 	}
 }
 
-function setnightmetatheme(a){
-	const metas = document.getElementsByTagName("meta");
-	var darktheme, lighttheme;
-
-	var newnightmodetcolor = nightmodebck;
-	if(a == true){
-		// night mode is disable
-		darktheme = currennightthemedark;
-		lighttheme = currentnightthemelight;
-	}else{
-		// night mode is active
-		darktheme = newnightmodetcolor;
-		lighttheme = newnightmodetcolor;
-	}
-
-	var i, l = metas.length;
-	for(i = 0; i < l; i++){
-		if(metas[i].getAttribute("name") == "theme-color"){
-			if(metas[i].getAttribute("media")){
-				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){ metas[i].setAttribute("content", lighttheme); }else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){ metas[i].setAttribute("content", darktheme); }
-			}else{
-				metas[i].setAttribute("content", lighttheme);
-			}
-		}
-	}
-
-	var x = document.querySelector("meta[name=\"theme-color\"]");
-	if(x == null){
-		// create one theme-color
-		var newmeta = document.createElement("meta");
-		newmeta.name = "theme-color";
-		newmeta.setAttribute("content", lighttheme);
-		document.getElementsByTagName("head")[0].appendChild(newmeta);
-	}
-}
-
 var fg_red, fg_green, fg_blue, result_red, result_green, result_blue, result;
 function newconvertHex(hex, opacity){
 	hex = hex.replace("#", "");
