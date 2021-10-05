@@ -1,4 +1,3 @@
-
 /* Class = "UILabel"; text = "There is so much more you can do. And everything can be customized on the Turn Off the Lights Options page, so it matches your personal style and preferences."; ObjectID = "0OB-Fg-auw"; */
 "0OB-Fg-auw.text" = "There is so much more you can do. And everything can be customized on the Turn Off the Lights Options page, so it matches your personal style and preferences.";
 
@@ -6,7 +5,7 @@
 "3Cj-kM-e8I.text" = "Activate";
 
 /* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "B4r-RH-XgV"; */
-"B4r-RH-XgV.text" = "Turn Off the Lights";
+"B4r-RH-XgV.text" = "關燈看影片";
 
 /* Class = "UILabel"; text = "The last profile is the \"Eye Protection\" which dims the web page and adds this dark layer to all newly opened websites and will not remove the layer unless you tap the lamp button again."; ObjectID = "BLb-B0-RK2"; */
 "BLb-B0-RK2.text" = "The last profile is the \"Eye Protection\" which dims the web page and adds this dark layer to all newly opened websites and will not remove the layer unless you tap the lamp button again.";
@@ -27,7 +26,7 @@
 "Ggd-gi-wol.text" = "Options page";
 
 /* Class = "UIButton"; configuration.title = "OK"; ObjectID = "IN9-yT-dQQ"; */
-"IN9-yT-dQQ.configuration.title" = "OK";
+"IN9-yT-dQQ.configuration.title" = "確定";
 
 /* Class = "UIButton"; configuration.title = "Watch Video"; ObjectID = "Imp-Os-wOD"; */
 "Imp-Os-wOD.configuration.title" = "Watch Video";
@@ -51,10 +50,10 @@
 "O1s-ZN-JTo.text" = "Video Lover Profile";
 
 /* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "OWs-Lg-34j"; */
-"OWs-Lg-34j.text" = "Turn Off the Lights";
+"OWs-Lg-34j.text" = "關燈看影片";
 
 /* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "PJs-v5-LSN"; */
-"PJs-v5-LSN.text" = "Turn Off the Lights";
+"PJs-v5-LSN.text" = "關燈看影片";
 
 /* Class = "UIButton"; configuration.title = "2"; ObjectID = "QUA-an-ILC"; */
 "QUA-an-ILC.configuration.title" = "2";
@@ -78,7 +77,7 @@
 "b5Q-cU-SYm.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "c0N-xl-bA1"; */
-"c0N-xl-bA1.text" = "Turn Off the Lights";
+"c0N-xl-bA1.text" = "關燈看影片";
 
 /* Class = "UIButton"; configuration.title = "3"; ObjectID = "e2Y-OR-G7m"; */
 "e2Y-OR-G7m.configuration.title" = "3";
@@ -93,10 +92,10 @@
 "j8t-bB-hiC.text" = "Enable Turn Off the Lights";
 
 /* Class = "UILabel"; text = "Welcome"; ObjectID = "kSN-m6-Tb4"; */
-"kSN-m6-Tb4.text" = "Welcome";
+"kSN-m6-Tb4.text" = "歡迎";
 
 /* Class = "UILabel"; text = "You can set 3 types of button actions for the lamp button. The default action is the Video Lover profile, which will dim the web page and highlight the video player if available."; ObjectID = "lLD-al-AhY"; */
-"lLD-al-AhY.text" = "You can set 3 types of button actions for the lamp button. The default action is the Video Lover profile, which will dim the web page and highlight the video player if available.";
+"lLD-al-AhY.text" = "There is 3 kind of button actions you can set for the lamp button. The default action is the Video Lover profile. That will dim the web page and highlight the video player if available.";
 
 /* Class = "UIButton"; configuration.title = "1"; ObjectID = "lOv-lD-98t"; */
 "lOv-lD-98t.configuration.title" = "1";
@@ -105,7 +104,7 @@
 "lOv-lD-98t.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "mqJ-SP-Haf"; */
-"mqJ-SP-Haf.text" = "Turn Off the Lights";
+"mqJ-SP-Haf.text" = "關燈看影片";
 
 /* Class = "UILabel"; text = "Button Action"; ObjectID = "nb0-q9-EJC"; */
 "nb0-q9-EJC.text" = "Button Action";

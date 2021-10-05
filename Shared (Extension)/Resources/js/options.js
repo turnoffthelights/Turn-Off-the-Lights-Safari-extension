@@ -461,10 +461,14 @@ function read_options(){
 		closeMaterialYouTubeCancel(e);
 	});
 
+	function getBool(val){
+		return !!JSON.parse(String(val).toLowerCase());
+	}
+
 	function showhidemodal(name, visible, status){
 		document.getElementById(name).className = visible;
 		document.getElementById(name).setAttribute("aria-disabled", status);
-		setmetathemepopup(status);
+		setmetathemepopup(getBool(status));
 	}
 
 	// dialog
@@ -2349,6 +2353,35 @@ function seticonstyle(a, b, c){
 	$("icondarkon").style.opacity = c;
 }
 
+function manualthemechoice(a){
+	if(a == 1){
+		mantheme = "#232323";
+		manualthemechoose = 1;
+	}else{
+		mantheme = "#ffffff";
+		manualthemechoose = 0;
+	}
+
+	var x = document.getElementById("manualtheme");
+	if(x == null){
+		// create one theme-color
+		var newmeta = document.createElement("meta");
+		newmeta.id = "manualtheme";
+		newmeta.name = "theme-color";
+		newmeta.setAttribute("content", mantheme);
+		document.getElementsByTagName("head")[0].insertBefore(newmeta, document.getElementsByTagName("head")[0].firstChild);
+	}else{
+		x.setAttribute("content", mantheme);
+	}
+}
+
+function removemanualthemechoice(){
+	var m = document.getElementById("manualtheme");
+	if(m){
+		document.getElementById("manualtheme").remove();
+	}
+}
+
 function checkdarkmode(){
 	chrome.storage.sync.get(["darkmode"], function(items){
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
@@ -2357,9 +2390,11 @@ function checkdarkmode(){
 		if(darkmode == 1){
 			godarkmode();
 			seticonstyle(0, 0, 1);
+			manualthemechoice(1);
 		}else if(darkmode == 0){
 			golightmode();
 			seticonstyle(0, 1, 0);
+			manualthemechoice(0);
 		}else if(darkmode == 2){
 			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
 				godarkmode();
@@ -2367,6 +2402,7 @@ function checkdarkmode(){
 				golightmode();
 			}
 			seticonstyle(1, 0, 0);
+			removemanualthemechoice();
 		}
 	});
 }
@@ -2438,6 +2474,12 @@ function setmetatheme(a){
 				}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
 					metas[i].setAttribute("content", darktheme);
 				}
+			}else{
+				if(manualthemechoose == 1){
+					metas[i].setAttribute("content", darktheme);
+				}else{
+					metas[i].setAttribute("content", lighttheme);
+				}
 			}
 		}
 	}
@@ -2449,12 +2491,12 @@ function setmetathemepopup(a){
 	var lighttheme;
 
 	if(a == true){
+		darktheme = "#232323";
+		lighttheme = "#ffffff";
+	}else{
 		// top status bar color => if popup is open
 		darktheme = "#111111";
 		lighttheme = "#7f7f7f";
-	}else{
-		darktheme = "#232323";
-		lighttheme = "#ffffff";
 	}
 
 	let i, l = metas.length;
@@ -2579,18 +2621,21 @@ function domcontentloaded(){
 			golightmode();
 		}
 		seticonstyle(1, 0, 0);
+		removemanualthemechoice()
 		chrome.storage.sync.set({"darkmode":2});
 	});
 
 	$("btnactivedarkmodeoff").addEventListener("click", function(){
 		golightmode();
 		seticonstyle(0, 1, 0);
+		manualthemechoice(0);
 		chrome.storage.sync.set({"darkmode":0});
 	});
 
 	$("btnactivedarkmodeon").addEventListener("click", function(){
 		godarkmode();
 		seticonstyle(0, 0, 1);
+		manualthemechoice(1);
 		chrome.storage.sync.set({"darkmode":1});
 	});
 
@@ -2693,10 +2738,13 @@ function domcontentloaded(){
 	}
 
 	$("reveal-menu").addEventListener("click", function(){
-		if(this.checked == true){
-			setmetatheme(true);
-		}else{
-			setmetatheme(false);
+		// only set the meta theme sidebar for small screen 480px device
+		if(window.innerWidth < 480){
+			if(this.checked == true){
+				setmetatheme(true);
+			}else{
+				setmetatheme(false);
+			}
 		}
 	});
 

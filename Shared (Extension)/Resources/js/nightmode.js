@@ -355,6 +355,7 @@ const afterBodyReady = () => {
 					// Else create it
 					if(node.classList.contains("stefanvdnightbck") == false){
 						var thatbckishere = false;
+						var thatskipimage = false;
 						if(node.currentStyle){
 							y = node.currentStyle["background-color"];
 							z = node.currentStyle["background-image"];
@@ -380,15 +381,18 @@ const afterBodyReady = () => {
 									thatbckishere = true;
 								}
 							}else if(z.indexOf("linear-gradient") || z.indexOf("radial-gradient")){
-								// check if use more than 1X gradient white
-								var bla = occurrences(z, "rgb(255, 255, 255)");
-								if(bla >= 1){ // check if includes it 1 item or more
-									thatbckishere = true;
-								}
-								// check if use more than 1X transparent or rgba(0, 0, 0, 0)
-								var blb = occurrences(z, "rgba(0, 0, 0, 0)");
-								if(blb >= 1){ // check if includes it 1 item or more
-									thatbckishere = true;
+								// if bigger then width 24px
+								if(node.clientWidth >= 24){
+									// check if use more than 1X gradient white
+									var bla = occurrences(z, "rgb(255, 255, 255)");
+									if(bla >= 1){ // check if includes it 1 item or more
+										thatbckishere = true;
+									}
+									// check if use more than 1X transparent or rgba(0, 0, 0, 0)
+									var blb = occurrences(z, "rgba(0, 0, 0, 0)");
+									if(blb >= 1){ // check if includes it 1 item or more
+										thatbckishere = true;
+									}
 								}
 							}else{
 								// div with background image url inside
@@ -399,7 +403,7 @@ const afterBodyReady = () => {
 						}
 
 						// check div do have a background but is smaller then 150px
-						if(z != "none"){
+						if(z != "none" && !z.indexOf("linear-gradient") && !z.indexOf("radial-gradient")){
 							if(node.clientHeight < 150 && node.clientWidth < 150){
 								thatskipimage = true;
 							}
@@ -1794,9 +1798,9 @@ const afterBodyReady = () => {
 				var selectObj = window.getSelection();
 				// if text selection, stop the function
 				if(selectObj.isCollapsed){
-				// console.log("NO TEXT selected here!");
+					// console.log("NO TEXT selected here!");
 				}else{
-				// console.log("TEXT selected here! + CANCEL");
+					// console.log("TEXT selected here! + CANCEL");
 					cancelgesture();
 				}
 			}

@@ -183,25 +183,25 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	}
 });
 
-// Screen Shader inject before displaying the website
-chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
+// Inject before displaying the website
+chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
 	// Filter out non main window events.
 	if(frameId !== 0)return;
-	injectScriptsTo(tabId);
+	injectScriptsTo(tabId, url);
 });
 
-// Safari 15 bug => can not read multiple files. No actions for the 2nd script in array
 // screenshader.js = Screen Shader
-// Night Mode bug skip this, because not work well with 'chrome.webNavigation.onCommitted' on Safari
+// nightmode.js = Night Mode
 const scriptList = ["js/screenshader.js", "js/nightmode.js"];
-
-const injectScriptsTo = (tabId) => {
-	scriptList.forEach((script) => {
-		chrome.tabs.executeScript(tabId, {
-			file: `${script}`,
-			runAt: "document_start",
-		}, () => void chrome.runtime.lastError);
-	});
+const injectScriptsTo = (tabId, url) => {
+	if(url.match(/^http/i) || url.match(/^file/i)){
+		scriptList.forEach((script) => {
+			chrome.tabs.executeScript(tabId, {
+				file: `${script}`,
+				runAt: "document_start",
+			}, () => void chrome.runtime.lastError);
+		});
+	}
 };
 //---
 

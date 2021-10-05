@@ -1482,13 +1482,13 @@
         "message": "明白了"
     },
     "desscrolltip": {
-        "message": "You can scroll inside the top navigation bar and the color bars. When you scroll horizontally, you can see more buttons in this bar."
+        "message": "睡觉睡觉a j j"
     },
     "titleyoutube": {
         "message": "加入Turn Off the Lights 频道。"
     },
     "desyoutube": {
-        "message": "Uncover the power of the Turn Off the Lights browser extension. Watch it now on YouTube."
+        "message": "查看Turn Off the Lights浏览器扩展的力量。现在看看YouTube。"
     },
     "titlesub": {
         "message": "即刻订阅！"
@@ -1545,102 +1545,105 @@
         "message": "选项"
     },
     "desgamepadleftstickpress": {
-        "message": "Left Stick Pressed"
+        "message": "向左置顶"
     },
     "desgamepadrightstickpress": {
-        "message": "Right Stick Pressed"
+        "message": "向左置顶"
     },
     "desgamepaddirup": {
-        "message": "Directional Up"
+        "message": "向上"
     },
     "desgamepaddirdown": {
-        "message": "Directional Down"
+        "message": "向下"
     },
     "desgamepaddirleft": {
-        "message": "Directional Left"
+        "message": "向左"
     },
     "desgamepaddirright": {
-        "message": "Directional Right"
+        "message": "向左"
     },
     "desgamepadxboxlogo": {
         "message": "Xbox Logo"
     },
     "desgamepadpslogo": {
-        "message": "PlayStation Logo"
+        "message": "游戏站标志"
     },
     "desgpbuttonzoominout": {
-        "message": "Zoom in or out"
+        "message": "放大 / 缩小"
     },
     "desgpbuttonzoompos": {
-        "message": "Zoom position"
+        "message": "缩放位置"
     },
     "desgpbuttonbackwardsmall": {
-        "message": "play back 1 second"
+        "message": "回放1秒"
     },
     "desgpbuttonbackwardbig": {
-        "message": "play back 3 seconds"
+        "message": "回放3秒"
     },
     "desgpbuttonforwardsmall": {
-        "message": "play forward 1 second"
+        "message": "快进1秒"
     },
     "desgpbuttonforwardbig": {
-        "message": "play forward 3 seconds"
+        "message": "快进3秒"
     },
     "desgpbuttonhome": {
-        "message": "Gamepad video test page"
+        "message": "Gamepad 视频测试页面"
     },
     "desgpbuttondirup": {
-        "message": "Move the view up"
+        "message": "上移视图"
     },
     "desgpbuttondirdown": {
-        "message": "Move the view down"
+        "message": "下移视图"
     },
     "desgpbuttondirleft": {
-        "message": "Move the view left"
+        "message": "左移视图"
     },
     "desgpbuttondirright": {
-        "message": "Move the view right"
+        "message": "右移视图"
     },
     "desgpbuttondirreset": {
-        "message": "Reset the zoom view"
+        "message": "重置缩放视图"
     },
     "desgpbuttonshare": {
-        "message": "Exit Zoom Edit"
+        "message": "退出缩放编辑"
     },
     "desgpbuttonplaypause": {
-        "message": "Play/Pause the current video"
+        "message": "播放/暂停当前视频"
     },
     "desgpbuttonvolumeincrease": {
-        "message": "Increase volume"
+        "message": "增加音量"
     },
     "desgpbuttonvolumedecrease": {
-        "message": "Decrease volume"
+        "message": "减小音量"
     },
     "desgpbuttonnextvideo": {
-        "message": "Play next YouTube video"
+        "message": "播放下一个 YouTube 视频"
     },
     "desgpbuttonprevvideo": {
-        "message": "Play previous YouTube video"
+        "message": "播放上一个 YouTube 视频"
     },
     "titelgpconnect": {
-        "message": "Connected"
+        "message": "已连接"
     },
     "titelgpdisconnect": {
-        "message": "Disconnected"
+        "message": "断开连接"
     },
     "desnightmodeos": {
-        "message": "Automatically switch the current web page to Night Mode if the OS appearance is set to Dark"
+        "message": "如果操作系统外观设置为暗色，自动切换当前网页到夜间模式"
     },
     "titelonoff": {
-        "message": "ON/OFF"
+        "message": "开/关"
     },
     "titelnightmodeborder": {
-        "message": "Border color"
+        "message": "边框颜色"
     },
     "titleinfobx": {
-        "message": "Info"
+        "message": "信息"
     },
     "permissionwebnav": {
         "message": "这将在网页加载前就添加夜间模式。"
+    },
+    "desnmautoclock": {
+        "message": "在以下小时之间激活："
     }
 }

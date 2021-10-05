@@ -266,7 +266,7 @@
                                     <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     <state key="normal" title="Translate the Safari extension in your local language">
                                         <color key="titleColor" systemColor="labelColor"/>
-                                        <imageReference key="image" image="doc.plaintext.fill" catalog="system" symbolScale="large"/>
+                                        <imageReference key="image" image="doc.plaintext" catalog="system" symbolScale="large"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                     </state>
                                     <connections>
@@ -1215,7 +1215,7 @@
         <image name="AppHomeTab" width="250" height="250"/>
         <image name="AppMyChristmasTree" width="60" height="60"/>
         <image name="AppSunrise" width="60" height="60"/>
-        <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
+        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="house" catalog="system" width="128" height="106"/>

@@ -204,13 +204,10 @@ class YouTubeViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! VideoTableViewCell
-        
         cell.videoTitle.text = videos[indexPath.row].Title
-        let url = "https://img.youtube.com/vi/\(videos[indexPath.row].Key)/mqdefault.jpg"
+        let url = "https://img.youtube.com/vi/\(videos[indexPath.row].Key)/maxresdefault.jpg"
         cell.videoImage.downloaded(from: url)
-        
         return cell
     }
     

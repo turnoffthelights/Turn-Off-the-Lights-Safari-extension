@@ -2202,11 +2202,11 @@ function lightsgoonoroff(){
 				var blockbi;
 				for(blockbi = 22; blockbi < 42; blockbi++){ var newdynblockb = document.createElement("div"); newdynblockb.setAttribute("class", "stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blockbi + ""); newdynblockright.appendChild(newdynblockb); }
 			}else if(dynamic3 == true){
-				var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); newdynmaster.appendChild(newdynrainleft);
+				var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class", "stefanvddynamicbackgroundraindrupsleft"); newdynmaster.appendChild(newdynrainleft);
 				var rainlefti;
 				for(rainlefti = 0; rainlefti < 15; rainlefti++){ var newdynraina = document.createElement("div"); newdynraina.setAttribute("class", "stefanvddynamicbackgroundraindrups b" + rainlefti + ""); newdynrainleft.appendChild(newdynraina); }
 
-				var newdynrainright = document.createElement("div"); newdynrainright.setAttribute("class", "stefanvddynamicbackgroundblockright"); newdynmaster.appendChild(newdynrainright);
+				var newdynrainright = document.createElement("div"); newdynrainright.setAttribute("class", "stefanvddynamicbackgroundraindrupsright"); newdynmaster.appendChild(newdynrainright);
 				var rainrighti;
 				for(rainrighti = 16; rainrighti < 31; rainrighti++){ var newdynrainb = document.createElement("div"); newdynrainb.setAttribute("class", "stefanvddynamicbackgroundraindrups b" + rainrighti + ""); newdynrainright.appendChild(newdynrainb); }
 			}else if(dynamic4 == true){
