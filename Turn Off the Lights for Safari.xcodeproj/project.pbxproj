@@ -13,6 +13,26 @@
 		1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BEF26CC4E920033C5E7 /* Walkthrough.storyboard */; };
 		1E2F2BF526CC4F160033C5E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BF726CC4F160033C5E7 /* Main.storyboard */; };
 		1E2F5766267BE9D600C78FFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F5768267BE9D600C78FFC /* Localizable.strings */; };
+		1E331A40283FBDC5008DE3E6 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A35283FBDC5008DE3E6 /* popup.html */; };
+		1E331A41283FBDC5008DE3E6 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A35283FBDC5008DE3E6 /* popup.html */; };
+		1E331A42283FBDC5008DE3E6 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A36283FBDC5008DE3E6 /* icons */; };
+		1E331A43283FBDC5008DE3E6 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A36283FBDC5008DE3E6 /* icons */; };
+		1E331A46283FBDC5008DE3E6 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A38283FBDC5008DE3E6 /* js */; };
+		1E331A47283FBDC5008DE3E6 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A38283FBDC5008DE3E6 /* js */; };
+		1E331A48283FBDC5008DE3E6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A39283FBDC5008DE3E6 /* schema.json */; };
+		1E331A49283FBDC5008DE3E6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A39283FBDC5008DE3E6 /* schema.json */; };
+		1E331A4A283FBDC5008DE3E6 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3A283FBDC5008DE3E6 /* css */; };
+		1E331A4B283FBDC5008DE3E6 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3A283FBDC5008DE3E6 /* css */; };
+		1E331A4C283FBDC5008DE3E6 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3B283FBDC5008DE3E6 /* manifest.json */; };
+		1E331A4D283FBDC5008DE3E6 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3B283FBDC5008DE3E6 /* manifest.json */; };
+		1E331A4E283FBDC5008DE3E6 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3C283FBDC5008DE3E6 /* options.html */; };
+		1E331A4F283FBDC5008DE3E6 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3C283FBDC5008DE3E6 /* options.html */; };
+		1E331A50283FBDC5008DE3E6 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3D283FBDC5008DE3E6 /* images */; };
+		1E331A51283FBDC5008DE3E6 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3D283FBDC5008DE3E6 /* images */; };
+		1E331A52283FBDC5008DE3E6 /* palette.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3E283FBDC5008DE3E6 /* palette.html */; };
+		1E331A53283FBDC5008DE3E6 /* palette.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3E283FBDC5008DE3E6 /* palette.html */; };
+		1E331A54283FBDC5008DE3E6 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3F283FBDC5008DE3E6 /* _locales */; };
+		1E331A55283FBDC5008DE3E6 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 1E331A3F283FBDC5008DE3E6 /* _locales */; };
 		1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */; };
 		1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E378628267CA350003A0F73 /* LicensesViewController.swift */; };
 		1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */; };
@@ -40,33 +60,7 @@
 		1E70CA3226726F380064A939 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9F226726F380064A939 /* SafariWebExtensionHandler.swift */; };
 		1E70CA3326726F380064A939 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70C9F226726F380064A939 /* SafariWebExtensionHandler.swift */; };
 		1E70CA5426726F380064A939 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4526726F380064A939 /* LICENSE */; };
-		1E70CA5526726F380064A939 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4626726F380064A939 /* css */; };
-		1E70CA5626726F380064A939 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4726726F380064A939 /* images */; };
-		1E70CA5726726F380064A939 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4826726F380064A939 /* js */; };
-		1E70CA5826726F380064A939 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4926726F380064A939 /* popup.html */; };
-		1E70CA5926726F380064A939 /* palette.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4A26726F380064A939 /* palette.html */; };
-		1E70CA5A26726F380064A939 /* speech.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4B26726F380064A939 /* speech.html */; };
-		1E70CA5C26726F380064A939 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4D26726F380064A939 /* icons */; };
-		1E70CA5D26726F380064A939 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4E26726F380064A939 /* manifest.json */; };
-		1E70CA5E26726F380064A939 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4F26726F380064A939 /* schema.json */; };
-		1E70CA5F26726F380064A939 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5026726F380064A939 /* options.html */; };
-		1E70CA6026726F380064A939 /* background.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5126726F380064A939 /* background.html */; };
-		1E70CA6126726F380064A939 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5226726F380064A939 /* _locales */; };
-		1E70CA6226726F380064A939 /* motion.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5326726F380064A939 /* motion.html */; };
 		1E70CA6326726F380064A939 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4526726F380064A939 /* LICENSE */; };
-		1E70CA6426726F380064A939 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4626726F380064A939 /* css */; };
-		1E70CA6526726F380064A939 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4726726F380064A939 /* images */; };
-		1E70CA6626726F380064A939 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4826726F380064A939 /* js */; };
-		1E70CA6726726F380064A939 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4926726F380064A939 /* popup.html */; };
-		1E70CA6826726F380064A939 /* palette.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4A26726F380064A939 /* palette.html */; };
-		1E70CA6926726F380064A939 /* speech.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4B26726F380064A939 /* speech.html */; };
-		1E70CA6B26726F380064A939 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4D26726F380064A939 /* icons */; };
-		1E70CA6C26726F380064A939 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4E26726F380064A939 /* manifest.json */; };
-		1E70CA6D26726F380064A939 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA4F26726F380064A939 /* schema.json */; };
-		1E70CA6E26726F380064A939 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5026726F380064A939 /* options.html */; };
-		1E70CA6F26726F380064A939 /* background.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5126726F380064A939 /* background.html */; };
-		1E70CA7026726F380064A939 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5226726F380064A939 /* _locales */; };
-		1E70CA7126726F380064A939 /* motion.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E70CA5326726F380064A939 /* motion.html */; };
 		1E744B4526DE2C1A00BE9D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E744B4726DE2C1A00BE9D86 /* Main.storyboard */; };
 		1E7D1A192672850D00FECE52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1A16267283A700FECE52 /* ViewController.swift */; };
 		1E7D1A1A26728E0500FECE52 /* DaringInfantileDachshund.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E7D1A15267283A600FECE52 /* DaringInfantileDachshund.mp4 */; };
@@ -159,6 +153,16 @@
 		1E2F2BF626CC4F160033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E2F2BF926CC4F4A0033C5E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1E2F5767267BE9D600C78FFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E331A35283FBDC5008DE3E6 /* popup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
+		1E331A36283FBDC5008DE3E6 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		1E331A38283FBDC5008DE3E6 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = Resources/js; sourceTree = "<group>"; };
+		1E331A39283FBDC5008DE3E6 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = Resources/schema.json; sourceTree = "<group>"; };
+		1E331A3A283FBDC5008DE3E6 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; name = css; path = Resources/css; sourceTree = "<group>"; };
+		1E331A3B283FBDC5008DE3E6 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		1E331A3C283FBDC5008DE3E6 /* options.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = options.html; path = Resources/options.html; sourceTree = "<group>"; };
+		1E331A3D283FBDC5008DE3E6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
+		1E331A3E283FBDC5008DE3E6 /* palette.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = palette.html; path = Resources/palette.html; sourceTree = "<group>"; };
+		1E331A3F283FBDC5008DE3E6 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = Resources/_locales; sourceTree = "<group>"; };
 		1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "enable-safari-extension-ipad.mov"; sourceTree = "<group>"; };
 		1E378628267CA350003A0F73 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
 		1E41D60126DC120D00455536 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Walkthrough.strings"; sourceTree = "<group>"; };
@@ -202,19 +206,6 @@
 		1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Turn Off the Lights for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E70CA2526726F380064A939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E70CA4526726F380064A939 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = Resources/LICENSE; sourceTree = "<group>"; };
-		1E70CA4626726F380064A939 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; name = css; path = Resources/css; sourceTree = "<group>"; };
-		1E70CA4726726F380064A939 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
-		1E70CA4826726F380064A939 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = Resources/js; sourceTree = "<group>"; };
-		1E70CA4926726F380064A939 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
-		1E70CA4A26726F380064A939 /* palette.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = palette.html; path = Resources/palette.html; sourceTree = "<group>"; };
-		1E70CA4B26726F380064A939 /* speech.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = speech.html; path = Resources/speech.html; sourceTree = "<group>"; };
-		1E70CA4D26726F380064A939 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
-		1E70CA4E26726F380064A939 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
-		1E70CA4F26726F380064A939 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = Resources/schema.json; sourceTree = "<group>"; };
-		1E70CA5026726F380064A939 /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = Resources/options.html; sourceTree = "<group>"; };
-		1E70CA5126726F380064A939 /* background.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = background.html; path = Resources/background.html; sourceTree = "<group>"; };
-		1E70CA5226726F380064A939 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = Resources/_locales; sourceTree = "<group>"; };
-		1E70CA5326726F380064A939 /* motion.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = motion.html; path = Resources/motion.html; sourceTree = "<group>"; };
 		1E744B4626DE2C1A00BE9D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E744B5826DE2F7800BE9D86 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
 		1E744B5926DE2FC200BE9D86 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -552,19 +543,16 @@
 			isa = PBXGroup;
 			children = (
 				1E70CA4526726F380064A939 /* LICENSE */,
-				1E70CA4626726F380064A939 /* css */,
-				1E70CA4726726F380064A939 /* images */,
-				1E70CA4826726F380064A939 /* js */,
-				1E70CA4926726F380064A939 /* popup.html */,
-				1E70CA4A26726F380064A939 /* palette.html */,
-				1E70CA4B26726F380064A939 /* speech.html */,
-				1E70CA4D26726F380064A939 /* icons */,
-				1E70CA4E26726F380064A939 /* manifest.json */,
-				1E70CA4F26726F380064A939 /* schema.json */,
-				1E70CA5026726F380064A939 /* options.html */,
-				1E70CA5126726F380064A939 /* background.html */,
-				1E70CA5226726F380064A939 /* _locales */,
-				1E70CA5326726F380064A939 /* motion.html */,
+				1E331A3F283FBDC5008DE3E6 /* _locales */,
+				1E331A3A283FBDC5008DE3E6 /* css */,
+				1E331A36283FBDC5008DE3E6 /* icons */,
+				1E331A3D283FBDC5008DE3E6 /* images */,
+				1E331A38283FBDC5008DE3E6 /* js */,
+				1E331A3B283FBDC5008DE3E6 /* manifest.json */,
+				1E331A3C283FBDC5008DE3E6 /* options.html */,
+				1E331A3E283FBDC5008DE3E6 /* palette.html */,
+				1E331A35283FBDC5008DE3E6 /* popup.html */,
+				1E331A39283FBDC5008DE3E6 /* schema.json */,
 			);
 			name = Resources;
 			path = "Shared (Extension)";
@@ -732,7 +720,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					1E4CB209268CC77900015282 = {
 						CreatedOnToolsVersion = 13.0;
@@ -877,20 +865,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E70CA6826726F380064A939 /* palette.html in Resources */,
-				1E70CA6526726F380064A939 /* images in Resources */,
-				1E70CA6C26726F380064A939 /* manifest.json in Resources */,
-				1E70CA6726726F380064A939 /* popup.html in Resources */,
-				1E70CA6B26726F380064A939 /* icons in Resources */,
-				1E70CA7126726F380064A939 /* motion.html in Resources */,
-				1E70CA6426726F380064A939 /* css in Resources */,
-				1E70CA6D26726F380064A939 /* schema.json in Resources */,
+				1E331A52283FBDC5008DE3E6 /* palette.html in Resources */,
+				1E331A50283FBDC5008DE3E6 /* images in Resources */,
+				1E331A46283FBDC5008DE3E6 /* js in Resources */,
+				1E331A42283FBDC5008DE3E6 /* icons in Resources */,
 				1E70CA6326726F380064A939 /* LICENSE in Resources */,
-				1E70CA6926726F380064A939 /* speech.html in Resources */,
-				1E70CA6626726F380064A939 /* js in Resources */,
-				1E70CA6E26726F380064A939 /* options.html in Resources */,
-				1E70CA7026726F380064A939 /* _locales in Resources */,
-				1E70CA6F26726F380064A939 /* background.html in Resources */,
+				1E331A4A283FBDC5008DE3E6 /* css in Resources */,
+				1E331A54283FBDC5008DE3E6 /* _locales in Resources */,
+				1E331A4C283FBDC5008DE3E6 /* manifest.json in Resources */,
+				1E331A48283FBDC5008DE3E6 /* schema.json in Resources */,
+				1E331A40283FBDC5008DE3E6 /* popup.html in Resources */,
+				1E331A4E283FBDC5008DE3E6 /* options.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,20 +883,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E70CA5926726F380064A939 /* palette.html in Resources */,
-				1E70CA5626726F380064A939 /* images in Resources */,
-				1E70CA5D26726F380064A939 /* manifest.json in Resources */,
-				1E70CA5826726F380064A939 /* popup.html in Resources */,
-				1E70CA5C26726F380064A939 /* icons in Resources */,
-				1E70CA6226726F380064A939 /* motion.html in Resources */,
-				1E70CA5526726F380064A939 /* css in Resources */,
-				1E70CA5E26726F380064A939 /* schema.json in Resources */,
+				1E331A53283FBDC5008DE3E6 /* palette.html in Resources */,
+				1E331A51283FBDC5008DE3E6 /* images in Resources */,
+				1E331A47283FBDC5008DE3E6 /* js in Resources */,
+				1E331A43283FBDC5008DE3E6 /* icons in Resources */,
 				1E70CA5426726F380064A939 /* LICENSE in Resources */,
-				1E70CA5A26726F380064A939 /* speech.html in Resources */,
-				1E70CA5726726F380064A939 /* js in Resources */,
-				1E70CA5F26726F380064A939 /* options.html in Resources */,
-				1E70CA6126726F380064A939 /* _locales in Resources */,
-				1E70CA6026726F380064A939 /* background.html in Resources */,
+				1E331A4B283FBDC5008DE3E6 /* css in Resources */,
+				1E331A55283FBDC5008DE3E6 /* _locales in Resources */,
+				1E331A4D283FBDC5008DE3E6 /* manifest.json in Resources */,
+				1E331A49283FBDC5008DE3E6 /* schema.json in Resources */,
+				1E331A41283FBDC5008DE3E6 /* popup.html in Resources */,
+				1E331A4F283FBDC5008DE3E6 /* options.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1508,7 +1490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -1517,13 +1499,13 @@
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleVersion = 38;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = iphoneos;
@@ -1538,7 +1520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -1547,13 +1529,13 @@
 				INFOPLIST_KEY_CFBundleName = "Turn Off the Lights for Safari Extension";
 				INFOPLIST_KEY_CFBundleVersion = 38;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = iphoneos;
@@ -1571,7 +1553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -1584,12 +1566,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,
@@ -1609,7 +1591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -1622,12 +1604,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,
@@ -1647,7 +1629,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1665,7 +1647,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = macosx;
@@ -1680,7 +1662,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1698,7 +1680,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = macosx;
@@ -1714,8 +1696,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1734,7 +1717,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,
@@ -1753,8 +1736,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1773,7 +1757,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 4.3.2;
+				MARKETING_VERSION = 4.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					WebKit,

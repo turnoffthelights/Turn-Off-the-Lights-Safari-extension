@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,6 +27,43 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+// Importing the constants
+// eslint-disable-next-line no-undef
+//importScripts("constants.js");
+
+// BUG SAFARI
+/* eslint-disable no-unused-vars */
+const exbrowser = "safari";
+// values: "chrome", "safari", "edge", "firefox", "opera", "yandex"
+const totlscreenshotpage = "https://www.turnoffthelights.com/extension/capture-screenshot-of-video.html";
+const developerwebsite = "https://www.turnoffthelights.com";
+const ambientaureaproduct = "https://chrome.google.com/webstore/detail/ambient-aurea/pkaglmndhfgdaiaccjglghcbnfinfffa";
+const datetodayproduct = "https://chrome.google.com/webstore/detail/date-today/mhgknbehalhkedjgfhiaindklahhkccc";
+const turnoffthelightsproduct = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
+const financetoolbarproduct = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
+const propermenubarproduct = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+const fullscreenproduct = "https://chrome.google.com/webstore/detail/full-screen/gmimocjjppdelmhpcmpkhekmpoddgima";
+const zoomproduct = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
+const donatewebsite = "https://www.turnoffthelights.com/donate.html";
+const writereview = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
+const linkchangelog = "https://www.turnoffthelights.com/extension/chromechangelog.html";
+const linktranslate = "https://www.turnoffthelights.com/extension/translate.html";
+const linksupport = "https://www.turnoffthelights.com/support/";
+const linkwelcomepage = "https://www.turnoffthelights.com/extension/chromewelcome.html";
+const linkuninstall = "https://www.turnoffthelights.com/extension/chromeuninstalled.html";
+const linkguide = "https://www.turnoffthelights.com/extension/chromeguide.html";
+const linkshare = "https://www.turnoffthelights.com/shareextension.html";
+const linkthemedownload = "https://www.turnoffthelights.com/browser/theme.html";
+const browsernewtab = "chrome://newtab/";
+const browserstore = "https://chrome.google.com";
+const linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";
+const linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
+const linktotlmobileapp = "https://www.turnoffthelights.com/mobile.html";
+const linkgamepad = "https://www.turnoffthelights.com/game-controller/";
+const devmode = true;
+const devdonate = false;
+/*---*/
+
 chrome.runtime.onMessage.addListener(function request(request, sender){
 // eye protection & autoplay & shortcut
 	switch(request.name){
@@ -36,11 +73,14 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"redirectionoptions":
 		chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
 			chrome.tabs.remove(tabs[0].id);
-			chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true});
+			chrome.runtime.openOptionsPage();
 		});
 		break;
 	case"automatic":
-		chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});
+		chrome.scripting.executeScript({
+			target: {tabId: sender.tab.id},
+			files: ["js/light.js"]
+		});
 		break;
 	case"screenshot":
 		var checkcapturewebsite = totlscreenshotpage;
@@ -72,7 +112,10 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		chrome.tabs.query({}, function(tabs){
 			var i, l = tabs.length;
 			for(i = 0; i < l; i++){
-				chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
+				chrome.scripting.executeScript({
+					target: {tabId: tabs[i].id},
+					files: ["js/light.js"]
+				});
 			}
 		}
 		);
@@ -133,7 +176,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			chrome.tabs.query({}, function(tabs){
 				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
-					chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png", "38": "icons/iconwhite38.png"}});
+					chrome.action.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png", "38": "icons/iconwhite38.png"}});
 				}
 			});
 		}else{
@@ -145,11 +188,17 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			}
 			// return default icon
 			chrome.storage.sync.get(["icon"], function(items){
-				if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
+				if(items["icon"] == undefined){
+					if(exbrowser == "safari"){
+						items["icon"] = "icons/iconstick38safari.png";
+					}else{
+						items["icon"] = "icons/iconstick38.png";
+					}
+				}
 				chrome.tabs.query({}, function(tabs){
 					var i, l = tabs.length;
 					for(i = 0; i < l; i++){
-						chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": items["icon"], "38": items["icon"]}});
+						chrome.action.setIcon({tabId : tabs[i].id, path : {"19": items["icon"], "38": items["icon"]}});
 					}
 				});
 			});
@@ -161,7 +210,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"sendclearscreenshader":
 		chrome.storage.sync.set({"screenshader": false});
 		chromerefreshalltabs("goclearscreenshader");
-		break;	
+		break;
 	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){
@@ -171,16 +220,11 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		break;
 	case"pip":
 		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
-			var task;
-			if(request.value == 1){
-				task = "gopipvideo";
-			}else{
-				task = "gopipvisual";
-			}
-			chrome.tabs.sendMessage(tabs[0].id, {action: task});
+			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvisual"});
 		});
 		break;
 	}
+	return true;
 });
 
 // Inject before displaying the website
@@ -196,9 +240,10 @@ const scriptList = ["js/screenshader.js", "js/nightmode.js"];
 const injectScriptsTo = (tabId, url) => {
 	if(url.match(/^http/i) || url.match(/^file/i)){
 		scriptList.forEach((script) => {
-			chrome.tabs.executeScript(tabId, {
-				file: `${script}`,
-				runAt: "document_start",
+			chrome.scripting.executeScript({
+				target: {tabId: tabId},
+				files: [`${script}`],
+				injectImmediately: true
 			}, () => void chrome.runtime.lastError);
 		});
 	}
@@ -211,16 +256,22 @@ function restcontent(path, name, sendertab){
 	cssoReq.open("GET", path, true); cssoReq.send();
 }
 
-chrome.tabs.onActivated.addListener(function(activeInfo){
-	chrome.tabs.get(activeInfo.tabId, function(){
+chrome.tabs.onActivated.addListener(async(activeInfo) => {
+	chrome.tabs.get(activeInfo.tabId).then((thattab) => {
 		chrome.storage.sync.get(["icon"], function(items){
-			if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
-			chrome.browserAction.setIcon({tabId : activeInfo.tabId, path : {"19": items["icon"], "38": items["icon"]}});
+			if(items["icon"] == undefined){
+				if(exbrowser == "safari"){
+					items["icon"] = "icons/iconstick38safari.png";
+				}else{
+					items["icon"] = "icons/iconstick38.png";
+				}
+			}
+			chrome.action.setIcon({tabId : thattab.tabId, path : {"19": items["icon"], "38": items["icon"]}});
 		});
 	});
 });
 
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
+chrome.tabs.onUpdated.addListener(async(tabId, changeInfo) => {
 	// tab loaded, recheck all the video players on the current web page
 	if(changeInfo.status == "complete"){
 		chrome.tabs.query({}, function(tabs){
@@ -230,77 +281,80 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
 		});
 	}
 
-	chrome.storage.sync.get(["icon"], function(chromeset){
-		if(chromeset["icon"] == undefined){ chromeset["icon"] = "icons/iconstick38.png"; }
-		chrome.browserAction.setIcon({tabId : tabId, path : {"19": chromeset["icon"], "38": chromeset["icon"]}});
+	chrome.storage.sync.get(["icon"], function(items){
+		if(items["icon"] == undefined){
+			if(exbrowser == "safari"){
+				items["icon"] = "icons/iconstick38safari.png";
+			}else{
+				items["icon"] = "icons/iconstick38.png";
+			}
+		}
+		chrome.action.setIcon({tabId : tabId, path : {"19": items["icon"], "38": items["icon"]}});
 	});
 });
 
-// Set click to false at beginning
-var alreadyClicked = false;
-// Declare a timer variable
-var timer;
-chrome.browserAction.onClicked.addListener(function(tabs){
-	if(tabs.url.match(/^http/i) || tabs.url.match(/^file/i)){
-		if(tabs.url == totloptionspage || (new URL(tabs.url)).origin == browserstore || tabs.url == browsernewtab){
-			chrome.browserAction.setPopup({tabId: tabs.id, popup:"popup.html"});
-		}else{
+async function getCurrentTab(){
+	let queryOptions = {active: true, currentWindow: true};
+	let tabs = await chrome.tabs.query(queryOptions);
+	return tabs[0];
+}
 
-			// Check for previous click
-			if(alreadyClicked){
+// Set click to zero at beginning
+let clickbutton = 0;
+// Declare a timer variable
+let timer;
+chrome.action.onClicked.addListener(function(tab){
+	if(tab.url.match(/^http/i) || tab.url.match(/^file/i)){
+		if((new URL(tab.url)).origin == browserstore || tab.url == browsernewtab){
+			chrome.action.setPopup({tabId: tab.id, popup:"popup.html"});
+		}else{
+			clickbutton += 1;
+			if(clickbutton == 2){
 				// console.log("Doubleclick");
-				// Yes, Previous Click Detected
-				// Clear timer already set in earlier Click
-				window.clearTimeout(timer);
-				// Show the popup window
-				// Clear all Clicks
-				alreadyClicked = false;
-				chrome.browserAction.setPopup({tabId: tabs.id, popup:""});
-				return;
+				clearTimeout(timer);
+				chrome.action.setPopup({tabId: tab.id, popup:"palette.html"});
+				chrome.action.openPopup();
+				console.log("end the button");
 			}
 
-			// Set Click to  true
-			alreadyClicked = true;
-			chrome.browserAction.setPopup({tabId: tabs.id, popup:"palette.html"});
-
-			// Add a timer to detect next click to a sample of 250
-			timer = window.setTimeout(function(){
+			timer = setTimeout(function(){
 				// console.log("Singelclick");
-				var popups = chrome.extension.getViews({type: "popup"});
-				if(popups.length != 0){ // popup exist
-
-				}else{ // not exist
+				if(clickbutton == 1){
 					chrome.storage.sync.get(["alllightsoff", "mousespotlights"], function(chromeset){
 						if((chromeset["mousespotlights"] != true)){ // regular lamp
 							if((chromeset["alllightsoff"] != true)){
-								chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function(){
-									if(chrome.runtime.lastError){
-									// console.error(chrome.runtime.lastError.message);
-									}
+								chrome.scripting.executeScript({
+									target: {tabId: tab.id},
+									files: ["js/light.js"]
 								});
 							}else{
-								chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
+								chrome.tabs.sendMessage(tab.id, {action: "masterclick"});
 							}
 						}else{ // all tabs
 							// Night Mode profile
 							// Eye Protection profile
-							chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
+							chrome.tabs.sendMessage(tab.id, {action: "masterclick"});
 						}
 					});
 				}
-
+				clickbutton = 0;
 				// Clear all timers
-				window.clearTimeout(timer);
-				// Ignore clicks
-				alreadyClicked = false;
-				chrome.browserAction.setPopup({tabId: tabs.id, popup:""});
+				clearTimeout(timer);
+				chrome.action.setPopup({tabId: tab.id, popup:""});
 			}, 250);
-
 		}
 	}else{
-		chrome.browserAction.setPopup({tabId: tabs.id, popup:"popup.html"});
+		chrome.action.setPopup({tabId: tab.id, popup:"popup.html"});
 	}
 });
+
+function codenight(){
+	if(document.getElementById("totldark")){
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "day"});
+	}else{
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "night"});
+	}
+}
 
 var lampandnightmode;
 chrome.commands.onCommand.addListener(function(command){
@@ -310,7 +364,12 @@ chrome.commands.onCommand.addListener(function(command){
 			if(lampandnightmode == true){
 				chrome.runtime.sendMessage({name: "mastertabnight"});
 			}else{
-				chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+				getCurrentTab().then((thattab) => {
+					chrome.scripting.executeScript({
+						target: {tabId: thattab.id},
+						func: codenight
+					});
+				});
 			}
 		});
 	}
@@ -320,7 +379,11 @@ chrome.commands.onCommand.addListener(function(command){
 function onClickHandler(info, tab){
 	var str = info.menuItemId;
 	switch(true){
-	case(str.includes("totlvideo") || str.includes("totlpage")): chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+	case(str.includes("totlvideo") || str.includes("totlpage")):
+		chrome.scripting.executeScript({
+			target: {tabId: tab.id},
+			files: ["js/light.js"]
+		});
 		break;
 	case(str.includes("totlguideemenu")): chrome.tabs.create({url: linkguide, active:true});
 		break;
@@ -330,9 +393,19 @@ function onClickHandler(info, tab){
 		break;
 	case(str.includes("totlshareemail")): var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
 		break;
-	case(str.includes("totlsharetwitter")): var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true});
+	case(str.includes("totlsharetwitter")): var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextd") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/intent/tweet?text=" + sturnoffthelightsproductcodeurl, active:true});
 		break;
 	case(str.includes("totlsharefacebook")): chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
+		break;
+	case(str.includes("totlsharewechat")): chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
+		break;
+	case(str.includes("totlshareqq")): chrome.tabs.create({url: "https://connect.qq.com/widget/shareqq/index.html?url=" + encodeURIComponent(turnoffthelightsproduct) + "&title=" + encodeURIComponent(chrome.i18n.getMessage("sharetextd")), active:true});
+		break;
+	case(str.includes("totlshareweibo")): chrome.tabs.create({url: "https://service.weibo.com/share/share.php?url=" + turnoffthelightsproduct + "&title=" + encodeURIComponent(chrome.i18n.getMessage("sharetextd")), active:true});
+		break;
+	case(str.includes("totlsharevkontakte")): chrome.tabs.create({url: "https://vk.com/share.php?url=" + turnoffthelightsproduct, active:true});
+		break;
+	case(str.includes("totlsharewhatsapp")): chrome.tabs.create({url: "https://api.whatsapp.com/send?text=" + chrome.i18n.getMessage("sharetextd") + "%0a" + turnoffthelightsproduct, active:true});
 		break;
 	case(str.includes("totlsubscribe")): chrome.tabs.create({url: linkyoutube, active:true});
 		break;
@@ -354,6 +427,10 @@ var sharemenupostonfacebook = chrome.i18n.getMessage("sharemenupostonfacebook");
 var sharemenuratetitle = chrome.i18n.getMessage("sharemenuratetitle");
 var sharemenudonatetitle = chrome.i18n.getMessage("sharemenudonatetitle");
 var sharemenusubscribetitle = chrome.i18n.getMessage("desremyoutube");
+var sharemenupostonweibo = chrome.i18n.getMessage("sharemenupostonweibo");
+var sharemenupostonvkontakte = chrome.i18n.getMessage("sharemenupostonvkontakte");
+var sharemenupostonwhatsapp = chrome.i18n.getMessage("sharemenupostonwhatsapp");
+var sharemenupostonqq = chrome.i18n.getMessage("sharemenupostonqq");
 
 function browsercontext(a, b, c, d){
 	var item = {"title": a, "type": "normal", "id": b, "contexts": contexts};
@@ -380,7 +457,7 @@ if(chrome.contextMenus){
 	if(actionmenuadded == false){
 		actionmenuadded = true;
 
-		var contexts = ["browser_action"];
+		var contexts = ["action"];
 		browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
 		browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
 		browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
@@ -390,8 +467,24 @@ if(chrome.contextMenus){
 		parent = browsercontext(sharemenusharetitle, "totlsharemenu", {"16": "images/IconShare.png", "32": "images/IconShare@2x.png"});
 		browsercontext(sharemenutellafriend, "totlshareemail", {"16": "images/IconEmail.png", "32": "images/IconEmail@2x.png"}, parent);
 		chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
-		browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
-		browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
+
+		var uiLanguage = chrome.i18n.getUILanguage();
+		if(uiLanguage.includes("zh")){
+			// Chinese users
+			browsercontext(sharemenupostonweibo, "totlshareweibo", {"16": "images/IconWeibo.png", "32": "images/IconWeibo@2x.png"}, parent);
+			browsercontext(sharemenupostonqq, "totlshareqq", {"16": "images/IconQQ.png", "32": "images/IconQQ@2x.png"}, parent);
+		}else if(uiLanguage.includes("ru")){
+			// Russian users
+			browsercontext(sharemenupostonvkontakte, "totlsharevkontakte", {"16": "images/IconVkontakte.png", "32": "images/IconVkontakte@2x.png"}, parent);
+			browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
+			browsercontext(sharemenupostonwhatsapp, "totlsharewhatsapp", {"16": "images/IconWhatsApp.png", "32": "images/IconWhatsApp@2x.png"}, parent);
+			browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
+		}else{
+			// all users
+			browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
+			browsercontext(sharemenupostonwhatsapp, "totlsharewhatsapp", {"16": "images/IconWhatsApp.png", "32": "images/IconWhatsApp@2x.png"}, parent);
+			browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
+		}
 
 		chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartor", "contexts": contexts});
 		browsercontext(sharemenusubscribetitle, "totlsubscribe", {"16": "images/IconYouTube.png", "32": "images/IconYouTube@2x.png"});
@@ -472,7 +565,7 @@ chrome.storage.onChanged.addListener(function(changes){
 				chrome.tabs.query({}, function(tabs){
 					var i, l = tabs.length;
 					for(i = 0; i < l; i++){
-						chrome.browserAction.setIcon({tabId : tabs[i].id,
+						chrome.action.setIcon({tabId : tabs[i].id,
 							path : {
 								"19": changes["icon"].newValue,
 								"38": changes["icon"].newValue
@@ -540,7 +633,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			chromerefreshalltabs("gorefreshpipvisualtype");
 		}
 
-		var changenamegamepad = ["gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo"];
+		var changenamegamepad = ["gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "gamepadonly", "gamepadDomains", "gamepadchecklistwhite", "gamepadchecklistblack"];
 		if(changenamegamepad.includes(key)){
 			chromerefreshalltabs("gorefreshgamepad");
 		}
@@ -564,9 +657,7 @@ function chromerefreshalltabs(name){
 		for(i = 0; i < l; i++){
 			var protocol = tabs[i].url.split(":")[0];
 			if(protocol == "http" || protocol == "https"){
-				if(tabs[i].url != totloptionspage){
-					chrome.tabs.sendMessage(tabs[i].id, {action: name});
-				}
+				chrome.tabs.sendMessage(tabs[i].id, {action: name});
 			}
 		}
 	});
@@ -600,14 +691,15 @@ if(typeof chrome.omnibox !== "undefined"){
 			}else if(onmniresult == i18nomnidaymode){
 				omnidaynightmode(0);
 			}else if(onmniresult == i18nomnilightoff || text == i18nomnilighton){
-				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-					var tab = tabs[0];
-					chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+				getCurrentTab().then((thattab) => {
+					chrome.scripting.executeScript({
+						target: {tabId: thattab.id},
+						files: ["js/light.js"]
+					});
 				});
 			}else if(onmniresult == i18nomnihelp){
-				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-					var tab = tabs[0];
-					chrome.tabs.update(tab.id, {url: linksupport});
+				getCurrentTab().then((thattab) => {
+					chrome.tabs.update(thattab.id, {url: linksupport});
 				});
 			}
 		});
@@ -616,19 +708,25 @@ if(typeof chrome.omnibox !== "undefined"){
 function omnidaynightmode(a){
 	var result = "";
 	if(a == 0){ result = "day"; }else{ result = "night"; }
-	chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-		var tab = tabs[0];
-		chrome.tabs.sendMessage(tab.id, {action: "goinnightmode", value:result});
+	getCurrentTab().then((thattab) => {
+		chrome.tabs.sendMessage(thattab.id, {action: "goinnightmode", value:result});
 	});
 }
 
+/*if(chrome.runtime.setUninstallURL){
 chrome.runtime.setUninstallURL(linkuninstall);
+}*/
+
+//chrome.runtime.setUninstallURL("https://example.org");
+//todo
+
+console.log("xyz test");
 
 function initwelcome(){
 	chrome.storage.sync.get(["firstRun"], function(chromeset){
 		if((chromeset["firstRun"] != "false") && (chromeset["firstRun"] != false)){
-			chrome.tabs.create({url: linkwelcomepage, active:true});
-			chrome.tabs.create({url: linkguide, active:false});
+			//chrome.tabs.create({url: linkwelcomepage, active:true});
+			//chrome.tabs.create({url: linkguide, active:false});
 			var crrinstall = new Date().getTime();
 			chrome.storage.sync.set({"firstRun": false, "version": "2.4", "firstDate": crrinstall});
 		}
@@ -728,3 +826,30 @@ function installation(){
 chrome.runtime.onInstalled.addListener(function(){
 	installation();
 });
+
+/*
+BUG in Chrome manifest v3:
++ it work now v100 - chrome.i18n.getmessage -> not a function -> fixed in Chrome version 100
++ it work now v100 - omni suggestion error -> https://bugs.chromium.org/p/chromium/issues/detail?id=1186804
++ it work but show error seticon -> https://bugs.chromium.org/p/chromium/issues/detail?id=1262029&q=setIcon&can=2
++ it work now v102 and runat "document_start" is now "injectImmediately" for execute scripting
+https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
+https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
++ it work now v103 - shorcut key do not work https://bugs.chromium.org/p/chromium/issues/detail?id=1190476
++ service working shutdown every 5 minutes? https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
+
+OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
+OK Done IMPROVEMENT double click lamp button action
+OK Done IMPROVEMENT information panel design
+OK Done REMOVED Speech and Camera -> not possile anymore because of service worker background page
+OK Done ADDED Russian and Chinese share buttons
+OK Done IMPROVEMENT rate box to 5 stars in the Options page
+OK Done IMPROVEMENT PIP-mode
+OK Done ADDED doubleclick on slider to get the default 80% opacity in the palette panel
+OK Done whitelist/blacklist the game controller
+OK Done ADDED autonightmode option in double click panel
++ Bug youtube autohd script
++ issue: no YouTube video detection right to left layout issue ARAB
++ update .html links
+
+*/

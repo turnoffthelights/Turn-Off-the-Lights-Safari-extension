@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_name__",
   "short_name": "Turn Off the Lights",
-  "version": "4.3.2",
-  "description": "__MSG_descriptionshort__",
+  "version": "4.4.0.0",
+  "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
   "omnibox": { "keyword" : "totl" },
@@ -16,18 +16,19 @@
       "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "browser_action": {
+  "action": {
       "default_title": "__MSG_pageatitle__",
       "default_icon": {
-        "19": "icons/iconstick19.png",
-        "38": "icons/iconstick38.png"
+        "19": "icons/iconstick19safari.png",
+        "38": "icons/iconstick38safari.png"
       }
   },
   "background": {
-    "page": "background.html",
-	  "persistent": false
+    "service_worker": "js/background.js"
   },
-  "content_security_policy": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' https://www.turnoffthelights.com * data:; object-src 'none'",
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' https://www.turnoffthelights.com * data:; object-src 'none'"
+  },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
@@ -61,7 +62,7 @@
     }
   ],
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+L",
         "mac": "MacCtrl+Shift+L"
@@ -80,9 +81,10 @@
     "open_in_tab": true
   },
   "offline_enabled": true,
-  "minimum_chrome_version": "33",
+  "minimum_chrome_version": "103",
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage", "webNavigation" ]
+  "permissions": ["contextMenus", "tabs", "storage", "webNavigation", "scripting"],
+  "host_permissions": ["<all_urls>"]
 }

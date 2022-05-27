@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -35,7 +35,7 @@ function eventFunc(selector, event, callback){
 	});
 }
 
-var lightcolor = null, darkmode = null, interval = null, nighttheme = null, lampandnightmode = null, ambilight = null, ambilightfixcolor = null, ambilight4color = null, ambilightvarcolor = null, atmosvivid = null, nightmodetxt = null, nightmodebck = null, nightmodehyperlink = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, firstDate = null, optionskipremember = null, firstsawrate = null, pipvisualtype = null, nightmodebutton = null, nightonly = null, nightDomains = null, nightmodebydomain = null, firstsawscroll = null, nightmodeborder = null;
+var lightcolor = null, darkmode = null, interval = null, nighttheme = null, lampandnightmode = null, ambilight = null, ambilightfixcolor = null, ambilight4color = null, ambilightvarcolor = null, atmosvivid = null, nightmodetxt = null, nightmodebck = null, nightmodehyperlink = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, firstDate = null, optionskipremember = null, firstsawrate = null, pipvisualtype = null, nightmodebutton = null, nightonly = null, nightDomains = null, nightmodebydomain = null, firstsawscroll = null, nightmodeborder = null, nightenabletheme = null;
 
 function save_options(){
 	var getpipvisualtype;
@@ -47,19 +47,35 @@ function save_options(){
 		getpipvisualtype = 3;
 	}
 
-	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains)});
+	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains), "nightenabletheme":$("nightenabletheme").checked});
+}
+
+function codenight(){
+	if(document.getElementById("totldark")){
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "day"});
+	}else{
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "night"});
+	}
 }
 
 function executenightmode(){
 	if(lampandnightmode == true){
 		chrome.runtime.sendMessage({name: "mastertabnight"});
 	}else{
-		chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+		chrome.tabs.query({
+			active: true,
+			currentWindow: true
+		}, function(tabs){
+			chrome.scripting.executeScript({
+				target: {tabId: tabs[0].id},
+				func: codenight
+			});
+		});
 	}
 }
 
 function openoptionspage(){
-	chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true});
+	chrome.runtime.openOptionsPage();
 }
 
 function opendonationpage(){
@@ -80,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
+	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll", "nightenabletheme"], function(items){
 		lightcolor = items["lightcolor"]; if(lightcolor == null)lightcolor = "#000000"; // default color black
 		currentlayercolor = lightcolor;
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
@@ -111,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		nightDomains = items["nightDomains"];
 		if(typeof nightDomains == "undefined" || nightDomains == null)
 			nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
+
+		nightenabletheme = items["nightenabletheme"]; if(nightenabletheme == null)nightenabletheme = false; // default false
 
 		pipvisualtype = items["pipvisualtype"]; if(pipvisualtype == null)pipvisualtype = 1; // default 1
 
@@ -175,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		if(nighttheme == true)$("nighttheme").checked = true;
 		if(lampandnightmode == true)$("lampandnightmode").checked = true;
+		if(nightenabletheme == true)$("nightenabletheme").checked = true;
 		if(ambilight == true)$("ambilight").checked = true;
 		if(ambilightfixcolor == true)$("ambilightfixcolor").checked = true;
 		if(ambilight4color == true)$("ambilight4color").checked = true;
@@ -329,6 +348,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("oslider").addEventListener("wheel", wheel); // for modern
 	$("oslider").addEventListener("change", opacitychange, false);
 	$("oslider").addEventListener("input", opacitychange, false);
+	$("oslider").addEventListener("dblclick", function(){ this.value = 80; opacitychange(); });
 
 	var arraycolor = ["color1a", "color1b", "color1c", "color1d", "color1e", "color1f", "color1g", "color1h", "color2a", "color2b", "color2c", "color2d", "color2e", "color2f", "color2g", "color2h", "color3a", "color3b", "color3c", "color3d", "color3e", "color3f", "color3g", "color3h", "color4a", "color4b", "color4c", "color4d", "color4e", "color4f", "color4g", "color4h", "color5a", "color5b", "color5c", "color5d", "color5e", "color5f", "color5g", "color5h", "color6a", "color6b", "color6c", "color6d", "color6e", "color6f", "color6g", "color6h"];
 	for(var icolor = 0; icolor < arraycolor.length; icolor++)
@@ -338,8 +358,11 @@ document.addEventListener("DOMContentLoaded", function(){
 		chrome.tabs.query({
 			active: true,
 			currentWindow: true
-		}, function(tab){
-			chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+		}, function(tabs){
+			chrome.scripting.executeScript({
+				target: {tabId: tabs[0].id},
+				files: ["js/light.js"]
+			});
 		});
 	});
 
@@ -517,8 +540,79 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	eventFunc("energybox", "click", openoptionspage);
 
-	$("btnpipvideo").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pip", value: 1}); });
-	$("btnpipvisual").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pip", value: 2}); });
+	// PIP
+	function codepip(){
+		var i18ntitelpiperror = chrome.i18n.getMessage("titelpiperror");
+		var videotopipvideo = document.getElementsByTagName("video")[0];
+		if(videotopipvideo){
+			try{
+				if(videotopipvideo !== document.pictureInPictureElement){
+					videotopipvideo.requestPictureInPicture();
+				}else{
+					document.exitPictureInPicture();
+				}
+			}catch(reason){
+				console.error(reason);
+			}
+		}else{
+			window.alert(i18ntitelpiperror);
+		}
+	}
+	function codepipvisual(){
+		var i18ntitelpiperror = chrome.i18n.getMessage("titelpiperror");
+		var videotopipvideo = document.getElementsByTagName("video")[0];
+		var videopipvisual = document.getElementById("stefanvdpipvisualizationvideo");
+		if(videotopipvideo){
+			videopipvisual.addEventListener("loadedmetadata", () => {
+				if(document.pictureInPictureElement){
+					document.exitPictureInPicture();
+				}else{
+					if(document.pictureInPictureEnabled){
+						videopipvisual.requestPictureInPicture();
+					}
+				}
+			});
+			// Show a play/pause button in the Picture-in-Picture window
+			navigator.mediaSession.setActionHandler("play", function(){
+				document.getElementsByTagName("video")[0].play();
+				navigator.mediaSession.playbackState = "playing";
+			});
+
+			navigator.mediaSession.setActionHandler("pause", function(){
+				document.getElementsByTagName("video")[0].pause();
+				navigator.mediaSession.playbackState = "paused";
+			});
+		}else{
+			window.alert(i18ntitelpiperror);
+		}
+	}
+
+	$("btnpipvideo").addEventListener("click", function(){
+		chrome.tabs.query({
+			active: true,
+			currentWindow: true
+		}, function(tabs){
+			chrome.scripting.executeScript({
+				target: {tabId: tabs[0].id},
+				func: codepip
+			});
+		});
+	});
+	$("btnpipvisual").addEventListener("click", function(){
+		chrome.runtime.sendMessage({name: "pip", value: 1},
+			function(){
+				chrome.tabs.query({
+					active: true,
+					currentWindow: true
+				}, function(tabs){
+					chrome.scripting.executeScript({
+						target: {tabId: tabs[0].id},
+						func: codepipvisual
+					});
+				});
+			}
+		);
+	});
 
 	function showhidemodal(name, visible, status){
 		document.getElementById(name).className = visible;
@@ -598,14 +692,48 @@ function opacitychange(){
 	executelivechange();
 }
 
+function codetask(a, b, c){
+	var div = document.getElementsByTagName("div");
+	var i;
+	var l = div.length;
+	for(i = 0; i < l; i++){
+		if(div[i].className == ("stefanvdlightareoff")){
+			div[i].style.background = c;
+			div[i].style.opacity = (b / 100);
+		}
+	}
+	var metas = document.getElementsByTagName("meta");
+	var m, p = metas.length;
+	for(m = 0; m < p; m++){
+		if(metas[m].getAttribute("name") == "theme-color"){
+			if(metas[m].getAttribute("media")){
+				if(metas[m].getAttribute("media") == "(prefers-color-scheme: light)"){
+					metas[m].setAttribute("content", a);
+				}else if(metas[m].getAttribute("media") == "(prefers-color-scheme: dark)"){
+					metas[m].setAttribute("content", a);
+				}
+			}else{
+				metas[m].setAttribute("content", a);
+			}
+		}
+	}
+	if(document.getElementById("stefanvdscreenshader")){
+		document.getElementById("stefanvdscreenshader").style.opacity = b; document.getElementById("stefanvdscreenshader").style.background = a;
+	}
+}
+
 function executelivechange(){
 	chrome.tabs.query({
 		active: true,
 		currentWindow: true
-	}, function(tab){
+	}, function(tabs){
 		var newlightoffcolor = newconvertHex(currentlayercolor, $("oslider").value);
 		var currentopac = $("oslider").value;
-		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + currentlayercolor + "';div[i].style.opacity = (" + currentopac + "/100);}}var metas = document.getElementsByTagName(\"meta\");var m, p = metas.length;for(m = 0; m < p; m++){if(metas[m].getAttribute(\"name\") == \"theme-color\"){if(metas[m].getAttribute(\"media\")){if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: light)\"){metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}else if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: dark)\"){metas[m].setAttribute(\"content\",'" + newlightoffcolor + "');}}else{metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}}}if(document.getElementById(\"stefanvdscreenshader\")){document.getElementById(\"stefanvdscreenshader\").style.opacity = " + currentopac + "; document.getElementById(\"stefanvdscreenshader\").style.background = '" + newlightoffcolor + "'}"});
+		chrome.scripting.executeScript({
+			target: {tabId: tabs[0].id},
+			func: codetask,
+			args: [newlightoffcolor, currentopac, currentlayercolor]
+		});
 	});
 }
 

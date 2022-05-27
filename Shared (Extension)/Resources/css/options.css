@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -212,7 +212,6 @@ body{min-width:1150px;min-height:800px;background:var(--totl-body-background);co
 .navbar-item-selected{background:var(--totl-nav-background-hover);color:var(--totl-primary-font-color)}
 ul#navbar li a{display:flex;align-items:center;margin-right:0;padding:12px 24px 12px 24px;font-size:105%;cursor:pointer}
 ul#navbar li a svg{margin-right:24px;fill:var(--totl-sidebar-icon-background)}
-#settings{-webkit-padding-end:24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:#333;cursor:pointer;font-size:200%;font-weight:400;margin:0;padding-bottom:14px;padding-top:13px;text-align:end}
 .page h2{-webkit-padding-end:24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:var(--totl-title-color);font-size:200%;font-weight:400;margin:0;padding-bottom:4px;padding-top:13px}
 .page{height:100%;width:100%;position:relative}
 section{position:relative;-webkit-box-orient:horizontal;border-bottom:var(--totl-section-border);display:-webkit-box;padding-top:20px;padding-bottom:20px;width:100%}
@@ -256,13 +255,11 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvdbtnplaygroundtwitter{background:url(/images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #stefanvdbtnplaygroundfacebook:hover,#stefanvdbtnplaygroundtwitter:hover{opacity:.8;cursor:pointer}
 /* Video frame */
-.youtubepreview{width:100%;height:380px;background:white;color:black;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:2px;border:var(--totl-section-border)}
-.youtubeviewpanel{width:475px;padding-left:15px;padding-right:15px}
+.youtubepreview{width:100%;height:400px;background:white;color:black;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:2px;border:var(--totl-section-border);border-spacing:0}
+.youtubeviewpanel{width:475px;padding-left:15px;padding-right:15px;padding-top:15px;vertical-align:top}
 .youtubesuggpanel{border-left:1px #D9D9D9 solid;padding-left:15px}
-.youtube_player{text-align:center;padding-top:15px}
 .youtubetitel{padding:5px;font-weight:700;color:#000;font-size:18px}
 .youtubesuggestionbar{height:335px;background:#fff}
-.youtubesuggestionbartable{padding-top:5px;padding-bottom:5px}
 .youtubesuggestiontitel{font-size:12px;font-weight:700}
 .youtubesuggestionby{font-size:10px;color:#333}
 .youtubecommentsupload{font-size:11px;color:#000;font-weight:700;border-top:1px #D9D9D9 solid;padding-top:10px}
@@ -303,16 +300,16 @@ section>div:only-of-type{-webkit-box-flex:1}
 .youtubeinforbar{background:#fff}
 #dont-turn-off-the-lights{z-index:1000;position:relative;visibility:visible;width:340px;height:195px}
 /* Black div */
-#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:380px;opacity:1;position:absolute;background-color:#000;z-index:99;border-radius:2px}
+#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:400px;opacity:1;position:absolute;background-color:#000;z-index:99;border-radius:2px}
 #example2{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:480px;opacity:1;position:absolute;background-color:#000;z-index:99;border-radius:2px}
 /* Blur */
-#stefanvdblurimage{pointer-events:none;width:100%;height:380px;position:absolute;z-index:98;overflow:hidden;backdrop-filter:blur(6px)}
+#stefanvdblurimage{pointer-events:none;width:100%;height:400px;position:absolute;z-index:98;overflow:hidden;backdrop-filter:blur(6px)}
 /* Dynamic */
-#stefanvddynamicbackground{pointer-events:none;width:100%;height:380px;position:absolute;z-index:99;overflow:hidden}
+#stefanvddynamicbackground{pointer-events:none;width:100%;height:400px;position:absolute;z-index:99;overflow:hidden}
 /* Dynamic Background Bubbles */
-#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleleft{height:380px;position:absolute}
-#stefanvddynamicbackground .stefanvddynamicbackgroundbubblemid{height:380px;position:absolute;left:200px;width:300px}
-#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleright{height:380px;left:840px;position:absolute;-webkit-transform:scaleX(-1);transform:scaleX(-1)}
+#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleleft{height:400px;position:absolute}
+#stefanvddynamicbackground .stefanvddynamicbackgroundbubblemid{height:400px;position:absolute;left:200px;width:300px}
+#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleright{height:400px;left:840px;position:absolute;-webkit-transform:scaleX(-1);transform:scaleX(-1)}
 #stefanvddynamicbackground .stefanvddynamicbackgroundbubbles{background-color:rgba(255,255,255,0.16);border:1px solid rgba(88,88,88,0.2);border-radius:100px 100px 100px 100px;position:absolute}
 /* Left */
 #stefanvddynamicbackground .stefanvddynamicbubbles0{left:33px;bottom:0;height:17px;width:17px;animation:totlbubbles0 10s 0s linear infinite}
@@ -352,7 +349,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvddynamicbackground .stefanvddynamicbubbles16{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles16 10s 0s linear infinite}
 @keyframes totlbubbles16{from{bottom:0;left:248px}5%{bottom:7%;left:232px}to{bottom:100%;left:236px}}
 /* Dynamic Background Squares */
-#stefanvddynamicbackground .stefanvddynamicbackgroundblockleft{height:380px;position:absolute;left:7px;width:700px}
+#stefanvddynamicbackground .stefanvddynamicbackgroundblockleft{height:400px;position:absolute;left:7px;width:700px}
 #stefanvddynamicbackground .stefanvddynamicbackgroundblocks{background-color:rgba(255,255,255,0.16);border:1px solid rgba(88,88,88,0.2);position:absolute}
 /* Left */
 #stefanvddynamicbackground .stefanvddynamicblocks1{left:47px;top:60px;opacity:0;height:37px;width:37px;animation:totlblocks1 6s 0s ease-out infinite}
@@ -398,7 +395,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvddynamicbackground .stefanvddynamicblocks21{left:47px;top:19px;opacity:0;height:37px;width:37px;animation:totlblocks21 6s 0s ease-out infinite}
 @keyframes totlblocks21{0%{transform:scale(0,0);opacity:0}10%{opacity:1}20%{opacity:0;transform:scale(1.2,1.2)}}
 /* Dynamic Background Raindrups */
-#stefanvddynamicbackground .stefanvddynamicbackgroundraindrupsleft{height:380px;position:absolute;left:12px}
+#stefanvddynamicbackground .stefanvddynamicbackgroundraindrupsleft{height:400px;position:absolute;left:12px}
 #stefanvddynamicbackground .stefanvddynamicbackgroundraindrups{position:absolute;-webkit-transform:rotate(45deg);transform:rotate(45deg);background:rgba(0,0,0,0.2);box-shadow:inset 1px 0 0 0 rgba(255,255,255,0.25),inset 0 1px 0 0 rgba(255,255,255,0.25),inset 1px 0 3px 0 rgba(255,255,255,0.25),inset 0 1px 3px 0 rgba(255,255,255,0.75),inset -1px 0 0 0 rgba(255,255,255,0.15),inset 0 -1px 0 0 rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.05)}
 @keyframes drups{0%{top:0;opacity:0}5%{top:5%;opacity:1}95%{top:95%;opacity:1}100%{top:99%;opacity:0}}
 #stefanvddynamicbackground .b0{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:33px;top:0;animation:drups 15s 0s linear infinite}
@@ -418,13 +415,13 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvddynamicbackground .b14{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:714px;top:0;animation:drups 15s 2s linear infinite}
 #stefanvddynamicbackground .b15{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:760px;top:0;animation:drups 15s 0s linear infinite}
 /* Dynamic Background Cloud */
-#stefanvddynamicbackground #stefanvdworld{position:absolute;height:380px;width:840px;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
+#stefanvddynamicbackground #stefanvdworld{position:absolute;height:400px;width:840px;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvdworld div{-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvdworld .stefanvdcloudBase{position:absolute;left:256px;top:256px;width:20px;height:20px;margin-left:-10px;margin-top:-10px}
 #stefanvddynamicbackground #stefanvdworld .stefanvdcloudLayer{position:absolute;left:50%;top:50%;width:256px;height:256px;margin-left:-128px;margin-top:-128px;-webkit-transition:opacity .5s ease-out;transition:opacity .5s ease-out;background-image:url(/images/cloud.png)}
 /* Dynamic Background Space */
 #stefanvddynamicbackground #stefanvddynamicspace div{position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
-#stefanvddynamicbackground #stefanvddynamicspace{height:380px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
+#stefanvddynamicbackground #stefanvddynamicspace{height:400px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
 #stefanvddynamicbackground #stefanvddynamicspace b{position:absolute;height:2px;width:2px;background:#FFF;box-shadow:0 0 5px #FFF}
 @keyframes totlspace{from{-webkit-transform:translateZ(-300px);opacity:0}50%{-webkit-transform:translateZ(00px);opacity:1}to{-webkit-transform:translateZ(300px);opacity:0}}
 #stefanvddynamicbackground #stefanvddynamicspace .s001{top:5%;left:92%;animation:totlspace 6s 0s linear infinite}
@@ -476,7 +473,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 @keyframes totlspacepart{from{transform:translateZ(-300px);opacity:0}50%{transform:translateZ(0px);opacity:1}to{transform:translateZ(300px);opacity:0}}
 /* Dynamic Background Space with no flying */
 #stefanvddynamicbackground #stefanvddynamicspacenoflying div{position:absolute}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying{height:380px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying{height:400px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
 #stefanvddynamicbackground #stefanvddynamicspacenoflying b{position:absolute;height:2px;width:2px;background:#FFF;box-shadow:0 0 5px #FFF}
 @keyframes totlspacenoflying{from{transform:translateZ(-300px);opacity:0}50%{transform:translateZ(00px);opacity:1}to{transform:translateZ(300px);opacity:0}}
 #stefanvddynamicbackground #stefanvddynamicspacenoflying .ns001{top:5%;left:92%;animation:totlspacenoflying 6s 0s linear infinite}
@@ -765,7 +762,6 @@ section>div:only-of-type{-webkit-box-flex:1}
 #wallpapershow{right:0;position:absolute;width:135px}
 #wallpaperhide{right:0;position:absolute;width:135px}
 #imagegallery{padding-left:20px;margin:16px 0 0 0;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)}
-.imageshaduw{margin:10px 12px;padding:1px;border:1px solid #bebebe}
 /* loading bar */
 #loadinghelp{bottom:10px;position:absolute;right:15px}
 #loadinghelp a,#loadinghelp a:active,#loadinghelp a:visited,#loadinghelp a:hover{color:var(--totl-page-a)}
@@ -796,15 +792,13 @@ section>div:only-of-type{-webkit-box-flex:1}
 /* autoplay only */
 /* atmosphere only */
 /* night only */
-/* cammotion only */
-/* speech only */
 /* auto stop only */
 /* video tool bar only */
 /* video volume bar only */
-#autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
-#autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:360px;float:left;box-sizing:border-box}
-#autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:16px}
-#autoplayaddbutton,#autoplayremovebutton,#autostopaddbutton,#autostopremovebutton,#atmosphereaddbutton,#atmosphereremovebutton,#videovolumeaddbutton,#videovolumeremovebutton,#videotooladdbutton,#videotoolremovebutton,#addbutton,#removebutton,#nightaddbutton,#nightremovebutton,#cammotionaddbutton,#cammotionremovebutton,#speechaddbutton,#speechremovebutton{width:100%;max-width:123px;text-overflow:ellipsis;white-space:nowrap}
+#autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist,#gamepadwhitelist{margin-left:25px}
+#autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url],#gamepadwhitelist input[type=url]{width:360px;float:left;box-sizing:border-box}
+#autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select,#gamepadwhitelist select{width:100%;margin-right:16px}
+#autoplayaddbutton,#autoplayremovebutton,#autostopaddbutton,#autostopremovebutton,#atmosphereaddbutton,#atmosphereremovebutton,#videovolumeaddbutton,#videovolumeremovebutton,#videotooladdbutton,#videotoolremovebutton,#addbutton,#removebutton,#nightaddbutton,#nightremovebutton,#gamepadaddbutton,#gamepadremovebutton{width:100%;max-width:123px;text-overflow:ellipsis;white-space:nowrap}
 /* Night Theme */
 #samplestefanvdnighttheme{padding:0;margin:20px 0;z-index:500;-webkit-user-select:none;-moz-user-select:none;user-select:none;background:#fff;border:1px solid #EBEBEB;box-shadow:#fff 0 0 7px;border-radius:4px;cursor:pointer;height:35px;overflow:hidden;width:70px;position:relative;display:block}
 #samplestefanvdnighttheme input{display:none}
@@ -822,52 +816,20 @@ section>div:only-of-type{-webkit-box-flex:1}
 #samplestefanvdnighttheme .sun{box-sizing:content-box;width:35px;height:32px;display:block;position:absolute;background:#E7F6FF;border-radius:3px;margin-top:50%;margin-left:13%;border-top:3px solid #CBEAFF}
 #samplestefanvdnighttheme .sun:before{content:" ";width:17px;height:17px;border-radius:8.5px;position:absolute;background:#FE0;box-shadow:0 0 21px rgba(255,220,0,1),0 0 10px rgba(255,220,0,1);top:-14px;margin-top:50%;left:-7px;margin-left:50%}
 #samplestefanvdnighttheme .sun:after{content:" ";width:28px;height:14px;border-radius:7px;background:rgba(255,255,255,0.75);position:absolute;top:-3px;margin-top:50%;left:-25px;margin-left:50%}
-/* Motion */
-#motionvideo{display:none}
-/* Tablet CSS */
-.tablet{border:1px solid #777;border-radius:2px;display:block;position:relative;float:right}
-.tablet .screencanvas{background:#fff}
-.screencanvas{display:block;overflow:hidden;position:relative;top:0;text-indent:-9999px;z-index:10}
-.monitor,.monitor .screencanvas{height:35px;width:60px}
-.monitor{background:#000;border:2px solid #000;border-radius:1px;float:left;position:relative}
-.camera{position:absolute;top:0px;left:30px;width:2px;height:2px;background:#0f0;border-radius:2px;z-index:20}
-.motionworks,.speechworks,.nightworks{display:inline-block;padding:24px 16px 0px 16px;position:relative;height:145px}
-.motionworks .step{height:55px;position:relative}
-.nightworks .step{height:30px;position:relative}
-.speechworks .step{height:30px;position:relative}
-.screendimmer{animation:totlbounceInDown 12s 2.5s linear infinite;background:#000;opacity:0;height:35px;width:60px}
-@keyframes totlbounceInDown{0%{-webkit-transform:translateY(-100px);opacity:.8}5%{-webkit-transform:translateY(0px);opacity:.8}10%{-webkit-transform:translateY(-2px)}15%{-webkit-transform:translateY(0px);opacity:.8}20%{-webkit-transform:translateY(-1px);opacity:.8}25%{-webkit-transform:translateY(0);opacity:.8}78%{-webkit-transform:translateY(0);opacity:.8}80%{-webkit-transform:translateY(0);opacity:0}100%{-webkit-transform:translateY(0);opacity:0}}
-.handgreep{z-index:500;animation:movehanddown 12s 0s linear infinite;position:relative}
-.hand{position:absolute;top:20px;right:42px;display:inline-block}
-.hand .fingera{position:absolute;top:26px;left:0px;background:#fff;width:3px;height:14px;border:1pxsolidsilver;border-radius:5px;border:1px solid silver;border-radius:5px}
-.hand .fingerb{position:absolute;top:17px;left:4px;background:#fff;width:3px;height:20px;border:1px solid silver;border-radius:5px}
-.hand .fingerc{position:absolute;top:14px;left:8px;background:#fff;width:3px;height:25px;border:1px solid silver;border-radius:5px}
-.hand .fingerd{position:absolute;top:16px;left:12px;background:#fff;width:3px;height:24px;border:1px solid silver;border-radius:5px}
-.hand .fingere{position:absolute;top:20px;left:16px;background:#fff;width:3px;height:20px;border:1px solid silver;border-radius:5px}
-.hand .palm{position:absolute;top:32px;left:0;background:#fff;width:19px;height:16px;border:1px solid silver;border-radius:72px}
-@keyframes movehanddown{0%{-webkit-transform:translateY(-60px);opacity:1}15%{-webkit-transform:translateY(-30px);opacity:1}17%{opacity:0}100%{-webkit-transform:translateY(0);opacity:0}}
-@keyframes cameraglow{0%{background:rgba(0,255,0,0)}5%{background:rgba(0,255,0,1)}59%{background:rgba(0,255,0,1)}60%{background:rgba(0,255,0,0)}100%{background:rgba(0,255,0,0)}}
-.enablecameralamp{animation:cameraglow 12s 0s linear infinite}
-.cameracheclist{font-size:12px;font-weight:700}
-.cameracheclist ul{font-size:12px}
-.cameracheclist ul li{font-size:12px}
-.motionworks .step .stepdescription{font-size:13px;width:60%;text-align:left;float:left}
-.nightworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left}
-.speechworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left}
-#stefanmotion p{margin:0}
-#motioncanvas,#motioncomp{box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);border-radius:2px;display:inline-block}
+/* Information box CSS */
+.nightworks{display:inline-block;padding:24px 16px 0px 16px;position:relative;height:145px}
+.nightworks .step{position:relative}
+.nightworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left;margin-bottom:15px}
 /* lamp */
 #loadinglamp{margin-right:5px}
-#welcomelamp{margin-right:5px}
-#rememberlamp{margin-right:5px}
 #btnpreview{display:none}
 .lampchoose{padding:10px;border:1px solid #EEE;background:#fff;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);margin: 5px 10px 5px 0px}
 .lampchoose:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .bcklampchoose{background:#000}
 /* share box */
-#shareboxyoutube{background:-webkit-image-set(url(/images/youtube.webp) 1x,url(/images/youtube@2x.webp) 2x,url(/images/youtube.png) 1x, url(/images/youtube@2x.png) 2x);background:url(/images/youtube.png)left top no-repeat;width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
-#shareboxfacebook{background:-webkit-image-set(url(/images/facebook.webp) 1x,url(/images/facebook@2x.webp) 2x,url(/images/facebook.png) 1x,url(/images/facebook@2x.png) 2x);background:url(/images/facebook.png)left top no-repeat;width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
-#shareboxtwitter{background:-webkit-image-set(url(/images/twitter.webp) 1x,url(/images/twitter@2x.webp) 2x,url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);background:url(/images/twitter.png)left top no-repeat;width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
+#shareboxyoutube{background:url(/images/youtube@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/youtube.webp) 1x,url(/images/youtube@2x.webp) 2x,url(/images/youtube.png) 1x, url(/images/youtube@2x.png) 2x);width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
+#shareboxfacebook{background:url(/images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/facebook.webp) 1x,url(/images/facebook@2x.webp) 2x,url(/images/facebook.png) 1x,url(/images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
+#shareboxtwitter{background:url(/images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/twitter.webp) 1x,url(/images/twitter@2x.webp) 2x,url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #shareboxrate:hover,#shareboxyoutube:hover,#shareboxfacebook:hover,#shareboxtwitter:hover{opacity:.8;cursor:pointer}
 /* Review box */
 #reviewextensionbox{height:75px;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;content-visibility:auto}
@@ -901,9 +863,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 .profilebox .profile{background:var(--totl-card-background);display:inline-grid;width:250px;margin:5px 10px 5px 0px;position:relative;padding:0;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:all 0.3s cubic-bezier(.25,.8,.25,1)}
 .profilebox .profile:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .profilebox .profil .cardactionbox{position:relative;display:inline-block;width:100%}
-#expandprofileaicon,#expandprofilebicon,#expandprofilecicon,#expandcamtipicon{width:36px;height:36px;display:inline-block;transform:rotate(90deg);margin:8px 0;padding:0;right:8px;position:absolute}
-#expandprofileaicon:active,#expandprofilebicon:active,#expandprofilecicon:active,#expandcamtipicon:active{background-color:rgba(158,158,158,.4)}
-#expandprofileaicon:hover,#expandprofilebicon:hover,#expandprofilecicon:hover,#expandcamtipicon:hover{background-color:rgba(158,158,158,.2)}
+#expandprofileaicon,#expandprofilebicon,#expandprofilecicon{width:36px;height:36px;display:inline-block;transform:rotate(90deg);margin:8px 0;padding:0;right:8px;position:absolute}
+#expandprofileaicon:active,#expandprofilebicon:active,#expandprofilecicon:active{background-color:rgba(158,158,158,.4)}
+#expandprofileaicon:hover,#expandprofilebicon:hover,#expandprofilecicon:hover{background-color:rgba(158,158,158,.2)}
 .cardokbutton{display:block;-webkit-user-select:none;-moz-user-select:none;user-select:none;margin:8px 0;float:left;background:0 0;border:none;border-radius:2px;color:#2296f3;position:relative;height:36px;min-width:64px;padding:0 16px;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;outline:none;cursor:pointer;text-decoration:none;text-align:center;line-height:36px}
 .cardokbutton:active{background-color:rgba(158,158,158,.4)}
 .cardokbutton:hover{background-color:rgba(158,158,158,.2)}
@@ -911,12 +873,12 @@ section>div:only-of-type{-webkit-box-flex:1}
 .suggpanel .profile{background:var(--totl-card-background);display:inline-block;margin:0px;position:relative;padding:0;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:all 0.3s cubic-bezier(.25,.8,.25,1);width:100%;min-height:270px}
 .suggpanel .profile:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .suggpanel .profile .cardactionbox{position:relative;display:inline-block;width:100%;height:50px}
-#expandprofilea,#expandprofileb,#expandprofilec,#expandcamtip{display:none}
+#expandprofilea,#expandprofileb,#expandprofilec{display:none}
 .cardinfo{position:absolute;top:22px;right:15px}
-#reveal-profilea,#reveal-profileb,#reveal-profilec,#reveal-camtip{display:none}
-input[type=checkbox]:checked ~ #expandprofilea,input[type=checkbox]:checked ~ #expandprofileb,input[type=checkbox]:checked ~ #expandprofilec,input[type=checkbox]:checked ~ #expandcamtip{display:block}
-#profilesuba,#profilesubb,#profilesubc,#camtip{height:36px;width:36px;-webkit-user-select:none;-moz-user-select:none;user-select:none;box-sizing:border-box;position:relative;cursor:pointer;display:inline-block;margin:0;padding:0}
-#profilesuba svg,#profilesubb svg,#profilesubc svg,#camtip svg{position:absolute;top:6px;left:6px;fill:#4c4c4c}
+#reveal-profilea,#reveal-profileb,#reveal-profilec{display:none}
+input[type=checkbox]:checked ~ #expandprofilea,input[type=checkbox]:checked ~ #expandprofileb,input[type=checkbox]:checked ~ #expandprofilec{display:block}
+#profilesuba,#profilesubb,#profilesubc{height:36px;width:36px;-webkit-user-select:none;-moz-user-select:none;user-select:none;box-sizing:border-box;position:relative;cursor:pointer;display:inline-block;margin:0;padding:0}
+#profilesuba svg,#profilesubb svg,#profilesubc svg{position:absolute;top:6px;left:6px;fill:#4c4c4c}
 .cardinfo svg{fill:#898989}
 .cardinfo svg:hover{fill:var(--totl-card-info)}
 input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:checked ~ div #expandprofilebicon,input[type=checkbox]:checked ~ div #expandprofilecicon{transform:rotate(270deg)}
@@ -943,7 +905,6 @@ input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:chec
 .sharestatslove .text{display:inline-block;font-size:20px;padding-top:10px}
 /* chart */
 .analyticbox{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);padding:15px}
-.esta .header{width:100%;display:block;font-size:14px}
 .esta{background:#1664c0;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);padding:15px;width:calc( 100% - 30px);display:block;float:left;margin-right:30px;margin-top:20px;color:white}
 .esta div{width:calc(33% - 15px);display:block;float:left;margin-right:15px}
 .canvaschart:first-child{width:calc(50% - 42px);display:inline-block;margin:auto 10px 0px 0px;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);padding:15px}
@@ -993,7 +954,7 @@ input[type=checkbox]:checked ~ #mainview{padding-left:0}
 .minitable{line-height:48px;list-style:none;margin:0;padding:0}
 .minitable li{border-bottom:var(--totl-minitable-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tabbar{border-bottom:var(--totl-minitable-tab-border);height:48px}
-.tabbarintern{width:100%;display:flex;overflow:scroll}
+.tabbarintern{width:100%;display:flex;overflow-x:auto;overflow-y:hidden}
 .tabbutton{cursor:pointer;margin:0;border:none;padding:0 20px;float:left;position:relative;display:flex;align-items:center;justify-content:center;text-decoration:none;height:46px;line-height:46px;font-weight:500;font-size:14px;text-transform:uppercase;color:rgba(0,0,0,.54);overflow:hidden;min-width:calc(75px - 40px)}
 .tabbutton:active{background-color:rgba(158,158,158,0.4);border-bottom:2px solid rgba(158,158,158,0)}
 .tabbutton:hover{background-color:rgba(158,158,158,.2);border-bottom:2px solid rgba(158,158,158,0)}
@@ -1111,7 +1072,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 .md-intgroup{display:inline-flex;gap:15px;margin:0;align-items:center}
 .md-submarg{margin:0}
 /* Modal */
-#materialModal{font-family:Arial,sans-serif;position:fixed;bottom:0px;left:0px;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:table;z-index:1000}
+#materialModal{font-family:Arial,sans-serif;position:fixed;top:0px;left:0px;width:100%;height:100%;background:rgba(0,0,0,0.5);display:table;z-index:1000}
 #materialModalCentered{display:table-cell;vertical-align:middle;padding:20px}
 #materialModalContent{border-radius:2px;padding:14px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:485px;min-height:200px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none}
 #materialModalTitle{margin:10px;font-weight:bold;font-size:16px}
@@ -1138,7 +1099,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 #materialModalYouTube.hide{opacity:0;transition:opacity 0.2s ease-out;pointer-events:none}
 #materialModalYouTube.show{opacity:1;transition:opacity 0.2s ease-in}
 #materialModalYouTubeContent img{margin:20px;filter:var(--totl-modal-youtube-logo)}
-#materialModalYouTube{font-family:Arial,sans-serif;position:fixed;bottom:0px;left:0px;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:table;z-index:1000}
+#materialModalYouTube{font-family:Arial,sans-serif;position:fixed;top:0px;left:0px;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:table;z-index:1000}
 #materialModalYouTubeCentered{display:table-cell;vertical-align:middle;padding:20px}
 #materialModalYouTubeContent{padding:0px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:450px;min-height:385px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:15px;overflow:hidden}
 #materialModalYouTubeTitle{margin:15px;font-size:18px}
@@ -1146,6 +1107,26 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 #materialModalYouTubeButtons{width:calc(100% - 12px);position:absolute;bottom:0px}
 #materialModalYouTubeButtonOK{background:red;color:white;border-radius:5px}
 #materialModalYouTubeButtonOK:hover{opacity:.7}
+/* Rate */
+.ratetitle{font-size:28px;font-family:Arial;display:flex;justify-content:center;padding:14px;margin:10px;text-align:center}
+.ratedes{font-size:16px;font-family:Arial;display:flex;justify-content:center;margin-top:20px}
+.starrating{display:flex;justify-content:center;margin:50px}
+.desrate{display:flex;justify-content:center;margin:20px 24px;flex-direction:column;align-items:center}
+.rateactiontext{display:flex;justify-content:center;flex-direction:column;align-items:center;font-size:16px;text-align:center}
+.rating:not(:checked) > input{position:absolute;top:-9999px;clip:rect(0,0,0,0)}
+.rating:not(:checked) > label{float:right;width:1em;padding:0 .1em;overflow:hidden;white-space:nowrap;cursor:pointer;font-size:365%;line-height:1.2;color:#727272}
+.rating:not(:checked) > label:before{content:'★ '}
+.rating > input:checked ~ label{color:gold}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label{color:gold}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label{color:#ea0}
+.rating > label:active{position:relative;top:2px;left:2px}
+#materialModalRateButtonWriteOK,#materialModalButtonSupportOK{background:#4285f4;color:white;border-radius:5px}
+#materialModalRateButtonWriteOK:hover,#materialModalButtonSupportOK:hover{opacity:.7}
 /* About */
 .aboutbuttons button{margin:15px 10px 0 0;display:inline-block}
 #permullist{padding-inline-start:15px}
@@ -1176,9 +1157,9 @@ only screen and (max-device-width:480px){
   .videopreview iframe{width:100%;height:auto;aspect-ratio:16/9}
   .youtubesuggpanel{display:none}
   #samplelikebar,#sampledislikebutton,#samplesharebutton,#sampleaddbutton{display:none}
-  #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
-  #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:100%;float:left}
-  #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:0px}
+  #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist,#gamepadwhitelist{margin-left:25px}
+  #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url],#gamepadwhitelist input[type=url]{width:100%;float:left}
+  #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select,#gamepadwhitelist select{width:100%;margin-right:0px}
   #ayh{font-size:12px;right:15px}
   #tllo{font-size:11px;top:26px;right:15px}
   .stars{font-size:14px;top:22px;left:15px}
