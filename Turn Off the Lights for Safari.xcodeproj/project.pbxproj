@@ -38,8 +38,8 @@
 		1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */; };
 		1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */; };
 		1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */; };
-		1E4CB227268CDC2300015282 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */; };
 		1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */; };
+		1E54226D28423578003B4F50 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54226C28423578003B4F50 /* TOtL_macOS_test.swift */; };
 		1E665AF826FE6B48002ED59A /* share-lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E665AF726FE6B48002ED59A /* share-lamp.png */; };
 		1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762772681F2B800995D6C /* MasterViewController.swift */; };
 		1E67627A2681F42E00995D6C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762792681F42E00995D6C /* SplitViewController.swift */; };
@@ -89,19 +89,19 @@
 			remoteGlobalIDString = 1E70CA0826726F380064A939;
 			remoteInfo = "Turn Off the Lights for Safari (macOS)";
 		};
-		1E4CB228268CDC2300015282 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E70CA0826726F380064A939;
-			remoteInfo = "Turn Off the Lights for Safari (macOS)";
-		};
 		1E4CB235268CDC6D00015282 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1E70C9F626726F380064A939;
 			remoteInfo = "Turn Off the Lights for Safari (iOS)";
+		};
+		1E54226E28423578003B4F50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70CA0826726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari (macOS)";
 		};
 		1EE7F91526DE59930011E42E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -175,11 +175,11 @@
 		1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_UITest.swift; sourceTree = "<group>"; };
 		1E4CB217268CC79300015282 /* TOtL-macOS-UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_UITest.swift; sourceTree = "<group>"; };
-		1E4CB224268CDC2300015282 /* TOtL-macOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_test.swift; sourceTree = "<group>"; };
 		1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-iOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_test.swift; sourceTree = "<group>"; };
 		1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Turn Off the Lights for Safari (iOS).entitlements"; sourceTree = "<group>"; };
+		1E54226A28423578003B4F50 /* TOtL-macOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E54226C28423578003B4F50 /* TOtL_macOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_test.swift; sourceTree = "<group>"; };
 		1E665AF726FE6B48002ED59A /* share-lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-lamp.png"; sourceTree = "<group>"; };
 		1E6762772681F2B800995D6C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		1E6762792681F42E00995D6C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
@@ -346,14 +346,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4CB221268CDC2300015282 /* Frameworks */ = {
+		1E4CB22E268CDC6D00015282 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4CB22E268CDC6D00015282 /* Frameworks */ = {
+		1E54226728423578003B4F50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -407,14 +407,6 @@
 			path = "TOtL-macOS-UITest";
 			sourceTree = "<group>";
 		};
-		1E4CB225268CDC2300015282 /* TOtL-macOS-test */ = {
-			isa = PBXGroup;
-			children = (
-				1E4CB226268CDC2300015282 /* TOtL_macOS_test.swift */,
-			);
-			path = "TOtL-macOS-test";
-			sourceTree = "<group>";
-		};
 		1E4CB232268CDC6D00015282 /* TOtL-iOS-test */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,10 +415,17 @@
 			path = "TOtL-iOS-test";
 			sourceTree = "<group>";
 		};
+		1E54226B28423578003B4F50 /* TOtL-macOS-test */ = {
+			isa = PBXGroup;
+			children = (
+				1E54226C28423578003B4F50 /* TOtL_macOS_test.swift */,
+			);
+			path = "TOtL-macOS-test";
+			sourceTree = "<group>";
+		};
 		1E70C9E326726F350064A939 = {
 			isa = PBXGroup;
 			children = (
-				1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */,
 				1E70C9E826726F350064A939 /* Shared (App) */,
 				1E70C9F126726F380064A939 /* Shared (Extension) */,
 				1E70C9F926726F380064A939 /* iOS (App) */,
@@ -435,8 +434,8 @@
 				1E70CA2426726F380064A939 /* macOS (Extension) */,
 				1E4CB20B268CC77900015282 /* TOtL-iOS-UITest */,
 				1E4CB218268CC79300015282 /* TOtL-macOS-UITest */,
-				1E4CB225268CDC2300015282 /* TOtL-macOS-test */,
 				1E4CB232268CDC6D00015282 /* TOtL-iOS-test */,
+				1E54226B28423578003B4F50 /* TOtL-macOS-test */,
 				1E70C9F826726F380064A939 /* Products */,
 				1EE7F91326DE59930011E42E /* Frameworks */,
 			);
@@ -469,8 +468,8 @@
 				1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */,
 				1E4CB20A268CC77900015282 /* TOtL-iOS-UITest.xctest */,
 				1E4CB217268CC79300015282 /* TOtL-macOS-UITest.xctest */,
-				1E4CB224268CDC2300015282 /* TOtL-macOS-test.xctest */,
 				1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */,
+				1E54226A28423578003B4F50 /* TOtL-macOS-test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -478,6 +477,7 @@
 		1E70C9F926726F380064A939 /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */,
 				1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */,
 				1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */,
 				1E665AF726FE6B48002ED59A /* share-lamp.png */,
@@ -606,24 +606,6 @@
 			productReference = 1E4CB217268CC79300015282 /* TOtL-macOS-UITest.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1E4CB223268CDC2300015282 /* TOtL-macOS-test */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E4CB22A268CDC2300015282 /* Build configuration list for PBXNativeTarget "TOtL-macOS-test" */;
-			buildPhases = (
-				1E4CB220268CDC2300015282 /* Sources */,
-				1E4CB221268CDC2300015282 /* Frameworks */,
-				1E4CB222268CDC2300015282 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1E4CB229268CDC2300015282 /* PBXTargetDependency */,
-			);
-			name = "TOtL-macOS-test";
-			productName = "TOtL-macOS-test";
-			productReference = 1E4CB224268CDC2300015282 /* TOtL-macOS-test.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		1E4CB230268CDC6D00015282 /* TOtL-iOS-test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E4CB237268CDC6D00015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-test" */;
@@ -640,6 +622,24 @@
 			name = "TOtL-iOS-test";
 			productName = "TOtL-iOS-test";
 			productReference = 1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E54226928423578003B4F50 /* TOtL-macOS-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E54227028423578003B4F50 /* Build configuration list for PBXNativeTarget "TOtL-macOS-test" */;
+			buildPhases = (
+				1E54226628423578003B4F50 /* Sources */,
+				1E54226728423578003B4F50 /* Frameworks */,
+				1E54226828423578003B4F50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E54226F28423578003B4F50 /* PBXTargetDependency */,
+			);
+			name = "TOtL-macOS-test";
+			productName = "TOtL-macOS-test";
+			productReference = 1E54226A28423578003B4F50 /* TOtL-macOS-test.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		1E70C9F626726F380064A939 /* Turn Off the Lights for Safari (iOS) */ = {
@@ -721,7 +721,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					1E4CB209268CC77900015282 = {
@@ -732,13 +732,13 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 1E70CA0826726F380064A939;
 					};
-					1E4CB223268CDC2300015282 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 1E70CA0826726F380064A939;
-					};
 					1E4CB230268CDC6D00015282 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 1E70C9F626726F380064A939;
+					};
+					1E54226928423578003B4F50 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 1E70CA0826726F380064A939;
 					};
 					1E70C9F626726F380064A939 = {
 						CreatedOnToolsVersion = 13.0;
@@ -802,8 +802,8 @@
 				1E70CA1F26726F380064A939 /* Turn Off the Lights for Safari Extension (macOS) */,
 				1E4CB209268CC77900015282 /* TOtL-iOS-UITest */,
 				1E4CB216268CC79300015282 /* TOtL-macOS-UITest */,
-				1E4CB223268CDC2300015282 /* TOtL-macOS-test */,
 				1E4CB230268CDC6D00015282 /* TOtL-iOS-test */,
+				1E54226928423578003B4F50 /* TOtL-macOS-test */,
 			);
 		};
 /* End PBXProject section */
@@ -823,14 +823,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4CB222268CDC2300015282 /* Resources */ = {
+		1E4CB22F268CDC6D00015282 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4CB22F268CDC6D00015282 /* Resources */ = {
+		1E54226828423578003B4F50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -918,19 +918,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4CB220268CDC2300015282 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E4CB227268CDC2300015282 /* TOtL_macOS_test.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E4CB22D268CDC6D00015282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E54226628423578003B4F50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E54226D28423578003B4F50 /* TOtL_macOS_test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,15 +1000,15 @@
 			target = 1E70CA0826726F380064A939 /* Turn Off the Lights for Safari (macOS) */;
 			targetProxy = 1E4CB21B268CC79300015282 /* PBXContainerItemProxy */;
 		};
-		1E4CB229268CDC2300015282 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E70CA0826726F380064A939 /* Turn Off the Lights for Safari (macOS) */;
-			targetProxy = 1E4CB228268CDC2300015282 /* PBXContainerItemProxy */;
-		};
 		1E4CB236268CDC6D00015282 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E70C9F626726F380064A939 /* Turn Off the Lights for Safari (iOS) */;
 			targetProxy = 1E4CB235268CDC6D00015282 /* PBXContainerItemProxy */;
+		};
+		1E54226F28423578003B4F50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70CA0826726F380064A939 /* Turn Off the Lights for Safari (macOS) */;
+			targetProxy = 1E54226E28423578003B4F50 /* PBXContainerItemProxy */;
 		};
 		1EE7F91626DE59930011E42E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1276,60 +1276,6 @@
 			};
 			name = Release;
 		};
-		1E4CB22B268CDC2300015282 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PRR97757HF;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Contents/MacOS/Turn Off the Lights for Safari";
-			};
-			name = Debug;
-		};
-		1E4CB22C268CDC2300015282 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PRR97757HF;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Contents/MacOS/Turn Off the Lights for Safari";
-			};
-			name = Release;
-		};
 		1E4CB238268CDC6D00015282 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1378,6 +1324,46 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Turn Off the Lights for Safari";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E54227128423578003B4F50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Contents/MacOS/Turn Off the Lights for Safari";
+			};
+			name = Debug;
+		};
+		1E54227228423578003B4F50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRR97757HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Contents/MacOS/Turn Off the Lights for Safari";
 			};
 			name = Release;
 		};
@@ -1564,7 +1550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Turn Off the Lights for Safari (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Turn Off the Lights for Safari (iOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 64;
@@ -1605,7 +1591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Turn Off the Lights for Safari (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Turn Off the Lights for Safari (iOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 64;
@@ -1809,20 +1795,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E4CB22A268CDC2300015282 /* Build configuration list for PBXNativeTarget "TOtL-macOS-test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E4CB22B268CDC2300015282 /* Debug */,
-				1E4CB22C268CDC2300015282 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1E4CB237268CDC6D00015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E4CB238268CDC6D00015282 /* Debug */,
 				1E4CB239268CDC6D00015282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E54227028423578003B4F50 /* Build configuration list for PBXNativeTarget "TOtL-macOS-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E54227128423578003B4F50 /* Debug */,
+				1E54227228423578003B4F50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
