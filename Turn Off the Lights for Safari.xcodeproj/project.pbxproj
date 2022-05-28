@@ -39,7 +39,7 @@
 		1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */; };
 		1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */; };
 		1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */; };
-		1E54226D28423578003B4F50 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54226C28423578003B4F50 /* TOtL_macOS_test.swift */; };
+		1E542275284243D6003B4F50 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E542274284243D6003B4F50 /* TOtL_macOS_test.swift */; };
 		1E665AF826FE6B48002ED59A /* share-lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E665AF726FE6B48002ED59A /* share-lamp.png */; };
 		1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762772681F2B800995D6C /* MasterViewController.swift */; };
 		1E67627A2681F42E00995D6C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762792681F42E00995D6C /* SplitViewController.swift */; };
@@ -179,7 +179,7 @@
 		1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_test.swift; sourceTree = "<group>"; };
 		1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Turn Off the Lights for Safari (iOS).entitlements"; sourceTree = "<group>"; };
 		1E54226A28423578003B4F50 /* TOtL-macOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E54226C28423578003B4F50 /* TOtL_macOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_test.swift; sourceTree = "<group>"; };
+		1E542274284243D6003B4F50 /* TOtL_macOS_test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_test.swift; sourceTree = "<group>"; };
 		1E665AF726FE6B48002ED59A /* share-lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-lamp.png"; sourceTree = "<group>"; };
 		1E6762772681F2B800995D6C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		1E6762792681F42E00995D6C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
@@ -418,7 +418,7 @@
 		1E54226B28423578003B4F50 /* TOtL-macOS-test */ = {
 			isa = PBXGroup;
 			children = (
-				1E54226C28423578003B4F50 /* TOtL_macOS_test.swift */,
+				1E542274284243D6003B4F50 /* TOtL_macOS_test.swift */,
 			);
 			path = "TOtL-macOS-test";
 			sourceTree = "<group>";
@@ -738,6 +738,7 @@
 					};
 					1E54226928423578003B4F50 = {
 						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
 						TestTargetID = 1E70CA0826726F380064A939;
 					};
 					1E70C9F626726F380064A939 = {
@@ -930,7 +931,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E54226D28423578003B4F50 /* TOtL_macOS_test.swift in Sources */,
+				1E542275284243D6003B4F50 /* TOtL_macOS_test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1332,16 +1333,23 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Off the Lights for Safari.app/Contents/MacOS/Turn Off the Lights for Safari";
 			};
@@ -1352,10 +1360,16 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.TOtL-macOS-test";
