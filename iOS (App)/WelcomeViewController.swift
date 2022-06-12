@@ -39,6 +39,15 @@ private extension AnimatedButton {
 class WelcomeViewController: UIViewController, UIActivityItemSource {
     var metadata: LPLinkMetadata?
 
+    let defaults = UserDefaults(suiteName: "group.stefanvd.turnoffthelightsforsafari")
+
+    @IBOutlet weak var theguide: UIView!
+    @IBAction func closeguide(_ sender: Any) {
+        defaults!.set(true, forKey: "launchedBefore")
+        theguide.frame.size.height = 0
+        theguide.isHidden = true
+    }
+    
     @IBOutlet weak var imagepeople: UIImageView!
     func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
         let metadata = LPLinkMetadata()
@@ -74,8 +83,29 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        // debug
+        //defaults!.set(false, forKey: "launchedBefore")
+        
+        let launchedBefore = defaults!.bool(forKey: "launchedBefore")
+        if launchedBefore {
+            //print("Not first launch.")
+            theguide.frame.size.height = 0
+            theguide.isHidden = true
+        } else {
+            //print("First launch, setting UserDefault.")
+            theguide.isHidden = false
+        }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        theguide.layer.cornerRadius = 10
+        theguide.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMinXMinYCorner]
+        theguide.clipsToBounds = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if traitCollection.horizontalSizeClass == .compact {
@@ -122,6 +152,29 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         }
     }
 
+    @IBAction func toolbarshareaction(_ sender: Any) {
+        let items = [self]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        // Check if user is on iPad and present popover
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            DispatchQueue.main.async {
+                if let popoverPresentationController = ac.popoverPresentationController {
+                    popoverPresentationController.sourceView = self.btnshare
+                    popoverPresentationController.sourceRect = self.btnshare.bounds;
+                    popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.down;
+                }
+            }
+        }
+
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+
+        // Present share activityView on regular iPhone
+        DispatchQueue.main.async {
+            self.present(ac, animated: true)
+        }
+    }
+    
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         switch UIDevice.current.orientation{
         case .landscapeLeft, .landscapeRight:

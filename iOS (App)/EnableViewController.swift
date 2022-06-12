@@ -21,13 +21,9 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         super.viewDidLoad()
         addvideo()
         settranslationtext()
-        
-        // default zero opacity
-        self.btnok.alpha = 0.0
     }
     
     @IBOutlet weak var lbleasysetup: UILabel!
-    @IBOutlet weak var lblturnoffthelights: UILabel!
     @IBOutlet weak var lblactivate: UILabel!
     @IBOutlet weak var lblwatchvideo: UIButton!
     @IBOutlet weak var lblstep1: UILabel!
@@ -37,17 +33,10 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.8, execute: {
-            UIView.animate(withDuration: 1.5) {
-                self.btnok.alpha = 1.0
-            }
-        })
     }
 
     func settranslationtext(){
         lbleasysetup.text = String.localizedStringWithFormat(NSLocalizedString("lbleasytosetup", comment: ""), "").uppercased()
-        lblturnoffthelights.text = String.localizedStringWithFormat(NSLocalizedString("lblturnoffthelights", comment: ""), "")
         lblactivate.text = String.localizedStringWithFormat(NSLocalizedString("lblactivate", comment: ""), "")
         lblwatchvideo.setTitle(String.localizedStringWithFormat(NSLocalizedString("lblwatchvideo", comment: ""), ""), for: .normal)
         
@@ -88,6 +77,8 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         let boldString4b = NSMutableAttributedString(string:part4b, attributes:attrs4)
         attributedString4.append(boldString4b)
         lblstep4.attributedText = attributedString4
+        
+        btnok.setTitle(String.localizedStringWithFormat(NSLocalizedString("lblactionok", comment: ""), ""), for: .normal)
     }
     
     func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {

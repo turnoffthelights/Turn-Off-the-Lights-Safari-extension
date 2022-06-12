@@ -161,7 +161,7 @@ class AboutController: UITableViewController{
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         
-        if let url = URL(string: "https://www.turnoffthelights.com/browser/languages.html") {
+        if let url = URL(string: "https://www.turnoffthelights.com/browser/extension/translate/") {
             UIApplication.shared.open(url)
         }
     }

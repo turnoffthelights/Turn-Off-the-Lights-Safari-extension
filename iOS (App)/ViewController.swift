@@ -164,7 +164,8 @@ class ViewController: UIViewController{
         vc.modalTransitionStyle = .coverVertical
         if UIDevice.current.userInterfaceIdiom == .phone {
             // rotation limit work only in fullscreen mode
-            vc.modalPresentationStyle = .fullScreen
+            //vc.modalPresentationStyle = .fullScreen
+            vc.modalPresentationStyle = .pageSheet
         } else {
             vc.modalPresentationStyle = .pageSheet
         }

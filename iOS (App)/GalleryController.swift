@@ -50,10 +50,19 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
     
     @IBOutlet weak var iconmytree: UIImageView!
     @IBOutlet weak var iconsunrise: UIImageView!
-    @IBOutlet weak var icondisk: UIImageView!
-    @IBOutlet weak var iconlamp: UIImageView!
+    @IBOutlet weak var iconharddisk: UIImageView!
+    @IBOutlet weak var icondatetoday: UIImageView!
+    @IBOutlet weak var iconmylunarnewyear: UIImageView!
+    @IBOutlet weak var iconhometab: UIImageView!
+    @IBOutlet weak var iconcanada: UIImageView!
+    @IBOutlet weak var iconhellooffice: UIImageView!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         iconmytree.layer.borderColor = UIColor.separator.cgColor
         iconmytree.layer.masksToBounds = true
@@ -65,91 +74,74 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
         iconsunrise.contentMode = .scaleToFill
         iconsunrise.layer.borderWidth = 1
         
-        icondisk.layer.borderColor = UIColor.separator.cgColor
-        icondisk.layer.masksToBounds = true
-        icondisk.contentMode = .scaleToFill
-        icondisk.layer.borderWidth = 1
+        iconharddisk.layer.borderColor = UIColor.separator.cgColor
+        iconharddisk.layer.masksToBounds = true
+        iconharddisk.contentMode = .scaleToFill
+        iconharddisk.layer.borderWidth = 1
         
-        iconlamp.layer.borderColor = UIColor.separator.cgColor
-        iconlamp.layer.masksToBounds = true
-        iconlamp.contentMode = .scaleToFill
-        iconlamp.layer.borderWidth = 1
+        icondatetoday.layer.borderColor = UIColor.separator.cgColor
+        icondatetoday.layer.masksToBounds = true
+        icondatetoday.contentMode = .scaleToFill
+        icondatetoday.layer.borderWidth = 1
+        
+        iconmylunarnewyear.layer.borderColor = UIColor.separator.cgColor
+        iconmylunarnewyear.layer.masksToBounds = true
+        iconmylunarnewyear.contentMode = .scaleToFill
+        iconmylunarnewyear.layer.borderWidth = 1
+        
+        iconhometab.layer.borderColor = UIColor.separator.cgColor
+        iconhometab.layer.masksToBounds = true
+        iconhometab.contentMode = .scaleToFill
+        iconhometab.layer.borderWidth = 1
+        
+        iconcanada.layer.borderColor = UIColor.separator.cgColor
+        iconcanada.layer.masksToBounds = true
+        iconcanada.contentMode = .scaleToFill
+        iconcanada.layer.borderWidth = 1
+        
+        iconhellooffice.layer.borderColor = UIColor.separator.cgColor
+        iconhellooffice.layer.masksToBounds = true
+        iconhellooffice.contentMode = .scaleToFill
+        iconhellooffice.layer.borderWidth = 1
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            // check if website exists
-            guard let url = URL(string: "https://apps.apple.com/app/id1062397646") else {
-            return
-            }
-
-            let safariVC = SFSafariViewController(url: url)
-            safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
-            // Check if user is on iPad and present popover
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                safariVC.popoverPresentationController?.sourceView = self.view
-            }
-            safariVC.delegate = self
-            present(safariVC, animated: true, completion: nil)
+            openapplink(url: "https://apps.apple.com/app/id1062397646")
         }else if indexPath.row == 1 {
-            // check if website exists
-            guard let url = URL(string: "https://apps.apple.com/app/id1530008755") else {
-            return
-            }
-
-            let safariVC = SFSafariViewController(url: url)
-            safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
-            // Check if user is on iPad and present popover
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                safariVC.popoverPresentationController?.sourceView = self.view
-            }
-            safariVC.delegate = self
-            present(safariVC, animated: true, completion: nil)
+            openapplink(url: "https://apps.apple.com/app/id1530008755")
         }else if indexPath.row == 2 {
-            // check if website exists
-            guard let url = URL(string: "https://apps.apple.com/app/id1043842695") else {
-            return
-            }
-
-            let safariVC = SFSafariViewController(url: url)
-            safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
-            // Check if user is on iPad and present popover
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                safariVC.popoverPresentationController?.sourceView = self.view
-            }
-            safariVC.delegate = self
-            present(safariVC, animated: true, completion: nil)
+            openapplink(url: "https://apps.apple.com/app/id1043842695")
         }else if indexPath.row == 3 {
-            // check if website exists
-            guard let url = URL(string: "https://apps.apple.com/app/id1523093827") else {
-            return
-            }
-
-            let safariVC = SFSafariViewController(url: url)
-            safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
-            // Check if user is on iPad and present popover
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                safariVC.popoverPresentationController?.sourceView = self.view
-            }
-            safariVC.delegate = self
-            present(safariVC, animated: true, completion: nil)
+            openapplink(url: "https://apps.apple.com/app/id1523093827")
         }else if indexPath.row == 4 {
-            // check if website exists
-            guard let url = URL(string: "https://apps.apple.com/app/id1585512140") else {
-            return
-            }
-
-            let safariVC = SFSafariViewController(url: url)
-            safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
-            // Check if user is on iPad and present popover
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                safariVC.popoverPresentationController?.sourceView = self.view
-            }
-            safariVC.delegate = self
-            present(safariVC, animated: true, completion: nil)
+            openapplink(url: "https://apps.apple.com/app/id1596469569")
+        }else if indexPath.row == 5 {
+            openapplink(url: "https://apps.apple.com/app/id1585512140")
+        }else if indexPath.row == 6 {
+            openapplink(url: "https://apps.apple.com/app/id1416358359")
+        }else if indexPath.row == 7 {
+            openapplink(url: "https://apps.apple.com/app/id1569818870")
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func openapplink(url: String){
+        // check if website exists
+        guard let url = URL(string: url) else {
+        return
+        }
+
+        let safariVC = SFSafariViewController(url: url)
+        // Check if user is on iPad and present popover
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            safariVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        }else{
+            safariVC.modalPresentationStyle = UIModalPresentationStyle.popover
+        }
+        safariVC.delegate = self
+        present(safariVC, animated: true, completion: nil)
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {

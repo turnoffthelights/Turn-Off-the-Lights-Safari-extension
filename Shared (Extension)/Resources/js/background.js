@@ -63,6 +63,7 @@ const linkgamepad = "https://www.turnoffthelights.com/game-controller/";
 const devmode = true;
 const devdonate = false;
 /*---*/
+console.log("Start the code from here further.");
 
 chrome.runtime.onMessage.addListener(function request(request, sender){
 // eye protection & autoplay & shortcut

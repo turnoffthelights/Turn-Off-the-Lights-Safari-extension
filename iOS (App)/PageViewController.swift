@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, UIScrollViewDelegate {
 
     var pageControl = UIPageControl()
     
@@ -45,22 +45,41 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         closeButton.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
         closeButton.layer.cornerRadius = 16
         closeButton.layer.masksToBounds = true;
+        closeButton.alpha = 1.0
         closeButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(closeButton)
         
         self.closeButton.translatesAutoresizingMaskIntoConstraints = false
         self.closeButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: +18).isActive = true
         self.closeButton.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -18).isActive = true
+        
+        for subview in view.subviews {
+            if let scrollView = subview as? UIScrollView {
+                scrollView.delegate = self
+            }
+        }
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if currentIndex == 0, scrollView.contentOffset.x + scrollView.contentInset.left < 0 {
+           scrollView.contentOffset = CGPoint(x: -scrollView.contentInset.left, y: scrollView.contentOffset.y)
+        }
+        else if currentIndex == orderedViewControllers.count - 1, scrollView.contentInset.right < 0, scrollView.contentOffset.x + scrollView.contentInset.right > 0 {
+           scrollView.contentOffset = CGPoint(x: -scrollView.contentInset.right, y: scrollView.contentOffset.y)
+        }
+    }
+
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if currentIndex == 0, scrollView.contentOffset.x + scrollView.contentInset.left < 0 {
+           targetContentOffset.pointee = CGPoint(x: -scrollView.contentInset.left, y: targetContentOffset.pointee.y)
+        }
+        else if currentIndex == orderedViewControllers.count - 1, scrollView.contentInset.right < 0, scrollView.contentOffset.x + scrollView.contentInset.right > 0 {
+           targetContentOffset.pointee = CGPoint(x: -scrollView.contentInset.right, y: targetContentOffset.pointee.y)
+        }
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        
-        closeButton.alpha = 0
-        UIView.animate(withDuration: 1.0, delay: 5.0, animations: {
-            self.closeButton.alpha = 1.0
-        })
-
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -158,7 +177,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     @objc private func pageControlHandle(sender: UIPageControl){
         //print(sender.currentPage)
         let selectedPage = sender.currentPage
-        setViewControllers([orderedViewControllers[selectedPage]], direction: .forward, animated: true, completion: nil)
+        if(selectedPage > currentIndex){
+            setViewControllers([orderedViewControllers[selectedPage]], direction: .forward, animated: true, completion: nil)
+        }else{
+            setViewControllers([orderedViewControllers[selectedPage]], direction: .reverse, animated: true, completion: nil)
+        }
+        currentIndex = sender.currentPage
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
