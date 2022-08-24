@@ -1,14 +1,13 @@
 //
-//  SmallCollectionViewCell1.swift
-//  MyApp
+//  SmalliPadCell1.swift
+//  Turn Off the Lights for Safari (iOS)
 //
-//  Created by innovation on 2022-07-27.
+//  Created by Stefan Van Damme on 24/08/2022.
 //
 
 import UIKit
 
 class SmalliPadCell1: UICollectionViewCell {
-    
     func i18string(text: String) -> String{
         return String.localizedStringWithFormat(NSLocalizedString(text, comment: ""), "")
     }
@@ -104,5 +103,4 @@ class SmalliPadCell1: UICollectionViewCell {
         newString5.append(boldTextstep5c)
         lblstep5newtab.attributedText = newString5
     }
-
 }

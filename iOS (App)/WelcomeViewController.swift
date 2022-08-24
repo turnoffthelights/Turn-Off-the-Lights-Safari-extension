@@ -75,7 +75,7 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         super.viewDidLoad()
         
         // debug
-        defaults!.set(false, forKey: "launchedBefore")
+        //defaults!.set(false, forKey: "launchedBefore")
         
         //ipad cell
         let CellTypeOne = UINib(nibName: bigcellId, bundle: nil)
@@ -87,7 +87,6 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         collectionView.reloadData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.gorefreshcollection(notification:)), name: Notification.Name("callcloseinstallpanel"), object: nil)
-
     }
     
     @objc func gorefreshcollection(notification: Notification){
@@ -149,17 +148,17 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        collectionView.reloadData()
+        collectionView?.reloadData()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        collectionView.collectionViewLayout.invalidateLayout()
+        collectionView?.collectionViewLayout.invalidateLayout()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        collectionView.collectionViewLayout.invalidateLayout()
+        collectionView?.collectionViewLayout.invalidateLayout()
     }
 }
 

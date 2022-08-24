@@ -2,153 +2,55 @@
 //  YouTubeViewController.swift
 //  Turn Off the Lights for Safari (iOS)
 //
-//  Created by Stefan Van Damme on 18/06/2021.
+//  Created by Stefan Van Damme on 24/08/2022.
 //
 
+import Foundation
 import UIKit
 import SafariServices
 import AVFoundation
 import AVKit
 import AudioToolbox
 
-//UITableViewDelegate, UITableViewDataSource
-class YouTubeViewController: UITableViewController{
-    @IBOutlet weak var videolayer: UIView!
-    @IBOutlet weak var imageinspiration: UIImageView!
-    
-    // View which contains the loading text and the spinner
-    let loadingView = UIView()
+class YouTubeViewController: UIViewController {
+    @IBOutlet weak var ytvideolayer: UIView!
+    @IBOutlet weak var ytimageinspiration: UIImageView!
 
-    // Spinner shown during load the TableView
-    var spinner = UIActivityIndicatorView()
+    @IBOutlet weak var ytcollectionView: UICollectionView!
+    let bigcellId = "VideoiPadCell1"
 
-    // Text shown during load the TableView
-    let loadingLabel = UILabel()
-
-    // Set the activity indicator into the main view
-    private func setLoadingScreen() {
-
-        // Sets the view which contains the loading text and the spinner
-        let width: CGFloat = 120
-        let height: CGFloat = 30
-        let x = (tableView.frame.width / 2) - (width / 2)
-        let y = (tableView.frame.height / 2) - (height / 2) - (navigationController?.navigationBar.frame.height)!
-        loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
-
-        // Sets loading text
-        loadingLabel.textColor = .gray
-        loadingLabel.textAlignment = .center
-        loadingLabel.text = "Loading..."
-        loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
-
-        // Sets spinner
-        spinner = UIActivityIndicatorView(style: .medium)
-        spinner.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        spinner.startAnimating()
-
-        // Adds text and spinner to the view
-        loadingView.addSubview(spinner)
-        loadingView.addSubview(loadingLabel)
-
-        tableView.addSubview(loadingView)
+    struct VideoApp {
+        var appName : String
+        var appDownloadLink : String
     }
     
-    // Remove the activity indicator from the main view
-    private func removeLoadingScreen() {
-        // Hides and stops the text and the spinner
-        spinner.stopAnimating()
-        spinner.isHidden = true
-        loadingLabel.isHidden = true
-    }
+    var videoproducts : Array<VideoApp> =  [
+        VideoApp(appName: "⚡️Introduction Turn Off the Lights for Safari on iOS 15 and higher", appDownloadLink: "GSEqAjzy_hg"),
+        VideoApp(appName: "🔵How to enable Safari Extension iOS 15 and higher?", appDownloadLink: "la3l4IQrtbo"),
+        VideoApp(appName: "🔵How to enable the Night Owl profile on iOS 15 and higher?", appDownloadLink: "vubVpLm8ldk"),
+        VideoApp(appName: "🔵How to enable the Eye Protection profile on iOS 15 and higher?", appDownloadLink: "3TNYUG9O-u8"),
+        VideoApp(appName: "🔵How to enable the Video Lover profile on iOS 15 and higher?", appDownloadLink: "Rm8nKaPlnSI"),
+        VideoApp(appName: "🔵How to open the Turn Off the Lights Options page on iOS 15 and higher?", appDownloadLink: "91DmhjsCb_Y"),
+        // -- general videos
+        VideoApp(appName: "🔔Introduction - Turn Off the Lights Browser Extension version 4", appDownloadLink: "yONZVLA72ZM"),
+        VideoApp(appName: "🌿Turn Off the Lights Browser Extension Version 4 - The Ultimate and Valuable Tool!", appDownloadLink: "oWg0rMvCJng"),
+        VideoApp(appName: "🎁Double Click - Will make you see the useful HIDDEN Menu!", appDownloadLink: "nsmGfOAgcoE"),
+        VideoApp(appName: "🕯How enable the Night Mode feature?", appDownloadLink: "mbO37Ac5ny8"),
+        VideoApp(appName: "🔵How to enable the water reflection feature in the Turn Off the Lights browser extension?", appDownloadLink: "klMYXTbFzok"),
+        VideoApp(appName: "🔵How to enable the Atmosphere Lighting Vivid Mode in the Turn Off the Lights browser extension?", appDownloadLink: "GOARYksUcEM"),
+        VideoApp(appName: "🔵How to enable the Audio Visualizer on YouTube? (and other HTML5 video websites)", appDownloadLink: "V5uDBWCzrEQ"),
+        VideoApp(appName: "🔵How to enable the block 60fps on YouTube?", appDownloadLink: "P9_tK6p-YOU")
+    ]
     
-    var videos:[Video] = []
-    var video:Video = Video()
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view, typically from a nib.
-        setLoadingScreen()
-        
-        let videoa = Video()
-        videoa.Key = "GSEqAjzy_hg"
-        videoa.Title = "⚡️Introduction Turn Off the Lights for Safari on iOS 15 and higher"
-        videos.append(videoa)
-        
-        let videob = Video()
-        videob.Key = "la3l4IQrtbo"
-        videob.Title = "🔵How to enable Safari Extension iOS 15 and higher?"
-        videos.append(videob)
-        
-        let videoc = Video()
-        videoc.Key = "vubVpLm8ldk"
-        videoc.Title = "🔵How to enable the Night Owl profile on iOS 15 and higher?"
-        videos.append(videoc)
-        
-        let videod = Video()
-        videod.Key = "3TNYUG9O-u8"
-        videod.Title = "🔵How to enable the Eye Protection profile on iOS 15 and higher?"
-        videos.append(videod)
+        //ipad cell
+        let CellTypeOne = UINib(nibName: bigcellId, bundle: nil)
 
-        let videoe = Video()
-        videoe.Key = "Rm8nKaPlnSI"
-        videoe.Title = "🔵How to enable the Video Lover profile on iOS 15 and higher?"
-        videos.append(videoe)
-        
-        let videof = Video()
-        videof.Key = "91DmhjsCb_Y"
-        videof.Title = "🔵How to open the Turn Off the Lights Options page on iOS 15 and higher?"
-        videos.append(videof)
+        ytcollectionView.register(CellTypeOne, forCellWithReuseIdentifier: bigcellId)
 
-        // -- general videos
-        
-        let video = Video()
-        video.Key = "yONZVLA72ZM"
-        video.Title = "🔔Introduction - Turn Off the Lights Browser Extension version 4"
-        videos.append(video)
-        
-        let video2 = Video()
-        video2.Key = "oWg0rMvCJng"
-        video2.Title = "🌿Turn Off the Lights Browser Extension Version 4 - The Ultimate and Valuable Tool!"
-        videos.append(video2)
-        
-        let video3 = Video()
-        video3.Key = "nsmGfOAgcoE"
-        video3.Title = "🎁Double Click - Will make you see the useful HIDDEN Menu!"
-        videos.append(video3)
-        
-        let video4 = Video()
-        video4.Key = "mbO37Ac5ny8"
-        video4.Title = "🕯How enable the Night Mode feature?"
-        videos.append(video4)
-        
-        let video5 = Video()
-        video5.Key = "klMYXTbFzok"
-        video5.Title = "🔵How to enable the water reflection feature in the Turn Off the Lights browser extension?"
-        videos.append(video5)
-        
-        let video6 = Video()
-        video6.Key = "GOARYksUcEM"
-        video6.Title = "🔵How to enable the Atmosphere Lighting Vivid Mode in the Turn Off the Lights browser extension?"
-        videos.append(video6)
-        
-        let video7 = Video()
-        video7.Key = "V5uDBWCzrEQ"
-        video7.Title = "🔵How to enable the Audio Visualizer on YouTube? (and other HTML5 video websites)"
-        videos.append(video7)
-        
-        let video8 = Video()
-        video8.Key = "P9_tK6p-YOU"
-        video8.Title = "🔵How to enable the block 60fps on YouTube?"
-        videos.append(video8)
+        ytcollectionView.reloadData()
         
         addvideo()
     }
@@ -175,12 +77,6 @@ class YouTubeViewController: UITableViewController{
     private var playerLayer: AVPlayerLayer!
     private var playerItem: AVPlayerItem!
     private var playerLooper: AVPlayerLooper!
-
-    // Fixed to update size on iPad to full size
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        playerLayer.frame = videolayer.layer.bounds
-    }
     
     func addvideo(){
         let path = Bundle.main.path(forResource: "forest", ofType: "mov")
@@ -194,9 +90,9 @@ class YouTubeViewController: UITableViewController{
         playerLooper = AVPlayerLooper(player: player, templateItem: playerItem,
                                       timeRange: CMTimeRange(start: CMTime.zero, end: CMTimeMake(value: duration, timescale: 1)) )
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        playerLayer.frame = videolayer.layer.bounds
+        playerLayer.frame = ytvideolayer.layer.bounds
 
-        videolayer.layer.insertSublayer(playerLayer, at: 1)
+        ytvideolayer.layer.insertSublayer(playerLayer, at: 1)
         player.play()
         
 //        playerLayer.cornerRadius = 15
@@ -204,26 +100,70 @@ class YouTubeViewController: UITableViewController{
 //        playerLayer.masksToBounds = true
      
         // poster avplayer
-        imageinspiration.image = imagePreview(from: pathURL, in: 0.0)
+        ytimageinspiration.image = imagePreview(from: pathURL, in: 0.0)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        ytcollectionView?.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        ytcollectionView?.collectionViewLayout.invalidateLayout()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        ytcollectionView?.collectionViewLayout.invalidateLayout()
+        // Fixed to update size on iPad to full size
+        playerLayer?.frame = ytvideolayer.layer.bounds
+    }
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return videos.count
+/* Extension ViewController */
+extension YouTubeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        return UICollectionReusableView()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! VideoTableViewCell
-        cell.videoTitle.text = videos[indexPath.row].Title
-        let url = "https://img.youtube.com/vi/\(videos[indexPath.row].Key)/maxresdefault.jpg"
-        cell.videoImage.downloaded(from: url)
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vi = videos[indexPath.row].Key
-//        self.video = vi
-//        performSegue(withIdentifier: "toVideo", sender: nil)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let dequeuedCell = collectionView.dequeueReusableCell(withReuseIdentifier: bigcellId, for: indexPath)
         
+        guard let cellOne = dequeuedCell as? VideoiPadCell1 else {
+            fatalError("Wrong cell type for section 0. Expected CellTypeOne")
+        }
+        
+        // configure your CellTypeOne
+        cellOne.appName.text = videoproducts[indexPath.row].appName
+        let url = "https://img.youtube.com/vi/\(videoproducts[indexPath.row].appDownloadLink)/maxresdefault.jpg"
+        cellOne.imageAppLogo.downloaded(from: url)
+        cellOne.buttonview.tag = indexPath.row
+        cellOne.buttonview.addTarget(self, action: #selector(openLinkAction), for: .touchUpInside)
+        
+        cellOne.layer.cornerRadius = 10
+        /*cellOne.layer.shadowColor = UIColor.lightGray.cgColor
+        cellOne.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        cellOne.layer.shadowRadius = 12.0
+        cellOne.layer.shadowOpacity = 0.5
+        cellOne.layer.masksToBounds = false*/
+        return cellOne
+    }
+    
+    @objc func openLinkAction(sender: UIButton!) {
+        let btnsendtag: UIButton = sender
+        let vi = videoproducts[btnsendtag.tag].appDownloadLink
+
         let youtubeId = vi
         if let youtubeURL = URL(string: "youtube://\(youtubeId)"),
             UIApplication.shared.canOpenURL(youtubeURL) {
@@ -244,28 +184,45 @@ class YouTubeViewController: UITableViewController{
             }
         }
     }
-    
-    // animation effect add moving item on scroll
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        self.removeLoadingScreen()
         
-        if let lastIndexPath = tableView.indexPathsForVisibleRows?.last{
-            if lastIndexPath.row <= indexPath.row{
-                cell.center.y = cell.center.y + cell.frame.height / 2
-                cell.alpha = 0
-                UIView.animate(withDuration: 0.5, delay: 0.05*Double(indexPath.row), options: [.curveEaseInOut], animations: {
-                    cell.center.y = cell.center.y - cell.frame.height / 2
-                    cell.alpha = 1
-                }, completion: nil)
-            }
-        }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return videoproducts.count
+    }
+        
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-}
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var kWhateverHeightYouWant = 0
+        let cellwidth : CGFloat
+        let cellheight : CGFloat
 
-class Video{
-    var Key:String = ""
-    var Title:String = ""
+        //if UIDevice().userInterfaceIdiom == .phone
+        if(traitCollection.horizontalSizeClass == .compact){
+            //print("Smaller screen")
+            kWhateverHeightYouWant = 260
+            cellwidth = collectionView.frame.size.width - 40 //space 20
+            cellheight = CGFloat(kWhateverHeightYouWant)
+        }else{
+            //print("Bigger screen")
+            kWhateverHeightYouWant = 340
+            cellwidth = (collectionView.frame.size.width / 2) - 30
+            cellheight = CGFloat(kWhateverHeightYouWant)
+        }
+        return CGSize(width: cellwidth, height: cellheight)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let inset:CGFloat = 20
+        return UIEdgeInsets(top: 0, left: inset, bottom: inset, right: inset)
+    }
+        
 }
 
 extension UIImageView {
