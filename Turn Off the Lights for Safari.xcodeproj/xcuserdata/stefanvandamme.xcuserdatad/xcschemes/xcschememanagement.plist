@@ -14,16 +14,6 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>TOtL-macOS-UITest.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
-		<key>TOtL-macOS-test.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
 		<key>Turn Off the Lights for Safari (iOS).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -63,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>1E4CB230268CDC6D00015282</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1E54226928423578003B4F50</key>
 		<dict>
 			<key>primary</key>
 			<true/>
