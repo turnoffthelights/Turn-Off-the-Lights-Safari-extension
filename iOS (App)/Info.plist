@@ -25,5 +25,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>SFSafariCorrespondingMacOSAppBundleIdentifier</key>
+	<string>com.stefanvd.Turn-Off-the-Lights-for-Safari</string>
 </dict>
 </plist>

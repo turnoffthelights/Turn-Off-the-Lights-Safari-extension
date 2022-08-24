@@ -24,8 +24,7 @@
       }
   },
   "background": {
-    "service_worker": "js/background.js",
-	  "persistent": false
+    "service_worker": "js/background.js"
   },
   "content_security_policy": {
     "extension_pages": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' https://www.turnoffthelights.com * data:; object-src 'none'"
@@ -38,7 +37,6 @@
     },
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.mycinema.pro/*"],
       "css" : ["css/light.css"],
       "run_at": "document_end",
       "all_frames": true,
@@ -46,7 +44,7 @@
     },
     {
       "matches": ["*://*.youtube.com/*"],
-      "js": [ "js/fps.js" ],
+      "js": ["js/fps.js"],
       "run_at": "document_start",
       "all_frames": true
     },
@@ -81,6 +79,16 @@
     "page": "options.html",
     "open_in_tab": true
   },
+  "web_accessible_resources": [{
+    "resources": ["/js/fps-block.js", "/js/hd-quality.js"],
+    "matches": ["*://www.youtube.com/*"],
+    "use_dynamic_url": true
+  },
+  {
+    "resources": ["/js/video-player-status.js"],
+    "matches": ["http://*/*", "https://*/*"],
+    "use_dynamic_url": true
+  }],
   "offline_enabled": true,
   "minimum_chrome_version": "103",
   "storage": {

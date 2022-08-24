@@ -50,18 +50,6 @@ class WelcomeGuideViewController: UIViewController {
         lblaction3?.text = lblaction3?.text?.uppercased()
         lblaction2?.text = lblaction2?.text?.uppercased()
         lblaction1?.text = lblaction1?.text?.uppercased()
-        
-        DispatchQueue.main.async {
-            self.titlemain?.alpha = 0
-            UIView.animate(withDuration: 1.0, delay: 2.0, animations: {
-                self.titlemain?.alpha = 1.0
-            })
-            
-            self.titledes?.alpha = 0
-            UIView.animate(withDuration: 1.0, delay: 3.0, animations: {
-                self.titledes?.alpha = 1.0
-            })
-        }
     }
 
     @IBAction func opennightowlprofile(_ sender: Any) {
@@ -105,6 +93,25 @@ class WelcomeGuideViewController: UIViewController {
                 let vc = SFSafariViewController(url: url, configuration: config)
                 present(vc, animated: true)
             }
+        }
+    }
+    
+    let thisgithub = "https://github.com/turnoffthelights/Turn-Off-the-Lights-Safari-extension"
+    @IBAction func opengithub(_ sender: Any) {
+        
+        let config = SFSafariViewController.Configuration()
+        config.barCollapsingEnabled = true
+        config.entersReaderIfAvailable = false
+
+        if let url = URL(string: thisgithub) {
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
+    }
+    
+    @IBAction func openexterngithub(_ sender: Any) {
+        if let url = URL(string: thisgithub) {
+            UIApplication.shared.open(url)
         }
     }
     

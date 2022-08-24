@@ -9,5 +9,7 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).SafariWebExtensionHandler</string>
 	</dict>
+	<key>SFSafariCorrespondingMacOSExtensionBundleIdentifier</key>
+	<string>com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension</string>
 </dict>
 </plist>

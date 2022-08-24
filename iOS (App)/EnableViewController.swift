@@ -12,9 +12,6 @@ import AVKit
 import AudioToolbox
 
 class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
-    
-    @IBOutlet weak var btnok: UIButton!
-    
     @IBOutlet weak var videolayer: UIView!
     @IBOutlet weak var imageinspiration: UIImageView!
     override func viewDidLoad(){
@@ -77,8 +74,6 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         let boldString4b = NSMutableAttributedString(string:part4b, attributes:attrs4)
         attributedString4.append(boldString4b)
         lblstep4.attributedText = attributedString4
-        
-        btnok.setTitle(String.localizedStringWithFormat(NSLocalizedString("lblactionok", comment: ""), ""), for: .normal)
     }
     
     func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {
@@ -162,17 +157,6 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
        {
            currentviewController?.present(playerViewController,animated: true,completion:nil)
        }
-    }
-
-    @IBAction func closebutton(_ sender: Any) {
-        let appdefaults = UserDefaults.standard
-        appdefaults.set(true, forKey: "walkthroughPresented")
-        appdefaults.synchronize()
-        
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "closeguide"), object: nil)
     }
 
 }

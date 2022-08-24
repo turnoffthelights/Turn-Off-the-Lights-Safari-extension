@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E07A7C12895AFFC00EF820B /* SmalliPadCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07A7BF2895AFFC00EF820B /* SmalliPadCell1.swift */; };
+		1E07A7C22895AFFC00EF820B /* SmalliPadCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E07A7C02895AFFC00EF820B /* SmalliPadCell1.xib */; };
 		1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E151BB2267FC78E0004E9E3 /* SidebarController.swift */; };
 		1E2A618E2682675E00619A31 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */; };
 		1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A61902682677300619A31 /* YouTubeViewController.swift */; };
@@ -40,6 +42,9 @@
 		1E4CB21A268CC79300015282 /* TOtL_macOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB219268CC79300015282 /* TOtL_macOS_UITest.swift */; };
 		1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */; };
 		1E542275284243D6003B4F50 /* TOtL_macOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E542274284243D6003B4F50 /* TOtL_macOS_test.swift */; };
+		1E5FEC292896884300C73DE5 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FEC282896884300C73DE5 /* SectionHeader.swift */; };
+		1E6402832895374E0015265F /* BigiPadCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E64027D2895374E0015265F /* BigiPadCell1.xib */; };
+		1E6402852895374E0015265F /* BigiPadCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64027F2895374E0015265F /* BigiPadCell1.swift */; };
 		1E665AF826FE6B48002ED59A /* share-lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E665AF726FE6B48002ED59A /* share-lamp.png */; };
 		1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762772681F2B800995D6C /* MasterViewController.swift */; };
 		1E67627A2681F42E00995D6C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6762792681F42E00995D6C /* SplitViewController.swift */; };
@@ -70,8 +75,8 @@
 		1EBA02C826D56B2100EDF450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBA02C726D56B2100EDF450 /* LaunchScreen.storyboard */; };
 		1EC4AC1A26851FC0005FCF33 /* CommonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */; };
 		1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */; };
-		1ECAC65E26DE657100369F11 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1ECAC65F26DE657700369F11 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1ECAC65E26DE657100369F11 /* Turn Off the Lights for Safari Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1ECAC65F26DE657700369F11 /* Turn Off the Lights for Safari Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,36 +125,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1EE7F91726DE59930011E42E /* Embed App Extensions */ = {
+		1EE7F91726DE59930011E42E /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1ECAC65E26DE657100369F11 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
+				1ECAC65E26DE657100369F11 /* Turn Off the Lights for Safari Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EE7F91B26DE59B90011E42E /* Embed App Extensions */ = {
+		1EE7F91B26DE59B90011E42E /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1ECAC65F26DE657700369F11 /* Turn Off the Lights for Safari Extension.appex in Embed App Extensions */,
+				1ECAC65F26DE657700369F11 /* Turn Off the Lights for Safari Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E07A7BF2895AFFC00EF820B /* SmalliPadCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmalliPadCell1.swift; sourceTree = "<group>"; };
+		1E07A7C02895AFFC00EF820B /* SmalliPadCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmalliPadCell1.xib; sourceTree = "<group>"; };
 		1E151BB2267FC78E0004E9E3 /* SidebarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarController.swift; sourceTree = "<group>"; };
 		1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		1E2A61902682677300619A31 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		1E2F2BF326CC4EFA0033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Walkthrough.storyboard; sourceTree = "<group>"; };
-		1E2F2BF426CC4F060033C5E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Walkthrough.strings; sourceTree = "<group>"; };
 		1E2F2BF626CC4F160033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E2F2BF926CC4F4A0033C5E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1E2F5767267BE9D600C78FFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -180,6 +186,9 @@
 		1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Turn Off the Lights for Safari (iOS).entitlements"; sourceTree = "<group>"; };
 		1E54226A28423578003B4F50 /* TOtL-macOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-macOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E542274284243D6003B4F50 /* TOtL_macOS_test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOtL_macOS_test.swift; sourceTree = "<group>"; };
+		1E5FEC282896884300C73DE5 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		1E64027D2895374E0015265F /* BigiPadCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigiPadCell1.xib; sourceTree = "<group>"; };
+		1E64027F2895374E0015265F /* BigiPadCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigiPadCell1.swift; sourceTree = "<group>"; };
 		1E665AF726FE6B48002ED59A /* share-lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-lamp.png"; sourceTree = "<group>"; };
 		1E6762772681F2B800995D6C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		1E6762792681F42E00995D6C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +290,7 @@
 		1E862AA226AC4FA3004B9642 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuideViewController.swift; sourceTree = "<group>"; };
 		1E8F88FC269E194F00030DDB /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		1EB72EEC288D8A170015D945 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Walkthrough.strings; sourceTree = "<group>"; };
 		1EBA02BB26D549D000EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		1EBA02BC26D549D100EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Walkthrough.strings; sourceTree = "<group>"; };
 		1EBA02BD26D549D100EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -423,6 +433,18 @@
 			path = "TOtL-macOS-test";
 			sourceTree = "<group>";
 		};
+		1E64027C2895374E0015265F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1E07A7BF2895AFFC00EF820B /* SmalliPadCell1.swift */,
+				1E07A7C02895AFFC00EF820B /* SmalliPadCell1.xib */,
+				1E64027D2895374E0015265F /* BigiPadCell1.xib */,
+				1E64027F2895374E0015265F /* BigiPadCell1.swift */,
+				1E5FEC282896884300C73DE5 /* SectionHeader.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1E70C9E326726F350064A939 = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +499,7 @@
 		1E70C9F926726F380064A939 /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				1E64027C2895374E0015265F /* Cell */,
 				1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */,
 				1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */,
 				1E35DA0626A8B94C007FE4E0 /* enable-safari-extension-ipad.mov */,
@@ -649,7 +672,7 @@
 				1E70C9F326726F380064A939 /* Sources */,
 				1E70C9F426726F380064A939 /* Frameworks */,
 				1E70C9F526726F380064A939 /* Resources */,
-				1EE7F91726DE59930011E42E /* Embed App Extensions */,
+				1EE7F91726DE59930011E42E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -668,7 +691,7 @@
 				1E70CA0526726F380064A939 /* Sources */,
 				1E70CA0626726F380064A939 /* Frameworks */,
 				1E70CA0726726F380064A939 /* Resources */,
-				1EE7F91B26DE59B90011E42E /* Embed App Extensions */,
+				1EE7F91B26DE59B90011E42E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -722,7 +745,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					1E4CB209268CC77900015282 = {
 						CreatedOnToolsVersion = 13.0;
@@ -847,10 +870,12 @@
 				1E35DA0726A8B94D007FE4E0 /* enable-safari-extension-ipad.mov in Resources */,
 				1E665AF826FE6B48002ED59A /* share-lamp.png in Resources */,
 				1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */,
+				1E6402832895374E0015265F /* BigiPadCell1.xib in Resources */,
 				1E2F2BF526CC4F160033C5E7 /* Main.storyboard in Resources */,
 				1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */,
 				1E70CA3026726F380064A939 /* Assets.xcassets in Resources */,
 				1E6C4913267B83C3001048CF /* forest.mov in Resources */,
+				1E07A7C22895AFFC00EF820B /* SmalliPadCell1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,9 +965,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */,
+				1E5FEC292896884300C73DE5 /* SectionHeader.swift in Sources */,
 				1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */,
 				1E6C4914267B83C3001048CF /* GalleryController.swift in Sources */,
 				1E70C9FB26726F380064A939 /* AppDelegate.swift in Sources */,
+				1E07A7C12895AFFC00EF820B /* SmalliPadCell1.swift in Sources */,
 				1E6C4918267B83C3001048CF /* EnableViewController.swift in Sources */,
 				1E6C4915267B83C3001048CF /* NewsTableViewCell.swift in Sources */,
 				1E6C491A267B83C3001048CF /* ViewController.swift in Sources */,
@@ -953,6 +980,7 @@
 				1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */,
 				1E6C4916267B83C3001048CF /* NewsTableViewController.swift in Sources */,
 				1E2A61912682677300619A31 /* YouTubeViewController.swift in Sources */,
+				1E6402852895374E0015265F /* BigiPadCell1.swift in Sources */,
 				1E862AA326AC4FA3004B9642 /* PageViewController.swift in Sources */,
 				1E862AA726AC55C8004B9642 /* WelcomeGuideViewController.swift in Sources */,
 				1E6C491B267B83C3001048CF /* WelcomeViewController.swift in Sources */,
@@ -1028,7 +1056,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				1E2F2BF326CC4EFA0033C5E7 /* Base */,
-				1E2F2BF426CC4F060033C5E7 /* en */,
 				1EBA02BC26D549D100EDF450 /* nl */,
 				1EBA02C026D56A5800EDF450 /* es */,
 				1EBA02C426D56B0500EDF450 /* nb */,
@@ -1058,6 +1085,7 @@
 				1E744B8B26DE309200BE9D86 /* tr */,
 				1E744B8F26DE30A300BE9D86 /* ko */,
 				1E744B9226DE36D600BE9D86 /* zh-Hant */,
+				1EB72EEC288D8A170015D945 /* en */,
 			);
 			name = Walkthrough.storyboard;
 			sourceTree = "<group>";
@@ -1234,6 +1262,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1259,6 +1288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1336,6 +1366,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1363,6 +1394,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1416,6 +1448,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1478,6 +1511,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1648,6 +1682,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1681,6 +1716,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1717,6 +1753,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1757,6 +1794,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;

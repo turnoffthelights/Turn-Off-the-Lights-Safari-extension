@@ -19,10 +19,13 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                 self.newVc(viewController: "walk3"),
                 self.newVc(viewController: "walk4"),
                 self.newVc(viewController: "walk5"),
-                self.newVc(viewController: "walk6")]
+                self.newVc(viewController: "walk6"),
+                self.newVc(viewController: "walk7")]
     }()
 
-    var closeButton = UIButton()
+    var finalButton = UIButton()
+    var skipButton = UIButton()
+    var nextButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
@@ -38,20 +41,58 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
         configurePageControl()
         
-        // add close button on top
-        //let config = UIButton.Configuration.gray()
-        closeButton = UIButton.init(type: .close)
-        //closeButton.configuration = config
-        closeButton.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-        closeButton.layer.cornerRadius = 16
-        closeButton.layer.masksToBounds = true;
-        closeButton.alpha = 1.0
-        closeButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.view.addSubview(closeButton)
+        // skip button
+        var skipconfiguration = UIButton.Configuration.plain()
+        skipconfiguration.cornerStyle = .capsule
+        skipconfiguration.baseForegroundColor = UIColor.gray
+        skipconfiguration.baseBackgroundColor = .none
+        skipconfiguration.buttonSize = .medium
+        skipconfiguration.title = String.localizedStringWithFormat(NSLocalizedString("lblactionskip", comment: ""), "")
+        skipButton = UIButton(configuration: skipconfiguration, primaryAction: nil)
+        skipButton.layer.masksToBounds = true;
+        skipButton.alpha = 1.0
+        skipButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(skipButton)
         
-        self.closeButton.translatesAutoresizingMaskIntoConstraints = false
-        self.closeButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: +18).isActive = true
-        self.closeButton.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -18).isActive = true
+        self.skipButton.translatesAutoresizingMaskIntoConstraints = false
+        self.skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        self.skipButton.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
+
+        // next button
+        var nextconfiguration = UIButton.Configuration.filled()
+        nextconfiguration.cornerStyle = .capsule
+        nextconfiguration.baseForegroundColor = UIColor.white
+        nextconfiguration.buttonSize = .medium
+        nextconfiguration.title = String.localizedStringWithFormat(NSLocalizedString("lblactionnext", comment: ""), "")
+        nextButton = UIButton(configuration: nextconfiguration, primaryAction: nil)
+        nextButton.layer.masksToBounds = true;
+        nextButton.alpha = 1.0
+        nextButton.addTarget(self, action: #selector(nextslide), for: .touchUpInside)
+        self.view.addSubview(nextButton)
+        
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        nextButton.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
+
+        // final button
+        var finalconfiguration = UIButton.Configuration.filled()
+        finalconfiguration.cornerStyle = .medium
+        finalconfiguration.baseForegroundColor = UIColor.white
+        finalconfiguration.buttonSize = .large
+        finalconfiguration.title = String.localizedStringWithFormat(NSLocalizedString("lblactionok", comment: ""), "")
+
+        finalButton = UIButton(configuration: finalconfiguration, primaryAction: nil)
+        finalButton.layer.masksToBounds = true;
+        finalButton.alpha = 1.0
+        finalButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(finalButton)
+        
+        finalButton.translatesAutoresizingMaskIntoConstraints = false
+        finalButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        finalButton.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
+        finalButton.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
+        finalButton.isHidden = true;
+
         
         for subview in view.subviews {
             if let scrollView = subview as? UIScrollView {
@@ -83,6 +124,13 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     }
     
     @objc func buttonAction(sender: UIButton!) {
+        let appdefaults = UserDefaults.standard
+        appdefaults.set(true, forKey: "walkthroughPresented")
+        appdefaults.synchronize()
+        
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+
         NotificationCenter.default.post(name: Notification.Name(rawValue: "closeguide"), object: nil)
     }
 
@@ -103,10 +151,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.view.addSubview(self.pageControl)
 
         self.pageControl.translatesAutoresizingMaskIntoConstraints = false
-        self.pageControl.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -25).isActive = true
-        self.pageControl.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -20).isActive = true
+        self.pageControl.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -27).isActive = true
+        self.pageControl.widthAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.widthAnchor, constant: -20).isActive = true
         self.pageControl.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        self.pageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        self.pageControl.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor).isActive = true
     }
     
     func newVc(viewController: String) -> UIViewController {
@@ -120,11 +168,20 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
         currentIndex = self.pageControl.currentPage
-
-        if(currentIndex == 5){
-            closeButton.isHidden = true;
+        hidebuttons(value: currentIndex)
+    }
+    
+    func hidebuttons(value: Int){
+        if(value == 6){
+            nextButton.isHidden = true;
+            skipButton.isHidden = true;
+            pageControl.isHidden = true;
+            finalButton.isHidden = false;
         } else {
-            closeButton.isHidden = false;
+            nextButton.isHidden = false;
+            skipButton.isHidden = false;
+            pageControl.isHidden = false;
+            finalButton.isHidden = true;
         }
     }
     
@@ -174,6 +231,20 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         return orderedViewControllers[nextIndex]
     }
     
+    @objc func nextslide(sender: UIButton!) {
+        pageControl.currentPage += 1
+        goToNextPage()
+    }
+    
+    func goToNextPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
+        guard let currentPage = viewControllers?[0] else { return }
+        guard let nextPage = dataSource?.pageViewController(self, viewControllerAfter: currentPage) else { return }
+        
+        setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
+        currentIndex = pageControl.currentPage
+        hidebuttons(value: currentIndex)
+    }
+    
     @objc private func pageControlHandle(sender: UIPageControl){
         //print(sender.currentPage)
         let selectedPage = sender.currentPage
@@ -183,6 +254,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             setViewControllers([orderedViewControllers[selectedPage]], direction: .reverse, animated: true, completion: nil)
         }
         currentIndex = sender.currentPage
+        hidebuttons(value: currentIndex)
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -192,7 +264,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             return .all
         }
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }

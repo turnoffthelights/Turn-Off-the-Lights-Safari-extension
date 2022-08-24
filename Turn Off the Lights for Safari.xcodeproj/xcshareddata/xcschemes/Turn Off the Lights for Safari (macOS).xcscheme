@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1340"
+   LastUpgradeVersion = "1400"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E4CB223268CDC2300015282"
+               BlueprintIdentifier = "1E54226928423578003B4F50"
                BuildableName = "TOtL-macOS-test.xctest"
                BlueprintName = "TOtL-macOS-test"
                ReferencedContainer = "container:Turn Off the Lights for Safari.xcodeproj">

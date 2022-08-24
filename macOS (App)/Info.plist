@@ -6,5 +6,7 @@
 	<false/>
 	<key>SFSafariWebExtensionConverterVersion</key>
 	<string>13.0</string>
+	<key>SFSafariCorrespondingIOSAppBundleIdentifier</key>
+	<string>com.stefanvd.Turn-Off-the-Lights-for-Safari</string>
 </dict>
 </plist>

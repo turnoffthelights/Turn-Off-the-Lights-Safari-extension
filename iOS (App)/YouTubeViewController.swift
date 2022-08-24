@@ -64,40 +64,48 @@ class YouTubeViewController: UITableViewController{
     var videos:[Video] = []
     var video:Video = Video()
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view, typically from a nib.
         setLoadingScreen()
         
         let videoa = Video()
         videoa.Key = "GSEqAjzy_hg"
-        videoa.Title = "⚡️Introduction Turn Off the Lights for Safari on iOS 15"
+        videoa.Title = "⚡️Introduction Turn Off the Lights for Safari on iOS 15 and higher"
         videos.append(videoa)
         
         let videob = Video()
         videob.Key = "la3l4IQrtbo"
-        videob.Title = "🔵How to enable Safari Extension iOS 15?"
+        videob.Title = "🔵How to enable Safari Extension iOS 15 and higher?"
         videos.append(videob)
         
         let videoc = Video()
         videoc.Key = "vubVpLm8ldk"
-        videoc.Title = "🔵How to enable the Night Owl profile on iOS 15?"
+        videoc.Title = "🔵How to enable the Night Owl profile on iOS 15 and higher?"
         videos.append(videoc)
         
         let videod = Video()
         videod.Key = "3TNYUG9O-u8"
-        videod.Title = "🔵How to enable the Eye Protection profile on iOS 15?"
+        videod.Title = "🔵How to enable the Eye Protection profile on iOS 15 and higher?"
         videos.append(videod)
 
         let videoe = Video()
         videoe.Key = "Rm8nKaPlnSI"
-        videoe.Title = "🔵How to enable the Video Lover profile on iOS 15?"
+        videoe.Title = "🔵How to enable the Video Lover profile on iOS 15 and higher?"
         videos.append(videoe)
         
         let videof = Video()
         videof.Key = "91DmhjsCb_Y"
-        videof.Title = "🔵How to open the Turn Off the Lights Options page on iOS 15?"
+        videof.Title = "🔵How to open the Turn Off the Lights Options page on iOS 15 and higher?"
         videos.append(videof)
 
         // -- general videos

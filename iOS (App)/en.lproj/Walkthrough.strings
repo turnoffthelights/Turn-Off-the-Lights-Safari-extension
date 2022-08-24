@@ -5,9 +5,6 @@
 /* Class = "UILabel"; text = "Activate"; ObjectID = "3Cj-kM-e8I"; */
 "3Cj-kM-e8I.text" = "Activate";
 
-/* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "B4r-RH-XgV"; */
-"B4r-RH-XgV.text" = "Turn Off the Lights";
-
 /* Class = "UILabel"; text = "The last profile is the \"Eye Protection\" which dims the web page and adds this dark layer to all newly opened websites and will not remove the layer unless you tap the lamp button again."; ObjectID = "BLb-B0-RK2"; */
 "BLb-B0-RK2.text" = "The last profile is the \"Eye Protection\" which dims the web page and adds this dark layer to all newly opened websites and will not remove the layer unless you tap the lamp button again.";
 
@@ -25,9 +22,6 @@
 
 /* Class = "UILabel"; text = "Options page"; ObjectID = "Ggd-gi-wol"; */
 "Ggd-gi-wol.text" = "Options page";
-
-/* Class = "UIButton"; configuration.title = "OK"; ObjectID = "IN9-yT-dQQ"; */
-"IN9-yT-dQQ.configuration.title" = "OK";
 
 /* Class = "UIButton"; configuration.title = "Watch Video"; ObjectID = "Imp-Os-wOD"; */
 "Imp-Os-wOD.configuration.title" = "Watch Video";
@@ -50,12 +44,6 @@
 /* Class = "UILabel"; text = "Video Lover Profile"; ObjectID = "O1s-ZN-JTo"; */
 "O1s-ZN-JTo.text" = "Video Lover Profile";
 
-/* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "OWs-Lg-34j"; */
-"OWs-Lg-34j.text" = "Turn Off the Lights";
-
-/* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "PJs-v5-LSN"; */
-"PJs-v5-LSN.text" = "Turn Off the Lights";
-
 /* Class = "UIButton"; configuration.title = "2"; ObjectID = "QUA-an-ILC"; */
 "QUA-an-ILC.configuration.title" = "2";
 
@@ -71,20 +59,35 @@
 /* Class = "UILabel"; text = "Eye Protection Profile"; ObjectID = "aNm-VO-d5h"; */
 "aNm-VO-d5h.text" = "Eye Protection Profile";
 
+/* Class = "UILabel"; text = "Permissions"; ObjectID = "ak7-Ts-ZUp"; */
+"ak7-Ts-ZUp.text" = "Permissions";
+
 /* Class = "UIButton"; configuration.title = "Watch Video"; ObjectID = "b5Q-cU-SYm"; */
 "b5Q-cU-SYm.configuration.title" = "Watch Video";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "b5Q-cU-SYm"; */
 "b5Q-cU-SYm.normalTitle" = "Button";
 
-/* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "c0N-xl-bA1"; */
-"c0N-xl-bA1.text" = "Turn Off the Lights";
-
 /* Class = "UIButton"; configuration.title = "3"; ObjectID = "e2Y-OR-G7m"; */
 "e2Y-OR-G7m.configuration.title" = "3";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "e2Y-OR-G7m"; */
 "e2Y-OR-G7m.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Github"; ObjectID = "giw-Pr-QBO"; */
+"giw-Pr-QBO.configuration.title" = "Github";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "giw-Pr-QBO"; */
+"giw-Pr-QBO.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "https://github.com/turnoffthelights/Turn-Off-the-Lights-Safari-extension"; ObjectID = "gsS-Wx-WRI"; */
+"gsS-Wx-WRI.configuration.title" = "https://github.com/turnoffthelights/Turn-Off-the-Lights-Safari-extension";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gsS-Wx-WRI"; */
+"gsS-Wx-WRI.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "We take your privacy and security very seriously. We have built the Turn Off the Lights browser extension for our users first, to get a great video and web experience available to all. When you add Turn Off the Lights, it says that we can \"Read and change all your data on the websites you visit\". This permission allows Turn Off the Lights to detect the current video player. We had never collected and will never collect any personal data, credit card, browsing history, and password.\n\nFurthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on Github."; ObjectID = "gxt-yJ-blz"; */
+"gxt-yJ-blz.text" = "We take your privacy and security very seriously. We have built the Turn Off the Lights browser extension for our users first, to get a great video and web experience available to all. When you add Turn Off the Lights, it says that we can \"Read and change all your data on the websites you visit\". This permission allows Turn Off the Lights to detect the current video player. We had never collected and will never collect any personal data, credit card, browsing history, and password.\n\nFurthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on Github.";
 
 /* Class = "UILabel"; text = "Search and tap on Safari, tap then on Extensions"; ObjectID = "i0A-Dg-a92"; */
 "i0A-Dg-a92.text" = "Search and tap on Safari, tap then on Extensions";
@@ -104,9 +107,6 @@
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "lOv-lD-98t"; */
 "lOv-lD-98t.normalTitle" = "Button";
 
-/* Class = "UILabel"; text = "Turn Off the Lights"; ObjectID = "mqJ-SP-Haf"; */
-"mqJ-SP-Haf.text" = "Turn Off the Lights";
-
 /* Class = "UILabel"; text = "Button Action"; ObjectID = "nb0-q9-EJC"; */
 "nb0-q9-EJC.text" = "Button Action";
 
@@ -115,6 +115,9 @@
 
 /* Class = "UILabel"; text = "Open the Settings app on your device"; ObjectID = "opu-Bg-yF6"; */
 "opu-Bg-yF6.text" = "Open the Settings app on your device";
+
+/* Class = "UILabel"; text = "Privacy and Open-Source"; ObjectID = "vQR-bB-JZO"; */
+"vQR-bB-JZO.text" = "Privacy and Open-Source";
 
 /* Class = "UILabel"; text = "Button Action"; ObjectID = "z9V-ho-vtZ"; */
 "z9V-ho-vtZ.text" = "Button Action";

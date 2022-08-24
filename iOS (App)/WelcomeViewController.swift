@@ -10,45 +10,11 @@ import UIKit
 import SafariServices
 import LinkPresentation
 
-class AnimatedButton: UIButton {
-
-    override var isHighlighted: Bool {
-        didSet {
-            let transform: CGAffineTransform = isHighlighted ? .init(scaleX: 0.95, y: 0.95) : .identity
-            animate(transform)
-        }
-    }
-
-}
-
-private extension AnimatedButton {
-    private func animate(_ transform: CGAffineTransform) {
-        UIView.animate(
-            withDuration: 0.4,
-            delay: 0,
-            usingSpringWithDamping: 0.5,
-            initialSpringVelocity: 3,
-            options: [.curveEaseInOut],
-            animations: {
-                self.transform = transform
-            }
-        )
-    }
-}
-
 class WelcomeViewController: UIViewController, UIActivityItemSource {
     var metadata: LPLinkMetadata?
 
     let defaults = UserDefaults(suiteName: "group.stefanvd.turnoffthelightsforsafari")
-
-    @IBOutlet weak var theguide: UIView!
-    @IBAction func closeguide(_ sender: Any) {
-        defaults!.set(true, forKey: "launchedBefore")
-        theguide.frame.size.height = 0
-        theguide.isHidden = true
-    }
     
-    @IBOutlet weak var imagepeople: UIImageView!
     func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
         let metadata = LPLinkMetadata()
         metadata.originalURL = URL(string: "https://www.turnoffthelights.com")
@@ -76,34 +42,61 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
     }
     
     @IBAction func openoptions(_ sender: Any) {
-        if let url = URL(string: "https://www.turnoffthelights.com/extension/redirection/") {
+        if let url = URL(string: "https://www.turnoffthelights.com/browser/extension/options/") {
             UIApplication.shared.open(url)
         }
     }
+    
+    func i18string(text: String) -> String{
+        return String.localizedStringWithFormat(NSLocalizedString(text, comment: ""), "")
+    }
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    let bigcellId = "BigiPadCell1"
+    let smallcellId = "SmalliPadCell1"
+
+    struct App {
+        var appName : String
+        var appDes : String
+        var appImage : String
+        var appButton : String
+        var appDownloadLink : String
+    }
+    
+    var products : Array<App> =  [
+        App(appName: "", appDes: "", appImage: "", appButton: "", appDownloadLink: ""),
+        App(appName: "WORLD PREMIERE", appDes: "Browser Extension use Manifest V3 for better Privacy, Performance, and Security.", appImage: "lock.shield.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/blog/"),
+        App(appName: "TRANSLATOR COMMUNITY", appDes: "Help and Translate the Browser Extension!", appImage: "rectangle.3.group.bubble.left.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/browser/extension/translate/"),
+        App(appName: "DEVELOPER COMMUNITY", appDes: "Find, and Report Issues!", appImage: "chevron.left.forwardslash.chevron.right", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/open-source/"),
+        App(appName: "SOCIAL COMMUNITY", appDes: "Watch and Learn the New Features!", appImage: "heart.circle.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/videos/")
+    ]
     
     override func viewDidLoad(){
         super.viewDidLoad()
         
         // debug
-        //defaults!.set(false, forKey: "launchedBefore")
+        defaults!.set(false, forKey: "launchedBefore")
         
-        let launchedBefore = defaults!.bool(forKey: "launchedBefore")
-        if launchedBefore {
-            //print("Not first launch.")
-            theguide.frame.size.height = 0
-            theguide.isHidden = true
-        } else {
-            //print("First launch, setting UserDefault.")
-            theguide.isHidden = false
-        }
+        //ipad cell
+        let CellTypeOne = UINib(nibName: bigcellId, bundle: nil)
+        let CellTypeTwo = UINib(nibName: smallcellId, bundle: nil)
+
+        collectionView.register(CellTypeOne, forCellWithReuseIdentifier: bigcellId)
+        collectionView.register(CellTypeTwo, forCellWithReuseIdentifier: smallcellId)
+
+        collectionView.reloadData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.gorefreshcollection(notification:)), name: Notification.Name("callcloseinstallpanel"), object: nil)
+
+    }
+    
+    @objc func gorefreshcollection(notification: Notification){
+        defaults!.set(true, forKey: "launchedBefore")
+        collectionView.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        theguide.layer.cornerRadius = 10
-        theguide.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMinXMinYCorner]
-        theguide.clipsToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -115,7 +108,6 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
             // large iPad size
             self.navigationItem.title = ""
         }
-        hidepeoplesmallscreen()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -127,77 +119,173 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
             self.navigationItem.title = ""
         }
     }
+    
+    @IBAction func bigshare(_ sender: Any) {
+        bigshareaction()
+    }
+    
+    @IBOutlet weak var btnshare: UIBarButtonItem!
+    func bigshareaction() {
+        let items = [self]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        // Check if user is on iPad and present popover
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            DispatchQueue.main.async {
+                if let popoverPresentationController = ac.popoverPresentationController {
+                    popoverPresentationController.barButtonItem = self.btnshare
+                    popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.down;
+                }
+            }
+        }
+
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+
+        // Present share activityView on regular iPhone
+        DispatchQueue.main.async {
+            self.present(ac, animated: true)
+        }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionView.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+}
+
+/* Extension ViewController */
+extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader{
+            sectionHeader.sectionHeaderlabel.text = "Safari extension"
+            return sectionHeader
+        }
+        return UICollectionReusableView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // the first cell - explain how to install Safari extension
+        if(indexPath.item == 0){
+            let dequeuedCell = collectionView.dequeueReusableCell(withReuseIdentifier: smallcellId, for: indexPath)
+            
+            guard let cellOne = dequeuedCell as? SmalliPadCell1 else {
+                fatalError("Wrong cell type for section 0. Expected CellTypeOne")
+            }
+            
+            cellOne.layer.cornerRadius = 10
+            /*cellOne.layer.shadowColor = UIColor.lightGray.cgColor
+            cellOne.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+            cellOne.layer.shadowRadius = 12.0
+            cellOne.layer.shadowOpacity = 0.5
+            cellOne.layer.masksToBounds = false*/
+            
+            return cellOne
+        }else{
+            let dequeuedCell = collectionView.dequeueReusableCell(withReuseIdentifier: bigcellId, for: indexPath)
+            
+            guard let cellOne = dequeuedCell as? BigiPadCell1 else {
+                fatalError("Wrong cell type for section 0. Expected CellTypeOne")
+            }
+            
+            // configure your CellTypeOne
+            cellOne.appName.text = products[indexPath.row].appName
+            cellOne.imageAppLogo.image = UIImage(systemName: products[indexPath.row].appImage)
+            cellOne.appDes.text = products[indexPath.row].appDes
+            cellOne.appDownloadButton.tag = indexPath.item
+            cellOne.appDownloadButton.addTarget(self, action: #selector(openLinkAction), for: .touchUpInside)
+            cellOne.appDownloadButton.setTitle(products[indexPath.row].appButton, for: .normal)
+            
+            cellOne.layer.cornerRadius = 10
+            /*cellOne.layer.shadowColor = UIColor.lightGray.cgColor
+            cellOne.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+            cellOne.layer.shadowRadius = 12.0
+            cellOne.layer.shadowOpacity = 0.5
+            cellOne.layer.masksToBounds = false*/
+            return cellOne
+        }
+    }
+    
+    @objc func openLinkAction(sender: UIButton!) {
+        let btnsendtag: UIButton = sender
+        if let url = URL(string: products[btnsendtag.tag].appDownloadLink) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
         
-    @IBOutlet weak var btnshare: UIButton!
-    @IBAction func bigshareaction(_ sender: Any) {
-        let items = [self]
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        // Check if user is on iPad and present popover
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            DispatchQueue.main.async {
-                if let popoverPresentationController = ac.popoverPresentationController {
-                    popoverPresentationController.sourceView = self.btnshare
-                    popoverPresentationController.sourceRect = self.btnshare.bounds;
-                    popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.down;
-                }
-            }
-        }
-
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
-
-        // Present share activityView on regular iPhone
-        DispatchQueue.main.async {
-            self.present(ac, animated: true)
-        }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return products.count
     }
-
-    @IBAction func toolbarshareaction(_ sender: Any) {
-        let items = [self]
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        // Check if user is on iPad and present popover
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            DispatchQueue.main.async {
-                if let popoverPresentationController = ac.popoverPresentationController {
-                    popoverPresentationController.sourceView = self.btnshare
-                    popoverPresentationController.sourceRect = self.btnshare.bounds;
-                    popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.down;
-                }
-            }
-        }
-
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
-
-        // Present share activityView on regular iPhone
-        DispatchQueue.main.async {
-            self.present(ac, animated: true)
-        }
+        
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        switch UIDevice.current.orientation{
-        case .landscapeLeft, .landscapeRight:
-            let screenSize: CGFloat = UIScreen.main.bounds.height
-            if(screenSize <= 320.0){
-                imagepeople.isHidden = true
-            }
-            break;
-        default:
-            imagepeople.isHidden = false
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 20
     }
     
-    func hidepeoplesmallscreen(){
-        if UIDevice.current.orientation.isLandscape {
-            //print("Landscape")
-            imagepeople.isHidden = false
-        } else {
-            //print("Portrait")
-            let screenSize: CGFloat = UIScreen.main.bounds.height
-            if(screenSize <= 320.0){
-               imagepeople.isHidden = true
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var kWhateverHeightYouWant = 0
+        let cellwidth : CGFloat
+        let cellheight : CGFloat
+
+        //if UIDevice().userInterfaceIdiom == .phone
+        if(traitCollection.horizontalSizeClass == .compact){
+            //print("Smaller screen")
+            kWhateverHeightYouWant = 320
+            if(indexPath.item == 0){
+                let launchedBefore = defaults!.bool(forKey: "launchedBefore")
+                if launchedBefore {
+                    cellwidth = collectionView.frame.size.width - 40 //space 20
+                    cellheight = CGFloat(0)
+                }else{
+                    cellwidth = collectionView.frame.size.width - 40 //space 20
+                    cellheight = CGFloat(160)
+                }
+            }else{
+                cellwidth = collectionView.frame.size.width - 40 //space 20
+                cellheight = CGFloat(kWhateverHeightYouWant)
             }
+        }else{
+            //print("Bigger screen")
+            kWhateverHeightYouWant = 320
+            if(indexPath.item == 0)
+            {
+                let launchedBefore = defaults!.bool(forKey: "launchedBefore")
+                if launchedBefore {
+                    cellwidth = (collectionView.frame.size.width) - 40
+                    cellheight = CGFloat(0)
+                }else{
+                    cellwidth = (collectionView.frame.size.width) - 40
+                    cellheight = CGFloat(160)
+                }
+            }
+            else
+            {
+                cellwidth = (collectionView.frame.size.width / 2) - 30
+                cellheight = CGFloat(kWhateverHeightYouWant)
+            }
+            
         }
+        return CGSize(width: cellwidth, height: cellheight)
     }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let inset:CGFloat = 20
+        return UIEdgeInsets(top: 0, left: inset, bottom: inset, right: inset)
+    }
+        
 }
