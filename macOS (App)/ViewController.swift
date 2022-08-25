@@ -84,9 +84,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func lampbonus(_ sender: Any) {
-        if let url = URL(string: "https://www.turnoffthelights.com/donate.html"), NSWorkspace.shared.open(url) {
-            //print("default browser was successfully opened")
-        }
+        Stefanfunctions().openweb(text:"https://www.turnoffthelights.com/donate.html")
     }
     
     func updateExtensionStatus() {
@@ -124,7 +122,6 @@ class ViewController: NSViewController {
             
             
         }
-        
         
         // Recheck the status every 1.5 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
@@ -167,9 +164,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func opensupport(_ sender: Any){
-        if let url = URL(string: "https://www.turnoffthelights.com/support/"), NSWorkspace.shared.open(url) {
-            //print("default browser was successfully opened")
-        }
+        Stefanfunctions().openweb(text:"https://www.turnoffthelights.com/support/")
     }
     
     deinit {

@@ -61,48 +61,24 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
         super.viewDidAppear(animated)
     }
     
+    func setappicondesign(element:UIImageView){
+        element.layer.borderColor = UIColor.separator.cgColor
+        element.layer.masksToBounds = true
+        element.contentMode = .scaleToFill
+        element.layer.borderWidth = 1
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        iconmytree.layer.borderColor = UIColor.separator.cgColor
-        iconmytree.layer.masksToBounds = true
-        iconmytree.contentMode = .scaleToFill
-        iconmytree.layer.borderWidth = 1
-        
-        iconsunrise.layer.borderColor = UIColor.separator.cgColor
-        iconsunrise.layer.masksToBounds = true
-        iconsunrise.contentMode = .scaleToFill
-        iconsunrise.layer.borderWidth = 1
-        
-        iconharddisk.layer.borderColor = UIColor.separator.cgColor
-        iconharddisk.layer.masksToBounds = true
-        iconharddisk.contentMode = .scaleToFill
-        iconharddisk.layer.borderWidth = 1
-        
-        icondatetoday.layer.borderColor = UIColor.separator.cgColor
-        icondatetoday.layer.masksToBounds = true
-        icondatetoday.contentMode = .scaleToFill
-        icondatetoday.layer.borderWidth = 1
-        
-        iconmylunarnewyear.layer.borderColor = UIColor.separator.cgColor
-        iconmylunarnewyear.layer.masksToBounds = true
-        iconmylunarnewyear.contentMode = .scaleToFill
-        iconmylunarnewyear.layer.borderWidth = 1
-        
-        iconhometab.layer.borderColor = UIColor.separator.cgColor
-        iconhometab.layer.masksToBounds = true
-        iconhometab.contentMode = .scaleToFill
-        iconhometab.layer.borderWidth = 1
-        
-        iconcanada.layer.borderColor = UIColor.separator.cgColor
-        iconcanada.layer.masksToBounds = true
-        iconcanada.contentMode = .scaleToFill
-        iconcanada.layer.borderWidth = 1
-        
-        iconhellooffice.layer.borderColor = UIColor.separator.cgColor
-        iconhellooffice.layer.masksToBounds = true
-        iconhellooffice.contentMode = .scaleToFill
-        iconhellooffice.layer.borderWidth = 1
+        setappicondesign(element: iconmytree)
+        setappicondesign(element: iconsunrise)
+        setappicondesign(element: iconharddisk)
+        setappicondesign(element: icondatetoday)
+        setappicondesign(element: iconmylunarnewyear)
+        setappicondesign(element: iconhometab)
+        setappicondesign(element: iconcanada)
+        setappicondesign(element: iconhellooffice)
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

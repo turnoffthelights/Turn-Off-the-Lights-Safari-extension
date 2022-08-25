@@ -33,30 +33,25 @@ class SidebarController: UITableViewController {
     let defaults = UserDefaults(suiteName: "group.stefanvd.turnoffthelightsforsafari")
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                defaults!.set(0, forKey: "currentopentab")
-            }
+        if indexPath.section == 0 && indexPath.row == 0 {
+            savecurrentab(number:0)
         }
             
-        if indexPath.section == 1 {
-            if indexPath.row == 0 {
-                defaults!.set(1, forKey: "currentopentab")
-            }
+        if indexPath.section == 1 && indexPath.row == 0 {
+            savecurrentab(number:1)
         }
         
-        if indexPath.section == 2 {
-            if indexPath.row == 0 {
-                defaults!.set(2, forKey: "currentopentab")
-            }
+        if indexPath.section == 2 && indexPath.row == 0 {
+            savecurrentab(number:2)
         }
         
-        if indexPath.section == 3 {
-            if indexPath.row == 0 {
-                defaults!.set(3, forKey: "currentopentab")
-            }
+        if indexPath.section == 3 && indexPath.row == 0 {
+            savecurrentab(number:3)
         }
-        defaults!.synchronize()
     }
     
+    func savecurrentab(number:Int){
+        defaults!.set(number, forKey: "currentopentab")
+        defaults!.synchronize()
+    }
 }

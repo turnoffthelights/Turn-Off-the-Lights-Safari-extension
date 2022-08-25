@@ -40,6 +40,7 @@
 		1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */; };
 		1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */; };
 		1E5AF2E928B7D2C8004930D6 /* Stefanfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AF2E828B7D2C8004930D6 /* Stefanfunctions.swift */; };
+		1E5AF2EB28B7E5CC004930D6 /* Stefanfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AF2EA28B7E5CC004930D6 /* Stefanfunctions.swift */; };
 		1E5FEC292896884300C73DE5 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FEC282896884300C73DE5 /* SectionHeader.swift */; };
 		1E6402832895374E0015265F /* BigiPadCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E64027D2895374E0015265F /* BigiPadCell1.xib */; };
 		1E6402852895374E0015265F /* BigiPadCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64027F2895374E0015265F /* BigiPadCell1.swift */; };
@@ -169,6 +170,7 @@
 		1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_test.swift; sourceTree = "<group>"; };
 		1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Turn Off the Lights for Safari (iOS).entitlements"; sourceTree = "<group>"; };
 		1E5AF2E828B7D2C8004930D6 /* Stefanfunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stefanfunctions.swift; sourceTree = "<group>"; };
+		1E5AF2EA28B7E5CC004930D6 /* Stefanfunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stefanfunctions.swift; sourceTree = "<group>"; };
 		1E5FEC282896884300C73DE5 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		1E64027D2895374E0015265F /* BigiPadCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigiPadCell1.xib; sourceTree = "<group>"; };
 		1E64027F2895374E0015265F /* BigiPadCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigiPadCell1.swift; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 		1E70CA0A26726F380064A939 /* macOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				1E5AF2EA28B7E5CC004930D6 /* Stefanfunctions.swift */,
 				1E7D1A14267283A600FECE52 /* Assets.xcassets */,
 				1E7D1A15267283A600FECE52 /* DaringInfantileDachshund.mp4 */,
 				1E744B4726DE2C1A00BE9D86 /* Main.storyboard */,
@@ -876,6 +879,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5AF2EB28B7E5CC004930D6 /* Stefanfunctions.swift in Sources */,
 				1E7D1A192672850D00FECE52 /* ViewController.swift in Sources */,
 				1E70CA0C26726F380064A939 /* AppDelegate.swift in Sources */,
 			);
