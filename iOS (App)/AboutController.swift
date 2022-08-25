@@ -104,14 +104,10 @@ class AboutController: UITableViewController{
     }
     
     func openweb() {
-        if let url = URL(string: "https://www.turnoffthelights.com") {
-            UIApplication.shared.open(url)
-        }
+        Stefanfunctions().openweb(text:"https://www.turnoffthelights.com")
     }
     func opensupport() {
-        if let url = URL(string: "https://www.turnoffthelights.com/support/") {
-            UIApplication.shared.open(url)
-        }
+        Stefanfunctions().openweb(text:"https://www.turnoffthelights.com/support/")
     }
 
     var productURL = URL(string: "https://itunes.apple.com/app/id1273998507")!

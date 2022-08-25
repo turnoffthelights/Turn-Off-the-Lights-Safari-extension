@@ -68,9 +68,7 @@ class YouTubeViewController: UIViewController {
     }
     
     @IBAction func openyoutube(_ sender: Any) {
-        if let url = URL(string: "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1") {
-            UIApplication.shared.open(url)
-        }
+        Stefanfunctions().openweb(text:"https://www.youtube.com/c/turnoffthelights?sub_confirmation=1")
     }
     
     private var player: AVQueuePlayer!

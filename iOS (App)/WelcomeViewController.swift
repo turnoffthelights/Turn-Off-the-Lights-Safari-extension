@@ -19,36 +19,30 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         let metadata = LPLinkMetadata()
         metadata.originalURL = URL(string: "https://www.turnoffthelights.com")
         metadata.url = metadata.originalURL
-        metadata.title = String.localizedStringWithFormat(NSLocalizedString("lblplaceholder", comment: ""), "")
+        metadata.title = Stefanfunctions().i18string(text: "lblplaceholder")
         metadata.imageProvider = NSItemProvider.init(contentsOf:Bundle.main.url(forResource: "share-lamp", withExtension: "png"))
         return metadata
     }
 
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
-        return String.localizedStringWithFormat(NSLocalizedString("lblplaceholder", comment: ""), "")
+        return Stefanfunctions().i18string(text: "lblplaceholder")
     }
 
     let websitelink = "https://www.turnoffthelights.com"
     func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
         if activityType == .postToTwitter {
-            return String.localizedStringWithFormat(NSLocalizedString("lblsharetwitter", comment: ""), "") + " " + websitelink
+            return Stefanfunctions().i18string(text: "lblsharetwitter") + " " + websitelink
         } else {
-            return String.localizedStringWithFormat(NSLocalizedString("lblshareregular", comment: ""), "") + " " + websitelink
+            return Stefanfunctions().i18string(text: "lblshareregular") + " " + websitelink
         }
     }
     
     func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
-        return String.localizedStringWithFormat(NSLocalizedString("lblemailsubject", comment: ""), "")
+        return Stefanfunctions().i18string(text: "lblemailsubject")
     }
     
     @IBAction func openoptions(_ sender: Any) {
-        if let url = URL(string: "https://www.turnoffthelights.com/browser/extension/options/") {
-            UIApplication.shared.open(url)
-        }
-    }
-    
-    func i18string(text: String) -> String{
-        return String.localizedStringWithFormat(NSLocalizedString(text, comment: ""), "")
+        Stefanfunctions().openweb(text:"https://www.turnoffthelights.com/browser/extension/options/")
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -68,7 +62,7 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
         App(appName: "WORLD PREMIERE", appDes: "Browser Extension use Manifest V3 for better Privacy, Performance, and Security.", appImage: "lock.shield.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/blog/"),
         App(appName: "TRANSLATOR COMMUNITY", appDes: "Help and Translate the Browser Extension!", appImage: "rectangle.3.group.bubble.left.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/browser/extension/translate/"),
         App(appName: "DEVELOPER COMMUNITY", appDes: "Find, and Report Issues!", appImage: "chevron.left.forwardslash.chevron.right", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/open-source/"),
-        App(appName: "SOCIAL COMMUNITY", appDes: "Watch and Learn the New Features!", appImage: "heart.circle.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/videos/")
+        App(appName: "SOCIAL COMMUNITY", appDes: "Watch and Learn the New Features!", appImage: "heart.circle.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/video/")
     ]
     
     override func viewDidLoad(){

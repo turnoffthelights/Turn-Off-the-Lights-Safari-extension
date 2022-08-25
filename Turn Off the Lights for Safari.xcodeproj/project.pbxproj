@@ -39,6 +39,7 @@
 		1E45037A26A4B17F00A5B147 /* enable-safari-extension-iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E45037926A4B17E00A5B147 /* enable-safari-extension-iphone.mp4 */; };
 		1E4CB20D268CC77900015282 /* TOtL_iOS_UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB20C268CC77900015282 /* TOtL_iOS_UITest.swift */; };
 		1E4CB234268CDC6D00015282 /* TOtL_iOS_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */; };
+		1E5AF2E928B7D2C8004930D6 /* Stefanfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AF2E828B7D2C8004930D6 /* Stefanfunctions.swift */; };
 		1E5FEC292896884300C73DE5 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FEC282896884300C73DE5 /* SectionHeader.swift */; };
 		1E6402832895374E0015265F /* BigiPadCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E64027D2895374E0015265F /* BigiPadCell1.xib */; };
 		1E6402852895374E0015265F /* BigiPadCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64027F2895374E0015265F /* BigiPadCell1.swift */; };
@@ -167,6 +168,7 @@
 		1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOtL-iOS-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4CB233268CDC6D00015282 /* TOtL_iOS_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOtL_iOS_test.swift; sourceTree = "<group>"; };
 		1E54226528422FB5003B4F50 /* Turn Off the Lights for Safari (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Turn Off the Lights for Safari (iOS).entitlements"; sourceTree = "<group>"; };
+		1E5AF2E828B7D2C8004930D6 /* Stefanfunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stefanfunctions.swift; sourceTree = "<group>"; };
 		1E5FEC282896884300C73DE5 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		1E64027D2895374E0015265F /* BigiPadCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigiPadCell1.xib; sourceTree = "<group>"; };
 		1E64027F2895374E0015265F /* BigiPadCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigiPadCell1.swift; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 				1E8F88FC269E194F00030DDB /* NetworkViewController.swift */,
 				1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */,
 				1ECD0B1528B6A4CB00C7EC91 /* YouTubeViewController.swift */,
+				1E5AF2E828B7D2C8004930D6 /* Stefanfunctions.swift */,
 			);
 			path = "iOS (App)";
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5AF2E928B7D2C8004930D6 /* Stefanfunctions.swift in Sources */,
 				1E6762782681F2B800995D6C /* MasterViewController.swift in Sources */,
 				1E5FEC292896884300C73DE5 /* SectionHeader.swift in Sources */,
 				1E378629267CA350003A0F73 /* LicensesViewController.swift in Sources */,

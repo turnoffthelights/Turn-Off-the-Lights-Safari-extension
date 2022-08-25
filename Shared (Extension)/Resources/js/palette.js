@@ -92,9 +92,9 @@ function openaurorapage(){
 
 document.addEventListener("DOMContentLoaded", function(){
 	// disable context menu
-	document.addEventListener("contextmenu", function(e){
+	/*document.addEventListener("contextmenu", function(e){
 		e.preventDefault();
-	}, false);
+	}, false);*/
 
 	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll", "nightenabletheme", "nightmodeimage", "nmimagedark", "nmimagegray"], function(items){
 		lightcolor = items["lightcolor"]; if(lightcolor == null)lightcolor = "#000000"; // default color black

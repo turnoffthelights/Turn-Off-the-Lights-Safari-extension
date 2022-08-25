@@ -33,16 +33,16 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
     }
 
     func settranslationtext(){
-        lbleasysetup.text = String.localizedStringWithFormat(NSLocalizedString("lbleasytosetup", comment: ""), "").uppercased()
-        lblactivate.text = String.localizedStringWithFormat(NSLocalizedString("lblactivate", comment: ""), "")
-        lblwatchvideo.setTitle(String.localizedStringWithFormat(NSLocalizedString("lblwatchvideo", comment: ""), ""), for: .normal)
+        lbleasysetup.text = Stefanfunctions().i18string(text: "lbleasytosetup").uppercased()
+        lblactivate.text = Stefanfunctions().i18string(text: "lblactivate")
+        lblwatchvideo.setTitle(Stefanfunctions().i18string(text: "lblwatchvideo"), for: .normal)
         
         // steps list
-        lblstep1.text = String.localizedStringWithFormat(NSLocalizedString("lblstep1", comment: ""), "")
+        lblstep1.text = Stefanfunctions().i18string(text: "lblstep1")
         
-        let part2a = String.localizedStringWithFormat(NSLocalizedString("lblstep2a", comment: ""), "") + " "
-        let part2b = String.localizedStringWithFormat(NSLocalizedString("lblstep2b", comment: ""), "")
-        let part2c = " " + String.localizedStringWithFormat(NSLocalizedString("lblstep2c", comment: ""), "")
+        let part2a = Stefanfunctions().i18string(text: "lblstep2a") + " "
+        let part2b = Stefanfunctions().i18string(text: "lblstep2b")
+        let part2c = " " + Stefanfunctions().i18string(text: "lblstep2c")
         let attributedString = NSMutableAttributedString(string:part2a)
         let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
         let boldString = NSMutableAttributedString(string:part2b, attributes:attrs)
@@ -51,10 +51,10 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         attributedString.append(lastString)
         lblstep2.attributedText = attributedString
 
-        let part3a = String.localizedStringWithFormat(NSLocalizedString("lblstep3a", comment: ""), "") + " "
-        let part3b = String.localizedStringWithFormat(NSLocalizedString("lblstep3b", comment: ""), "")
-        let part3c = String.localizedStringWithFormat(NSLocalizedString("lblstep3c", comment: ""), "") + " "
-        let part3d = String.localizedStringWithFormat(NSLocalizedString("lblstep3d", comment: ""), "")
+        let part3a = Stefanfunctions().i18string(text: "lblstep3a") + " "
+        let part3b = Stefanfunctions().i18string(text: "lblstep3b")
+        let part3c = Stefanfunctions().i18string(text: "lblstep3c") + " "
+        let part3d = Stefanfunctions().i18string(text: "lblstep3d")
         
         let attributedString3 = NSMutableAttributedString(string:part3a)
         let attrs3 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
@@ -66,8 +66,8 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         attributedString3.append(boldString3d)
         lblstep3.attributedText = attributedString3
 
-        let part4a = String.localizedStringWithFormat(NSLocalizedString("lblstep4a", comment: ""), "") + " "
-        let part4b = String.localizedStringWithFormat(NSLocalizedString("lblstep4b", comment: ""), "")
+        let part4a = Stefanfunctions().i18string(text: "lblstep4a") + " "
+        let part4b = Stefanfunctions().i18string(text: "lblstep4b")
 
         let attributedString4 = NSMutableAttributedString(string:part4a)
         let attrs4 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]

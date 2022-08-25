@@ -47,7 +47,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         skipconfiguration.baseForegroundColor = UIColor.gray
         skipconfiguration.baseBackgroundColor = .none
         skipconfiguration.buttonSize = .medium
-        skipconfiguration.title = String.localizedStringWithFormat(NSLocalizedString("lblactionskip", comment: ""), "")
+        skipconfiguration.title = Stefanfunctions().i18string(text: "lblactionskip")
         skipButton = UIButton(configuration: skipconfiguration, primaryAction: nil)
         skipButton.layer.masksToBounds = true;
         skipButton.alpha = 1.0
@@ -63,7 +63,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         nextconfiguration.cornerStyle = .capsule
         nextconfiguration.baseForegroundColor = UIColor.white
         nextconfiguration.buttonSize = .medium
-        nextconfiguration.title = String.localizedStringWithFormat(NSLocalizedString("lblactionnext", comment: ""), "")
+        nextconfiguration.title = Stefanfunctions().i18string(text: "lblactionnext")
         nextButton = UIButton(configuration: nextconfiguration, primaryAction: nil)
         nextButton.layer.masksToBounds = true;
         nextButton.alpha = 1.0
@@ -79,7 +79,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         finalconfiguration.cornerStyle = .medium
         finalconfiguration.baseForegroundColor = UIColor.white
         finalconfiguration.buttonSize = .large
-        finalconfiguration.title = String.localizedStringWithFormat(NSLocalizedString("lblactionok", comment: ""), "")
+        finalconfiguration.title = Stefanfunctions().i18string(text: "lblactionok")
 
         finalButton = UIButton(configuration: finalconfiguration, primaryAction: nil)
         finalButton.layer.masksToBounds = true;
