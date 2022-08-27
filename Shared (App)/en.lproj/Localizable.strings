@@ -43,3 +43,12 @@
 "bannerstep5c" = "web browser";
 "lblactionskip" = "SKIP";
 "lblactionnext" = "NEXT";
+"strfindout" = "Find out more";
+"strworldpremiere" = "WORLD PREMIERE";
+"strdesworldpremiere" = "Browser Extension use Manifest V3 for better Privacy, Performance, and Security.";
+"strtranslator" = "TRANSLATOR COMMUNITY";
+"strdestranslator" = "Help and Translate the Browser Extension!";
+"strdeveloper" = "DEVELOPER COMMUNITY";
+"strdesdeveloper" = "Find, and Report Issues!";
+"strsocial" = "SOCIAL COMMUNITY";
+"strdessocial" = "Follow and interact with other members!";

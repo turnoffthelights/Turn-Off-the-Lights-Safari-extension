@@ -59,12 +59,12 @@ class WelcomeViewController: UIViewController, UIActivityItemSource {
     
     var products : Array<App> =  [
         App(appName: "", appDes: "", appImage: "", appButton: "", appDownloadLink: ""),
-        App(appName: "WORLD PREMIERE", appDes: "Browser Extension use Manifest V3 for better Privacy, Performance, and Security.", appImage: "lock.shield.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/blog/"),
-        App(appName: "TRANSLATOR COMMUNITY", appDes: "Help and Translate the Browser Extension!", appImage: "rectangle.3.group.bubble.left.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/browser/extension/translate/"),
-        App(appName: "DEVELOPER COMMUNITY", appDes: "Find, and Report Issues!", appImage: "chevron.left.forwardslash.chevron.right", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/open-source/"),
-        App(appName: "SOCIAL COMMUNITY", appDes: "Watch and Learn the New Features!", appImage: "heart.circle.fill", appButton: "Find out more", appDownloadLink: "https://www.turnoffthelights.com/video/")
+        App(appName: Stefanfunctions().i18string(text: "strworldpremiere"), appDes: Stefanfunctions().i18string(text: "strdesworldpremiere"), appImage: "lock.shield.fill", appButton: Stefanfunctions().i18string(text: "strfindout"), appDownloadLink: "https://www.turnoffthelights.com/blog/"),
+        App(appName: Stefanfunctions().i18string(text: "strtranslator"), appDes: Stefanfunctions().i18string(text: "strdestranslator"), appImage: "rectangle.3.group.bubble.left.fill", appButton: Stefanfunctions().i18string(text: "strfindout"), appDownloadLink: "https://www.turnoffthelights.com/translator/"),
+        App(appName: Stefanfunctions().i18string(text: "strdeveloper"), appDes: Stefanfunctions().i18string(text: "strdesdeveloper"), appImage: "chevron.left.forwardslash.chevron.right", appButton: Stefanfunctions().i18string(text: "strfindout"), appDownloadLink: "https://www.turnoffthelights.com/developer/"),
+        App(appName: Stefanfunctions().i18string(text: "strsocial"), appDes: Stefanfunctions().i18string(text: "strdessocial"), appImage: "heart.circle.fill", appButton: Stefanfunctions().i18string(text: "strfindout"), appDownloadLink: "https://www.turnoffthelights.com/social/")
     ]
-    
+
     override func viewDidLoad(){
         super.viewDidLoad()
         
