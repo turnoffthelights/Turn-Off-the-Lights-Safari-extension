@@ -31,7 +31,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 // eslint-disable-next-line no-undef
 //importScripts("constants.js");
 
-// BUG SAFARI
+// Bug Safari
 /* eslint-disable no-unused-vars */
 const exbrowser = "safari";
 // values: "chrome", "safari", "edge", "firefox", "opera", "yandex", "whale"
@@ -58,7 +58,6 @@ const linkgamepad = "https://www.turnoffthelights.com/game-controller/";
 const devmode = true;
 const devdonate = false;
 /*---*/
-console.log("Start the code from here further.");
 
 chrome.runtime.onMessage.addListener(function request(request, sender){
 	// eye protection & autodim & shortcut
@@ -217,16 +216,21 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	return true;
 });
 
+// Not for Safari web browser, it use the content script way in the manifest.json file
+// because Safari 15.4 and 16.0 do not support script "injectImmediately" and not stable "webNavigation.onCommitted" on iOS
 // Inject before displaying the website
-chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
-	// Filter out non main window events.
-	if(frameId !== 0)return;
-	injectScriptsTo(tabId, url);
-});
+if(exbrowser != "safari"){
+	chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
+		// Filter out non main window events.
+		if(frameId !== 0)return;
+		injectScriptsTo(tabId, url);
+	});
+}
 
 // screen-shader.js = Screen Shader
 // night-mode.js = Night Mode
 const scriptList = ["js/screen-shader.js", "js/night-mode.js"];
+
 const injectScriptsTo = (tabId, url) => {
 	if(url.match(/^http/i) || url.match(/^file/i)){
 		scriptList.forEach((script) => {

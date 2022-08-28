@@ -24,7 +24,8 @@
       }
   },
   "background": {
-    "service_worker": "js/background.js"
+    "service_worker": "js/background.js",
+    "persistent": false
   },
   "content_scripts": [
     {
@@ -51,6 +52,16 @@
       "run_at": "document_start",
       "all_frames": true,
       "match_about_blank": true
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/night-mode.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/screen-shader.js"],
+      "run_at": "document_end"
     },
     {
       "matches": ["*://*.youtube.com/*"], 
