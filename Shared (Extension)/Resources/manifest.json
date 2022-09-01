@@ -29,12 +29,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "js": ["js/constants.js", "js/content.js", "js/eco.js"],
       "run_at": "document_end"
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "css" : ["css/light.css"],
       "run_at": "document_end",
       "all_frames": true,
@@ -47,19 +47,19 @@
       "all_frames": true
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "js": ["js/autostop.js"],
       "run_at": "document_start",
       "all_frames": true,
       "match_about_blank": true
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "js": ["js/night-mode.js"],
       "run_at": "document_end"
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "js": ["js/screen-shader.js"],
       "run_at": "document_end"
     },
@@ -94,7 +94,7 @@
   },
   {
     "resources": ["/js/video-player-status.js"],
-    "matches": ["http://*/*", "https://*/*"],
+    "matches": ["<all_urls>"],
     "use_dynamic_url": true
   }],
   "offline_enabled": true,

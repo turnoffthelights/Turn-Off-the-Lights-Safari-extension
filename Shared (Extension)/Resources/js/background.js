@@ -230,7 +230,6 @@ if(exbrowser != "safari"){
 // screen-shader.js = Screen Shader
 // night-mode.js = Night Mode
 const scriptList = ["js/screen-shader.js", "js/night-mode.js"];
-
 const injectScriptsTo = (tabId, url) => {
 	if(url.match(/^http/i) || url.match(/^file/i)){
 		scriptList.forEach((script) => {
@@ -844,5 +843,6 @@ OK Done ADDED Night Mode with dim images filter
 OK Done Security improvement loading the welcome guide
 + issue: no YouTube video detection right to left layout issue ARAB
 + check for use activetabs permission and screenshot capture issue?
++ issue: no video:hover focus course online
 
 */

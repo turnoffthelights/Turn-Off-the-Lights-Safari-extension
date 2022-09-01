@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController{
 
     private let imageView:UIImageView = {
-        let imageView = UIImageView(frame:  CGRect(x:0 , y: 0, width: 128, height: 128))
+        let imageView = UIImageView(frame: CGRect(x:0 , y: 0, width: 128, height: 128))
         imageView.image = UIImage(named:"LargeIcon")
         return imageView
     }()
@@ -40,6 +40,25 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         view.addSubview(imageView)
     }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+         DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+             if UIDevice.current.orientation.isLandscape {
+                 //print("Landscape")
+                 let size = self.imageView.frame.height
+                 let diffX = self.view.bounds.size.width - size
+                 let diffY = self.view.bounds.size.height - size
+                 self.imageView.frame = CGRect(x: diffX/2, y: diffY/2, width: 128, height: 128)
+             }
+             else {
+                 //print("Portrait")
+                 let size = self.imageView.frame.height
+                 let diffX = self.view.bounds.size.width - size
+                 let diffY = self.view.bounds.size.height - size
+                 self.imageView.frame = CGRect(x: diffX/2, y: diffY/2, width: 128, height: 128)
+             }
+         })
+     }
     
     @objc func startmainapp(_ notification: Notification) {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
@@ -75,6 +94,7 @@ class ViewController: UIViewController{
             animation.repeatCount = Float(3)
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay/2)
             self.imageView.layer.add(animation, forKey: "pop")
+
             // Remove zoom out effect
             DispatchQueue.main.asyncAfter(deadline: .now()+3.0) {
                 self.animate()
