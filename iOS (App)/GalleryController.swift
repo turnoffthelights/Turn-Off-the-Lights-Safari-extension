@@ -82,27 +82,11 @@ class GalleryController: UITableViewController,SFSafariViewControllerDelegate{
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            openapplink(url: "https://apps.apple.com/app/id1062397646")
-        }else if indexPath.row == 1 {
-            openapplink(url: "https://apps.apple.com/app/id1530008755")
-        }else if indexPath.row == 2 {
-            openapplink(url: "https://apps.apple.com/app/id1043842695")
-        }else if indexPath.row == 3 {
-            openapplink(url: "https://apps.apple.com/app/id1523093827")
-        }else if indexPath.row == 4 {
-            openapplink(url: "https://apps.apple.com/app/id1596469569")
-        }else if indexPath.row == 5 {
-            openapplink(url: "https://apps.apple.com/app/id1585512140")
-        }else if indexPath.row == 6 {
-            openapplink(url: "https://apps.apple.com/app/id1416358359")
-        }else if indexPath.row == 7 {
-            openapplink(url: "https://apps.apple.com/app/id1569818870")
-        }
-        
+        openapplink(url: stefanappurl[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    var stefanappurl = ["https://apps.apple.com/app/id1062397646", "https://apps.apple.com/app/id1530008755", "https://apps.apple.com/app/id1043842695", "https://apps.apple.com/app/id1523093827", "https://apps.apple.com/app/id1596469569", "https://apps.apple.com/app/id1585512140", "https://apps.apple.com/app/id1416358359", "https://apps.apple.com/app/id1569818870"]
     func openapplink(url: String){
         // check if website exists
         guard let url = URL(string: url) else {
