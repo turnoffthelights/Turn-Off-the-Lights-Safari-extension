@@ -87,46 +87,43 @@ class ViewController: NSViewController {
         Stefanfunctions().openweb(text:"https://www.turnoffthelights.com/donate.html")
     }
     
+    let titlestatuslavelenabled = "Safari extension is Enabled".localized()
+    let titlestatuslaveldisabled = "Safari extension is Disabled".localized()
+    let titleactiondisabled = "Disable Turn Off the Lights".localized()
+    let titleactionenabled = "Enable Turn Off the Lights".localized()
     func updateExtensionStatus() {
-        let titlestatuslavelenabled = "Safari extension is Enabled".localized()
-        let titlestatuslaveldisabled = "Safari extension is Disabled".localized()
-        let titleactiondisabled = "Disable Turn Off the Lights".localized()
-        let titleactionenabled = "Enable Turn Off the Lights".localized()
-        
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in
             //NSLog("extension: \(String(describing: state)), \(String(describing: error))")
             if error != nil {
                 //print("Error determining the state of extension: \(String(describing: error))");
                 return;
             }
-            
             DispatchQueue.global().async(execute: {
                 DispatchQueue.main.sync {
                     if state!.isEnabled {
-                        self.extensionStatusLabel.stringValue = titlestatuslavelenabled
-                        self.openactionbutton.title = titleactiondisabled
-                        self.lblenableextension.isHidden = true
-                        self.installimage.isHidden = true
-                        self.safaripreview.isHidden = false
-                        self.thatvideo.isHidden = false
+                        self.extensionStatusLabel.stringValue = self.titlestatuslavelenabled
+                        self.openactionbutton.title = self.titleactiondisabled
+                        self.showinstallpreview(status: false)
                     } else {
-                        self.extensionStatusLabel.stringValue = titlestatuslaveldisabled
-                        self.openactionbutton.title = titleactionenabled
-                        self.lblenableextension.isHidden = false
-                        self.installimage.isHidden = false
-                        self.safaripreview.isHidden = true
-                        self.thatvideo.isHidden = true
+                        self.extensionStatusLabel.stringValue = self.titlestatuslaveldisabled
+                        self.openactionbutton.title = self.titleactionenabled
+                        self.showinstallpreview(status: true)
                     }
                 }
             })
-            
-            
         }
         
         // Recheck the status every 1.5 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             self.updateExtensionStatus()
         })
+    }
+    
+    func showinstallpreview(status:Bool){
+        self.lblenableextension.isHidden = !status
+        self.installimage.isHidden = !status
+        self.safaripreview.isHidden = status
+        self.thatvideo.isHidden = status
     }
     
     override var representedObject: Any? {
