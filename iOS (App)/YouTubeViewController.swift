@@ -55,18 +55,6 @@ class YouTubeViewController: UIViewController {
         addvideo()
     }
     
-    func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {
-        let timestamp = CMTime(seconds: seconds, preferredTimescale: 60)
-        let asset = AVURLAsset(url: moviePath)
-        let generator = AVAssetImageGenerator(asset: asset)
-        generator.appliesPreferredTrackTransform = true
-
-        guard let imageRef = try? generator.copyCGImage(at: timestamp, actualTime: nil) else {
-            return nil
-        }
-        return UIImage(cgImage: imageRef)
-    }
-    
     @IBAction func openyoutube(_ sender: Any) {
         Stefanfunctions().openweb(text:"https://www.youtube.com/c/turnoffthelights?sub_confirmation=1")
     }
@@ -98,7 +86,7 @@ class YouTubeViewController: UIViewController {
 //        playerLayer.masksToBounds = true
      
         // poster avplayer
-        ytimageinspiration.image = imagePreview(from: pathURL, in: 0.0)
+        ytimageinspiration.image = Stefanfunctions().imagePreview(from: pathURL, in: 0.0)
     }
     
     override func viewWillAppear(_ animated: Bool) {

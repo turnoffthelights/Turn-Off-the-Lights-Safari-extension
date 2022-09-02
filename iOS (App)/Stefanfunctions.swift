@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Stefanfunctions{
     func i18string(text: String) -> String{
@@ -25,5 +26,17 @@ class Stefanfunctions{
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "calloffline"), object: nil)
             }
         })
+    }
+    
+    func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {
+        let timestamp = CMTime(seconds: seconds, preferredTimescale: 60)
+        let asset = AVURLAsset(url: moviePath)
+        let generator = AVAssetImageGenerator(asset: asset)
+        generator.appliesPreferredTrackTransform = true
+
+        guard let imageRef = try? generator.copyCGImage(at: timestamp, actualTime: nil) else {
+            return nil
+        }
+        return UIImage(cgImage: imageRef)
     }
 }

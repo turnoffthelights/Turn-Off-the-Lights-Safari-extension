@@ -32,11 +32,12 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         super.viewDidAppear(animated)
     }
 
+    let textBold = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
     func settranslationtext(){
         lbleasysetup.text = Stefanfunctions().i18string(text: "lbleasytosetup").uppercased()
         lblactivate.text = Stefanfunctions().i18string(text: "lblactivate")
         lblwatchvideo.setTitle(Stefanfunctions().i18string(text: "lblwatchvideo"), for: .normal)
-        
+
         // steps list
         lblstep1.text = Stefanfunctions().i18string(text: "lblstep1")
         
@@ -44,50 +45,27 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
         let part2b = Stefanfunctions().i18string(text: "lblstep2b")
         let part2c = " " + Stefanfunctions().i18string(text: "lblstep2c")
         let attributedString = NSMutableAttributedString(string:part2a)
-        let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
-        let boldString = NSMutableAttributedString(string:part2b, attributes:attrs)
-        let lastString = NSMutableAttributedString(string:part2c)
-        attributedString.append(boldString)
-        attributedString.append(lastString)
+        attributedString.append(NSMutableAttributedString(string:part2b, attributes:textBold))
+        attributedString.append(NSMutableAttributedString(string:part2c))
         lblstep2.attributedText = attributedString
 
         let part3a = Stefanfunctions().i18string(text: "lblstep3a") + " "
         let part3b = Stefanfunctions().i18string(text: "lblstep3b")
         let part3c = Stefanfunctions().i18string(text: "lblstep3c") + " "
         let part3d = Stefanfunctions().i18string(text: "lblstep3d")
-        
         let attributedString3 = NSMutableAttributedString(string:part3a)
-        let attrs3 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
-        let boldString3b = NSMutableAttributedString(string:part3b, attributes:attrs3)
-        let lastString3c = NSMutableAttributedString(string:part3c)
-        attributedString3.append(boldString3b)
-        attributedString3.append(lastString3c)
-        let boldString3d = NSMutableAttributedString(string:part3d, attributes:attrs3)
-        attributedString3.append(boldString3d)
+        attributedString3.append(NSMutableAttributedString(string:part3b, attributes:textBold))
+        attributedString3.append(NSMutableAttributedString(string:part3c))
+        attributedString3.append(NSMutableAttributedString(string:part3d, attributes:textBold))
         lblstep3.attributedText = attributedString3
 
         let part4a = Stefanfunctions().i18string(text: "lblstep4a") + " "
         let part4b = Stefanfunctions().i18string(text: "lblstep4b")
-
         let attributedString4 = NSMutableAttributedString(string:part4a)
-        let attrs4 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
-        let boldString4b = NSMutableAttributedString(string:part4b, attributes:attrs4)
-        attributedString4.append(boldString4b)
+        attributedString4.append(NSMutableAttributedString(string:part4b, attributes:textBold))
         lblstep4.attributedText = attributedString4
     }
-    
-    func imagePreview(from moviePath: URL, in seconds: Double) -> UIImage? {
-        let timestamp = CMTime(seconds: seconds, preferredTimescale: 60)
-        let asset = AVURLAsset(url: moviePath)
-        let generator = AVAssetImageGenerator(asset: asset)
-        generator.appliesPreferredTrackTransform = true
-
-        guard let imageRef = try? generator.copyCGImage(at: timestamp, actualTime: nil) else {
-            return nil
-        }
-        return UIImage(cgImage: imageRef)
-    }
-    
+        
     private var player: AVQueuePlayer!
     private var playerLayer: AVPlayerLayer!
     private var playerItem: AVPlayerItem!
@@ -121,7 +99,7 @@ class EnableViewController: UIViewController,AVPlayerViewControllerDelegate{
 //        playerLayer.masksToBounds = true
      
         // poster avplayer
-        imageinspiration.image = imagePreview(from: pathURL, in: 0.0)
+        imageinspiration.image = Stefanfunctions().imagePreview(from: pathURL, in: 0.0)
     }
     
     @IBAction func opentutorialvideo(_ sender: Any) {

@@ -18,7 +18,7 @@ extension UIView {
         }
         set {
             layer.cornerRadius = newValue
-            layer.masksToBounds = true;
+            layer.masksToBounds = true
         }
     }
 }
@@ -31,7 +31,7 @@ extension UIImageView {
         }
         set {
             layer.cornerRadius = newValue
-            layer.masksToBounds = true;
+            layer.masksToBounds = true
         }
     }
 }
