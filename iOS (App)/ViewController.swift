@@ -43,20 +43,11 @@ class ViewController: UIViewController{
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
          DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
-             if UIDevice.current.orientation.isLandscape {
-                 //print("Landscape")
-                 let size = self.imageView.frame.height
-                 let diffX = self.view.bounds.size.width - size
-                 let diffY = self.view.bounds.size.height - size
-                 self.imageView.frame = CGRect(x: diffX/2, y: diffY/2, width: 128, height: 128)
-             }
-             else {
-                 //print("Portrait")
-                 let size = self.imageView.frame.height
-                 let diffX = self.view.bounds.size.width - size
-                 let diffY = self.view.bounds.size.height - size
-                 self.imageView.frame = CGRect(x: diffX/2, y: diffY/2, width: 128, height: 128)
-             }
+             // it will provide you with the correct width and height, that depending on the current Landscape or Portrait mode
+             let size = self.imageView.frame.height
+             let diffX = self.view.bounds.size.width - size
+             let diffY = self.view.bounds.size.height - size
+             self.imageView.frame = CGRect(x: diffX/2, y: diffY/2, width: 128, height: 128)
          })
      }
     
@@ -67,12 +58,7 @@ class ViewController: UIViewController{
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
-                let connected = UserDefaults.standard.bool(forKey: "connected")
-                if(connected == false){
-                    NotificationCenter.default.post(name: Notification.Name(rawValue: "calloffline"), object: nil)
-                }
-            })
+            Stefanfunctions().checkoffline()
         })
     }
     
@@ -108,32 +94,29 @@ class ViewController: UIViewController{
             let size = self.view.frame.size.width * 3
             let diffX = size - self.view.frame.size.width
             let diffY = self.view.frame.size.height - size
-
             self.imageView.frame = CGRect(x: -(diffX/2), y: diffY/2, width: size, height: size)
         })
 
         UIView.animate(withDuration: 1.5, animations: {
             self.imageView.alpha = 0
         }, completion: { done in
-            if done {
-                DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
-
-                    // Debug
-                    //self.showWalkthrough()
-                    
-                    let appdefaults = UserDefaults.standard
-                    if !appdefaults.bool(forKey: "walkthroughPresented") {
-                        self.showWalkthrough()
-                    }else{
-                        // regular open the app
-                        self.showmainapp()
-                    }
-
-                })
-
+            if done { self.navopenview() }
+        })
+    }
+    
+    func navopenview(){
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
+            // Debug
+            //self.showWalkthrough()
+            
+            let appdefaults = UserDefaults.standard
+            if !appdefaults.bool(forKey: "walkthroughPresented") {
+                self.showWalkthrough()
+            }else{
+                // regular open the app
+                self.showmainapp()
             }
         })
-        
     }
 
     @IBAction func opensafaripref(_ sender: Any) {

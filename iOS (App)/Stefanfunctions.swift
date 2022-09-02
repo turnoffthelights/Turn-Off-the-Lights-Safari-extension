@@ -17,4 +17,13 @@ class Stefanfunctions{
             UIApplication.shared.open(url)
         }
     }
+    
+    func checkoffline(){
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
+            let connected = UserDefaults.standard.bool(forKey: "connected")
+            if(connected == false){
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "calloffline"), object: nil)
+            }
+        })
+    }
 }

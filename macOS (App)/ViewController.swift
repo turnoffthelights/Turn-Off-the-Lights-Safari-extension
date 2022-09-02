@@ -84,7 +84,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func lampbonus(_ sender: Any) {
-        Stefanfunctions().openweb(text:"https://www.turnoffthelights.com/donate.html")
+        Stefanfunctions().openweb(text:"https://www.turnoffthelights.com/donate/")
     }
     
     let titlestatuslavelenabled = "Safari extension is Enabled".localized()
