@@ -101,13 +101,9 @@ class ViewController: NSViewController {
             DispatchQueue.global().async(execute: {
                 DispatchQueue.main.sync {
                     if state!.isEnabled {
-                        self.extensionStatusLabel.stringValue = self.titlestatuslavelenabled
-                        self.openactionbutton.title = self.titleactiondisabled
-                        self.showinstallpreview(status: false)
-                    } else {
-                        self.extensionStatusLabel.stringValue = self.titlestatuslaveldisabled
-                        self.openactionbutton.title = self.titleactionenabled
                         self.showinstallpreview(status: true)
+                    } else {
+                        self.showinstallpreview(status: false)
                     }
                 }
             })
@@ -120,10 +116,17 @@ class ViewController: NSViewController {
     }
     
     func showinstallpreview(status:Bool){
-        self.lblenableextension.isHidden = !status
-        self.installimage.isHidden = !status
-        self.safaripreview.isHidden = status
-        self.thatvideo.isHidden = status
+        if(status == true){
+            self.extensionStatusLabel.stringValue = self.titlestatuslavelenabled
+            self.openactionbutton.title = self.titleactiondisabled
+        }else{
+            self.extensionStatusLabel.stringValue = self.titlestatuslaveldisabled
+            self.openactionbutton.title = self.titleactionenabled
+        }
+        self.lblenableextension.isHidden = status
+        self.installimage.isHidden = status
+        self.safaripreview.isHidden = !status
+        self.thatvideo.isHidden = !status
     }
     
     override var representedObject: Any? {
