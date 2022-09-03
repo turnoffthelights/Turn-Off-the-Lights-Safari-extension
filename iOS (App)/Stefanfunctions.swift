@@ -12,18 +12,14 @@ import SafariServices
 extension UIApplication {
     func topViewController() -> UIViewController? {
         var topViewController: UIViewController? = nil
-        if #available(iOS 13, *) {
-            for scene in connectedScenes {
-                if let windowScene = scene as? UIWindowScene {
-                    for window in windowScene.windows {
-                        if window.isKeyWindow {
-                            topViewController = window.rootViewController
-                        }
+        for scene in connectedScenes {
+            if let windowScene = scene as? UIWindowScene {
+                for window in windowScene.windows {
+                    if window.isKeyWindow {
+                        topViewController = window.rootViewController
                     }
                 }
             }
-        } else {
-            topViewController = keyWindow?.rootViewController
         }
         while true {
             if let presented = topViewController?.presentedViewController {
@@ -73,25 +69,29 @@ class Stefanfunctions{
         return UIImage(cgImage: imageRef)
     }
     
+    func opensafaripreview(pageurl: String){
+        // redirect through safari
+        //UIApplication.shared.open(pageurl, options: [:], completionHandler: nil)
+        
+        let config = SFSafariViewController.Configuration()
+        config.barCollapsingEnabled = true
+        config.entersReaderIfAvailable = false
+        
+        if let url = URL(string: pageurl) {
+            let vc = SFSafariViewController(url: url, configuration: config)
+            let topController = UIApplication.shared.topViewController()
+            topController?.present(vc, animated: true)
+        }
+    }
+    
     func openyoutubevideo(youtubeId: String){
         if let youtubeURL = URL(string: "youtube://\(youtubeId)"),
            UIApplication.shared.canOpenURL(youtubeURL) {
             // redirect to app
             UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
         } else if URL(string: "https://www.youtube.com/watch?v=\(youtubeId)") != nil {
-            // redirect through safari
-            //UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-            
             let thisurlpost = "https://www.youtube.com/watch?v=\(youtubeId)"
-            let config = SFSafariViewController.Configuration()
-            config.barCollapsingEnabled = true
-            config.entersReaderIfAvailable = false
-            
-            if let url = URL(string: thisurlpost) {
-                let vc = SFSafariViewController(url: url, configuration: config)
-                let topController = UIApplication.shared.topViewController()
-                topController?.present(vc, animated: true)
-            }
+            Stefanfunctions().opensafaripreview(pageurl: thisurlpost)
         }
     }
     

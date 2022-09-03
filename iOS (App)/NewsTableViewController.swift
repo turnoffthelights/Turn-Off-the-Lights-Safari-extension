@@ -21,14 +21,7 @@ class NewsTableViewController: UITableViewController {
     @IBOutlet weak var spinningicon: UIActivityIndicatorView!
     func showTutorial(_ which: Int) {
         let thisurlpost = rssItems![which].link
-        let config = SFSafariViewController.Configuration()
-        config.barCollapsingEnabled = true
-        config.entersReaderIfAvailable = false
-
-        if let url = URL(string: thisurlpost) {
-            let vc = SFSafariViewController(url: url, configuration: config)
-            present(vc, animated: true)
-        }
+        Stefanfunctions().opensafaripreview(pageurl: thisurlpost)
     }
     
     var gettimenow: String {

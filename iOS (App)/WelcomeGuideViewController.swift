@@ -67,14 +67,7 @@ class WelcomeGuideViewController: UIViewController {
     
     let thisgithub = "https://github.com/turnoffthelights/Turn-Off-the-Lights-Safari-extension"
     @IBAction func opengithub(_ sender: Any) {
-        let config = SFSafariViewController.Configuration()
-        config.barCollapsingEnabled = true
-        config.entersReaderIfAvailable = false
-
-        if let url = URL(string: thisgithub) {
-            let vc = SFSafariViewController(url: url, configuration: config)
-            present(vc, animated: true)
-        }
+        Stefanfunctions().opensafaripreview(pageurl: thisgithub)
     }
     
     @IBAction func openexterngithub(_ sender: Any) {
