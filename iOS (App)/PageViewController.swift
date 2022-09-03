@@ -42,6 +42,20 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         configurePageControl()
         
         // skip button
+        addskipButton()
+        // next button
+        addNextButton()
+        // final button
+        addFinalButton()
+        
+        for subview in view.subviews {
+            if let scrollView = subview as? UIScrollView {
+                scrollView.delegate = self
+            }
+        }
+    }
+    
+    func addskipButton(){
         var skipconfiguration = UIButton.Configuration.plain()
         skipconfiguration.cornerStyle = .capsule
         skipconfiguration.baseForegroundColor = UIColor.gray
@@ -57,8 +71,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.skipButton.translatesAutoresizingMaskIntoConstraints = false
         self.skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         self.skipButton.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
-
-        // next button
+    }
+    
+    func addNextButton(){
         var nextconfiguration = UIButton.Configuration.filled()
         nextconfiguration.cornerStyle = .capsule
         nextconfiguration.baseForegroundColor = UIColor.white
@@ -73,8 +88,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         nextButton.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
-
-        // final button
+    }
+    
+    func addFinalButton(){
         var finalconfiguration = UIButton.Configuration.filled()
         finalconfiguration.cornerStyle = .medium
         finalconfiguration.baseForegroundColor = UIColor.white
@@ -93,12 +109,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         finalButton.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         finalButton.isHidden = true;
 
-        
-        for subview in view.subviews {
-            if let scrollView = subview as? UIScrollView {
-                scrollView.delegate = self
-            }
-        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
