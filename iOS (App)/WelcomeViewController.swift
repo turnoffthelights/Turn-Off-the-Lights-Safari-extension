@@ -178,12 +178,6 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
             }
             
             cellOne.layer.cornerRadius = 10
-            /*cellOne.layer.shadowColor = UIColor.lightGray.cgColor
-            cellOne.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-            cellOne.layer.shadowRadius = 12.0
-            cellOne.layer.shadowOpacity = 0.5
-            cellOne.layer.masksToBounds = false*/
-            
             return cellOne
         }else{
             let dequeuedCell = collectionView.dequeueReusableCell(withReuseIdentifier: bigcellId, for: indexPath)
@@ -192,20 +186,13 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
                 fatalError("Wrong cell type for section 0. Expected CellTypeOne")
             }
             
-            // configure your CellTypeOne
             cellOne.appName.text = products[indexPath.row].appName
             cellOne.imageAppLogo.image = UIImage(systemName: products[indexPath.row].appImage)
             cellOne.appDes.text = products[indexPath.row].appDes
             cellOne.appDownloadButton.tag = indexPath.item
             cellOne.appDownloadButton.addTarget(self, action: #selector(openLinkAction), for: .touchUpInside)
             cellOne.appDownloadButton.setTitle(products[indexPath.row].appButton, for: .normal)
-            
             cellOne.layer.cornerRadius = 10
-            /*cellOne.layer.shadowColor = UIColor.lightGray.cgColor
-            cellOne.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-            cellOne.layer.shadowRadius = 12.0
-            cellOne.layer.shadowOpacity = 0.5
-            cellOne.layer.masksToBounds = false*/
             return cellOne
         }
     }
@@ -271,7 +258,6 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
                 cellwidth = (collectionView.frame.size.width / 2) - 30
                 cellheight = CGFloat(kWhateverHeightYouWant)
             }
-            
         }
         return CGSize(width: cellwidth, height: cellheight)
     }

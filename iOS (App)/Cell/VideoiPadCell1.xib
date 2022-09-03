@@ -24,7 +24,7 @@
                             <constraint firstAttribute="width" secondItem="lw2-Sx-gqc" secondAttribute="height" multiplier="140:79" id="0DP-Pw-lEe"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="imagewcornerRadius">
+                            <userDefinedRuntimeAttribute type="number" keyPath="">
                                 <real key="value" value="15"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>

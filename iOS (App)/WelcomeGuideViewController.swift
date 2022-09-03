@@ -10,7 +10,7 @@ import AVKit
 import AVFoundation
 import SafariServices
 
-extension UIView {
+@IBDesignable extension UIView {
     @IBInspectable
     var viewcornerRadius: CGFloat {
         get {
@@ -23,7 +23,7 @@ extension UIView {
     }
 }
 
-extension UIImageView {
+@IBDesignable extension UIImageView {
     @IBInspectable
     var imagewcornerRadius: CGFloat {
         get {
