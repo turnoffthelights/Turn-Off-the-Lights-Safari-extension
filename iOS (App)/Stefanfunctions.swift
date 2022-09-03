@@ -7,6 +7,39 @@
 
 import UIKit
 import AVFoundation
+import SafariServices
+
+extension UIApplication {
+    func topViewController() -> UIViewController? {
+        var topViewController: UIViewController? = nil
+        if #available(iOS 13, *) {
+            for scene in connectedScenes {
+                if let windowScene = scene as? UIWindowScene {
+                    for window in windowScene.windows {
+                        if window.isKeyWindow {
+                            topViewController = window.rootViewController
+                        }
+                    }
+                }
+            }
+        } else {
+            topViewController = keyWindow?.rootViewController
+        }
+        while true {
+            if let presented = topViewController?.presentedViewController {
+                topViewController = presented
+            } else if let navController = topViewController as? UINavigationController {
+                topViewController = navController.topViewController
+            } else if let tabBarController = topViewController as? UITabBarController {
+                topViewController = tabBarController.selectedViewController
+            } else {
+                // Handle any other third party container in `else if` if required
+                break
+            }
+        }
+        return topViewController
+    }
+}
 
 class Stefanfunctions{
     func i18string(text: String) -> String{
@@ -39,4 +72,27 @@ class Stefanfunctions{
         }
         return UIImage(cgImage: imageRef)
     }
+    
+    func openyoutubevideo(youtubeId: String){
+        if let youtubeURL = URL(string: "youtube://\(youtubeId)"),
+           UIApplication.shared.canOpenURL(youtubeURL) {
+            // redirect to app
+            UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+        } else if URL(string: "https://www.youtube.com/watch?v=\(youtubeId)") != nil {
+            // redirect through safari
+            //UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+            
+            let thisurlpost = "https://www.youtube.com/watch?v=\(youtubeId)"
+            let config = SFSafariViewController.Configuration()
+            config.barCollapsingEnabled = true
+            config.entersReaderIfAvailable = false
+            
+            if let url = URL(string: thisurlpost) {
+                let vc = SFSafariViewController(url: url, configuration: config)
+                let topController = UIApplication.shared.topViewController()
+                topController?.present(vc, animated: true)
+            }
+        }
+    }
+    
 }

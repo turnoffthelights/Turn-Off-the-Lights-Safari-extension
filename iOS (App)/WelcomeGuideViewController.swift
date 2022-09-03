@@ -54,24 +54,7 @@ class WelcomeGuideViewController: UIViewController {
 
     func openyoutubeapporweb(text:String){
         let youtubeId = text
-        if let youtubeURL = URL(string: "youtube://\(youtubeId)"),
-            UIApplication.shared.canOpenURL(youtubeURL) {
-            // redirect to app
-            UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-        } else if URL(string: "https://www.youtube.com/watch?v=\(youtubeId)") != nil {
-            // redirect through safari
-            //UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-            
-            let thisurlpost = "https://www.youtube.com/watch?v=\(youtubeId)"
-            let config = SFSafariViewController.Configuration()
-            config.barCollapsingEnabled = true
-            config.entersReaderIfAvailable = false
-
-            if let url = URL(string: thisurlpost) {
-                let vc = SFSafariViewController(url: url, configuration: config)
-                present(vc, animated: true)
-            }
-        }
+        Stefanfunctions().openyoutubevideo(youtubeId: youtubeId)
     }
     
     @IBAction func opennightowlprofile(_ sender: Any) {

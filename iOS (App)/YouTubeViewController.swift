@@ -148,27 +148,8 @@ extension YouTubeViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     @objc func openLinkAction(sender: UIButton!) {
         let btnsendtag: UIButton = sender
-        let vi = videoproducts[btnsendtag.tag].appDownloadLink
-
-        let youtubeId = vi
-        if let youtubeURL = URL(string: "youtube://\(youtubeId)"),
-            UIApplication.shared.canOpenURL(youtubeURL) {
-            // redirect to app
-            UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-        } else if URL(string: "https://www.youtube.com/watch?v=\(youtubeId)") != nil {
-            // redirect through safari
-            //UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
-
-            let thisurlpost = "https://www.youtube.com/watch?v=\(youtubeId)"
-            let config = SFSafariViewController.Configuration()
-            config.barCollapsingEnabled = true
-            config.entersReaderIfAvailable = false
-
-            if let url = URL(string: thisurlpost) {
-                let vc = SFSafariViewController(url: url, configuration: config)
-                present(vc, animated: true)
-            }
-        }
+        let youtubeId = videoproducts[btnsendtag.tag].appDownloadLink
+        Stefanfunctions().openyoutubevideo(youtubeId: youtubeId)
     }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
