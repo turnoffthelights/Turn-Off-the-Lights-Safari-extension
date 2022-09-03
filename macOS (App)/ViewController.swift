@@ -93,20 +93,13 @@ class ViewController: NSViewController {
     let titleactionenabled = "Enable Turn Off the Lights".localized()
     func updateExtensionStatus() {
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in
-            //NSLog("extension: \(String(describing: state)), \(String(describing: error))")
-            if error != nil {
-                //print("Error determining the state of extension: \(String(describing: error))");
-                return;
-            }
-            DispatchQueue.global().async(execute: {
-                DispatchQueue.main.sync {
-                    if state!.isEnabled {
-                        self.showinstallpreview(status: true)
-                    } else {
-                        self.showinstallpreview(status: false)
-                    }
+            DispatchQueue.main.async {
+                if (state?.isEnabled ?? false) {
+                   self.showinstallpreview(status: true)
+                } else {
+                   self.showinstallpreview(status: false)
                 }
-            })
+            }
         }
         
         // Recheck the status every 1.5 seconds
