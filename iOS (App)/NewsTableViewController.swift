@@ -7,7 +7,7 @@
 
 import UIKit
 import SafariServices
-
+    
 extension String {
     var withoutHtmlTags: String {
     return self.replacingOccurrences(of: "<[^>]+>", with: "", options:
@@ -68,30 +68,40 @@ class NewsTableViewController: UITableViewController {
 
     // Set the activity indicator into the main view
     private func setLoadingScreen() {
-
         // Sets the view which contains the loading text and the spinner
         let width: CGFloat = 120
         let height: CGFloat = 30
-        let x = (tableView.frame.width / 2) - (width / 2)
-        let y = (tableView.frame.height / 2) - (height / 2) - (navigationController?.navigationBar.frame.height)!
-        loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
-
-        // Sets loading text
-        loadingLabel.textColor = .gray
-        loadingLabel.textAlignment = .center
-        loadingLabel.text = "Loading..."
-        loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
-
+        
+        loadingView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        self.view.addSubview(loadingView)
+        
         // Sets spinner
         spinner = UIActivityIndicatorView(style: .medium)
         spinner.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         spinner.startAnimating()
 
+        // Sets label
+        loadingLabel.frame = CGRect(x: 30, y: 0, width: width, height: height)
+        loadingLabel.textColor = .gray
+        loadingLabel.text = Stefanfunctions().i18string(text: "strnewsloading")
+
         // Adds text and spinner to the view
         loadingView.addSubview(spinner)
         loadingView.addSubview(loadingLabel)
 
-        tableView.addSubview(loadingView)
+        loadingView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        loadingView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+
+        let totalView = UIView()
+        totalView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(totalView)
+        totalView.addSubview(loadingView)
+        NSLayoutConstraint.activate([
+            totalView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            totalView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            totalView.heightAnchor.constraint(equalToConstant: height),
+            totalView.widthAnchor.constraint(equalToConstant: width)
+        ])
     }
 
     // Remove the activity indicator from the main view
