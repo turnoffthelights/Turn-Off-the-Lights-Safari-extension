@@ -2,7 +2,7 @@
 
 <img alt="Turn Off the Lights Browser Extension Logo" src="https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/blob/master/src/icons/icon48.png" align="left" style="padding: 0 10px 5px 0">
 
-**Turn Off the Lights** is a popular browser extension that works on all major web browsers such as Google Chrome, Firefox, Opera, Safari, Yandex, Maxthon and Microsoft Edge.
+**Turn Off the Lights** is a popular browser extension that works on all major web browsers such as Google Chrome, Firefox, Opera, Safari, Yandex, Maxthon, Brave, Vivaldi, Naver Whale, and Microsoft Edge.
 
 Using Turn Off the Lights to dims the web page and reduces the eye strain caused by the bright screen. And it will highlight the video player on that web page such as on YouTube.
 
