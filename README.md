@@ -9,6 +9,8 @@ Using Turn Off the Lights to dims the web page and reduces the eye strain caused
 
 **[Join our growing community on Facebook](https://www.facebook.com/turnoffthelight) to stay up to date!**
 
+**[Join our growing community on Twitter](https://www.twitter.com/turnoffthelight) to stay up to date!**
+
 **[Join our growing Translators community on Crowdin](https://www.crowdin.com/project/turnoffthelights) to stay up to date!**
 
 **[Please use and enjoy it, and if you can make a donation of any amount, I'd appreciate it immensely](https://www.turnoffthelights.com/donate.html)**
@@ -42,13 +44,11 @@ Using Turn Off the Lights to dims the web page and reduces the eye strain caused
   * Alt + (arrow up) to increase the opacity
   * Alt + (arrow down) to decrease the opacity
   * Alt + * to toggle the lights on all open tabs
-* Option Camera Motion
-* Option Speech Recognition
 * Option for Mouse Wheel Volume Control for each HTML5 video player
 * Option to add a filter to the current HTML5 video player (grayscale, sepia, invert, contrast, saturate, hue rotation and brightness)
 * Option to show the Audio Visualization effect on top of the current HTML5 video (Blocks, Frequency and Music Tunnel)
 * Option to loop the current HTML5 video player
-* Option to place the Night Mode switch to toggle YouTube in black or white theme. And with whitelist/blacklist filter
+* Option to place the Night Mode switch to toggle YouTube in black or white theme. Get Dark Mode on all websites with whitelist/blacklist filter
   * Time stamp: Activate the Night Mode within the chosen time
   * Blackout: Dims the web page and activates the Night Mode
 * Option to stop YouTube and HTML5 videos from automatically playing.
@@ -70,3 +70,4 @@ The Browser extension is available in the following stores:
 * Available for Yandex: See Yandex built-in extension
 * [Maxthon in the Maxthon Extension gallery](http://extension.maxthon.com/detail/index.php?view_id=1813)
 * [Microsoft Edge in the Windows Store](http://clkde.tradedoubler.com/click?p=198981&amp;a=1376739&amp;g=0&amp;url=https%3a%2f%2fwww.microsoft.com%2fstore%2fp%2fturn-off-the-lights-for-microsoft-edge%2f9nblggh52lrr)
+* [Naver Whale in the Whale store](https://store.whale.naver.com/detail/oplanocjcpankemphfllmlhglnloaolj)
