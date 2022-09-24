@@ -54,16 +54,6 @@
       "match_about_blank": true
     },
     {
-      "matches": ["<all_urls>"],
-      "js": ["js/night-mode.js"],
-      "run_at": "document_end"
-    },
-    {
-      "matches": ["<all_urls>"],
-      "js": ["js/screen-shader.js"],
-      "run_at": "document_end"
-    },
-    {
       "matches": ["*://*.youtube.com/*"], 
       "css" : ["css/youtube.css"]
     }

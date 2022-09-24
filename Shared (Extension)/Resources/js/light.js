@@ -609,9 +609,6 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 
 			// update 10 September 2018
 			// fix for the TrueView video
-			var ythtmlvideocontainer = document.querySelector(".html5-video-container");
-			if(ythtmlvideocontainer){ ythtmlvideocontainer.style.position = "absolute"; }
-
 			var ytdivvideoads = document.querySelector(".video-ads");
 			if(ytdivvideoads){ ytdivvideoads.classList.add("stefanvdvideocontrolsitem"); }
 			//---

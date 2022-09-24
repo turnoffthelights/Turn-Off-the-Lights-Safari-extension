@@ -1473,7 +1473,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 4.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
@@ -1507,7 +1507,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 4.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari.Extension";
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
@@ -1545,7 +1545,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 4.4.1;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1586,7 +1586,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 4.4.1;
 				OTHER_LDFLAGS = (
 					"-framework",
