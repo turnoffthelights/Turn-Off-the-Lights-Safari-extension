@@ -934,7 +934,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Pr-QBO">
                                                 <rect key="frame" x="319" y="467" width="75" height="34.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="Github"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="GitHub"/>
                                                 <connections>
                                                     <action selector="opengithub:" destination="Ckl-sE-H3n" eventType="touchUpInside" id="NOi-Jl-h1N"/>
                                                     <action selector="opennightowlprofile:" destination="fts-oI-caG" eventType="touchUpInside" id="hI5-q6-eHc"/>
@@ -944,7 +944,7 @@
                                                 <rect key="frame" x="20" y="550" width="374" height="328.5"/>
                                                 <string key="text">We take your privacy and security very seriously. We have built the Turn Off the Lights browser extension for our users first, to get a great video and web experience available to all. When you add Turn Off the Lights, it says that we can "Read and change all your data on the websites you visit". This permission allows Turn Off the Lights to detect the current video player. We had never collected and will never collect any personal data, credit card, browsing history, and password.
 
-Furthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on Github.</string>
+Furthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on GitHub.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

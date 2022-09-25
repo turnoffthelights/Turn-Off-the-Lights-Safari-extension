@@ -74,8 +74,8 @@
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "e2Y-OR-G7m"; */
 "e2Y-OR-G7m.normalTitle" = "Button";
 
-/* Class = "UIButton"; configuration.title = "Github"; ObjectID = "giw-Pr-QBO"; */
-"giw-Pr-QBO.configuration.title" = "Github";
+/* Class = "UIButton"; configuration.title = "GitHub"; ObjectID = "giw-Pr-QBO"; */
+"giw-Pr-QBO.configuration.title" = "GitHub";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "giw-Pr-QBO"; */
 "giw-Pr-QBO.normalTitle" = "Button";
@@ -86,8 +86,8 @@
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gsS-Wx-WRI"; */
 "gsS-Wx-WRI.normalTitle" = "Button";
 
-/* Class = "UILabel"; text = "We take your privacy and security very seriously. We have built the Turn Off the Lights browser extension for our users first, to get a great video and web experience available to all. When you add Turn Off the Lights, it says that we can \"Read and change all your data on the websites you visit\". This permission allows Turn Off the Lights to detect the current video player. We had never collected and will never collect any personal data, credit card, browsing history, and password.\n\nFurthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on Github."; ObjectID = "gxt-yJ-blz"; */
-"gxt-yJ-blz.text" = "We take your privacy and security very seriously. We have built the Turn Off the Lights browser extension for our users first, to get a great video and web experience available to all. When you add Turn Off the Lights, it says that we can \"Read and change all your data on the websites you visit\". This permission allows Turn Off the Lights to detect the current video player. We had never collected and will never collect any personal data, credit card, browsing history, and password.\n\nFurthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on Github.";
+/* Class = "UILabel"; text = "We take your privacy and security very seriously. We have built the Turn Off the Lights browser extension for our users first, to get a great video and web experience available to all. When you add Turn Off the Lights, it says that we can \"Read and change all your data on the websites you visit\". This permission allows Turn Off the Lights to detect the current video player. We had never collected and will never collect any personal data, credit card, browsing history, and password.\n\nFurthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on GitHub."; ObjectID = "gxt-yJ-blz"; */
+"gxt-yJ-blz.text" = "We take your privacy and security very seriously. We have built the Turn Off the Lights browser extension for our users first, to get a great video and web experience available to all. When you add Turn Off the Lights, it says that we can \"Read and change all your data on the websites you visit\". This permission allows Turn Off the Lights to detect the current video player. We had never collected and will never collect any personal data, credit card, browsing history, and password.\n\nFurthermore, the Turn Off the Lights browser extension is free and Open-Source with the source code publicly available on GitHub.";
 
 /* Class = "UILabel"; text = "Search and tap on Safari, tap then on Extensions"; ObjectID = "i0A-Dg-a92"; */
 "i0A-Dg-a92.text" = "Search and tap on Safari, tap then on Extensions";
