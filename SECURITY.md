@@ -2,20 +2,15 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Turn Off the Lights browser extension that is currently being supported with security updates. The web browser updates automatically the Turn Off the Lights Browser extension to the latest version. If you are using an old Turn Off the Lights or are using a not supported web browser, please update your web browser.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 4.4.x   | :white_check_mark: |
+| < 4.3   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+We take all the privacy and security issues very seriously. If you found a possible vulnerability, please report this on the 24h contact form at https://www.turnoffthelights.com/support/contact-us/
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Your report will instantly be follow up by a developer, and you will get an update when the reported vulnerability is accepted or declined. With the timeline when it will be fixed.
