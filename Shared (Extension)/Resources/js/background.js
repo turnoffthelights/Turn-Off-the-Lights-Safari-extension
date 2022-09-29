@@ -841,8 +841,8 @@ OK Done IMPROVEMENT AutoPlay feature name to AutoDim
 OK Done IMPROVEMENT website .html links
 OK Done ADDED Night Mode with dim images filter
 OK Done Security improvement loading the welcome guide
-+ issue: no YouTube video detection right to left layout issue ARAB
+OK Done issue: no YouTube video detection right to left layout issue ARAB
+OK Done issue: no video:hover focus course online
 + check for use activetabs permission and screenshot capture issue?
-+ issue: no video:hover focus course online
 
 */
