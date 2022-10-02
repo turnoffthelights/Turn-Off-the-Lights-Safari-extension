@@ -13,7 +13,6 @@ const linksupport = "https://www.turnoffthelights.com/support/";
 const linkwelcome = "https://www.turnoffthelights.com/browser/extension/welcome/safari/";
 const linkuninstall = "https://www.turnoffthelights.com/browser/extension/uninstall/safari/";
 const linkguide = "https://www.turnoffthelights.com/browser/extension/guide/safari/";
-const linkshare = "https://www.turnoffthelights.com/share/browser/extension/";
 const linkbrowsertheme = "https://www.turnoffthelights.com/browser/theme/";
 const browsernewtab = "safari://newtab/";
 const browserstore = "https://apps.apple.com";
