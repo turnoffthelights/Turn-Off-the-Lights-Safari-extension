@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   Turn Off the Lights for Safari
 
@@ -6,50 +6,50 @@
   
 */
 
-"lbleasytosetup" = "Easy to set this up";
+"lbleasytosetup" = "Ayarlaması kolay";
 "lblturnoffthelights" = "Turn Off the Lights";
-"lblactivate" = "Activate";
-"lblwatchvideo" = "Watch Video";
-"lblstep1" = "Leave this app";
-"lblstep2a" = "Open the";
-"lblstep2b" = "Settings";
-"lblstep2c" = "app on your device";
-"lblstep3a" = "Search and tap on";
+"lblactivate" = "Etkinleştir";
+"lblwatchvideo" = "Videoyu İzle";
+"lblstep1" = "Bu uygulamadan ayrıl";
+"lblstep2a" = "Aç";
+"lblstep2b" = "Ayarlar";
+"lblstep2c" = "cihazınızdaki uygulama";
+"lblstep3a" = "Ara ve üzerine tıkla";
 "lblstep3b" = "Safari";
-"lblstep3c" = ", tap then on";
-"lblstep3d" = "Extensions";
-"lblstep4a" = "Enable";
+"lblstep3c" = "daha sonra üzerine tıkla";
+"lblstep3d" = "Eklentiler";
+"lblstep4a" = "Etkinleştir";
 "lblstep4b" = "Turn Off the Lights";
-"lblplaceholder" = "Turn Off the Lights Safari extension";
-"lblemailsubject" = "FREE Turn Off the Lights Safari extension";
-"lblsharetwitter" = "Download the free Turn Off the Lights Safari extension to get Dark Mode on all websites. Try it yourself! #iOS15 via @TurnOfftheLight";
-"lblshareregular" = "I just installed this free Turn Off the Lights Safari extension, it is my favorite Safari extension to get Dark Mode on all websites. Try it yourself!";
-"lblsafariextensionstatus" = "Safari Extension is";
-"lblsafariextensionenable" = "Enabled";
-"lblsafariextensiondisable" = "Disabled";
-"lblquickoptions" = "Open Options page";
-"lblactionok" = "OK, Got it";
-"bannerstep1a" = "Open the";
-"bannerstep1b" = "Settings";
-"bannerstep1c" = "app";
-"bannerstep2a" = "Scroll to";
+"lblplaceholder" = "Turn Off the Lights Safari uzantısı";
+"lblemailsubject" = "ÜCRETSİZ Turn Off the Lights Safari uzantısı";
+"lblsharetwitter" = "Tüm web sitelerinde Karanlık Modu etkinleştirmek için ücretsiz Turn Off the Lights Safari uzantısını indirin. Kendiniz deneyin! @TurnOfftheLight aracılığıyla #iOS15";
+"lblshareregular" = "Ücretsiz Turn Off the Lights Safari uzantısını yükledim, tüm web sitelerinde Karanlık Modu etkinleştirmek için en sevdiğim Safari uzantısıdır. Kendiniz deneyin!";
+"lblsafariextensionstatus" = "Safari Eklentisi";
+"lblsafariextensionenable" = "Açık";
+"lblsafariextensiondisable" = "Devre dışı";
+"lblquickoptions" = "Ayarları aç";
+"lblactionok" = "Tamam Anladım";
+"bannerstep1a" = "Aç";
+"bannerstep1b" = "Ayarlar";
+"bannerstep1c" = "uygulama";
+"bannerstep2a" = "Kaydır";
 "bannerstep2b" = "Safari";
-"bannerstep3a" = "Select";
-"bannerstep3b" = "Extensions";
-"bannerstep4a" = "Turn on";
+"bannerstep3a" = "Seç";
+"bannerstep3b" = "Eklentiler";
+"bannerstep4a" = "Aç";
 "bannerstep4b" = "Turn Off the Lights";
-"bannerstep5a" = "Open the";
+"bannerstep5a" = "Aç";
 "bannerstep5b" = "Safari";
-"bannerstep5c" = "web browser";
-"lblactionskip" = "SKIP";
-"lblactionnext" = "NEXT";
-"strfindout" = "Find out more";
-"strworldpremiere" = "WORLD PREMIERE";
-"strdesworldpremiere" = "Browser Extension use Manifest V3 for better Privacy, Performance, and Security.";
-"strtranslator" = "TRANSLATOR COMMUNITY";
-"strdestranslator" = "Help Translate our Browser Extension!";
-"strdeveloper" = "DEVELOPER COMMUNITY";
-"strdesdeveloper" = "Find, and Report Issues!";
-"strsocial" = "SOCIAL COMMUNITY";
-"strdessocial" = "Follow and interact with other members!";
-"strnewsloading" = "Loading…";
+"bannerstep5c" = "web tarayıcısı";
+"lblactionskip" = "ATLA";
+"lblactionnext" = "SONRAKİ";
+"strfindout" = "Daha fazla bul";
+"strworldpremiere" = "DÜNYA GALASI";
+"strdesworldpremiere" = "Tarayıcı Uzantısı, daha iyi Gizlilik, Performans ve Güvenlik için Manifest V3'ü kullanır.";
+"strtranslator" = "ÇEVİRMEN TOPLULUĞU";
+"strdestranslator" = "Yardım Edin ve Tarayıcı Uzantısını Çevirin!";
+"strdeveloper" = "GELİŞTİRİCİ TOPLULUĞU";
+"strdesdeveloper" = "Sorunları Bulun ve Bildirin!";
+"strsocial" = "SOSYAL TOPLULUK";
+"strdessocial" = "Takip edin ve diğer üyelerle etkileşim kurun!";
+"strnewsloading" = "Yükleniyor…";

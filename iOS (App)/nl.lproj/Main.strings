@@ -23,7 +23,7 @@
 "5hQ-UE-ILr.text" = "Datum";
 
 /* Class = "UILabel"; text = "Please check your internet connection and try again."; ObjectID = "6NF-tT-Pe3"; */
-"6NF-tT-Pe3.text" = "Controleer je internetverbinding en probeer het nog een keer.";
+"6NF-tT-Pe3.text" = "Controleer uw internetverbinding en probeer het opnieuw.";
 
 /* Class = "UIButton"; normalTitle = "Download"; ObjectID = "9bl-uF-mzm"; */
 "9bl-uF-mzm.normalTitle" = "Downloaden";
@@ -35,7 +35,7 @@
 "B30-5t-0qX.headerTitle" = "Browserextensie";
 
 /* Class = "UITableViewSection"; headerTitle = "Guide"; ObjectID = "Bou-rk-djw"; */
-"Bou-rk-djw.headerTitle" = "Gids";
+"Bou-rk-djw.headerTitle" = "Handleiding";
 
 /* Class = "UILabel"; text = "Hard Disk"; ObjectID = "CNU-C9-Jvh"; */
 "CNU-C9-Jvh.text" = "Hard Disk";
@@ -50,7 +50,7 @@
 "JOQ-kt-hRG.text" = "Geen verbinding";
 
 /* Class = "UIButton"; normalTitle = "Translate the Safari extension in your local language"; ObjectID = "LNZ-Yg-yKq"; */
-"LNZ-Yg-yKq.normalTitle" = "Vertaal de Safari-extensie in uw lokale taal";
+"LNZ-Yg-yKq.normalTitle" = "De Safari-extensie naar uw lokale taal vertalen";
 
 /* Class = "UITabBarItem"; title = "More"; ObjectID = "Lu9-5p-UCh"; */
 "Lu9-5p-UCh.title" = "Meer";
@@ -62,7 +62,7 @@
 "Nrc-aT-Cwd.normalTitle" = "Downloaden";
 
 /* Class = "UIButton"; normalTitle = "Love Safari Extension? Leave a review"; ObjectID = "Q4p-cT-4RD"; */
-"Q4p-cT-4RD.normalTitle" = "Houd je van de Safari-extensie? Laat een beoordeling achter";
+"Q4p-cT-4RD.normalTitle" = "Bevalt de Safari-extensie? Laat een beoordeling achter.";
 
 /* Class = "UILabel"; text = "Welcome Guide"; ObjectID = "S2c-YZ-JXQ"; */
 "S2c-YZ-JXQ.text" = "Welkomsthandleiding";
@@ -80,7 +80,7 @@
 "cCD-St-9Ia.text" = "Safari-extensie";
 
 /* Class = "UITableViewSection"; headerTitle = "You and Us"; ObjectID = "fKR-DI-C8W"; */
-"fKR-DI-C8W.headerTitle" = "Jij en Ik";
+"fKR-DI-C8W.headerTitle" = "U en wij";
 
 /* Class = "UINavigationItem"; title = "News"; ObjectID = "frC-PM-qni"; */
 "frC-PM-qni.title" = "Nieuws";
@@ -101,7 +101,7 @@
 "pJZ-9Y-hHw.title" = "Video’s";
 
 /* Class = "UILabel"; text = "Check out Turn Off the Lights other projects"; ObjectID = "pak-Cb-lcw"; */
-"pak-Cb-lcw.text" = "Bekijk Turn Off the Lights andere projecten";
+"pak-Cb-lcw.text" = "Bekijk andere Turn Off the Lights-projecten";
 
 /* Class = "UILabel"; text = "Need help or Feedback?"; ObjectID = "pmS-Sl-ylc"; */
 "pmS-Sl-ylc.text" = "Hulp of feedback nodig?";
@@ -116,7 +116,7 @@
 "rsF-Ny-q8I.normalTitle" = "Downloaden";
 
 /* Class = "UILabel"; text = "Help spread the word!"; ObjectID = "sq1-qS-Z1a"; */
-"sq1-qS-Z1a.text" = "Help ons het woord te verspreiden!";
+"sq1-qS-Z1a.text" = "Vertel het door!";
 
 /* Class = "UILabel"; text = "Licenses"; ObjectID = "tME-ct-sBk"; */
 "tME-ct-sBk.text" = "Licenties";

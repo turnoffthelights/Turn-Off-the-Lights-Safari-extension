@@ -1559,50 +1559,14 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 							var context = screenshot.getContext("2d", {desynchronized: true});
 							screenshot.width = onevideo.offsetWidth;
 							screenshot.height = onevideo.offsetHeight;
-							/*context.drawImage(onevideo, 0, 0, onevideo.offsetWidth, onevideo.offsetHeight);
-							try{ 
-								var dataURL = screenshot.toDataURL("image/png");
-								console.log("B Stefan dataURL=");
-								console.log(dataURL);
-								// save the video screenshot
-								window.setTimeout(function(){
-									chrome.runtime.sendMessage({name:"screenshot", value:dataURL});
-								}, 2000);
-							}catch(e){ console.error(e); }
-							*/
-							//TODO
-							console.log("SS Stefan dataURL=");
-							/*context.fillRect(0, 0, onevideo.offsetWidth, onevideo.offsetHeight);
 							context.drawImage(onevideo, 0, 0, onevideo.offsetWidth, onevideo.offsetHeight);
-							var dataURL = screenshot.toDataURL("image/png");
-							console.log(dataURL);
-							chrome.runtime.sendMessage({name:"screenshot", value:dataURL});*/
+							try{ var dataURL = screenshot.toDataURL("image/png"); }catch(e){ console.error(e); }
+							// save the video screenshot
+							chrome.runtime.sendMessage({name:"screenshot", value:dataURL});
 
-
-
-							if(document.getElementById("output")){}else{
-								var newoutput = document.createElement("div");
-								newoutput.setAttribute("id", "output");
-								document.body.appendChild(newoutput);
-							}
-
-							function capture(video) {
-								var w = video.videoWidth;
-								var h = video.videoHeight;
-								var canvas = document.createElement('canvas');
-								canvas.width = w;
-								canvas.height = h;
-								var ctx = canvas.getContext('2d');
-								ctx.drawImage(video, 0, 0, w, h);
-								return canvas;
-							}
-							function shoot() {
-								var video = onevideo;
-								var canvas = capture(video);
-								console.log(canvas.toDataURL("image/png"));
-							}
-							shoot();
-
+							// Note: Bug issue on Safari web browser version 15.0 and version 16.0
+							// It can not capture the YouTube screenshot the canvas 'drawImage' is blank
+							// On another website, if the video uses MP4 video, that work fine
 						}, false);
 						newscreenshotbutton.setAttribute("data-video", i);
 						newscreenshotbutton.style.background = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADVUlEQVRoQ+2ZgVEUMRSG/1eB2gFUoFQgVCBWoFagVKBUIFYgdiAVCBUIFYgVqBU85zvzMOzt3iW7AXZuLjM7N3C55P35X/73J2vakGYbgkNbIHNjcstIzoi7v5f0TtLjSqauJR2b2Wnl75a6T2bE3T9IAsiU9tLMvk4ZYBIQd9+R9D0x8aZ2Zd0dFj9K+i1p18z4HNWmAvkmaV/SFzN7PSYCdz+X9HzKGMx7C4i7ExRpwmdp+yNpZ+xqJlYvJT0qnVASafjJzFiERbsBMiHXJ+e3u8Pm5wog0RWhYI/+A5KYIE1oRyA2MxRldi0xCPAQmAOYCSCRp0dmdjK76HsCyjLozMwOA4invk+6ue7uqMph+v7UzI7nADQx82ORVrSUWgsg8XcE6u6w87YT+E1ePjQgd7+Jex2QX6lG7KWgqRnXZrY7BMLdqe4vEovUmWepL8rEvkNxSIfRNSNb6GIgTIYs5kB+mhkB3moJAOyVWBXGhW0kdDSgGkb67MdSaiUQqF6s/oUk/NOlmcEEysh3PCgOBZDGd6jOKDDFQFIAgImqzWZf6HZGL6nEpuPzCkbyQtWXgknuYeTpFHtSBWTVhu4wAYj90tVNv0X2ATOKmZZAIvWqQHTYDDDVatgESFrRSKlFdR0jx5mrqHbArYCEP7owsxqTuYQ3c8BVR4FWQKgH1IuqyQc2fyzKwm6UMtsKCMUROd0LiS0NoKcGMQ7jIddRs9YO1wpIr61ZO/tAhzyo0jG2QDqFEO2nBrRMrSszC3ewlphWjGzMZg+lOTezg7XLt6KDu8clRpUCtmIEb4Utxx23KIjVlxhNgGSGkrPzWK/EYoRrfhiLkoAQyCjj1zWcNZs882plB6uSvE8BRYrBDBcYK31X8lfcBaBQ1Sl1J0B6mOFfAOFghZzmByvkGpEIbzbKNd8ZkAwMx1yedbeGsMDB6qT0/DLg0dqlVo9vYt9g/Hg428MCjdWPywcuAEcdbztF+e6AlOyrVn0G5VfS0gVdq0lbjzN0QRd2o1rLWwdYOt7QlSkqEpfYnMN53zHnS+xXkuI25/8ldqdKly7KHPrdfq2Q6TLMIJ8cYefczpJ0L7/omXPUJbFNeodYMsF99dkCua+VLp1ny0jpSt1Xv41h5C+YBzxRDPItSgAAAABJRU5ErkJggg==)";

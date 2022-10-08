@@ -116,7 +116,7 @@
 "rsF-Ny-q8I.normalTitle" = "Pobierz";
 
 /* Class = "UILabel"; text = "Help spread the word!"; ObjectID = "sq1-qS-Z1a"; */
-"sq1-qS-Z1a.text" = "Powiedz o nas innym!";
+"sq1-qS-Z1a.text" = "Powiedz o nas innym.";
 
 /* Class = "UILabel"; text = "Licenses"; ObjectID = "tME-ct-sBk"; */
 "tME-ct-sBk.text" = "Licencje";
