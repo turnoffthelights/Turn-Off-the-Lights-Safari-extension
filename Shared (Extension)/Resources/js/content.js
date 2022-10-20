@@ -1563,7 +1563,6 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 							try{ var dataURL = screenshot.toDataURL("image/png"); }catch(e){ console.error(e); }
 							// save the video screenshot
 							chrome.runtime.sendMessage({name:"screenshot", value:dataURL});
-
 							// Note: Bug issue on Safari web browser version 15.0 and version 16.0
 							// It can not capture the YouTube screenshot the canvas 'drawImage' is blank
 							// On another website, if the video uses MP4 video, that work fine
