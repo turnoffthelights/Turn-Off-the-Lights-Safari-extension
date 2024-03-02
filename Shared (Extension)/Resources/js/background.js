@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2022 Stefan vd
+Copyright (C) 2024 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -29,34 +29,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 // Importing the constants
 // eslint-disable-next-line no-undef
-//importScripts("constants.js");
-
-// Bug Safari
-/* eslint-disable no-unused-vars */
-const exbrowser = "safari";
-// values: "chrome", "safari", "edge", "firefox", "opera", "yandex", "whale"
-const linkredirectionoptions = "https://www.turnoffthelights.com/browser/extension/options/";
-const linkcapturescreenshot = "https://www.turnoffthelights.com/browser/extension/capture-screenshot-of-video/";
-const linkdeveloperwebsite = "https://www.turnoffthelights.com";
-const linkproduct = "https://itunes.apple.com/app/id1273998507";
-const linkdonate = "https://www.turnoffthelights.com/donate/";
-const writereview = "https://itunes.apple.com/app/id1273998507?action=write-review";
-const linkchangelog = "https://www.turnoffthelights.com/browser/extension/changelog/chrome/";
-const linktranslate = "https://www.turnoffthelights.com/browser/extension/translate/";
-const linksupport = "https://www.turnoffthelights.com/support/";
-const linkwelcome = "https://www.turnoffthelights.com/browser/extension/welcome/chrome/";
-const linkuninstall = "https://www.turnoffthelights.com/browser/extension/uninstall/chrome/";
-const linkguide = "https://www.turnoffthelights.com/browser/extension/guide/chrome/";
-const linkbrowsertheme = "https://www.turnoffthelights.com/browser/theme/";
-const browsernewtab = "chrome://newtab/";
-const browserstore = "https://chrome.google.com";
-const linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";
-const linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
-const linktotlmobileapp = "https://www.turnoffthelights.com/mobile/";
-const linkgamepad = "https://www.turnoffthelights.com/game-controller/";
-const devmode = true;
-const devdonate = false;
-/*---*/
+importScripts("constants.js");
 
 chrome.runtime.onMessage.addListener(function request(request, sender){
 	// eye protection & autodim & shortcut
@@ -224,6 +197,20 @@ if(exbrowser != "safari"){
 		if(frameId !== 0)return;
 		injectScriptsTo(tabId, url);
 	});
+}else{
+    // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting
+    // Safari no support "executeScript.injectImmediately"
+    // Use this content script in iOS 16.4 and higher
+    chrome.scripting.registerContentScripts([
+        {
+          id: "session-script",
+          js: ["js/screen-shader.js", "js/night-mode.js"],
+          matches: ["<all_urls>"],
+          runAt: "document_start"
+        },
+      ])
+    .then(() => console.log("registration complete"))
+    .catch((err) => console.warn("unexpected error", err));
 }
 
 // screen-shader.js = Screen Shader

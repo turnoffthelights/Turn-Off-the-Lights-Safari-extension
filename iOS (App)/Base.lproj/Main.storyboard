@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XgQ-Ap-W4Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XgQ-Ap-W4Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -77,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY8-ol-qmg">
-                                <rect key="frame" x="87" y="98" width="240" height="126"/>
+                                <rect key="frame" x="87" y="97" width="240" height="127.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="4rk-fj-Nvh"/>
                                     <constraint firstAttribute="height" constant="128" id="S5X-Tb-9yu"/>
@@ -370,20 +370,20 @@
                             <tableViewSection headerTitle="About" id="4vm-f2-vCa">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pBo-uk-M07">
-                                        <rect key="frame" x="20" y="634.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="634.5" width="374" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pBo-uk-M07" id="5wi-MF-eSx">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpI-DN-Nyv">
-                                                    <rect key="frame" x="20" y="11" width="57" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="57" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGy-U3-sEB">
-                                                    <rect key="frame" x="346" y="11" width="8" height="21.5"/>
+                                                    <rect key="frame" x="346" y="11" width="8" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="8" id="Q4H-1u-bm5"/>
                                                     </constraints>
@@ -404,7 +404,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="tME-ct-sBk" style="IBUITableViewCellStyleDefault" id="4SI-NI-b9D">
-                                        <rect key="frame" x="20" y="678" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="677.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4SI-NI-b9D" id="1YD-Id-B6p">
                                             <rect key="frame" x="0.0" y="0.0" width="343.5" height="43.5"/>
@@ -1382,7 +1382,7 @@
             <size key="intrinsicContentSize" width="417" height="27"/>
         </designable>
         <designable name="Q4p-cT-4RD">
-            <size key="intrinsicContentSize" width="314" height="25.5"/>
+            <size key="intrinsicContentSize" width="314" height="26.5"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
@@ -1392,10 +1392,10 @@
         <segue reference="x4l-Lf-j1p"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="AppDateToday" width="250" height="250"/>
+        <image name="AppDateToday" width="60" height="60"/>
         <image name="AppHardDisk" width="60" height="60"/>
         <image name="AppHelloOffice" width="60" height="60"/>
-        <image name="AppHomeTab" width="250" height="250"/>
+        <image name="AppHomeTab" width="60" height="60"/>
         <image name="AppMyChristmasTree" width="60" height="60"/>
         <image name="AppMyLunarNewYear" width="60" height="60"/>
         <image name="AppSunrise" width="60" height="60"/>
@@ -1406,14 +1406,14 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="share-lamp.png" width="180" height="180"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="113"/>
-        <image name="wifi.slash" catalog="system" width="128" height="101"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="121"/>
+        <image name="wifi.slash" catalog="system" width="128" height="111"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

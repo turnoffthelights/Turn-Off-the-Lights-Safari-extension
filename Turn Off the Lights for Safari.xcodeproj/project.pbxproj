@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1E07A7C12895AFFC00EF820B /* SmalliPadCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07A7BF2895AFFC00EF820B /* SmalliPadCell1.swift */; };
 		1E07A7C22895AFFC00EF820B /* SmalliPadCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E07A7C02895AFFC00EF820B /* SmalliPadCell1.xib */; };
+		1E07D0082B8FCE7E00B9E5F7 /* Turn_Off_the_Lights_for_SafariApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07D0072B8FCE7E00B9E5F7 /* Turn_Off_the_Lights_for_SafariApp.swift */; };
+		1E07D00A2B8FCE7E00B9E5F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07D0092B8FCE7E00B9E5F7 /* ContentView.swift */; };
+		1E07D00C2B8FCE7F00B9E5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E07D00B2B8FCE7F00B9E5F7 /* Assets.xcassets */; };
+		1E07D00F2B8FCE7F00B9E5F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E07D00E2B8FCE7F00B9E5F7 /* Preview Assets.xcassets */; };
+		1E07D0142B8FD81000B9E5F7 /* Turn Off the Lights for Safari Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1E70CA1626726F380064A939 /* Turn Off the Lights for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1E151BB3267FC78E0004E9E3 /* SidebarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E151BB2267FC78E0004E9E3 /* SidebarController.swift */; };
 		1E2A618E2682675E00619A31 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */; };
 		1E2F2BED26CC4E920033C5E7 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2BEF26CC4E920033C5E7 /* Walkthrough.storyboard */; };
@@ -71,6 +76,13 @@
 		1E862AA326AC4FA3004B9642 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E862AA226AC4FA3004B9642 /* PageViewController.swift */; };
 		1E862AA726AC55C8004B9642 /* WelcomeGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */; };
 		1E8F88FD269E194F00030DDB /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8F88FC269E194F00030DDB /* NetworkViewController.swift */; };
+		1EA2656D2B925D6C004DAE95 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2656C2B925D6C004DAE95 /* VideoView.swift */; };
+		1EA2656E2B92621B004DAE95 /* forest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C4907267B83C2001048CF /* forest.mov */; };
+		1EA2656F2B9262FB004DAE95 /* share-lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E665AF726FE6B48002ED59A /* share-lamp.png */; };
+		1EA265712B9265F3004DAE95 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA265702B9265F3004DAE95 /* NewsView.swift */; };
+		1EA265752B92665A004DAE95 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA265732B926651004DAE95 /* FeedParser.swift */; };
+		1EA265772B927298004DAE95 /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA265762B927298004DAE95 /* LicensesView.swift */; };
+		1EA265792B9276FD004DAE95 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA265782B9276FD004DAE95 /* HomeView.swift */; };
 		1EBA02C826D56B2100EDF450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBA02C726D56B2100EDF450 /* LaunchScreen.storyboard */; };
 		1EC4AC1A26851FC0005FCF33 /* CommonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1826851FC0005FCF33 /* CommonClasses.swift */; };
 		1EC4AC1B26851FC0005FCF33 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC1926851FC0005FCF33 /* SimpleTableViewController.swift */; };
@@ -79,9 +91,21 @@
 		1ECD0B1628B6A4CB00C7EC91 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD0B1528B6A4CB00C7EC91 /* YouTubeViewController.swift */; };
 		1ECD0B1928B6AA3A00C7EC91 /* VideoiPadCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD0B1828B6AA3A00C7EC91 /* VideoiPadCell1.swift */; };
 		1ECD0B1A28B6AB2400C7EC91 /* VideoiPadCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD0B1728B6AA2300C7EC91 /* VideoiPadCell1.xib */; };
+		1EE86E642B91262200118AD8 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86E5E2B91262100118AD8 /* HelpView.swift */; };
+		1EE86E672B91262200118AD8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86E612B91262100118AD8 /* SettingsView.swift */; };
+		1EE86E692B91262200118AD8 /* OtherAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86E632B91262200118AD8 /* OtherAppsView.swift */; };
+		1EE86E6B2B91262E00118AD8 /* Stefanfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86E6A2B91262E00118AD8 /* Stefanfunctions.swift */; };
+		1EE86E8E2B91360F00118AD8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1EE86E8D2B91360F00118AD8 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E07D0152B8FD81000B9E5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70CA1526726F380064A939;
+			remoteInfo = "Turn Off the Lights for Safari Extension (iOS)";
+		};
 		1E4CB20E268CC77900015282 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E70C9E426726F350064A939 /* Project object */;
@@ -113,6 +137,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1E07D0172B8FD81100B9E5F7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E07D0142B8FD81000B9E5F7 /* Turn Off the Lights for Safari Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1EE7F91726DE59930011E42E /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -140,6 +175,13 @@
 /* Begin PBXFileReference section */
 		1E07A7BF2895AFFC00EF820B /* SmalliPadCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmalliPadCell1.swift; sourceTree = "<group>"; };
 		1E07A7C02895AFFC00EF820B /* SmalliPadCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmalliPadCell1.xib; sourceTree = "<group>"; };
+		1E07D0012B8FCE7E00B9E5F7 /* Turn Off the Lights for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turn Off the Lights for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E07D0042B8FCE7E00B9E5F7 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		1E07D0072B8FCE7E00B9E5F7 /* Turn_Off_the_Lights_for_SafariApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn_Off_the_Lights_for_SafariApp.swift; sourceTree = "<group>"; };
+		1E07D0092B8FCE7E00B9E5F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1E07D00B2B8FCE7F00B9E5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E07D00E2B8FCE7F00B9E5F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E07D0102B8FCE7F00B9E5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E151BB2267FC78E0004E9E3 /* SidebarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarController.swift; sourceTree = "<group>"; };
 		1E2A618C2682675E00619A31 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		1E2F2BF326CC4EFA0033C5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Walkthrough.storyboard; sourceTree = "<group>"; };
@@ -275,6 +317,11 @@
 		1E862AA226AC4FA3004B9642 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		1E862AA626AC55C7004B9642 /* WelcomeGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuideViewController.swift; sourceTree = "<group>"; };
 		1E8F88FC269E194F00030DDB /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		1EA2656C2B925D6C004DAE95 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		1EA265702B9265F3004DAE95 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		1EA265732B926651004DAE95 /* FeedParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
+		1EA265762B927298004DAE95 /* LicensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesView.swift; sourceTree = "<group>"; };
+		1EA265782B9276FD004DAE95 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1EB72EEC288D8A170015D945 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Walkthrough.strings; sourceTree = "<group>"; };
 		1EBA02BB26D549D000EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		1EBA02BC26D549D100EDF450 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Walkthrough.strings; sourceTree = "<group>"; };
@@ -327,9 +374,21 @@
 		1EE7F90926DE55490011E42E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		1EE7F90B26DE554A0011E42E /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Main.strings; sourceTree = "<group>"; };
 		1EE7F90E26DE55560011E42E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1EE86E5E2B91262100118AD8 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		1EE86E612B91262100118AD8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1EE86E632B91262200118AD8 /* OtherAppsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherAppsView.swift; sourceTree = "<group>"; };
+		1EE86E6A2B91262E00118AD8 /* Stefanfunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stefanfunctions.swift; sourceTree = "<group>"; };
+		1EE86E8D2B91360F00118AD8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E07CFFE2B8FCE7E00B9E5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E4CB207268CC77900015282 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +434,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E07D0022B8FCE7E00B9E5F7 /* Turn Off the Lights for Safari */ = {
+			isa = PBXGroup;
+			children = (
+				1EE86E8D2B91360F00118AD8 /* Localizable.xcstrings */,
+				1EA265732B926651004DAE95 /* FeedParser.swift */,
+				1E07D0072B8FCE7E00B9E5F7 /* Turn_Off_the_Lights_for_SafariApp.swift */,
+				1EE86E5E2B91262100118AD8 /* HelpView.swift */,
+				1EA265762B927298004DAE95 /* LicensesView.swift */,
+				1EE86E632B91262200118AD8 /* OtherAppsView.swift */,
+				1EE86E6A2B91262E00118AD8 /* Stefanfunctions.swift */,
+				1EE86E612B91262100118AD8 /* SettingsView.swift */,
+				1E07D0092B8FCE7E00B9E5F7 /* ContentView.swift */,
+				1EA265782B9276FD004DAE95 /* HomeView.swift */,
+				1EA265702B9265F3004DAE95 /* NewsView.swift */,
+				1E07D00B2B8FCE7F00B9E5F7 /* Assets.xcassets */,
+				1E07D0102B8FCE7F00B9E5F7 /* Info.plist */,
+				1E07D00D2B8FCE7F00B9E5F7 /* Preview Content */,
+				1EA2656C2B925D6C004DAE95 /* VideoView.swift */,
+			);
+			path = "Turn Off the Lights for Safari";
+			sourceTree = "<group>";
+		};
+		1E07D0032B8FCE7E00B9E5F7 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				1E07D0042B8FCE7E00B9E5F7 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		1E07D00D2B8FCE7F00B9E5F7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1E07D00E2B8FCE7F00B9E5F7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		1E4CB20B268CC77900015282 /* TOtL-iOS-UITest */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +513,8 @@
 				1E70CA2426726F380064A939 /* macOS (Extension) */,
 				1E4CB20B268CC77900015282 /* TOtL-iOS-UITest */,
 				1E4CB232268CDC6D00015282 /* TOtL-iOS-test */,
+				1E07D0022B8FCE7E00B9E5F7 /* Turn Off the Lights for Safari */,
+				1E07D0032B8FCE7E00B9E5F7 /* Packages */,
 				1E70C9F826726F380064A939 /* Products */,
 				1EE7F91326DE59930011E42E /* Frameworks */,
 			);
@@ -448,6 +547,7 @@
 				1E70CA2026726F380064A939 /* Turn Off the Lights for Safari Extension.appex */,
 				1E4CB20A268CC77900015282 /* TOtL-iOS-UITest.xctest */,
 				1E4CB231268CDC6D00015282 /* TOtL-iOS-test.xctest */,
+				1E07D0012B8FCE7E00B9E5F7 /* Turn Off the Lights for Safari.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -551,6 +651,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E07D0002B8FCE7E00B9E5F7 /* Turn Off the Lights for Safari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E07D0132B8FCE7F00B9E5F7 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari" */;
+			buildPhases = (
+				1E07CFFD2B8FCE7E00B9E5F7 /* Sources */,
+				1E07CFFE2B8FCE7E00B9E5F7 /* Frameworks */,
+				1E07CFFF2B8FCE7E00B9E5F7 /* Resources */,
+				1E07D0172B8FD81100B9E5F7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E07D0162B8FD81000B9E5F7 /* PBXTargetDependency */,
+			);
+			name = "Turn Off the Lights for Safari";
+			packageProductDependencies = (
+			);
+			productName = "Turn Off the Lights for Safari";
+			productReference = 1E07D0012B8FCE7E00B9E5F7 /* Turn Off the Lights for Safari.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1E4CB209268CC77900015282 /* TOtL-iOS-UITest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E4CB210268CC77900015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-UITest" */;
@@ -666,9 +787,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1400;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					1E07D0002B8FCE7E00B9E5F7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					1E4CB209268CC77900015282 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 1E70C9F626726F380064A939;
@@ -739,11 +863,24 @@
 				1E70CA1F26726F380064A939 /* Turn Off the Lights for Safari Extension (macOS) */,
 				1E4CB209268CC77900015282 /* TOtL-iOS-UITest */,
 				1E4CB230268CDC6D00015282 /* TOtL-iOS-test */,
+				1E07D0002B8FCE7E00B9E5F7 /* Turn Off the Lights for Safari */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E07CFFF2B8FCE7E00B9E5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E07D00F2B8FCE7F00B9E5F7 /* Preview Assets.xcassets in Resources */,
+				1EA2656E2B92621B004DAE95 /* forest.mov in Resources */,
+				1EE86E8E2B91360F00118AD8 /* Localizable.xcstrings in Resources */,
+				1E07D00C2B8FCE7F00B9E5F7 /* Assets.xcassets in Resources */,
+				1EA2656F2B9262FB004DAE95 /* share-lamp.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E4CB208268CC77900015282 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -826,6 +963,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E07CFFD2B8FCE7E00B9E5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EE86E6B2B91262E00118AD8 /* Stefanfunctions.swift in Sources */,
+				1EA265712B9265F3004DAE95 /* NewsView.swift in Sources */,
+				1EA2656D2B925D6C004DAE95 /* VideoView.swift in Sources */,
+				1EA265752B92665A004DAE95 /* FeedParser.swift in Sources */,
+				1E07D00A2B8FCE7E00B9E5F7 /* ContentView.swift in Sources */,
+				1EA265792B9276FD004DAE95 /* HomeView.swift in Sources */,
+				1EE86E642B91262200118AD8 /* HelpView.swift in Sources */,
+				1EA265772B927298004DAE95 /* LicensesView.swift in Sources */,
+				1EE86E672B91262200118AD8 /* SettingsView.swift in Sources */,
+				1E07D0082B8FCE7E00B9E5F7 /* Turn_Off_the_Lights_for_SafariApp.swift in Sources */,
+				1EE86E692B91262200118AD8 /* OtherAppsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E4CB206268CC77900015282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -904,6 +1059,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1E07D0162B8FD81000B9E5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70CA1526726F380064A939 /* Turn Off the Lights for Safari Extension (iOS) */;
+			targetProxy = 1E07D0152B8FD81000B9E5F7 /* PBXContainerItemProxy */;
+		};
 		1E4CB20F268CC77900015282 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E70C9F626726F380064A939 /* Turn Off the Lights for Safari (iOS) */;
@@ -1081,6 +1241,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E07D0112B8FCE7F00B9E5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 128;
+				DEVELOPMENT_ASSET_PATHS = "\"Turn Off the Lights for Safari/Preview Content\"";
+				DEVELOPMENT_TEAM = PRR97757HF;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 4.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		1E07D0122B8FCE7F00B9E5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 128;
+				DEVELOPMENT_ASSET_PATHS = "\"Turn Off the Lights for Safari/Preview Content\"";
+				DEVELOPMENT_TEAM = PRR97757HF;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turn Off the Lights for Safari";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 4.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanvd.Turn-Off-the-Lights-for-Safari";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
 		1E4CB211268CC77900015282 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1189,6 +1421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1238,7 +1471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1252,6 +1485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1295,7 +1529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1308,7 +1542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -1328,9 +1562,12 @@
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -1338,7 +1575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -1358,9 +1595,12 @@
 				PRODUCT_NAME = "Turn Off the Lights for Safari Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1373,7 +1613,7 @@
 				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Turn Off the Lights for Safari (iOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -1415,7 +1655,7 @@
 				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Turn Off the Lights for Safari (iOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -1455,7 +1695,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
@@ -1489,7 +1729,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
@@ -1526,7 +1766,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
@@ -1567,7 +1807,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Turn Off the Lights for Safari.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 126;
+				CURRENT_PROJECT_VERSION = 128;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PRR97757HF;
 				ENABLE_APP_SANDBOX = YES;
@@ -1603,6 +1843,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E07D0132B8FCE7F00B9E5F7 /* Build configuration list for PBXNativeTarget "Turn Off the Lights for Safari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E07D0112B8FCE7F00B9E5F7 /* Debug */,
+				1E07D0122B8FCE7F00B9E5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E4CB210268CC77900015282 /* Build configuration list for PBXNativeTarget "TOtL-iOS-UITest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
